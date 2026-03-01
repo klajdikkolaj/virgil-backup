@@ -1,0 +1,126 @@
+{
+  "jobs": [
+    {
+      "id": "716d6876-39c0-441f-8e4e-3562e5becb37",
+      "name": "gateway-watchdog",
+      "enabled": true,
+      "createdAtMs": 1772368406912,
+      "updatedAtMs": 1772372036031,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 1800000,
+        "anchorMs": 1772368406912
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Gateway health check: (1) Run 'openclaw doctor --fix' to clean invalid config keys (Discord bug). (2) Check if gateway is active. (3) If not, restart it. (4) Report status."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram"
+      },
+      "state": {
+        "nextRunAtMs": 1772373806926,
+        "lastRunAtMs": 1772372006926,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 29105,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "365f984a-962b-46b0-b9a4-552e5a0310ea",
+      "name": "heartbeat-klajdi",
+      "description": "Every 30min waking hours: email, calendar, Coolify health check",
+      "enabled": true,
+      "createdAtMs": 1772373274717,
+      "updatedAtMs": 1772373603328,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/30 6-22 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "model": "anthropic/claude-sonnet-4-6",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1772375400000,
+        "lastRunAtMs": 1772373600011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 3317,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "3387d0de-ae33-4690-a108-c7be11e03ca7",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772366065756,
+      "updatedAtMs": 1772366065756,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run vault semantic search reindex: cd ~/virgil-vault && git pull && qmd update && qmd embed. Then confirm index is up to date."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram"
+      },
+      "state": {
+        "nextRunAtMs": 1772416800000
+      }
+    },
+    {
+      "id": "8562697f-36a5-4601-abfb-45d44364a98c",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772356229052,
+      "updatedAtMs": 1772356229052,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 */3 * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run opencortex memory review: read recent memory/YYYY-MM-DD.md files, distill insights into MEMORY.md, restructure vault memory files for better long-term retention about Klajdi and Eternia project"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram"
+      },
+      "state": {
+        "nextRunAtMs": 1772614800000
+      }
+    }
+  ],
+  "total": 4,
+  "offset": 0,
+  "limit": 4,
+  "hasMore": false,
+  "nextOffset": null
+}

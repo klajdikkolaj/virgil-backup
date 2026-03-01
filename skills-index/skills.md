@@ -1,0 +1,12 @@
+# Installed Skills — 2026-03-01
+- **memory-guard**: no description
+- **metaskill**: Teaches AI agents how to learn better by enforcing deep correction, transfer learning, and proactive pattern recognition. Use when an error occurs and needs deep analysis (not surface patch), before starting a complex task to check past analogies, or after success to capture winning patterns. NOT for routine file reads or simple one-off commands.
+- **opencortex**: >
+- **qmd**: Local search/indexing CLI (BM25 + vectors + rerank) with MCP mode.
+- **realmrouter-switch**: Zero-friction RealmRouter model manager for OpenClaw. Chat-first workflow for setting API key, guided model picking, switching with availability check, rollback, connectivity testing, and short rr commands on both Unix and Windows.
+- **scholar-research**: "Search, analyze, and summarize peer-reviewed academic papers from open access sources. Provides credibility scoring, visualization, timeline generation, and figure extraction for top papers."
+- **security-auditor**: Use when reviewing code for security vulnerabilities, implementing authentication flows, auditing OWASP Top 10, configuring CORS/CSP headers, handling secrets, input validation, SQL injection prevention, XSS protection, or any security-related code review.
+- **security-audit-toolkit**: Audit codebases and infrastructure for security issues. Use when scanning dependencies for vulnerabilities, detecting hardcoded secrets, checking OWASP top 10 issues, verifying SSL/TLS, auditing file permissions, or reviewing code for injection and auth flaws.
+- **security-sentinel-skill**: Detect prompt injection, jailbreak, role-hijack, and system extraction attempts. Applies multi-layer defense with semantic analysis and penalty scoring.
+- **vt-hash-intel**: >
+- **wiseocr**: "Convert PDF files to Markdown using WiseOCR API (powered by WiseDiag). Supports table recognition, multi-column layouts, and medical document OCR. Usage: Upload a PDF file and say Use WiseOCR to process this."

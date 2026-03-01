@@ -1,0 +1,114 @@
+#!/bin/bash
+# Virgil Backup Script
+set -euo pipefail
+
+BACKUP_DIR="$HOME/virgil-backup"
+WORKSPACE="$HOME/.openclaw/workspace"
+OPENCLAW="$HOME/.openclaw"
+DISCORD_CHANNEL="1477637814014316586"
+DATE=$(date -u +"%Y-%m-%d")
+TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+ERRORS=()
+
+echo "🔒 Virgil Backup — $TIMESTAMP"
+
+mkdir -p "$BACKUP_DIR/workspace/memory"
+mkdir -p "$BACKUP_DIR/crons"
+mkdir -p "$BACKUP_DIR/config"
+mkdir -p "$BACKUP_DIR/skills-index"
+
+# Workspace files
+for f in SOUL.md MEMORY.md AGENTS.md USER.md IDENTITY.md HEARTBEAT.md TOOLS.md BOOTSTRAP.md; do
+  [ -f "$WORKSPACE/$f" ] && cp "$WORKSPACE/$f" "$BACKUP_DIR/workspace/" || ERRORS+=("Missing: $f")
+done
+
+# Memory directory
+[ -d "$WORKSPACE/memory" ] && cp -r "$WORKSPACE/memory/." "$BACKUP_DIR/workspace/memory/" || ERRORS+=("Missing: memory/")
+
+# Gateway config
+[ -f "$OPENCLAW/openclaw.json" ] && cp "$OPENCLAW/openclaw.json" "$BACKUP_DIR/config/openclaw.json" || ERRORS+=("Missing: openclaw.json")
+
+# Skills list
+if [ -d "$WORKSPACE/skills" ]; then
+  echo "# Installed Skills — $DATE" > "$BACKUP_DIR/skills-index/skills.md"
+  for skill_dir in "$WORKSPACE/skills"/*/; do
+    skill=$(basename "$skill_dir")
+    desc=$(grep "^description:" "$skill_dir/SKILL.md" 2>/dev/null | head -1 | sed 's/description: //' || echo "no description")
+    echo "- **$skill**: $desc" >> "$BACKUP_DIR/skills-index/skills.md"
+  done
+fi
+
+# Cron jobs
+openclaw cron list --json 2>/dev/null > "$BACKUP_DIR/crons/cron-jobs.json" || ERRORS+=("Failed to export crons")
+
+# Auth profiles
+[ -f "$OPENCLAW/agents/main/agent/auth-profiles.json" ] && \
+  cp "$OPENCLAW/agents/main/agent/auth-profiles.json" "$BACKUP_DIR/config/auth-profiles.json" || true
+
+echo "🔍 Scanning for secrets..."
+
+scrub_file() {
+  local file="$1"
+  [ -f "$file" ] || return
+  sed -i 's/[0-9]\{8,10\}:AA[A-Za-z0-9_-]\{33,\}/[TELEGRAM_BOT_TOKEN]/g' "$file"
+  sed -i 's/MTQ[A-Za-z0-9_-]\{20,\}\.[A-Za-z0-9_-]\{6\}\.[A-Za-z0-9_-]\{27,\}/[DISCORD_BOT_TOKEN]/g' "$file"
+  sed -i 's/sk-ant-[A-Za-z0-9_-]\{20,\}/[ANTHROPIC_API_KEY]/g' "$file"
+  sed -i 's/sk-[A-Za-z0-9]\{20,\}/[OPENAI_API_KEY]/g' "$file"
+  sed -i 's/AIza[A-Za-z0-9_-]\{35\}/[GOOGLE_API_KEY]/g' "$file"
+  sed -i 's/ghp_[A-Za-z0-9]\{36\}/[GITHUB_TOKEN]/g' "$file"
+  sed -i 's/+355[0-9]\{9\}/[PHONE_NUMBER]/g' "$file"
+}
+
+find "$BACKUP_DIR/workspace" "$BACKUP_DIR/config" "$BACKUP_DIR/crons" \
+  -type f \( -name "*.md" -o -name "*.json" -o -name "*.yaml" \) | \
+  while read -r f; do scrub_file "$f"; done
+
+echo "✅ Secrets scrubbed"
+
+cat > "$BACKUP_DIR/RESTORE.md" << 'RESTORE'
+# Virgil Restore Guide
+
+## Placeholders to fill in
+- [TELEGRAM_BOT_TOKEN] — from @BotFather
+- [DISCORD_BOT_TOKEN] — from Discord Developer Portal
+- [ANTHROPIC_API_KEY] — from console.anthropic.com
+- [GOOGLE_API_KEY] — from console.cloud.google.com
+- [GATEWAY_TOKEN] — regenerate with: openclaw gateway token
+- [PHONE_NUMBER] — your WhatsApp number
+
+## Restore steps
+1. Install OpenClaw on new server
+2. Clone this repo
+3. Copy config/openclaw.json → ~/.openclaw/openclaw.json
+4. Fill in all [PLACEHOLDERS] with real values
+5. Copy workspace/ files to your OpenClaw workspace
+6. Run: openclaw doctor --fix && openclaw gateway start
+7. Re-import crons from crons/cron-jobs.json
+8. Re-install skills listed in skills-index/skills.md
+RESTORE
+
+cd "$BACKUP_DIR"
+git config user.email "virgil@eternia"
+git config user.name "Virgil"
+git add -A
+
+if git diff --cached --quiet; then
+  SUMMARY="no changes"
+else
+  CHANGED=$(git diff --cached --name-only | wc -l | tr -d ' ')
+  SUMMARY="$CHANGED file(s) changed"
+fi
+
+git commit -m "🔒 Backup $DATE — $SUMMARY" || true
+git push origin main
+
+echo "✅ Pushed to GitHub"
+
+if [ ${#ERRORS[@]} -eq 0 ]; then
+  STATUS="✅ Daily backup complete — $SUMMARY ($TIMESTAMP)"
+else
+  STATUS="⚠️ Backup errors: ${ERRORS[*]} ($TIMESTAMP)"
+fi
+
+openclaw message send --channel discord --target "channel:$DISCORD_CHANNEL" --message "$STATUS" 2>/dev/null || true
+echo "$STATUS"

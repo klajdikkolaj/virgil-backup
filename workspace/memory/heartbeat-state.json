@@ -1,0 +1,10 @@
+{
+  "lastChecks": {
+    "email": 0,
+    "calendar": 0,
+    "coolify": 0
+  },
+  "alertedEvents": [],
+  "coolifyConfigured": false,
+  "notes": "gog not authenticated yet — email/calendar checks skipped until Klajdi sets up gog auth. Coolify API key not configured."
+}

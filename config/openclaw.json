@@ -1,0 +1,166 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.2.26",
+    "lastTouchedAt": "2026-03-01T12:45:13.928Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-01T12:45:13.893Z",
+    "lastRunVersion": "2026.2.26",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "token"
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-6"
+      },
+      "workspace": "/home/clawdkbot/.openclaw/workspace",
+      "memorySearch": {
+        "provider": "gemini",
+        "remote": {
+          "apiKey": "[GOOGLE_API_KEY]"
+        },
+        "model": "gemini-embedding-001"
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "boot-md": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "selfChatMode": true,
+      "allowFrom": [
+        "[PHONE_NUMBER]"
+      ],
+      "groupPolicy": "allowlist",
+      "debounceMs": 0,
+      "accounts": {
+        "default": {
+          "enabled": false,
+          "dmPolicy": "pairing",
+          "groupPolicy": "allowlist",
+          "debounceMs": 0
+        }
+      },
+      "mediaMaxMb": 50
+    },
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "[TELEGRAM_BOT_TOKEN]",
+      "groupPolicy": "allowlist",
+      "streaming": "off"
+    },
+    "discord": {
+      "enabled": true,
+      "token": "[DISCORD_BOT_TOKEN]",
+      "groupPolicy": "allowlist",
+      "streaming": "off",
+      "guilds": {
+        "1477606617670221948": {
+          "channels": {
+            "1477637736964952075": {
+              "enabled": true,
+              "requireMention": false
+            },
+            "1477637773681885184": {
+              "enabled": true,
+              "requireMention": false
+            },
+            "1477637792157794369": {
+              "enabled": true,
+              "requireMention": false
+            },
+            "1477637814014316586": {
+              "enabled": true,
+              "requireMention": false
+            },
+            "1477637827964571780": {
+              "enabled": true,
+              "requireMention": false
+            }
+          },
+          "requireMention": false
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "931c86b0590e687a04cd8c88406966ffd228de9b67d24752"
+    },
+    "tailscale": {
+      "mode": "serve",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "pnpm"
+    },
+    "entries": {
+      "goplaces": {
+        "apiKey": "[GOOGLE_API_KEY]"
+      },
+      "notion": {
+        "apiKey": "no"
+      },
+      "openai-image-gen": {
+        "apiKey": "no"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "whatsapp": {
+        "enabled": true
+      },
+      "discord": {
+        "enabled": true
+      }
+    }
+  }
+}
