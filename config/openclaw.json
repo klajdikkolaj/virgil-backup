@@ -1,10 +1,15 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.2.26",
-    "lastTouchedAt": "2026-03-01T12:45:13.928Z"
+    "lastTouchedAt": "2026-03-01T21:05:49.207Z"
+  },
+  "env": {
+    "GOG_KEYRING_BACKEND": "file",
+    "GOG_KEYRING_PASSWORD": "virgil-gog-2026",
+    "GOG_ACCOUNT": "kljdkolaj@gmail.com"
   },
   "wizard": {
-    "lastRunAt": "2026-03-01T12:45:13.893Z",
+    "lastRunAt": "2026-03-01T21:05:49.174Z",
     "lastRunVersion": "2026.2.26",
     "lastRunCommand": "doctor",
     "lastRunMode": "local"
@@ -14,13 +19,30 @@
       "anthropic:default": {
         "provider": "anthropic",
         "mode": "token"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
       }
     }
   },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "anthropic/claude-sonnet-4-6"
+        "primary": "anthropic/claude-sonnet-4-6",
+        "fallbacks": [
+          "openai-codex/gpt-5.3-codex",
+          "openai-codex/gpt-5.3-codex-spark",
+          "anthropic/claude-opus-4-6",
+          "anthropic/claude-haiku-4-5"
+        ]
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-6": {},
+        "openai-codex/gpt-5.3-codex": {},
+        "openai-codex/gpt-5.3-codex-spark": {},
+        "anthropic/claude-opus-4-6": {},
+        "anthropic/claude-haiku-4-5": {}
       },
       "workspace": "/home/clawdkbot/.openclaw/workspace",
       "memorySearch": {
@@ -94,29 +116,32 @@
       "streaming": "off",
       "guilds": {
         "1477606617670221948": {
+          "requireMention": false,
+          "users": [
+            "692688749972160542"
+          ],
           "channels": {
             "1477637736964952075": {
-              "enabled": true,
-              "requireMention": false
+              "requireMention": false,
+              "enabled": true
             },
             "1477637773681885184": {
-              "enabled": true,
-              "requireMention": false
+              "requireMention": false,
+              "enabled": true
             },
             "1477637792157794369": {
-              "enabled": true,
-              "requireMention": false
+              "requireMention": false,
+              "enabled": true
             },
             "1477637814014316586": {
-              "enabled": true,
-              "requireMention": false
+              "requireMention": false,
+              "enabled": true
             },
             "1477637827964571780": {
-              "enabled": true,
-              "requireMention": false
+              "requireMention": false,
+              "enabled": true
             }
-          },
-          "requireMention": false
+          }
         }
       }
     }

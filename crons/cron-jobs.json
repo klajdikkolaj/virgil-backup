@@ -1,15 +1,41 @@
 {
   "jobs": [
     {
+      "id": "10396329-d3bf-48d3-8eb2-7e09912419c7",
+      "name": "daily-backup",
+      "enabled": true,
+      "createdAtMs": 1772373836253,
+      "updatedAtMs": 1772373836253,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 4 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run the daily backup script: cd ~/virgil-backup && git pull && bash backup.sh"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram"
+      },
+      "state": {
+        "nextRunAtMs": 1772422200000,
+        "runningAtMs": 1772422200008
+      }
+    },
+    {
       "id": "716d6876-39c0-441f-8e4e-3562e5becb37",
       "name": "gateway-watchdog",
       "enabled": true,
       "createdAtMs": 1772368406912,
-      "updatedAtMs": 1772372036031,
+      "updatedAtMs": 1772421976716,
       "schedule": {
         "kind": "every",
-        "everyMs": 1800000,
-        "anchorMs": 1772368406912
+        "everyMs": 300000,
+        "anchorMs": 1772399203926
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -18,17 +44,17 @@
         "message": "Gateway health check: (1) Run 'openclaw doctor --fix' to clean invalid config keys (Discord bug). (2) Check if gateway is active. (3) If not, restart it. (4) Report status."
       },
       "delivery": {
-        "mode": "announce",
+        "mode": "none",
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772373806926,
-        "lastRunAtMs": 1772372006926,
+        "nextRunAtMs": 1772422255783,
+        "lastRunAtMs": 1772421955783,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 29105,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
+        "lastDurationMs": 20933,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
       }
     },
@@ -38,7 +64,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772373274717,
-      "updatedAtMs": 1772373603328,
+      "updatedAtMs": 1772400654018,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 6-22 * * *",
@@ -58,14 +84,38 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772375400000,
-        "lastRunAtMs": 1772373600011,
+        "nextRunAtMs": 1772427600000,
+        "lastRunAtMs": 1772400600006,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 3317,
+        "lastDurationMs": 54012,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "8562697f-36a5-4601-abfb-45d44364a98c",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772356229052,
+      "updatedAtMs": 1772374262846,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * *"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run opencortex memory review: read recent memory/YYYY-MM-DD.md files, distill insights into MEMORY.md, restructure vault memory files for better long-term retention about Klajdi and Eternia project"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "telegram"
+      },
+      "state": {
+        "nextRunAtMs": 1772442000000
       }
     },
     {
@@ -73,7 +123,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772366065756,
-      "updatedAtMs": 1772366065756,
+      "updatedAtMs": 1772416833584,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -90,37 +140,45 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772416800000
+        "nextRunAtMs": 1772503200000,
+        "lastRunAtMs": 1772416800007,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 33577,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     },
     {
-      "id": "8562697f-36a5-4601-abfb-45d44364a98c",
-      "name": "opencortex-memory-review",
+      "id": "5ad0a5d2-6202-4041-9a57-e3ca510b19c1",
+      "name": "daily-maintenance",
       "enabled": true,
-      "createdAtMs": 1772356229052,
-      "updatedAtMs": 1772356229052,
+      "createdAtMs": 1772373950525,
+      "updatedAtMs": 1772373950525,
       "schedule": {
         "kind": "cron",
-        "expr": "0 9 */3 * *"
+        "expr": "0 4 * * *",
+        "tz": "Europe/Tirane"
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run opencortex memory review: read recent memory/YYYY-MM-DD.md files, distill insights into MEMORY.md, restructure vault memory files for better long-term retention about Klajdi and Eternia project"
+        "message": "Run daily maintenance:\n1. Run: openclaw update --yes --json 2>&1 and capture output\n2. Run: systemctl --user restart openclaw-gateway.service\n3. Run: openclaw --version to get current version\n4. Run: openclaw skills check 2>&1 | head -20\n5. Send a Discord message to channel 1477637814014316586 summarizing: what was updated, current version, any errors. If any step failed, report exactly what failed and suggest a fix. Format: use emoji ✅/⚠️/❌ for status."
       },
       "delivery": {
         "mode": "announce",
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772614800000
+        "nextRunAtMs": 1772506800000
       }
     }
   ],
-  "total": 4,
+  "total": 6,
   "offset": 0,
-  "limit": 4,
+  "limit": 6,
   "hasMore": false,
   "nextOffset": null
 }

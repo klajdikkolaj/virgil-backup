@@ -10,8 +10,6 @@ Read `memory/workflows/heartbeat-check.md` for full rules and severity levels.
 
 2. **Calendar** — Check Google Calendar for events starting within 2 hours. Only alert if not already flagged (check `memory/heartbeat-state.json` → alertedEvents).
 
-3. **Coolify** — Check service health via Coolify API. Only alert if something is actually down/unhealthy. Skip if API key not configured.
-
 ### Rules:
 - **Silent if nothing needs attention** — reply HEARTBEAT_OK
 - Use 🚨 URGENT (action needed <1h) or ⚠️ HEADS UP (today) severity

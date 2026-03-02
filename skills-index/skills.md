@@ -1,4 +1,7 @@
-# Installed Skills — 2026-03-01
+# Installed Skills — 2026-03-02
+- **agent-orchestration-multi-agent-optimize**: "Optimize multi-agent systems with coordinated profiling, workload distribution, and cost-aware orchestration. Use when improving agent performance, throughput, or reliability."
+- **agent-team-orchestration**: "Orchestrate multi-agent teams with defined roles, task lifecycles, handoff protocols, and review workflows. Use when: (1) Setting up a team of 2+ agents with different specializations, (2) Defining task routing and lifecycle (inbox → spec → build → review → done), (3) Creating handoff protocols between agents, (4) Establishing review and quality gates, (5) Managing async communication and artifact sharing between agents."
+- **gog**: Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.
 - **memory-guard**: no description
 - **metaskill**: Teaches AI agents how to learn better by enforcing deep correction, transfer learning, and proactive pattern recognition. Use when an error occurs and needs deep analysis (not surface patch), before starting a complex task to check past analogies, or after success to capture winning patterns. NOT for routine file reads or simple one-off commands.
 - **opencortex**: >

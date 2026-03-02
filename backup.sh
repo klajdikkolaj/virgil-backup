@@ -19,7 +19,7 @@ mkdir -p "$BACKUP_DIR/skills-index"
 
 # Workspace files
 for f in SOUL.md MEMORY.md AGENTS.md USER.md IDENTITY.md HEARTBEAT.md TOOLS.md BOOTSTRAP.md; do
-  [ -f "$WORKSPACE/$f" ] && cp "$WORKSPACE/$f" "$BACKUP_DIR/workspace/" || ERRORS+=("Missing: $f")
+  [ -f "$WORKSPACE/$f" ] && cp "$WORKSPACE/$f" "$BACKUP_DIR/workspace/" || true
 done
 
 # Memory directory

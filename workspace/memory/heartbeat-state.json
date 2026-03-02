@@ -1,10 +1,9 @@
 {
   "lastChecks": {
-    "email": 0,
-    "calendar": 0,
-    "coolify": 0
+    "email": 1772531160,
+    "calendar": 1772531160
   },
   "alertedEvents": [],
   "coolifyConfigured": false,
-  "notes": "gog not authenticated yet — email/calendar checks skipped until Klajdi sets up gog auth. Coolify API key not configured."
+  "notes": "Late night check 23:46 UTC Mar 1. No urgent email (newsletters/promotions only + Google Workspace invoice). Calendar: 'New sprint - 15gg' tomorrow Mar 2 at 14:15 CET."
 }
