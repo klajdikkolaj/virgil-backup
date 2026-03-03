@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.2.26",
-    "lastTouchedAt": "2026-03-01T21:05:49.207Z"
+    "lastTouchedVersion": "2026.3.2",
+    "lastTouchedAt": "2026-03-02T16:42:58.630Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -26,20 +26,32 @@
       }
     }
   },
+  "acp": {
+    "enabled": true,
+    "dispatch": {
+      "enabled": true
+    },
+    "backend": "acpx",
+    "defaultAgent": "codex",
+    "allowedAgents": [
+      "claude",
+      "codex"
+    ]
+  },
   "agents": {
     "defaults": {
       "model": {
         "primary": "anthropic/claude-sonnet-4-6",
         "fallbacks": [
           "openai-codex/gpt-5.3-codex",
-          "openai-codex/gpt-5.3-codex-spark",
-          "anthropic/claude-opus-4-6",
-          "anthropic/claude-haiku-4-5"
+          "anthropic/claude-opus-4-6"
         ]
       },
       "models": {
         "anthropic/claude-sonnet-4-6": {},
-        "openai-codex/gpt-5.3-codex": {},
+        "openai-codex/gpt-5.3-codex": {
+          "alias": "codex"
+        },
         "openai-codex/gpt-5.3-codex-spark": {},
         "anthropic/claude-opus-4-6": {},
         "anthropic/claude-haiku-4-5": {}
@@ -51,9 +63,81 @@
           "apiKey": "[GOOGLE_API_KEY]"
         },
         "model": "gemini-embedding-001"
+      },
+      "thinkingDefault": "medium",
+      "subagents": {
+        "model": "openai-codex/gpt-5.3-codex",
+        "thinking": "low",
+        "runTimeoutSeconds": 900
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "Virgil (Sonnet)",
+        "workspace": "/home/clawdkbot/.openclaw/workspace",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-6",
+          "fallbacks": [
+            "openai-codex/gpt-5.3-codex",
+            "anthropic/claude-opus-4-6"
+          ]
+        }
+      },
+      {
+        "id": "virgil-opus",
+        "name": "Virgil (Opus)",
+        "workspace": "/home/clawdkbot/.openclaw/workspace",
+        "model": {
+          "primary": "anthropic/claude-opus-4-6",
+          "fallbacks": [
+            "openai-codex/gpt-5.3-codex"
+          ]
+        }
+      },
+      {
+        "id": "virgil-haiku",
+        "name": "Virgil (Haiku)",
+        "workspace": "/home/clawdkbot/.openclaw/workspace",
+        "model": {
+          "primary": "anthropic/claude-haiku-4-5",
+          "fallbacks": [
+            "openai-codex/gpt-5.3-codex",
+            "anthropic/claude-sonnet-4-6"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h",
+          "target": "discord",
+          "to": "1477637814014316586",
+          "accountId": "default"
+        }
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "virgil-opus",
+      "match": {
+        "channel": "discord",
+        "peer": {
+          "kind": "channel",
+          "id": "1477637773681885184"
+        }
+      }
+    },
+    {
+      "agentId": "virgil-haiku",
+      "match": {
+        "channel": "discord",
+        "peer": {
+          "kind": "channel",
+          "id": "1477637814014316586"
+        }
       }
     }
-  },
+  ],
   "commands": {
     "native": "auto",
     "nativeSkills": "auto",
@@ -61,7 +145,10 @@
     "ownerDisplay": "raw"
   },
   "session": {
-    "dmScope": "per-channel-peer"
+    "dmScope": "per-channel-peer",
+    "threadBindings": {
+      "enabled": true
+    }
   },
   "hooks": {
     "internal": {
@@ -140,6 +227,10 @@
             "1477637827964571780": {
               "requireMention": false,
               "enabled": true
+            },
+            "1477606618224132274": {
+              "requireMention": false,
+              "enabled": true
             }
           }
         }
@@ -184,6 +275,9 @@
         "enabled": true
       },
       "discord": {
+        "enabled": true
+      },
+      "acpx": {
         "enabled": true
       }
     }

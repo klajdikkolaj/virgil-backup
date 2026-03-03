@@ -10,6 +10,7 @@
 - Prefers keeping things simple — no unnecessary complexity
 - Doesn't need iOS Obsidian access — accesses vault through Virgil
 - Doesn't want suspicious/unverified skills installed
+- After creating files in Obsidian vault (~/virgil-vault), always commit and push to git immediately
 
 ## AI & Agents
 - Wants Virgil to be proactive but not annoying

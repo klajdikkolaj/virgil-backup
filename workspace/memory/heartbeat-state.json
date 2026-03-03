@@ -1,9 +1,14 @@
 {
   "lastChecks": {
-    "email": 1772531160,
-    "calendar": 1772531160
+    "email": 1772504340,
+    "calendar": 1772504340
   },
-  "alertedEvents": [],
+  "alertedEvents": [
+    "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z"
+  ],
+  "alertedEmails": [
+    "19cae7817c77ee79"
+  ],
   "coolifyConfigured": false,
-  "notes": "Late night check 23:46 UTC Mar 1. No urgent email (newsletters/promotions only + Google Workspace invoice). Calendar: 'New sprint - 15gg' tomorrow Mar 2 at 14:15 CET."
+  "notes": "02:19 UTC Mar 3. Email: no inbox mail in last 30m. Calendar: no events in next 2h."
 }

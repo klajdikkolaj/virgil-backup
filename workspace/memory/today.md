@@ -1,4 +1,4 @@
-# Today's Scratchpad — 2026-02-27
+# Today's Scratchpad — 2026-03-02
 
 _Ephemeral. Reset or archive daily._
 
@@ -6,13 +6,13 @@ _Ephemeral. Reset or archive daily._
 MODE 1 — Daily Operator
 
 ## Session Notes
-- First session with Klajdi
-- Identity and operating contract established (IDENTITY.md)
-- WhatsApp gateway connected
-- BOOTSTRAP.md: keep, treat IDENTITY.md as the contract
+- Memory review cron ran at 09:00 AM UTC
+- MEMORY.md fully distilled from: 2026-02-27.md, 2026-03-01.md, projects/eternia.md, contacts/klajdi.md, preferences.md
+- Vector memory debug session (2026-03-01) noted — Discord config caching issue documented
 
 ## Tasks / WIP
-_(nothing yet)_
+- Discord reminder set for 19:00 UTC today (2026-03-02)
 
 ## Pending Decisions
-_(nothing yet)_
+- 1Password: CLI installed, no account linked yet
+- Eternia Phase 1 (security hardening): still the active priority

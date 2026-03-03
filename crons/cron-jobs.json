@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772373836253,
-      "updatedAtMs": 1772373836253,
+      "updatedAtMs": 1772422225547,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -22,8 +22,15 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772422200000,
-        "runningAtMs": 1772422200008
+        "nextRunAtMs": 1772508600000,
+        "lastRunAtMs": 1772422200008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 25539,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "runningAtMs": 1772508600012
       }
     },
     {
@@ -31,11 +38,11 @@
       "name": "gateway-watchdog",
       "enabled": true,
       "createdAtMs": 1772368406912,
-      "updatedAtMs": 1772421976716,
+      "updatedAtMs": 1772508000464,
       "schedule": {
         "kind": "every",
-        "everyMs": 300000,
-        "anchorMs": 1772399203926
+        "everyMs": 1800000,
+        "anchorMs": 1772443267419
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -48,11 +55,11 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772422255783,
-        "lastRunAtMs": 1772421955783,
+        "nextRunAtMs": 1772509773152,
+        "lastRunAtMs": 1772507973152,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 20933,
+        "lastDurationMs": 27312,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
@@ -64,7 +71,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772373274717,
-      "updatedAtMs": 1772400654018,
+      "updatedAtMs": 1772487079302,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 6-22 * * *",
@@ -84,14 +91,80 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772427600000,
-        "lastRunAtMs": 1772400600006,
+        "nextRunAtMs": 1772514000000,
+        "lastRunAtMs": 1772487000011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 54012,
-        "lastDelivered": false,
+        "lastDurationMs": 79291,
         "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
+      }
+    },
+    {
+      "id": "9f872043-52e6-46c5-a45d-ec443093e125",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477637827964571780",
+      "name": "Daily Morning Briefing (Non-X Sources)",
+      "enabled": true,
+      "createdAtMs": 1772432503430,
+      "updatedAtMs": 1772438277545,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "sonnet",
+        "message": "You are running Klajdi's daily 2-minute morning briefing at 07:00 Europe/Tirane.\n\nPrimary objective:\nCreate a concise daily briefing WITHOUT using X/Twitter APIs.\n\nTopics to prioritize:\n- OpenClaw news/updates\n- Agent automation news\n- AI breakthroughs\n- Research on connecting mind to digital world (BCI, neurotech, brain-computer interfaces)\n- Also include developer tools, indie hacking, content creation, tech business signals when relevant\n\nAllowed source types:\n- Official blogs/docs/changelogs (OpenClaw docs, GitHub releases/commits/issues, vendor changelogs)\n- Public tech/news sites and newsletters\n- Hacker News / Product Hunt / GitHub trending where useful\n- arXiv / research summaries for AI + BCI topics\n- Public LinkedIn content only if directly accessible without login/paywall and easy to verify\n\nDo NOT do:\n- No X/Twitter calls\n- No scraping behind login walls\n- No Video Ideas section\n- No Quick Hits section\n\nOutput format (channel + Obsidian) must be exactly:\n1) Top Stories (3-5)\n2) Interesting Threads (2-4)\n3) OpenClaw & Agent Automation News\n4) AI Breakthroughs & Mind-Digital Research\n5) Action Items\n\nLength/tone:\n- 2-minute read max\n- Concise, high signal, no fluff\n- Include links for each key item\n\nFile output (MANDATORY):\n- Write full markdown briefing to: /home/clawdkbot/virgil-vault/Daily/YYYY-MM-DD-briefing.md\n\nChannel output:\n- Post concise summary in this Discord channel in same section structure.\n\nIf a source category has thin data that day, say so briefly and continue with best available verified signals."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637827964571780"
+      },
+      "state": {
+        "nextRunAtMs": 1772517600000,
+        "lastRunAtMs": 1772437630833,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 206132,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "874dbd00-0236-4ecc-9b7a-34a8a0117f2f",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477637827964571780",
+      "name": "vault-github-sync-after-briefing",
+      "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
+      "enabled": true,
+      "createdAtMs": 1772440228924,
+      "updatedAtMs": 1772440228924,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5 7 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "sonnet",
+        "message": "Sync the Obsidian vault repo to GitHub after morning briefing.\n\nSteps:\n1) cd /home/clawdkbot/virgil-vault\n2) git pull --rebase\n3) Stage only briefing files: git add Daily/*-briefing.md\n4) If no staged changes, finish with: \"No briefing changes to sync.\"\n5) If staged changes exist:\n   - git commit -m \"chore(briefing): sync daily briefing $(date +%F)\"\n   - git push origin HEAD\n6) Return a short status summary: synced/no-changes/failed and reason if failed.\n\nSafety:\n- Do not modify unrelated files.\n- If merge/rebase conflict happens, stop and report failure."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637827964571780"
+      },
+      "state": {
+        "nextRunAtMs": 1772517900000
       }
     },
     {
@@ -99,7 +172,7 @@
       "name": "opencortex-memory-review",
       "enabled": true,
       "createdAtMs": 1772356229052,
-      "updatedAtMs": 1772374262846,
+      "updatedAtMs": 1772480937662,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *"
@@ -112,10 +185,18 @@
       },
       "delivery": {
         "mode": "announce",
-        "channel": "telegram"
+        "channel": "discord",
+        "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772442000000
+        "nextRunAtMs": 1772528400000,
+        "lastRunAtMs": 1772442031817,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 81558,
+        "lastError": "No delivery target resolved for channel \"telegram\". Set delivery.to.",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     },
     {
@@ -123,7 +204,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772366065756,
-      "updatedAtMs": 1772416833584,
+      "updatedAtMs": 1772503257838,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -140,14 +221,14 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772503200000,
-        "lastRunAtMs": 1772416800007,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 33577,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1772589600000,
+        "lastRunAtMs": 1772503200007,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 57831,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "No delivery target resolved for channel \"telegram\". Set delivery.to."
       }
     },
     {
@@ -172,13 +253,13 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772506800000
+        "nextRunAtMs": 1772593200000
       }
     }
   ],
-  "total": 6,
+  "total": 8,
   "offset": 0,
-  "limit": 6,
+  "limit": 8,
   "hasMore": false,
   "nextOffset": null
 }
