@@ -1,19 +1,30 @@
-# Klajdi
+# Klajdi — Contact Memory
+_Last distilled: 2026-03-03_
 
-**Email:** kljdkolaj@gmail.com
-**Location:** Albania (timezone: Europe/Tirane)
-**Claude account:** Claude Pro via OAuth (kljdkolaj@gmail.com)
+## Identity
+- Name: Klajdi
+- Role: Creator and human authority of the Eternia project
 
-## About
-- Creator of the Eternia project
-- Wants a collaborative partner, not an autonomous agent
-- Values long-term coherence, structured thinking, safety, deliberate action
-- macOS user, iPhone user
+## Stable collaboration profile
+- Wants a collaborative partner, not autonomous takeover behavior
+- Strong preference for structured thinking and long-term coherence
+- Safety-first mindset: deliberate, reversible moves over speed
 
-## Setup
-- OpenClaw on Ubuntu server (89.167.111.189)
-- Tailscale connected: ubuntu-8gb-hel1-1.tail15b8b4.ts.net
-- Telegram: primary channel (chat_id: 2016260249)
-- WhatsApp: disabled (personal number, not a bot)
-- Discord: enabled but needs Message Content Intent fix
-- Obsidian vault: klajdikkolaj/virgil-vault (GitHub, synced via git)
+## Communication preferences
+- English by default
+- Direct and concise tone (minimal filler)
+- Ask first before any external, destructive, or irreversible action
+
+## AI/model preferences
+- Only notify model changes when automatic fallback occurs
+- Do not notify for manual model switches
+- Codex default reasoning: medium
+- Escalate to high/extra-high only for high-stakes/security/high-ambiguity tasks, and explicitly state why
+
+## Environment notes (operational)
+- Main channels: Telegram + Discord
+- Devices: macOS + iPhone
+- Prefers SSH-key workflows over token-based auth
+
+## Active shared objective
+- Build Eternia as a long-term evolving AI ecosystem with governance and safety as core constraints

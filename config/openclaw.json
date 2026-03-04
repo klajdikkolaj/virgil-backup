@@ -248,6 +248,9 @@
     "tailscale": {
       "mode": "serve",
       "resetOnExit": false
+    },
+    "remote": {
+      "token": "931c86b0590e687a04cd8c88406966ffd228de9b67d24752"
     }
   },
   "skills": {

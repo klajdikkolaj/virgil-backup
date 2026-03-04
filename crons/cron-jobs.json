@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772373836253,
-      "updatedAtMs": 1772422225547,
+      "updatedAtMs": 1772508632359,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -22,15 +22,14 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772508600000,
-        "lastRunAtMs": 1772422200008,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 25539,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "runningAtMs": 1772508600012
+        "nextRunAtMs": 1772595000000,
+        "lastRunAtMs": 1772508600012,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 32347,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "runningAtMs": 1772595000010
       }
     },
     {
@@ -38,7 +37,7 @@
       "name": "gateway-watchdog",
       "enabled": true,
       "createdAtMs": 1772368406912,
-      "updatedAtMs": 1772508000464,
+      "updatedAtMs": 1772594397980,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000,
@@ -55,11 +54,11 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772509773152,
-        "lastRunAtMs": 1772507973152,
+        "nextRunAtMs": 1772596173554,
+        "lastRunAtMs": 1772594373554,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 27312,
+        "lastDurationMs": 24426,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
@@ -71,7 +70,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772373274717,
-      "updatedAtMs": 1772487079302,
+      "updatedAtMs": 1772573459078,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 6-22 * * *",
@@ -91,14 +90,48 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772514000000,
-        "lastRunAtMs": 1772487000011,
+        "nextRunAtMs": 1772600400000,
+        "lastRunAtMs": 1772573400006,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 79291,
+        "lastDurationMs": 59072,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
+      }
+    },
+    {
+      "id": "430be374-b094-4959-8993-fce706c87593",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477606618224132274",
+      "name": "qmd-light-refresh",
+      "enabled": true,
+      "createdAtMs": 1772525977548,
+      "updatedAtMs": 1772589762178,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */3 * * *",
+        "tz": "Europe/Tirane",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run lightweight QMD refresh in CPU-only mode:\nexport QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU=off\nqmd update\nReport indexed counts and any errors."
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1772600547369,
+        "lastRunAtMs": 1772589747379,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 14799,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -108,7 +141,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772432503430,
-      "updatedAtMs": 1772438277545,
+      "updatedAtMs": 1772517823461,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *",
@@ -127,11 +160,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1772517600000,
-        "lastRunAtMs": 1772437630833,
+        "nextRunAtMs": 1772604000000,
+        "lastRunAtMs": 1772517665246,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 206132,
+        "lastDurationMs": 158215,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -145,7 +178,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772440228924,
-      "updatedAtMs": 1772440228924,
+      "updatedAtMs": 1772517941152,
       "schedule": {
         "kind": "cron",
         "expr": "5 7 * * *",
@@ -164,7 +197,14 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1772517900000
+        "nextRunAtMs": 1772604300000,
+        "lastRunAtMs": 1772517900008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 41144,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -172,7 +212,7 @@
       "name": "opencortex-memory-review",
       "enabled": true,
       "createdAtMs": 1772356229052,
-      "updatedAtMs": 1772480937662,
+      "updatedAtMs": 1772529076858,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *"
@@ -189,14 +229,14 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772528400000,
-        "lastRunAtMs": 1772442031817,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 81558,
-        "lastError": "No delivery target resolved for channel \"telegram\". Set delivery.to.",
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1
+        "nextRunAtMs": 1772614800000,
+        "lastRunAtMs": 1772528975340,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 101518,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -204,7 +244,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772366065756,
-      "updatedAtMs": 1772503257838,
+      "updatedAtMs": 1772589628521,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -214,21 +254,21 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run vault semantic search reindex: cd ~/virgil-vault && git pull && qmd update && qmd embed. Then confirm index is up to date."
+        "message": "Run vault semantic search reindex in CPU-only mode:\nexport QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU=off\ncd ~/virgil-vault && git pull && qmd update && qmd embed\nThen confirm index is up to date and report any errors."
       },
       "delivery": {
         "mode": "announce",
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772589600000,
-        "lastRunAtMs": 1772503200007,
+        "nextRunAtMs": 1772676000000,
+        "lastRunAtMs": 1772589600010,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 57831,
+        "lastDurationMs": 28511,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "No delivery target resolved for channel \"telegram\". Set delivery.to."
+        "consecutiveErrors": 2,
+        "lastError": "Delivering to Telegram requires target <chatId>"
       }
     },
     {
@@ -236,7 +276,7 @@
       "name": "daily-maintenance",
       "enabled": true,
       "createdAtMs": 1772373950525,
-      "updatedAtMs": 1772373950525,
+      "updatedAtMs": 1772513993353,
       "schedule": {
         "kind": "cron",
         "expr": "0 4 * * *",
@@ -246,20 +286,22 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run daily maintenance:\n1. Run: openclaw update --yes --json 2>&1 and capture output\n2. Run: systemctl --user restart openclaw-gateway.service\n3. Run: openclaw --version to get current version\n4. Run: openclaw skills check 2>&1 | head -20\n5. Send a Discord message to channel 1477637814014316586 summarizing: what was updated, current version, any errors. If any step failed, report exactly what failed and suggest a fix. Format: use emoji ✅/⚠️/❌ for status."
+        "message": "Run daily maintenance (safe mode, no self-restart inside same run):\n1. Run: openclaw update --yes --json 2>&1 and capture output\n2. Run: openclaw --version to get current version\n3. Run: openclaw skills check 2>&1 | head -20\n4. Send a Discord message to channel 1477637814014316586 summarizing: what was updated, current version, any errors. If any step failed, report exactly what failed and suggest a fix. Format: use emoji ✅/⚠️/❌ for status.\n5. IMPORTANT: Do NOT run `systemctl --user restart openclaw-gateway.service` in this job (it can terminate this cron run before completion).",
+        "model": "anthropic/claude-sonnet-4-6"
       },
       "delivery": {
         "mode": "announce",
-        "channel": "telegram"
+        "channel": "discord",
+        "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772593200000
+        "nextRunAtMs": 1772679600000
       }
     }
   ],
-  "total": 8,
+  "total": 9,
   "offset": 0,
-  "limit": 8,
+  "limit": 9,
   "hasMore": false,
   "nextOffset": null
 }
