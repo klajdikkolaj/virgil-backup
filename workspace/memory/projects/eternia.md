@@ -1,43 +1,51 @@
 # Eternia — Project Memory
-_Last distilled: 2026-03-03_
+_Last distilled: 2026-03-04_
 
 ## Project definition
 Eternia is a long-term evolving AI ecosystem combining learning, exploration, and symbolic worldbuilding.
 
+## Authority and governance
+- Human authority: Klajdi
+- Assistant role: steward/operator, never autonomous project owner
+- Execution must preserve governance clarity and safety constraints
+
 ## Source of truth
 - Repository: `Eternakk/eternia`
 - Access: SSH confirmed
-- Base branch for implementation: `seriously`
-- Key branch analyzed: `coklajdi/deep-research-continuation-plan`
+- Base implementation branch: `seriously`
+- Key strategy branch previously analyzed: `coklajdi/deep-research-continuation-plan`
 
-## Core execution law
-**Security-first sequencing is mandatory.**
-Do not advance to embodied movement / production multi-agent execution before trust-boundary hardening is complete.
+## Non-negotiable sequencing rule
+**Do not progress to embodied movement or production multi-agent scale before trust-boundary hardening is complete.**
 
-## Current phase map
-1. Trust boundary hardening (**P0, active priority**)
+## Phase map (canonical)
+1. Trust-boundary hardening (**active priority / P0**)
 2. Conversation hub + consented data capture
 3. Executable symbolic governance (laws runtime)
 4. Embodied movement + governor veto
 5. Export + anomaly analytics
-6. Production multi-agent dev loop
+6. Production multi-agent development loop
 
 ## Current status
-- All phases remain in-progress / incomplete.
-- Strategic focus remains on Phase 1 hardening.
+- No phase is marked complete.
+- Strategic focus remains Phase 1 hardening.
 
-## Stack memory
+## Technical stack memory (working model)
 - Backend: Python 3.12, FastAPI, WebSocket, PostgreSQL
 - Frontend: React/Vite
-- Infra: Docker, Prometheus, Grafana, Terraform
+- Infrastructure/ops: Docker, Prometheus, Grafana, Terraform
 
-## Important modules
+## Important module map
 - `world_builder.py` — simulation core
-- `alignment_governor.py` — safety enforcement
-- `services/api/` — REST + WebSocket surface
-- `modules/` — governor, monitoring, RL loop
+- `alignment_governor.py` — safety/governance enforcement
+- `services/api/` — REST + WebSocket surfaces
+- `modules/` — governor, monitoring, RL loop components
 
-## Execution governance links
+## Execution governance references
 - Routing and lane ownership: `memory/workflows/channel-routing.md`
-- Protocol strictness: `memory/workflows/protocol-levels.md`
-- Synthesis order for strategy answers: `memory/workflows/knowledge-access-order.md`
+- Protocol strictness by risk: `memory/workflows/protocol-levels.md`
+- Required synthesis order: `memory/workflows/knowledge-access-order.md`
+
+## Open strategic debts
+- Convert Phase 1 hardening from principle into tracked verification checklist with explicit pass/fail gates.
+- Reconfirm lane-level validation/testing cadence after model-routing changes.

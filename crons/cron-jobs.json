@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772373836253,
-      "updatedAtMs": 1772508632359,
+      "updatedAtMs": 1772595022775,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -22,14 +22,14 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772595000000,
-        "lastRunAtMs": 1772508600012,
+        "nextRunAtMs": 1772681400000,
+        "lastRunAtMs": 1772595000010,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 32347,
+        "lastDurationMs": 22765,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "runningAtMs": 1772595000010
+        "consecutiveErrors": 2,
+        "runningAtMs": 1772681400005
       }
     },
     {
@@ -37,7 +37,7 @@
       "name": "gateway-watchdog",
       "enabled": true,
       "createdAtMs": 1772368406912,
-      "updatedAtMs": 1772594397980,
+      "updatedAtMs": 1772680894862,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000,
@@ -54,11 +54,11 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772596173554,
-        "lastRunAtMs": 1772594373554,
+        "nextRunAtMs": 1772682667808,
+        "lastRunAtMs": 1772680867808,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 24426,
+        "lastDurationMs": 27054,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
@@ -70,7 +70,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772373274717,
-      "updatedAtMs": 1772573459078,
+      "updatedAtMs": 1772659872864,
       "schedule": {
         "kind": "cron",
         "expr": "*/30 6-22 * * *",
@@ -90,11 +90,11 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772600400000,
-        "lastRunAtMs": 1772573400006,
+        "nextRunAtMs": 1772686800000,
+        "lastRunAtMs": 1772659800011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 59072,
+        "lastDurationMs": 72853,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
@@ -107,7 +107,7 @@
       "name": "qmd-light-refresh",
       "enabled": true,
       "createdAtMs": 1772525977548,
-      "updatedAtMs": 1772589762178,
+      "updatedAtMs": 1772676162029,
       "schedule": {
         "kind": "cron",
         "expr": "0 */3 * * *",
@@ -124,11 +124,11 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1772600547369,
-        "lastRunAtMs": 1772589747379,
+        "nextRunAtMs": 1772686947369,
+        "lastRunAtMs": 1772676147376,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 14799,
+        "lastDurationMs": 14653,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
@@ -141,7 +141,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772432503430,
-      "updatedAtMs": 1772517823461,
+      "updatedAtMs": 1772604327555,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *",
@@ -160,11 +160,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1772604000000,
-        "lastRunAtMs": 1772517665246,
+        "nextRunAtMs": 1772690400000,
+        "lastRunAtMs": 1772604063929,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 158215,
+        "lastDurationMs": 263626,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -178,7 +178,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772440228924,
-      "updatedAtMs": 1772517941152,
+      "updatedAtMs": 1772604375953,
       "schedule": {
         "kind": "cron",
         "expr": "5 7 * * *",
@@ -197,11 +197,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1772604300000,
-        "lastRunAtMs": 1772517900008,
+        "nextRunAtMs": 1772690700000,
+        "lastRunAtMs": 1772604329796,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 41144,
+        "lastDurationMs": 46157,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
@@ -212,7 +212,7 @@
       "name": "opencortex-memory-review",
       "enabled": true,
       "createdAtMs": 1772356229052,
-      "updatedAtMs": 1772529076858,
+      "updatedAtMs": 1772614914107,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * *"
@@ -229,11 +229,11 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772614800000,
-        "lastRunAtMs": 1772528975340,
+        "nextRunAtMs": 1772701200000,
+        "lastRunAtMs": 1772614800009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 101518,
+        "lastDurationMs": 114098,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -244,7 +244,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772366065756,
-      "updatedAtMs": 1772589628521,
+      "updatedAtMs": 1772676043588,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -261,33 +261,33 @@
         "channel": "telegram"
       },
       "state": {
-        "nextRunAtMs": 1772676000000,
-        "lastRunAtMs": 1772589600010,
+        "nextRunAtMs": 1772762400000,
+        "lastRunAtMs": 1772676000010,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 28511,
+        "lastDurationMs": 43578,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 2,
+        "consecutiveErrors": 3,
         "lastError": "Delivering to Telegram requires target <chatId>"
       }
     },
     {
       "id": "5ad0a5d2-6202-4041-9a57-e3ca510b19c1",
-      "name": "daily-maintenance",
+      "name": "openclaw-update-postcheck-report",
       "enabled": true,
       "createdAtMs": 1772373950525,
-      "updatedAtMs": 1772513993353,
+      "updatedAtMs": 1772604646372,
       "schedule": {
         "kind": "cron",
-        "expr": "0 4 * * *",
+        "expr": "0 4 */3 * *",
         "tz": "Europe/Tirane"
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run daily maintenance (safe mode, no self-restart inside same run):\n1. Run: openclaw update --yes --json 2>&1 and capture output\n2. Run: openclaw --version to get current version\n3. Run: openclaw skills check 2>&1 | head -20\n4. Send a Discord message to channel 1477637814014316586 summarizing: what was updated, current version, any errors. If any step failed, report exactly what failed and suggest a fix. Format: use emoji ✅/⚠️/❌ for status.\n5. IMPORTANT: Do NOT run `systemctl --user restart openclaw-gateway.service` in this job (it can terminate this cron run before completion).",
-        "model": "anthropic/claude-sonnet-4-6"
+        "message": "Run OpenClaw update cycle (every 3 days) with post-check and report.\n\nSteps:\n1) Precheck\n   - Run: openclaw --version\n   - Run: openclaw status\n2) Update\n   - Run: openclaw update --yes --json 2>&1\n   - IMPORTANT: Do NOT run `systemctl --user restart openclaw-gateway.service` inside this job.\n3) Post-check\n   - Run: openclaw --version\n   - Run: openclaw status\n   - Run: openclaw doctor 2>&1 | head -40\n4) Report to Discord monitoring channel 1477637814014316586 with concise summary:\n   - pre-version -> post-version\n   - update outcome\n   - post-check health\n   - any warnings/errors\n   - use ✅/⚠️/❌ status markers\n\nIf update or checks fail, include exact failed command and likely cause.",
+        "model": "sonnet"
       },
       "delivery": {
         "mode": "announce",
@@ -295,7 +295,7 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772679600000
+        "nextRunAtMs": 1772852400000
       }
     }
   ],
