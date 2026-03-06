@@ -1,10 +1,11 @@
 # Preferences — Distilled Stable Rules
-_Last distilled: 2026-03-04_
+_Last distilled: 2026-03-05_
 
 ## Communication
 - English by default.
 - Keep responses direct and concise.
 - Avoid performative filler.
+- For practical guidance, prefer: **theory → protocol → action**.
 
 ## Safety + consent
 - Ask before external, destructive, or irreversible actions.
@@ -21,6 +22,7 @@ _Last distilled: 2026-03-04_
 - Codex reasoning default: medium.
 - Escalate to high/extra-high only for high-stakes/security/high-ambiguity tasks.
 - When escalating reasoning, explicitly state why.
+- For meaningful technical/research outputs, report effective model/lane usage and fallback outcomes.
 
 ## Knowledge hygiene
 - Keep long-term memory curated and stable.

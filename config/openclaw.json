@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.2",
-    "lastTouchedAt": "2026-03-02T16:42:58.630Z"
+    "lastTouchedVersion": "2026.3.3",
+    "lastTouchedAt": "2026-03-05T14:04:08.760Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -41,10 +41,11 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "anthropic/claude-sonnet-4-6",
+        "primary": "openai-codex/gpt-5.3-codex",
         "fallbacks": [
-          "openai-codex/gpt-5.3-codex",
-          "anthropic/claude-opus-4-6"
+          "anthropic/claude-opus-4-6",
+          "anthropic/claude-sonnet-4-6",
+          "anthropic/claude-haiku-4-5"
         ]
       },
       "models": {
@@ -75,35 +76,36 @@
       {
         "id": "main",
         "default": true,
-        "name": "Virgil (Sonnet)",
+        "name": "Virgil (Codex)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
-          "primary": "anthropic/claude-sonnet-4-6",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "openai-codex/gpt-5.3-codex",
+            "anthropic/claude-sonnet-4-6",
             "anthropic/claude-opus-4-6"
           ]
         }
       },
       {
         "id": "virgil-opus",
-        "name": "Virgil (Opus)",
+        "name": "Virgil (Codex→Opus)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
-          "primary": "anthropic/claude-opus-4-6",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "openai-codex/gpt-5.3-codex"
+            "anthropic/claude-opus-4-6",
+            "anthropic/claude-sonnet-4-6"
           ]
         }
       },
       {
         "id": "virgil-haiku",
-        "name": "Virgil (Haiku)",
+        "name": "Virgil (Codex→Haiku)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
-          "primary": "anthropic/claude-haiku-4-5",
+          "primary": "openai-codex/gpt-5.3-codex",
           "fallbacks": [
-            "openai-codex/gpt-5.3-codex",
+            "anthropic/claude-haiku-4-5",
             "anthropic/claude-sonnet-4-6"
           ]
         },

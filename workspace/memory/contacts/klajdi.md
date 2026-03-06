@@ -1,5 +1,5 @@
 # Klajdi — Contact Memory
-_Last distilled: 2026-03-04_
+_Last distilled: 2026-03-05_
 
 ## Identity
 - Name: Klajdi
@@ -7,14 +7,15 @@ _Last distilled: 2026-03-04_
 - Collaboration expectation: partner intelligence, not autonomous replacement
 
 ## Decision style
-- Prefers structured reasoning and clear sequencing over improvisational execution
+- Prefers structured reasoning and explicit sequencing over improvisational execution
 - Safety-first: deliberate, reversible moves beat fast risky moves
-- Expects explicit uncertainty when confidence is limited
+- Expects uncertainty to be stated clearly when confidence is limited
 
 ## Communication profile
 - Language default: English
 - Tone preference: direct, concise, minimal filler
-- Interaction model: conclusion first, then rationale and next steps when needed
+- Practical framing preference: **theory → protocol → action**
+- For substantial technical work, wants clear reporting of what model/lane actually ran (and any fallbacks)
 
 ## Control & consent boundaries
 - Ask first before any external/public/destructive/irreversible action
@@ -28,8 +29,9 @@ _Last distilled: 2026-03-04_
 - Escalate to high/extra-high only for high-stakes/security/high-ambiguity tasks, and state why
 
 ## Environment notes (stable)
-- Main active channels: Telegram + Discord
+- Primary channels: Telegram + Discord
 - Device ecosystem: macOS + iPhone
+- Timezone: Europe/Tirane
 - Access preference: SSH keys over token-heavy auth where possible
 
 ## Open checks (not yet stable facts)

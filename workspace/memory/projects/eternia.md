@@ -1,5 +1,5 @@
 # Eternia — Project Memory
-_Last distilled: 2026-03-04_
+_Last distilled: 2026-03-05_
 
 ## Project definition
 Eternia is a long-term evolving AI ecosystem combining learning, exploration, and symbolic worldbuilding.
@@ -7,7 +7,7 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 ## Authority and governance
 - Human authority: Klajdi
 - Assistant role: steward/operator, never autonomous project owner
-- Execution must preserve governance clarity and safety constraints
+- Execution must preserve governance clarity, consent boundaries, and safety constraints
 
 ## Source of truth
 - Repository: `Eternakk/eternia`
@@ -30,6 +30,11 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - No phase is marked complete.
 - Strategic focus remains Phase 1 hardening.
 
+## Operating expectations for project work
+- Prefer rigorous sequencing and evidence over speed.
+- Use explicit protocol gates for high-risk/research work.
+- Keep reporting transparent about effective lane/model execution and fallback outcomes.
+
 ## Technical stack memory (working model)
 - Backend: Python 3.12, FastAPI, WebSocket, PostgreSQL
 - Frontend: React/Vite
@@ -45,7 +50,8 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - Routing and lane ownership: `memory/workflows/channel-routing.md`
 - Protocol strictness by risk: `memory/workflows/protocol-levels.md`
 - Required synthesis order: `memory/workflows/knowledge-access-order.md`
+- Deep research contract: `memory/workflows/deep-research.md`
 
 ## Open strategic debts
-- Convert Phase 1 hardening from principle into tracked verification checklist with explicit pass/fail gates.
-- Reconfirm lane-level validation/testing cadence after model-routing changes.
+- Convert Phase 1 hardening into a tracked verification checklist with explicit pass/fail gates.
+- Reconfirm lane-level validation/testing cadence after routing and fallback changes.
