@@ -287,26 +287,5 @@
         "enabled": true
       }
     }
-  },
-  "assistantFileSettings": {
-    "bootstrapMaxChars": 5000,
-    "bootstrapTotalMaxChars": 20000
-  },
-  "contextPruning": {
-    "enabled": true,
-    "maxHistoryMessages": 120,
-    "strategy": "summary",
-    "minMessagesBeforePrune": 80,
-    "preserveSystemMessages": true
-  },
-  "compaction": {
-    "enabled": true,
-    "targetPromptTokens": 35000,
-    "reserveOutputTokens": 6000,
-    "triggerEveryTurns": 12,
-    "triggerOnEstimatedPromptTokens": 70000,
-    "summaryStyle": "structured",
-    "includeToolCallDigest": true,
-    "persistPath": "memory/compactions"
   }
 }

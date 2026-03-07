@@ -8,44 +8,42 @@ if [ ! -f "$LIVE_CONFIG" ]; then
   exit 1
 fi
 
-backup_path="${LIVE_CONFIG}.bak.$(date +%Y%m%d-%H%M%S)"
-cp "$LIVE_CONFIG" "$backup_path"
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "python3 is required" >&2
+  exit 1
+fi
 
-tmp=$(mktemp)
-jq '
-  .meta.lastTouchedVersion = "2026.3.7" |
-  .meta.lastTouchedAt = "2026-03-07T12:00:00.000Z" |
-  .agents.defaults.thinkingDefault = "low" |
-  .hooks.internal.entries["bootstrap-extra-files"].enabled = false |
-  .hooks.internal.entries["boot-md"].enabled = false |
-  .hooks.internal.entries["session-memory"].enabled = true |
-  .hooks.internal.entries["session-memory"].autoWriteOnCompaction = true |
-  .assistantFileSettings = {
-    bootstrapMaxChars: 5000,
-    bootstrapTotalMaxChars: 20000
-  } |
-  .contextPruning = {
-    enabled: true,
-    maxHistoryMessages: 120,
-    strategy: "summary",
-    minMessagesBeforePrune: 80,
-    preserveSystemMessages: true
-  } |
-  .compaction = {
-    enabled: true,
-    targetPromptTokens: 35000,
-    reserveOutputTokens: 6000,
-    triggerEveryTurns: 12,
-    triggerOnEstimatedPromptTokens: 70000,
-    summaryStyle: "structured",
-    includeToolCallDigest: true,
-    persistPath: "memory/compactions"
-  }
-' "$LIVE_CONFIG" > "$tmp"
+python3 - "$LIVE_CONFIG" <<'PY'
+import json
+import shutil
+import sys
+from datetime import datetime, timezone
+from pathlib import Path
 
-mv "$tmp" "$LIVE_CONFIG"
+cfg_path = Path(sys.argv[1]).expanduser()
+raw = json.loads(cfg_path.read_text())
 
-jq empty "$LIVE_CONFIG"
+backup_path = cfg_path.with_name(cfg_path.name + ".bak." + datetime.now().strftime("%Y%m%d-%H%M%S"))
+shutil.copy2(cfg_path, backup_path)
 
-echo "Applied optimizations to: $LIVE_CONFIG"
-echo "Backup saved at: $backup_path"
+raw.setdefault("meta", {})
+raw["meta"]["lastTouchedVersion"] = "2026.3.7"
+raw["meta"]["lastTouchedAt"] = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+agents = raw.setdefault("agents", {}).setdefault("defaults", {})
+agents["thinkingDefault"] = "low"
+
+entries = raw.setdefault("hooks", {}).setdefault("internal", {}).setdefault("entries", {})
+entries.setdefault("session-memory", {})["enabled"] = True
+entries["session-memory"]["autoWriteOnCompaction"] = True
+entries.setdefault("bootstrap-extra-files", {})["enabled"] = False
+entries.setdefault("boot-md", {})["enabled"] = False
+
+# Not supported on OpenClaw 2026.3.2; ensure they are absent.
+for key in ("assistantFileSettings", "contextPruning", "compaction"):
+    raw.pop(key, None)
+
+cfg_path.write_text(json.dumps(raw, indent=2) + "\n")
+print(f"Applied compatible optimizations to: {cfg_path}")
+print(f"Backup saved at: {backup_path}")
+PY

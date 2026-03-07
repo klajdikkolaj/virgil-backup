@@ -4,131 +4,108 @@ set -euo pipefail
 INPUT_FILE="${1:-crons/cron-jobs.json}"
 DRY_RUN="${DRY_RUN:-0}"
 
-if ! command -v jq >/dev/null 2>&1; then
-  echo "jq is required" >&2
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "python3 is required" >&2
   exit 1
 fi
-
 if ! command -v openclaw >/dev/null 2>&1; then
   echo "openclaw is required" >&2
   exit 1
 fi
-
 if [ ! -f "$INPUT_FILE" ]; then
   echo "Cron JSON not found: $INPUT_FILE" >&2
   exit 1
 fi
 
-ms_to_duration() {
-  local ms="$1"
-  if [ "$ms" -eq 0 ]; then
-    echo "0s"
-  elif [ $((ms % 3600000)) -eq 0 ]; then
-    echo "$((ms / 3600000))h"
-  elif [ $((ms % 60000)) -eq 0 ]; then
-    echo "$((ms / 60000))m"
-  elif [ $((ms % 1000)) -eq 0 ]; then
-    echo "$((ms / 1000))s"
-  else
-    echo "${ms}ms"
-  fi
-}
+python3 - "$INPUT_FILE" "$DRY_RUN" <<'PY'
+import json
+import shlex
+import subprocess
+import sys
+from pathlib import Path
 
-run_cmd() {
-  if [ "$DRY_RUN" = "1" ]; then
-    printf '[dry-run]'
-    printf ' %q' "$@"
-    printf '\n'
-  else
-    "$@"
-  fi
-}
+input_file = Path(sys.argv[1])
+dry_run = sys.argv[2] == "1"
 
-count=0
+data = json.loads(input_file.read_text())
 
-while IFS= read -r row; do
-  job_json=$(printf '%s' "$row" | base64 --decode)
+def ms_to_duration(ms: int) -> str:
+    if ms == 0:
+        return "0s"
+    if ms % 3_600_000 == 0:
+        return f"{ms // 3_600_000}h"
+    if ms % 60_000 == 0:
+        return f"{ms // 60_000}m"
+    if ms % 1_000 == 0:
+        return f"{ms // 1_000}s"
+    return f"{ms}ms"
 
-  kind=$(jq -r '.payload.kind // ""' <<<"$job_json")
-  if [ "$kind" != "agentTurn" ]; then
-    echo "Skipping non-agentTurn job: $(jq -r '.name' <<<"$job_json")"
-    continue
-  fi
+count = 0
+for job in data.get("jobs", []):
+    payload = job.get("payload", {})
+    if payload.get("kind") != "agentTurn":
+        print(f"Skipping non-agentTurn job: {job.get('name', '<unnamed>')}")
+        continue
 
-  cmd=(openclaw cron add)
+    cmd = ["openclaw", "cron", "add"]
 
-  name=$(jq -r '.name // empty' <<<"$job_json")
-  [ -n "$name" ] && cmd+=(--name "$name")
+    def add(flag, value):
+        if value is None:
+            return
+        if isinstance(value, str) and value == "":
+            return
+        cmd.extend([flag, str(value)])
 
-  description=$(jq -r '.description // empty' <<<"$job_json")
-  [ -n "$description" ] && cmd+=(--description "$description")
+    add("--name", job.get("name"))
+    add("--description", job.get("description"))
 
-  enabled=$(jq -r 'if has("enabled") then (.enabled | tostring) else "true" end' <<<"$job_json")
-  [ "$enabled" = "false" ] && cmd+=(--disabled)
+    if job.get("enabled", True) is False:
+        cmd.append("--disabled")
 
-  agent_id=$(jq -r '.agentId // empty' <<<"$job_json")
-  [ -n "$agent_id" ] && cmd+=(--agent "$agent_id")
+    add("--agent", job.get("agentId"))
+    add("--session", job.get("sessionTarget"))
+    add("--session-key", job.get("sessionKey"))
+    add("--wake", job.get("wakeMode"))
 
-  session_target=$(jq -r '.sessionTarget // empty' <<<"$job_json")
-  [ -n "$session_target" ] && cmd+=(--session "$session_target")
+    schedule = job.get("schedule", {})
+    kind = schedule.get("kind")
+    if kind == "cron":
+        add("--cron", schedule.get("expr"))
+        add("--tz", schedule.get("tz"))
+        stagger_ms = schedule.get("staggerMs")
+        if stagger_ms is not None:
+            if int(stagger_ms) == 0:
+                cmd.append("--exact")
+            else:
+                add("--stagger", ms_to_duration(int(stagger_ms)))
+    elif kind == "every":
+        every_ms = schedule.get("everyMs")
+        if every_ms is not None:
+            add("--every", ms_to_duration(int(every_ms)))
+    else:
+        print(f"Skipping unsupported schedule kind '{kind}' for job: {job.get('name')}" )
+        continue
 
-  session_key=$(jq -r '.sessionKey // empty' <<<"$job_json")
-  [ -n "$session_key" ] && cmd+=(--session-key "$session_key")
+    add("--message", payload.get("message"))
+    add("--model", payload.get("model"))
+    add("--thinking", payload.get("thinking"))
+    if payload.get("timeoutSeconds") is not None:
+        add("--timeout-seconds", int(payload.get("timeoutSeconds")))
 
-  wake_mode=$(jq -r '.wakeMode // empty' <<<"$job_json")
-  [ -n "$wake_mode" ] && cmd+=(--wake "$wake_mode")
+    delivery = job.get("delivery", {})
+    if delivery.get("mode") == "announce":
+        cmd.append("--announce")
+        add("--channel", delivery.get("channel"))
+        add("--to", delivery.get("to"))
+    else:
+        cmd.append("--no-deliver")
 
-  schedule_kind=$(jq -r '.schedule.kind // ""' <<<"$job_json")
-  case "$schedule_kind" in
-    cron)
-      cron_expr=$(jq -r '.schedule.expr // empty' <<<"$job_json")
-      [ -n "$cron_expr" ] && cmd+=(--cron "$cron_expr")
-      tz=$(jq -r '.schedule.tz // empty' <<<"$job_json")
-      [ -n "$tz" ] && cmd+=(--tz "$tz")
-      stagger_ms=$(jq -r '.schedule.staggerMs // empty' <<<"$job_json")
-      if [ -n "$stagger_ms" ] && [ "$stagger_ms" != "null" ]; then
-        if [ "$stagger_ms" = "0" ]; then
-          cmd+=(--exact)
-        else
-          cmd+=(--stagger "$(ms_to_duration "$stagger_ms")")
-        fi
-      fi
-      ;;
-    every)
-      every_ms=$(jq -r '.schedule.everyMs // empty' <<<"$job_json")
-      [ -n "$every_ms" ] && [ "$every_ms" != "null" ] && cmd+=(--every "$(ms_to_duration "$every_ms")")
-      ;;
-    *)
-      echo "Skipping unsupported schedule kind '$schedule_kind' for job: $name"
-      continue
-      ;;
-  esac
+    if dry_run:
+        print("[dry-run] " + shlex.join(cmd))
+    else:
+        subprocess.run(cmd, check=True)
 
-  message=$(jq -r '.payload.message // empty' <<<"$job_json")
-  [ -n "$message" ] && cmd+=(--message "$message")
+    count += 1
 
-  model=$(jq -r '.payload.model // empty' <<<"$job_json")
-  [ -n "$model" ] && cmd+=(--model "$model")
-
-  thinking=$(jq -r '.payload.thinking // empty' <<<"$job_json")
-  [ -n "$thinking" ] && cmd+=(--thinking "$thinking")
-
-  timeout_seconds=$(jq -r '.payload.timeoutSeconds // empty' <<<"$job_json")
-  [ -n "$timeout_seconds" ] && [ "$timeout_seconds" != "null" ] && cmd+=(--timeout-seconds "$timeout_seconds")
-
-  delivery_mode=$(jq -r '.delivery.mode // empty' <<<"$job_json")
-  if [ "$delivery_mode" = "announce" ]; then
-    cmd+=(--announce)
-    channel=$(jq -r '.delivery.channel // empty' <<<"$job_json")
-    [ -n "$channel" ] && cmd+=(--channel "$channel")
-    to=$(jq -r '.delivery.to // empty' <<<"$job_json")
-    [ -n "$to" ] && cmd+=(--to "$to")
-  else
-    cmd+=(--no-deliver)
-  fi
-
-  run_cmd "${cmd[@]}"
-  count=$((count + 1))
-done < <(jq -r '.jobs[] | @base64' "$INPUT_FILE")
-
-echo "Imported/created $count jobs from $INPUT_FILE"
+print(f"Imported/created {count} jobs from {input_file}")
+PY

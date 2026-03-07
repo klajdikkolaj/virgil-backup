@@ -3,29 +3,33 @@ set -euo pipefail
 
 INPUT_FILE="${1:-crons/cron-jobs.json}"
 
-if ! command -v jq >/dev/null 2>&1; then
-  echo "jq is required" >&2
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "python3 is required" >&2
   exit 1
 fi
-
 if ! command -v openclaw >/dev/null 2>&1; then
   echo "openclaw is required" >&2
   exit 1
 fi
 
 echo "Fetching existing cron jobs..."
-existing_ids=$(openclaw cron list --json | jq -r '.jobs[]?.id')
+python3 - <<'PY'
+import json
+import subprocess
 
-if [ -n "$existing_ids" ]; then
-  echo "Removing existing cron jobs..."
-  while IFS= read -r id; do
-    [ -z "$id" ] && continue
-    openclaw cron rm "$id" >/dev/null
-    echo "Removed: $id"
-  done <<< "$existing_ids"
-else
-  echo "No existing cron jobs to remove."
-fi
+out = subprocess.check_output(["openclaw", "cron", "list", "--json"], text=True)
+jobs = json.loads(out).get("jobs", [])
+if jobs:
+    print("Removing existing cron jobs...")
+    for job in jobs:
+        jid = job.get("id")
+        if not jid:
+            continue
+        subprocess.run(["openclaw", "cron", "rm", jid], check=True, stdout=subprocess.DEVNULL)
+        print(f"Removed: {jid}")
+else:
+    print("No existing cron jobs to remove.")
+PY
 
 echo "Importing replacement cron jobs from $INPUT_FILE"
 bash crons/import-jobs.sh "$INPUT_FILE"
