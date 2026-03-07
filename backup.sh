@@ -79,8 +79,8 @@ cat > "$BACKUP_DIR/RESTORE.md" << 'RESTORE'
 ## Restore steps
 1. Install OpenClaw on new server
 2. Clone this repo (or specific branch): `git clone -b <branch-name> <repo-url>`
-3. Copy config/openclaw.json → ~/.openclaw/openclaw.json
-4. Fill in all [PLACEHOLDERS] with real values
+3. New server: copy `config/openclaw.json` → `~/.openclaw/openclaw.json`, then fill all [PLACEHOLDERS] with real values
+4. Existing server: preserve live secrets and apply only optimization keys with `bash config/apply-live-optimizations.sh ~/.openclaw/openclaw.json`
 5. Copy workspace/ files to your OpenClaw workspace
 6. Run: openclaw doctor --fix && openclaw gateway start
 7. Recreate cron jobs from backup JSON: `bash crons/import-jobs.sh crons/cron-jobs.json`
