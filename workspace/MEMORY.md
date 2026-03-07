@@ -1,5 +1,5 @@
 # MEMORY.md — Virgil Long-Term Memory
-_Last reviewed: 2026-03-06 (opencortex-memory-review cron)_
+_Last reviewed: 2026-03-07 (opencortex-memory-review cron)_
 
 ---
 
@@ -39,6 +39,7 @@ Do not advance to embodied movement/production multi-agent phases before trust-b
 
 ### Active priority
 - Phase 1: trust-boundary hardening with explicit pass/fail verification gates.
+- Verification ledger: `memory/projects/eternia-phase1-trust-gates.md`
 
 ---
 
@@ -73,7 +74,7 @@ Keep these as *check-before-rely* items:
 
 ---
 
-## 🗂️ Retention policy
+## 🗂️ Retention map
 
 - `MEMORY.md` stores only stable anchors + constraints.
 - Person details live in `memory/contacts/`.
