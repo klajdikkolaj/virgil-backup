@@ -1,11 +1,107 @@
 {
   "jobs": [
     {
-      "id": "10396329-d3bf-48d3-8eb2-7e09912419c7",
+      "id": "63a3e4ae-2c7c-4d38-9976-5e16d65cdbf9",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477606618224132274",
+      "name": "maintenance-batch",
+      "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
+      "enabled": true,
+      "createdAtMs": 1772898156387,
+      "updatedAtMs": 1772898156387,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 7-22/6 * * *",
+        "tz": "Europe/Tirane",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run maintenance batch: (1) openclaw status, (2) openclaw doctor --fix, (3) CPU-only qmd update. If gateway inactive, restart it. Return one-line status.",
+        "model": "codex",
+        "thinking": "low"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1772907570852
+      }
+    },
+    {
+      "id": "5c5a5f3c-46d9-408a-ba15-ed017a9b7cb6",
+      "name": "heartbeat-klajdi",
+      "description": "Every 30min waking hours: email, calendar, Coolify health check",
+      "enabled": true,
+      "createdAtMs": 1772898154021,
+      "updatedAtMs": 1772906647028,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7-22/3 * * *",
+        "tz": "Europe/Tirane",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Read HEARTBEAT.md in workspace, follow it exactly, alert only on actionable items, otherwise HEARTBEAT_OK.",
+        "model": "codex",
+        "thinking": "low",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1772917357507,
+        "lastRunAtMs": 1772906557521,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 89507,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "226b04a5-6421-4f0c-bac7-c1d818df9dec",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772898169697,
+      "updatedAtMs": 1772898169697,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "codex",
+        "thinking": "low"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1772935200000
+      }
+    },
+    {
+      "id": "2d9e4be4-ea38-49d2-b3cf-cd9281c137b2",
       "name": "daily-backup",
       "enabled": true,
-      "createdAtMs": 1772373836253,
-      "updatedAtMs": 1772781896499,
+      "createdAtMs": 1772898151728,
+      "updatedAtMs": 1772898151728,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -25,134 +121,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772854200000,
-        "lastRunAtMs": 1772767800013,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 20483,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 4,
-        "runningAtMs": 1772854200014
+        "nextRunAtMs": 1772940600000
       }
     },
     {
-      "id": "365f984a-962b-46b0-b9a4-552e5a0310ea",
-      "name": "heartbeat-klajdi",
-      "description": "Every 30min waking hours: email, calendar, Coolify health check",
-      "enabled": true,
-      "createdAtMs": 1772373274717,
-      "updatedAtMs": 1772848949556,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 7-22/3 * * *",
-        "tz": "Europe/Tirane",
-        "staggerMs": 300000
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Read HEARTBEAT.md in workspace, follow it exactly, alert only on actionable items, otherwise HEARTBEAT_OK.",
-        "model": "codex",
-        "timeoutSeconds": 120,
-        "thinking": "low"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1772859707850,
-        "lastRunAtMs": 1772848907858,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 41698,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": false
-      }
-    },
-    {
-      "id": "430be374-b094-4959-8993-fce706c87593",
-      "agentId": "main",
-      "sessionKey": "agent:main:discord:channel:1477606618224132274",
-      "name": "maintenance-batch",
-      "enabled": true,
-      "createdAtMs": 1772525977548,
-      "updatedAtMs": 1772848967943,
-      "schedule": {
-        "kind": "cron",
-        "expr": "15 7-22/6 * * *",
-        "tz": "Europe/Tirane",
-        "staggerMs": 300000
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run maintenance batch: (1) openclaw status, (2) openclaw doctor --fix, (3) CPU-only qmd update. If gateway inactive, restart it. Return one-line status.",
-        "model": "codex",
-        "thinking": "low"
-      },
-      "delivery": {
-        "mode": "none"
-      },
-      "state": {
-        "nextRunAtMs": 1772859747369,
-        "lastRunAtMs": 1772848951573,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 16370,
-        "lastDelivered": false,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0
-      },
-      "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh"
-    },
-    {
-      "id": "716d6876-39c0-441f-8e4e-3562e5becb37",
-      "name": "gateway-watchdog",
-      "enabled": false,
-      "createdAtMs": 1772368406912,
-      "updatedAtMs": 1772850099740,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 10800000,
-        "anchorMs": 1772711322063
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Gateway health check: (1) Run 'openclaw doctor --fix' to clean invalid config keys (Discord bug). (2) Check if gateway is active. (3) If not, restart it. (4) Report status.",
-        "model": "codex",
-        "thinking": "medium"
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "telegram"
-      },
-      "state": {
-        "nextRunAtMs": 1772860868389,
-        "lastRunAtMs": 1772850068389,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 31351,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": false
-      },
-      "description": "Disabled: merged into maintenance-batch"
-    },
-    {
-      "id": "9f872043-52e6-46c5-a45d-ec443093e125",
+      "id": "02931abc-1ea0-4feb-b324-60bef6d3b6a3",
       "agentId": "main",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
-      "createdAtMs": 1772432503430,
-      "updatedAtMs": 1772777039822,
+      "createdAtMs": 1772898160834,
+      "updatedAtMs": 1772898160834,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *",
@@ -162,8 +141,8 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "model": "codex",
         "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-morning-briefing.md and execute exactly. Return concise status with saved file path.",
+        "model": "codex",
         "thinking": "medium"
       },
       "delivery": {
@@ -172,25 +151,18 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1772863200000,
-        "lastRunAtMs": 1772776800005,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 239817,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1772949600000
       }
     },
     {
-      "id": "874dbd00-0236-4ecc-9b7a-34a8a0117f2f",
+      "id": "29c5134f-a985-4a1c-acbb-1bed898b4c7b",
       "agentId": "main",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "name": "vault-github-sync-after-briefing",
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
-      "createdAtMs": 1772440228924,
-      "updatedAtMs": 1772777125611,
+      "createdAtMs": 1772898163160,
+      "updatedAtMs": 1772898163160,
       "schedule": {
         "kind": "cron",
         "expr": "5 7 * * *",
@@ -200,8 +172,8 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "model": "codex",
         "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/vault-briefing-sync.md and execute exactly. Return short status.",
+        "model": "codex",
         "thinking": "low"
       },
       "delivery": {
@@ -210,22 +182,15 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1772863500000,
-        "lastRunAtMs": 1772777100012,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 25599,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1772949900000
       }
     },
     {
-      "id": "8562697f-36a5-4601-abfb-45d44364a98c",
+      "id": "46a8e591-43b5-45f7-95ad-32fe6b842502",
       "name": "opencortex-memory-review",
       "enabled": true,
-      "createdAtMs": 1772356229052,
-      "updatedAtMs": 1772787776105,
+      "createdAtMs": 1772898165311,
+      "updatedAtMs": 1772898165311,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * 1,3,5"
@@ -244,24 +209,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772874000000,
-        "lastRunAtMs": 1772787600013,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 176092,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1773046800000
       }
     },
     {
-      "id": "dd671e6b-e2ef-4c1c-a094-30e314d3008b",
+      "id": "8b1d213e-2403-4935-a2d5-6e6654e385c6",
       "agentId": "main",
       "sessionKey": "agent:main:discord:channel:1477637736964952075",
       "name": "daily-ai-remote-job-hunt",
       "enabled": true,
-      "createdAtMs": 1772718794522,
-      "updatedAtMs": 1772806076191,
+      "createdAtMs": 1772898167529,
+      "updatedAtMs": 1772898167529,
       "schedule": {
         "kind": "cron",
         "expr": "0 12 * * 1-5",
@@ -271,10 +229,10 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "model": "codex",
-        "timeoutSeconds": 600,
         "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-ai-job-hunt.md and execute exactly. Return short status only: count + save path + git sync result.",
-        "thinking": "medium"
+        "model": "codex",
+        "thinking": "medium",
+        "timeoutSeconds": 600
       },
       "delivery": {
         "mode": "announce",
@@ -282,57 +240,45 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772881200000,
-        "lastRunAtMs": 1772794800013,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 600027,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 2,
-        "lastError": "cron: job execution timed out"
+        "nextRunAtMs": 1773054000000
       }
     },
     {
-      "id": "3387d0de-ae33-4690-a108-c7be11e03ca7",
-      "name": "vault-qmd-reindex",
+      "id": "897d709b-a5c3-433d-97d8-6e98f401e42b",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477606618224132274",
+      "name": "token-savings-report-48h",
       "enabled": true,
-      "createdAtMs": 1772366065756,
-      "updatedAtMs": 1772848842746,
+      "deleteAfterRun": true,
+      "createdAtMs": 1772900254812,
+      "updatedAtMs": 1772900254812,
       "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
+        "kind": "at",
+        "at": "2026-03-09T16:16:00.000Z"
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
         "model": "codex",
-        "thinking": "low"
+        "thinking": "low",
+        "message": "Prepare a concise 48h token-usage comparison report since optimization rollout.\n\nCompare before vs after for cron jobs and summarize:\n- total estimated daily tokens before\n- total estimated daily tokens after (based on last 48h runs)\n- absolute and percentage savings\n- biggest token consumers now\n- 3 next optimization actions\n\nUse cron run usage fields where available. Keep output under 12 bullets."
       },
       "delivery": {
-        "mode": "none",
+        "mode": "announce",
         "channel": "discord",
-        "to": "1477637814014316586"
+        "to": "1477606618224132274"
       },
       "state": {
-        "nextRunAtMs": 1772935200000,
-        "lastRunAtMs": 1772848800015,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 42731,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "nextRunAtMs": 1773072960000
       }
     },
     {
-      "id": "5ad0a5d2-6202-4041-9a57-e3ca510b19c1",
+      "id": "bb36957d-2c89-4e5c-b355-081a078b9068",
       "name": "openclaw-update-postcheck-report",
       "enabled": true,
-      "createdAtMs": 1772373950525,
-      "updatedAtMs": 1772719464136,
+      "createdAtMs": 1772898172314,
+      "updatedAtMs": 1772898172314,
       "schedule": {
         "kind": "cron",
         "expr": "0 4 */3 * *",

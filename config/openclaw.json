@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.7",
-    "lastTouchedAt": "2026-03-07T12:00:00.000Z"
+    "lastTouchedAt": "2026-03-07T16:17:26.366Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -174,7 +174,7 @@
   },
   "channels": {
     "whatsapp": {
-      "enabled": true,
+      "enabled": false,
       "dmPolicy": "allowlist",
       "selfChatMode": true,
       "allowFrom": [
@@ -278,7 +278,7 @@
         "enabled": true
       },
       "whatsapp": {
-        "enabled": true
+        "enabled": false
       },
       "discord": {
         "enabled": true
