@@ -1,37 +1,6 @@
 {
   "jobs": [
     {
-      "id": "63a3e4ae-2c7c-4d38-9976-5e16d65cdbf9",
-      "agentId": "main",
-      "sessionKey": "agent:main:discord:channel:1477606618224132274",
-      "name": "maintenance-batch",
-      "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
-      "enabled": true,
-      "createdAtMs": 1772898156387,
-      "updatedAtMs": 1772898156387,
-      "schedule": {
-        "kind": "cron",
-        "expr": "15 7-22/6 * * *",
-        "tz": "Europe/Tirane",
-        "staggerMs": 300000
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run maintenance batch: (1) openclaw status, (2) openclaw doctor --fix, (3) CPU-only qmd update. If gateway inactive, restart it. Return one-line status.",
-        "model": "codex",
-        "thinking": "low"
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "nextRunAtMs": 1772907570852
-      }
-    },
-    {
       "id": "5c5a5f3c-46d9-408a-ba15-ed017a9b7cb6",
       "name": "heartbeat-klajdi",
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
@@ -183,6 +152,44 @@
       },
       "state": {
         "nextRunAtMs": 1772949900000
+      }
+    },
+    {
+      "id": "63a3e4ae-2c7c-4d38-9976-5e16d65cdbf9",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477606618224132274",
+      "name": "maintenance-batch",
+      "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
+      "enabled": true,
+      "createdAtMs": 1772898156387,
+      "updatedAtMs": 1772907605505,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 7-22/6 * * *",
+        "tz": "Europe/Tirane",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run maintenance batch: (1) openclaw status, (2) openclaw doctor --fix, (3) CPU-only qmd update. If gateway inactive, restart it. Return one-line status.",
+        "model": "codex",
+        "thinking": "low"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1772950770852,
+        "lastRunAtMs": 1772907570868,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 34637,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
       }
     },
     {

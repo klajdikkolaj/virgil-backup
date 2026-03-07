@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.7",
-    "lastTouchedAt": "2026-03-07T16:17:26.366Z"
+    "lastTouchedAt": "2026-03-07T18:48:28.452Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -58,12 +58,47 @@
         "anthropic/claude-haiku-4-5": {}
       },
       "workspace": "/home/clawdkbot/.openclaw/workspace",
+      "bootstrapMaxChars": 5000,
+      "bootstrapTotalMaxChars": 20000,
       "memorySearch": {
         "provider": "gemini",
         "remote": {
           "apiKey": "[GOOGLE_API_KEY]"
         },
         "model": "gemini-embedding-001"
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h",
+        "keepLastAssistants": 3,
+        "softTrimRatio": 0.3,
+        "hardClearRatio": 0.5,
+        "minPrunableToolChars": 50000,
+        "tools": {
+          "deny": [
+            "browser",
+            "canvas"
+          ]
+        },
+        "softTrim": {
+          "maxChars": 4000,
+          "headChars": 1500,
+          "tailChars": 1500
+        },
+        "hardClear": {
+          "enabled": true,
+          "placeholder": "[Old tool result content cleared]"
+        }
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "reserveTokensFloor": 24000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 6000,
+          "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
       },
       "thinkingDefault": "low",
       "subagents": {
