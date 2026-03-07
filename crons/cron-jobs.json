@@ -15,7 +15,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run the daily backup script: cd ~/virgil-backup && git pull && bash backup.sh",
+        "message": "Run backup: cd ~/virgil-backup && git pull --rebase && bash backup.sh. Return short status only.",
         "model": "codex",
         "thinking": "low"
       },
@@ -44,7 +44,7 @@
       "updatedAtMs": 1772848949556,
       "schedule": {
         "kind": "cron",
-        "expr": "0 */3 * * *",
+        "expr": "0 7-22/3 * * *",
         "tz": "Europe/Tirane",
         "staggerMs": 300000
       },
@@ -52,7 +52,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Read HEARTBEAT.md if it exists (workspace context). Follow it strictly. Do not infer or repeat old tasks from prior chats. If nothing needs attention, reply HEARTBEAT_OK.",
+        "message": "Read HEARTBEAT.md in workspace, follow it exactly, alert only on actionable items, otherwise HEARTBEAT_OK.",
         "model": "codex",
         "timeoutSeconds": 120,
         "thinking": "low"
@@ -77,13 +77,13 @@
       "id": "430be374-b094-4959-8993-fce706c87593",
       "agentId": "main",
       "sessionKey": "agent:main:discord:channel:1477606618224132274",
-      "name": "qmd-light-refresh",
+      "name": "maintenance-batch",
       "enabled": true,
       "createdAtMs": 1772525977548,
       "updatedAtMs": 1772848967943,
       "schedule": {
         "kind": "cron",
-        "expr": "0 */3 * * *",
+        "expr": "15 7-22/6 * * *",
         "tz": "Europe/Tirane",
         "staggerMs": 300000
       },
@@ -91,7 +91,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run lightweight QMD refresh in CPU-only mode:\nexport QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU=off\nqmd update\nReport indexed counts and any errors.",
+        "message": "Run maintenance batch: (1) openclaw status, (2) openclaw doctor --fix, (3) CPU-only qmd update. If gateway inactive, restart it. Return one-line status.",
         "model": "codex",
         "thinking": "low"
       },
@@ -107,12 +107,13 @@
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
-      }
+      },
+      "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh"
     },
     {
       "id": "716d6876-39c0-441f-8e4e-3562e5becb37",
       "name": "gateway-watchdog",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1772368406912,
       "updatedAtMs": 1772850099740,
       "schedule": {
@@ -141,7 +142,8 @@
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
-      }
+      },
+      "description": "Disabled: merged into maintenance-batch"
     },
     {
       "id": "9f872043-52e6-46c5-a45d-ec443093e125",
@@ -161,8 +163,8 @@
       "payload": {
         "kind": "agentTurn",
         "model": "codex",
-        "message": "You are running Klajdi's daily 2-minute morning briefing at 07:00 Europe/Tirane.\n\nPrimary objective:\nCreate a concise daily briefing WITHOUT using X/Twitter APIs.\n\nTopics to prioritize:\n- OpenClaw news/updates\n- Agent automation news\n- AI breakthroughs\n- Research on connecting mind to digital world (BCI, neurotech, brain-computer interfaces)\n- Also include developer tools, indie hacking, content creation, tech business signals when relevant\n\nAllowed source types:\n- Official blogs/docs/changelogs (OpenClaw docs, GitHub releases/commits/issues, vendor changelogs)\n- Public tech/news sites and newsletters\n- Hacker News / Product Hunt / GitHub trending where useful\n- arXiv / research summaries for AI + BCI topics\n- Public LinkedIn content only if directly accessible without login/paywall and easy to verify\n\nDo NOT do:\n- No X/Twitter calls\n- No scraping behind login walls\n- No Video Ideas section\n- No Quick Hits section\n\nOutput format (channel + Obsidian) must be exactly:\n1) Top Stories (3-5)\n2) Interesting Threads (2-4)\n3) OpenClaw & Agent Automation News\n4) AI Breakthroughs & Mind-Digital Research\n5) Action Items\n\nLength/tone:\n- 2-minute read max\n- Concise, high signal, no fluff\n- Include links for each key item\n\nFile output (MANDATORY):\n- Write full markdown briefing to: /home/clawdkbot/virgil-vault/Daily/YYYY-MM-DD-briefing.md\n\nChannel output:\n- Post concise summary in this Discord channel in same section structure.\n\nIf a source category has thin data that day, say so briefly and continue with best available verified signals.",
-        "thinking": "high"
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-morning-briefing.md and execute exactly. Return concise status with saved file path.",
+        "thinking": "medium"
       },
       "delivery": {
         "mode": "announce",
@@ -199,7 +201,7 @@
       "payload": {
         "kind": "agentTurn",
         "model": "codex",
-        "message": "Sync the Obsidian vault repo to GitHub after morning briefing.\n\nSteps:\n1) cd /home/clawdkbot/virgil-vault\n2) git pull --rebase\n3) Stage only briefing files: git add Daily/*-briefing.md\n4) If no staged changes, finish with: \"No briefing changes to sync.\"\n5) If staged changes exist:\n   - git commit -m \"chore(briefing): sync daily briefing $(date +%F)\"\n   - git push origin HEAD\n6) Return a short status summary: synced/no-changes/failed and reason if failed.\n\nSafety:\n- Do not modify unrelated files.\n- If merge/rebase conflict happens, stop and report failure.",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/vault-briefing-sync.md and execute exactly. Return short status.",
         "thinking": "low"
       },
       "delivery": {
@@ -226,15 +228,15 @@
       "updatedAtMs": 1772787776105,
       "schedule": {
         "kind": "cron",
-        "expr": "0 9 * * *"
+        "expr": "0 9 * * 1,3,5"
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run opencortex memory review: read recent memory/YYYY-MM-DD.md files, distill insights into MEMORY.md, restructure vault memory files for better long-term retention about Klajdi and Eternia project",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly. Return concise status with files updated.",
         "model": "codex",
-        "thinking": "high"
+        "thinking": "medium"
       },
       "delivery": {
         "mode": "announce",
@@ -262,7 +264,7 @@
       "updatedAtMs": 1772806076191,
       "schedule": {
         "kind": "cron",
-        "expr": "0 12 * * *",
+        "expr": "0 12 * * 1-5",
         "tz": "Europe/Tirane"
       },
       "sessionTarget": "isolated",
@@ -270,9 +272,9 @@
       "payload": {
         "kind": "agentTurn",
         "model": "codex",
-        "timeoutSeconds": 1000,
-        "message": "Search daily for remote jobs posted in the last 24 hours (relative to Europe/Tirane).\n\nTarget roles (priority order):\n1) AI Trainer / AI Manager / AI Product / AI Program / AI Orchestration / Agentic workflows\n2) LLM app development / AI platform / AI tooling (Next.js/Node/TS + OpenAI/Anthropic)\n\nSources priority: RemoteOK, WeWorkRemotely, Wellfound, Remotive, Hugging Face Jobs, and company ATS pages (Greenhouse/Lever). Fallback to web search if needed.\n\nCollect 10 unique jobs. Deduplicate by company+title and canonical URL.\n\nGeo eligibility filter (strict):\n- Keep only roles that are remote and explicitly open worldwide, Europe, EMEA, or with no stated exclusion for Albania.\n- Reject roles that explicitly exclude Albania, Balkans, or non-listed countries where Albania is not eligible.\n\nReject scams/unverifiable postings (no real company site, Telegram-only, suspicious domains).\n\nFor each job, extract:\n- Title\n- Company\n- Posted date/time\n- Remote region (if any)\n- Contract type\n- Link\n- Requirements (bulleted, 5–12 bullets)\n- Why I match (2–4 bullets based on profile)\n- Open questions (1–3 bullets if info missing: salary, timezone, etc.)\n\nRank by fit score (0–100) and output sorted.\n\nWrite results to Obsidian vault ONLY:\n- Folder: /home/clawdkbot/virgil-vault/Jobs/Daily/\n- File: YYYY-MM-DD.md\n- Use Markdown with YAML frontmatter: date, sources_used, query_terms, count\n- DO NOT write any files under /home/clawdkbot/.openclaw/workspace.\n\nAlso maintain compact context index in vault:\n- File: /home/clawdkbot/virgil-vault/Jobs/Daily/_titles-index.md\n- Append one dated section with only the 10 titles + companies + links.\n\nProfile context for matching:\nSenior full-stack dev (Next.js/React+TS, Node/NestJS, Postgres/Supabase, Vercel), AI-native daily (Claude Code/Sonnet/Opus, ChatGPT, OpenAI Codex). Experience converting AI-generated prototypes into production architecture, shipping multi-tenant SaaS (EventHub), Stripe subscriptions, real-time features, and building full-stack VSL platform with refactors, performance, maintainability. Comfortable with LLM APIs (OpenAI/Anthropic) and automation/orchestration (OpenClaw agents, PR reviewer, CI habits, governance/guardrails).\n\nOutput format:\n- YAML frontmatter\n- Then sections for summary, ranked jobs, and top apply picks.\n\nAfter writing files, ALWAYS sync to GitHub:\n1) cd /home/clawdkbot/virgil-vault\n2) git pull --rebase\n3) git add Jobs/Daily/*.md\n4) if staged changes exist:\n   - git commit -m \"chore(jobs): daily AI jobs $(date +%F)\"\n   - git push origin HEAD\n5) if no staged changes, report \"no changes to sync\"\n\nReturn only short completion status with saved path + count + index updated + git sync result.",
-        "thinking": "high"
+        "timeoutSeconds": 600,
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-ai-job-hunt.md and execute exactly. Return short status only: count + save path + git sync result.",
+        "thinking": "medium"
       },
       "delivery": {
         "mode": "announce",
@@ -305,12 +307,12 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run vault semantic search reindex in CPU-only mode:\nexport QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU=off\ncd ~/virgil-vault && git pull && qmd update && qmd embed\nThen confirm index is up to date and report any errors.",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
         "model": "codex",
-        "thinking": "medium"
+        "thinking": "low"
       },
       "delivery": {
-        "mode": "announce",
+        "mode": "none",
         "channel": "discord",
         "to": "1477637814014316586"
       },
@@ -340,7 +342,7 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run OpenClaw update cycle (every 3 days) with post-check and report.\n\nSteps:\n1) Precheck\n   - Run: openclaw --version\n   - Run: openclaw status\n2) Update\n   - Run: openclaw update --yes --json 2>&1\n   - IMPORTANT: Do NOT run `systemctl --user restart openclaw-gateway.service` inside this job.\n3) Post-check\n   - Run: openclaw --version\n   - Run: openclaw status\n   - Run: openclaw doctor 2>&1 | head -40\n4) Report to Discord monitoring channel 1477637814014316586 with concise summary:\n   - pre-version -> post-version\n   - update outcome\n   - post-check health\n   - any warnings/errors\n   - use ✅/⚠️/❌ status markers\n\nIf update or checks fail, include exact failed command and likely cause.",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/openclaw-update-postcheck.md and execute exactly. Return concise status with version diff and health.",
         "model": "codex",
         "thinking": "medium"
       },

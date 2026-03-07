@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "openclaw.policy.v2",
+  "profile": "virgil",
+  "goals": {
+    "latency": "balanced",
+    "cost": "aggressive-optimization",
+    "quality": "burst-on-demand"
+  },
+  "budgets": {
+    "dailyTokenBudget": 250000,
+    "backgroundTokenBudget": 40000,
+    "maxPromptTokensByLane": {
+      "maintenance": 6000,
+      "execution": 22000,
+      "research": 70000
+    }
+  },
+  "complexityGate": {
+    "toHigh": [
+      "conflicting_evidence",
+      "high_blast_radius",
+      "multi_step_uncertain_change",
+      "explicit_deep_rigor_request"
+    ],
+    "defaultThinking": "low"
+  },
+  "lanes": {
+    "maintenance": {
+      "modelClass": "cheap",
+      "thinking": "low",
+      "allowedActions": ["read", "status", "notify", "sync"]
+    },
+    "execution": {
+      "modelClass": "codex",
+      "thinking": "medium",
+      "escalation": "high_on_gate"
+    },
+    "research": {
+      "modelClass": "premium",
+      "thinking": "high",
+      "escalation": "xhigh_on_gate"
+    },
+    "memory": {
+      "modelClass": "cheap",
+      "thinking": "low",
+      "escalation": "medium_for_conflict_resolution"
+    }
+  },
+  "memory": {
+    "tiers": {
+      "hot": "today+yesterday+active-task",
+      "warm": "7-30d summaries",
+      "cold": "stable curated rules"
+    },
+    "promotionRule": {
+      "minimumSignals": 2,
+      "signals": [
+        "reused_3x_in_14d",
+        "high_consequence_if_forgotten",
+        "stable_7d",
+        "user_confirmed"
+      ]
+    },
+    "pruning": "summary",
+    "compaction": "enabled"
+  },
+  "automation": {
+    "heartbeat": {
+      "activeHours": "07:00-23:00 Europe/Tirane",
+      "batchChecks": true,
+      "quietOnNoChange": true
+    },
+    "jobs": {
+      "retryPolicy": "bounded",
+      "circuitBreaker": {
+        "enabled": true,
+        "pauseAfterConsecutiveErrors": 3
+      }
+    }
+  },
+  "observability": {
+    "metrics": [
+      "tokens_in",
+      "tokens_out",
+      "cache_hit_rate",
+      "job_failure_rate",
+      "memory_hit_rate",
+      "median_latency"
+    ],
+    "reportCadence": "daily"
+  }
+}

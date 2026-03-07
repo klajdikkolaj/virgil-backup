@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.3",
-    "lastTouchedAt": "2026-03-05T14:04:08.760Z"
+    "lastTouchedVersion": "2026.3.7",
+    "lastTouchedAt": "2026-03-07T12:00:00.000Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -65,7 +65,7 @@
         },
         "model": "gemini-embedding-001"
       },
-      "thinkingDefault": "medium",
+      "thinkingDefault": "low",
       "subagents": {
         "model": "openai-codex/gpt-5.3-codex",
         "thinking": "low",
@@ -157,16 +157,17 @@
       "enabled": true,
       "entries": {
         "session-memory": {
-          "enabled": true
+          "enabled": true,
+          "autoWriteOnCompaction": true
         },
         "command-logger": {
           "enabled": true
         },
         "bootstrap-extra-files": {
-          "enabled": true
+          "enabled": false
         },
         "boot-md": {
-          "enabled": true
+          "enabled": false
         }
       }
     }
@@ -286,5 +287,26 @@
         "enabled": true
       }
     }
+  },
+  "assistantFileSettings": {
+    "bootstrapMaxChars": 5000,
+    "bootstrapTotalMaxChars": 20000
+  },
+  "contextPruning": {
+    "enabled": true,
+    "maxHistoryMessages": 120,
+    "strategy": "summary",
+    "minMessagesBeforePrune": 80,
+    "preserveSystemMessages": true
+  },
+  "compaction": {
+    "enabled": true,
+    "targetPromptTokens": 35000,
+    "reserveOutputTokens": 6000,
+    "triggerEveryTurns": 12,
+    "triggerOnEstimatedPromptTokens": 70000,
+    "summaryStyle": "structured",
+    "includeToolCallDigest": true,
+    "persistPath": "memory/compactions"
   }
 }

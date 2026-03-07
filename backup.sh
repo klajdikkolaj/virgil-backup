@@ -18,7 +18,7 @@ mkdir -p "$BACKUP_DIR/config"
 mkdir -p "$BACKUP_DIR/skills-index"
 
 # Workspace files
-for f in SOUL.md MEMORY.md AGENTS.md USER.md IDENTITY.md HEARTBEAT.md TOOLS.md BOOTSTRAP.md; do
+for f in SOUL.md MEMORY.md AGENTS.md USER.md IDENTITY.md HEARTBEAT.md TOOLS.md; do
   [ -f "$WORKSPACE/$f" ] && cp "$WORKSPACE/$f" "$BACKUP_DIR/workspace/" || true
 done
 
@@ -78,16 +78,17 @@ cat > "$BACKUP_DIR/RESTORE.md" << 'RESTORE'
 
 ## Restore steps
 1. Install OpenClaw on new server
-2. Clone this repo
+2. Clone this repo (or specific branch): `git clone -b <branch-name> <repo-url>`
 3. Copy config/openclaw.json → ~/.openclaw/openclaw.json
 4. Fill in all [PLACEHOLDERS] with real values
 5. Copy workspace/ files to your OpenClaw workspace
 6. Run: openclaw doctor --fix && openclaw gateway start
-7. Re-import crons from crons/cron-jobs.json
+7. Re-import crons from crons/cron-jobs.json (for example: `openclaw cron import --json-file crons/cron-jobs.json`)
 8. Re-install skills listed in skills-index/skills.md
 RESTORE
 
 cd "$BACKUP_DIR"
+BACKUP_BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "main")
 git config user.email "virgil@eternia"
 git config user.name "Virgil"
 git add -A
@@ -100,9 +101,9 @@ else
 fi
 
 git commit -m "🔒 Backup $DATE — $SUMMARY" || true
-git push origin main
+git push -u origin "$BACKUP_BRANCH"
 
-echo "✅ Pushed to GitHub"
+echo "✅ Pushed to GitHub branch: $BACKUP_BRANCH"
 
 if [ ${#ERRORS[@]} -eq 0 ]; then
   STATUS="✅ Daily backup complete — $SUMMARY ($TIMESTAMP)"
