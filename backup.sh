@@ -83,7 +83,7 @@ cat > "$BACKUP_DIR/RESTORE.md" << 'RESTORE'
 4. Existing server: preserve live secrets and apply only optimization keys with `bash config/apply-live-optimizations.sh ~/.openclaw/openclaw.json`
 5. Copy workspace/ files to your OpenClaw workspace
 6. Run: openclaw doctor --fix && openclaw gateway start
-7. Recreate cron jobs from backup JSON: `bash crons/import-jobs.sh crons/cron-jobs.json`
+7. Replace cron jobs from backup JSON (prevents duplicates): `bash crons/replace-jobs.sh crons/cron-jobs.json`
 8. Re-install skills listed in skills-index/skills.md
 RESTORE
 
