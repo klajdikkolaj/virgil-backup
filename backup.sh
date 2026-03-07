@@ -83,7 +83,7 @@ cat > "$BACKUP_DIR/RESTORE.md" << 'RESTORE'
 4. Fill in all [PLACEHOLDERS] with real values
 5. Copy workspace/ files to your OpenClaw workspace
 6. Run: openclaw doctor --fix && openclaw gateway start
-7. Re-import crons from crons/cron-jobs.json (for example: `openclaw cron import --json-file crons/cron-jobs.json`)
+7. Recreate cron jobs from backup JSON: `bash crons/import-jobs.sh crons/cron-jobs.json`
 8. Re-install skills listed in skills-index/skills.md
 RESTORE
 
