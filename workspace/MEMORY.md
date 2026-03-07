@@ -1,5 +1,5 @@
 # MEMORY.md — Virgil Long-Term Memory
-_Last reviewed: 2026-03-05 (opencortex-memory-review cron)_
+_Last reviewed: 2026-03-06 (opencortex-memory-review cron)_
 
 ---
 
@@ -23,8 +23,9 @@ Canonical profile: `memory/contacts/klajdi.md`
 ### Interaction defaults
 - English by default.
 - Direct, low-filler responses.
+- Practical framing preference: **theory → protocol → action**.
 - Ask before external, destructive, or irreversible actions.
-- Prefer transparent reporting of effective model behavior (including fallbacks) on important work.
+- For substantial technical/research work, report effective model/lane behavior and fallback outcomes.
 
 ---
 
@@ -43,10 +44,10 @@ Do not advance to embodied movement/production multi-agent phases before trust-b
 
 ## ⚙️ Operating Memory (stable enough to keep loaded)
 
-- Primary orchestration lane: Sonnet, with configured fallback lanes including Codex and Opus.
-- Codex default reasoning: medium; escalate only for high-stakes/security/high-ambiguity tasks, with explicit justification.
-- QMD memory indexing includes workspace memory + light refresh schedule; CPU-only default is preferred to avoid CUDA noise.
-- Preferred execution framing for practical guidance: **theory → protocol → action**.
+- Main/default lane is Sonnet; channel-level routing can override lane ownership (see routing workflow).
+- Codex default reasoning: medium; escalate only for high-stakes/security/high-ambiguity tasks with explicit justification.
+- QMD indexing includes workspace memory and runs in CPU-only mode by default to avoid CUDA noise.
+- Protocol strictness is risk-tiered (STRICT/MEDIUM/LIGHT) and documented for channel-specific execution.
 
 Reference workflows:
 - `memory/workflows/channel-routing.md`

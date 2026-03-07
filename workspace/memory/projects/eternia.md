@@ -1,5 +1,5 @@
 # Eternia — Project Memory
-_Last distilled: 2026-03-05_
+_Last distilled: 2026-03-06_
 
 ## Project definition
 Eternia is a long-term evolving AI ecosystem combining learning, exploration, and symbolic worldbuilding.
@@ -34,6 +34,7 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - Prefer rigorous sequencing and evidence over speed.
 - Use explicit protocol gates for high-risk/research work.
 - Keep reporting transparent about effective lane/model execution and fallback outcomes.
+- Preserve theory-grounded guidance (theory → protocol → action) for practical recommendations.
 
 ## Technical stack memory (working model)
 - Backend: Python 3.12, FastAPI, WebSocket, PostgreSQL
@@ -55,3 +56,4 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 ## Open strategic debts
 - Convert Phase 1 hardening into a tracked verification checklist with explicit pass/fail gates.
 - Reconfirm lane-level validation/testing cadence after routing and fallback changes.
+- If requested, package findings into a theory-based playbook artifact for repeatable execution.

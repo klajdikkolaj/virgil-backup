@@ -1,11 +1,12 @@
 # Preferences — Distilled Stable Rules
-_Last distilled: 2026-03-05_
+_Last distilled: 2026-03-06_
 
 ## Communication
 - English by default.
 - Keep responses direct and concise.
 - Avoid performative filler.
 - For practical guidance, prefer: **theory → protocol → action**.
+- For analysis-heavy questions, prioritize actionable conclusions over purely structural summaries.
 
 ## Safety + consent
 - Ask before external, destructive, or irreversible actions.
@@ -16,6 +17,7 @@ _Last distilled: 2026-03-05_
 - Prefer simple, maintainable solutions over unnecessary complexity.
 - Prefer SSH-key workflows over token-heavy access when viable.
 - Avoid suspicious/unverified skills.
+- Do not silently deviate from agreed workflow on high-risk/research tasks; state method changes explicitly.
 
 ## Model behavior
 - Notify only automatic fallback model changes (not manual switches).

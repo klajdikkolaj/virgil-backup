@@ -1,5 +1,5 @@
 # Klajdi — Contact Memory
-_Last distilled: 2026-03-05_
+_Last distilled: 2026-03-06_
 
 ## Identity
 - Name: Klajdi
@@ -15,7 +15,8 @@ _Last distilled: 2026-03-05_
 - Language default: English
 - Tone preference: direct, concise, minimal filler
 - Practical framing preference: **theory → protocol → action**
-- For substantial technical work, wants clear reporting of what model/lane actually ran (and any fallbacks)
+- Prefers actionable recommendations over purely structural summaries
+- For substantial technical/research work, wants clear reporting of effective model/lane execution (including fallbacks)
 
 ## Control & consent boundaries
 - Ask first before any external/public/destructive/irreversible action
