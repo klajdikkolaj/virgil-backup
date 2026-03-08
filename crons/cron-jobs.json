@@ -1,71 +1,6 @@
 {
   "jobs": [
     {
-      "id": "5c5a5f3c-46d9-408a-ba15-ed017a9b7cb6",
-      "name": "heartbeat-klajdi",
-      "description": "Every 30min waking hours: email, calendar, Coolify health check",
-      "enabled": true,
-      "createdAtMs": 1772898154021,
-      "updatedAtMs": 1772906647028,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 7-22/3 * * *",
-        "tz": "Europe/Tirane",
-        "staggerMs": 300000
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Read HEARTBEAT.md in workspace, follow it exactly, alert only on actionable items, otherwise HEARTBEAT_OK.",
-        "model": "codex",
-        "thinking": "low",
-        "timeoutSeconds": 120
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1772917357507,
-        "lastRunAtMs": 1772906557521,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 89507,
-        "lastDelivered": false,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0
-      }
-    },
-    {
-      "id": "226b04a5-6421-4f0c-bac7-c1d818df9dec",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772898169697,
-      "updatedAtMs": 1772898169697,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "codex",
-        "thinking": "low"
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "nextRunAtMs": 1772935200000
-      }
-    },
-    {
       "id": "2d9e4be4-ea38-49d2-b3cf-cd9281c137b2",
       "name": "daily-backup",
       "enabled": true,
@@ -90,7 +25,8 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1772940600000
+        "nextRunAtMs": 1772940600000,
+        "runningAtMs": 1772940600018
       }
     },
     {
@@ -121,6 +57,44 @@
       },
       "state": {
         "nextRunAtMs": 1772949600000
+      }
+    },
+    {
+      "id": "5c5a5f3c-46d9-408a-ba15-ed017a9b7cb6",
+      "name": "heartbeat-klajdi",
+      "description": "Every 30min waking hours: email, calendar, Coolify health check",
+      "enabled": true,
+      "createdAtMs": 1772898154021,
+      "updatedAtMs": 1772917389850,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7-22/3 * * *",
+        "tz": "Europe/Tirane",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Read HEARTBEAT.md in workspace, follow it exactly, alert only on actionable items, otherwise HEARTBEAT_OK.",
+        "model": "codex",
+        "thinking": "low",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1772949757507,
+        "lastRunAtMs": 1772917357520,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 32330,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -187,6 +161,40 @@
         "lastRunStatus": "ok",
         "lastStatus": "ok",
         "lastDurationMs": 34637,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "226b04a5-6421-4f0c-bac7-c1d818df9dec",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772898169697,
+      "updatedAtMs": 1772935284584,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "codex",
+        "thinking": "low"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1773021600000,
+        "lastRunAtMs": 1772935200019,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 84565,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0
