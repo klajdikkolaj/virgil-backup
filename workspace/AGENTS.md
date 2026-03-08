@@ -5,8 +5,9 @@ This workspace is home. Keep it safe, useful, and low-noise.
 ## Session Start (always)
 1. Read `SOUL.md`
 2. Read `USER.md`
-3. Read `memory/YYYY-MM-DD.md` for today and yesterday
-4. In direct/main session only: read `MEMORY.md`
+3. Run memory retrieval first (`memory_search`) for relevant context
+4. Read only the specific memory files needed for this task
+5. In direct/main session only: read `MEMORY.md`
 
 ## Memory Model
 - Daily logs: `memory/YYYY-MM-DD.md` (volatile events)

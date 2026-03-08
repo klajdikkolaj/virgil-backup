@@ -143,12 +143,6 @@
             "anthropic/claude-haiku-4-5",
             "anthropic/claude-sonnet-4-6"
           ]
-        },
-        "heartbeat": {
-          "every": "1h",
-          "target": "discord",
-          "to": "1477637814014316586",
-          "accountId": "default"
         }
       }
     ]
