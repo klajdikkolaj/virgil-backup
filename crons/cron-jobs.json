@@ -316,6 +316,56 @@
       "state": {
         "nextRunAtMs": 1773111600000
       }
+    },
+    {
+      "id": "dfb35a4d-70a5-44e3-930e-aa50f7d1180f",
+      "name": "cron-circuit-breaker",
+      "description": "Disable noisy failing cron jobs after threshold",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "20 */2 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "codex",
+        "thinking": "low",
+        "timeoutSeconds": 180,
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/cron-circuit-breaker.md and execute exactly. Return concise status only."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      }
+    },
+    {
+      "id": "1103d149-38f3-40cb-96a2-e8a8905dbcc0",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "codex",
+        "thinking": "low",
+        "timeoutSeconds": 240,
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      }
     }
   ],
   "total": 10,

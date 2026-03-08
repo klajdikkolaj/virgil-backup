@@ -119,6 +119,13 @@
             "anthropic/claude-sonnet-4-6",
             "anthropic/claude-opus-4-6"
           ]
+        },
+        "tools": {
+          "profile": "coding",
+          "deny": [
+            "browser",
+            "canvas"
+          ]
         }
       },
       {
@@ -131,6 +138,15 @@
             "anthropic/claude-opus-4-6",
             "anthropic/claude-sonnet-4-6"
           ]
+        },
+        "tools": {
+          "profile": "coding",
+          "allow": [
+            "group:web"
+          ],
+          "deny": [
+            "canvas"
+          ]
         }
       },
       {
@@ -142,6 +158,14 @@
           "fallbacks": [
             "anthropic/claude-haiku-4-5",
             "anthropic/claude-sonnet-4-6"
+          ]
+        },
+        "tools": {
+          "profile": "coding",
+          "deny": [
+            "browser",
+            "canvas",
+            "group:web"
           ]
         }
       }
