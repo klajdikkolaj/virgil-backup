@@ -1,0 +1,11 @@
+# macOS noise
+.DS_Store
+**/.DS_Store
+
+# Local runtime secrets/state (never commit)
+config/auth-profiles.json
+**/auth-profiles.json
+**/.openclaw/credentials/**
+**/.openclaw/secrets/**
+.env
+.env.*

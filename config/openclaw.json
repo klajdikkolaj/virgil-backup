@@ -5,8 +5,8 @@
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
-    "GOG_KEYRING_PASSWORD": "virgil-gog-2026",
-    "GOG_ACCOUNT": "kljdkolaj@gmail.com"
+    "GOG_KEYRING_PASSWORD": "[GOG_KEYRING_PASSWORD]",
+    "GOG_ACCOUNT": "[GOG_ACCOUNT_EMAIL]"
   },
   "wizard": {
     "lastRunAt": "2026-03-01T21:05:49.174Z",
@@ -281,14 +281,14 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "931c86b0590e687a04cd8c88406966ffd228de9b67d24752"
+      "token": "[GATEWAY_TOKEN]"
     },
     "tailscale": {
       "mode": "serve",
       "resetOnExit": false
     },
     "remote": {
-      "token": "931c86b0590e687a04cd8c88406966ffd228de9b67d24752"
+      "token": "[GATEWAY_TOKEN]"
     }
   },
   "skills": {

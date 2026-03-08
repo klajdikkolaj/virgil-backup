@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "profiles": {
+    "openai-codex:default": {
+      "type": "oauth",
+      "provider": "openai-codex",
+      "access": "[OAUTH_ACCESS_TOKEN]",
+      "refresh": "[OAUTH_REFRESH_TOKEN]",
+      "expires": 0,
+      "accountId": "[ACCOUNT_ID]"
+    },
+    "anthropic:default": {
+      "type": "token",
+      "provider": "anthropic",
+      "token": "[API_TOKEN]"
+    }
+  },
+  "usageStats": {}
+}
