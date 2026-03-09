@@ -9,6 +9,7 @@ DISCORD_CHANNEL="1477637814014316586"
 DATE=$(date -u +"%Y-%m-%d")
 TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
 ERRORS=()
+CAN_PUSH=1
 
 echo "🔒 Virgil Backup — $TIMESTAMP"
 
@@ -98,6 +99,7 @@ scrub_file() {
   local file="$1"
   [ -f "$file" ] || return
   python3 - "$file" << 'PY'
+import json
 import re
 import sys
 from pathlib import Path
@@ -105,24 +107,78 @@ from pathlib import Path
 p = Path(sys.argv[1])
 t = p.read_text(errors="ignore")
 
+def sanitize_json(node, path=()):
+    if isinstance(node, dict):
+        out = {}
+        for k, v in node.items():
+            key_path = path + (k,)
+            key = ".".join(key_path)
+
+            if key == "channels.discord.token":
+                out[k] = "[DISCORD_BOT_TOKEN]"
+                continue
+            if key == "channels.telegram.botToken":
+                out[k] = "[TELEGRAM_BOT_TOKEN]"
+                continue
+            if key in {"gateway.auth.token", "gateway.remote.token"}:
+                out[k] = "[GATEWAY_TOKEN]"
+                continue
+            if key == "env.GOG_KEYRING_PASSWORD":
+                out[k] = "[GOG_KEYRING_PASSWORD]"
+                continue
+            if key == "env.GOG_ACCOUNT":
+                out[k] = "[GOG_ACCOUNT_EMAIL]"
+                continue
+
+            # Auth profile keys
+            if "profiles" in path and k == "access":
+                out[k] = "[OAUTH_ACCESS_TOKEN]"
+                continue
+            if "profiles" in path and k == "refresh":
+                out[k] = "[OAUTH_REFRESH_TOKEN]"
+                continue
+            if "profiles" in path and k == "token":
+                out[k] = "[API_TOKEN]"
+                continue
+            if "profiles" in path and k == "accountId":
+                out[k] = "[ACCOUNT_ID]"
+                continue
+            if "profiles" in path and k == "expires":
+                out[k] = 0
+                continue
+
+            out[k] = sanitize_json(v, key_path)
+        return out
+    if isinstance(node, list):
+        return [sanitize_json(v, path) for v in node]
+    return node
+
+try:
+    obj = json.loads(t)
+    obj = sanitize_json(obj)
+    t = json.dumps(obj, indent=2) + "\n"
+except Exception:
+    pass
+
 patterns = [
     (r"[0-9]{8,10}:AA[A-Za-z0-9_-]{33,}", "[TELEGRAM_BOT_TOKEN]"),
-    (r"MTQ[A-Za-z0-9_-]{20,}\\.[A-Za-z0-9_-]{6}\\.[A-Za-z0-9_-]{27,}", "[DISCORD_BOT_TOKEN]"),
+    (r"MTQ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{6}\.[A-Za-z0-9_-]{27,}", "[DISCORD_BOT_TOKEN]"),
+    (r"\b[A-Za-z0-9_-]{23,30}\.[A-Za-z0-9_-]{6}\.[A-Za-z0-9_-]{25,}\b", "[DISCORD_BOT_TOKEN]"),
     (r"sk-ant-[A-Za-z0-9_-]{20,}", "[ANTHROPIC_API_KEY]"),
     (r"sk-[A-Za-z0-9]{20,}", "[OPENAI_API_KEY]"),
     (r"AIza[A-Za-z0-9_-]{35}", "[GOOGLE_API_KEY]"),
     (r"ghp_[A-Za-z0-9]{36}", "[GITHUB_TOKEN]"),
-    (r"\\+355[0-9]{9}", "[PHONE_NUMBER]"),
-    (r"\\brt_[A-Za-z0-9._-]{20,}\\b", "[OPENAI_REFRESH_TOKEN]"),
-    (r"\\beyJ[A-Za-z0-9_-]{8,}\\.[A-Za-z0-9_-]{8,}\\.[A-Za-z0-9_-]{8,}\\b", "[OAUTH_ACCESS_TOKEN]"),
-    (r"\\b[a-f0-9]{40,}\\b", "[GATEWAY_TOKEN]"),
+    (r"\+355[0-9]{9}", "[PHONE_NUMBER]"),
+    (r"\brt_[A-Za-z0-9._-]{20,}\b", "[OPENAI_REFRESH_TOKEN]"),
+    (r"\beyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\b", "[OAUTH_ACCESS_TOKEN]"),
+    (r"\b[a-f0-9]{40,}\b", "[GATEWAY_TOKEN]"),
 ]
 
 for pat, repl in patterns:
     t = re.sub(pat, repl, t)
 
-t = re.sub(r'("GOG_KEYRING_PASSWORD"\\s*:\\s*)"(.*?)"', r'\\1"[GOG_KEYRING_PASSWORD]"', t)
-t = re.sub(r'("GOG_ACCOUNT"\\s*:\\s*)"(.*?)"', r'\\1"[GOG_ACCOUNT_EMAIL]"', t)
+t = re.sub(r'("GOG_KEYRING_PASSWORD"\s*:\s*)"(.*?)"', r'\1"[GOG_KEYRING_PASSWORD]"', t)
+t = re.sub(r'("GOG_ACCOUNT"\s*:\s*)"(.*?)"', r'\1"[GOG_ACCOUNT_EMAIL]"', t)
 
 p.write_text(t)
 PY
@@ -131,6 +187,45 @@ PY
 find "$BACKUP_DIR/workspace" "$BACKUP_DIR/config" "$BACKUP_DIR/crons" \
   -type f \( -name "*.md" -o -name "*.json" -o -name "*.yaml" \) | \
   while read -r f; do scrub_file "$f"; done
+
+echo "🔒 Verifying scrubbed artifacts..."
+if ! python3 - "$BACKUP_DIR" << 'PY'
+import re
+import sys
+from pathlib import Path
+
+root = Path(sys.argv[1])
+patterns = [
+    r"[0-9]{8,10}:AA[A-Za-z0-9_-]{33,}",                    # Telegram token
+    r"MTQ[A-Za-z0-9_-]{20,}\.[A-Za-z0-9_-]{6}\.[A-Za-z0-9_-]{27,}",           # Discord bot token
+    r"\b[A-Za-z0-9_-]{23,30}\.[A-Za-z0-9_-]{6}\.[A-Za-z0-9_-]{25,}\b",        # Discord-like token
+    r"\brt_[A-Za-z0-9._-]{20,}\b",                                             # OAuth refresh token
+    r"\beyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\b",        # JWT-like token
+]
+
+hits = []
+for f in root.rglob("*"):
+    if not f.is_file():
+        continue
+    if f.suffix.lower() not in {".md", ".json", ".yaml", ".yml"}:
+        continue
+    text = f.read_text(errors="ignore")
+    for pat in patterns:
+        if re.search(pat, text):
+            hits.append((str(f), pat))
+            break
+
+if hits:
+    print("Potential secrets detected after scrub:")
+    for path, pat in hits[:20]:
+        print(f"- {path} :: {pat}")
+    sys.exit(1)
+PY
+then
+  echo "❌ Secret scan failed after scrub. Skipping push."
+  ERRORS+=("Secret scan failed")
+  CAN_PUSH=0
+fi
 
 echo "✅ Secrets scrubbed"
 
@@ -172,10 +267,13 @@ else
   SUMMARY="$CHANGED file(s) changed"
 fi
 
-git commit -m "🔒 Backup $DATE — $SUMMARY" || true
-git push -u origin "$BACKUP_BRANCH"
-
-echo "✅ Pushed to GitHub branch: $BACKUP_BRANCH"
+if [ "$CAN_PUSH" -eq 1 ]; then
+  git commit -m "🔒 Backup $DATE — $SUMMARY" || true
+  git push -u origin "$BACKUP_BRANCH"
+  echo "✅ Pushed to GitHub branch: $BACKUP_BRANCH"
+else
+  echo "⚠️ Push skipped due secret-scan failure."
+fi
 
 if [ ${#ERRORS[@]} -eq 0 ]; then
   STATUS="✅ Daily backup complete — $SUMMARY ($TIMESTAMP)"
