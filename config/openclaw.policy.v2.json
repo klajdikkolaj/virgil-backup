@@ -28,7 +28,12 @@
     "maintenance": {
       "modelClass": "cheap",
       "thinking": "low",
-      "allowedActions": ["read", "status", "notify", "sync"]
+      "allowedActions": [
+        "read",
+        "status",
+        "notify",
+        "sync"
+      ]
     },
     "execution": {
       "modelClass": "codex",

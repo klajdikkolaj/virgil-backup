@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.7",
-    "lastTouchedAt": "2026-03-07T18:48:28.452Z"
+    "lastTouchedAt": "2026-03-08T10:59:23.317Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -9,9 +9,9 @@
     "GOG_ACCOUNT": "[GOG_ACCOUNT_EMAIL]"
   },
   "wizard": {
-    "lastRunAt": "2026-03-01T21:05:49.174Z",
-    "lastRunVersion": "2026.2.26",
-    "lastRunCommand": "doctor",
+    "lastRunAt": "2026-03-08T08:36:31.242Z",
+    "lastRunVersion": "2026.3.7",
+    "lastRunCommand": "configure",
     "lastRunMode": "local"
   },
   "auth": {
@@ -43,8 +43,9 @@
       "model": {
         "primary": "openai-codex/gpt-5.3-codex",
         "fallbacks": [
-          "anthropic/claude-opus-4-6",
           "anthropic/claude-sonnet-4-6",
+          "openai-codex/gpt-5.3-codex-spark",
+          "anthropic/claude-opus-4-6",
           "anthropic/claude-haiku-4-5"
         ]
       },
@@ -119,18 +120,11 @@
             "anthropic/claude-sonnet-4-6",
             "anthropic/claude-opus-4-6"
           ]
-        },
-        "tools": {
-          "profile": "coding",
-          "deny": [
-            "browser",
-            "canvas"
-          ]
         }
       },
       {
         "id": "virgil-opus",
-        "name": "Virgil (Codex→Opus)",
+        "name": "Virgil (Codex\u2192Opus)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
@@ -138,20 +132,11 @@
             "anthropic/claude-opus-4-6",
             "anthropic/claude-sonnet-4-6"
           ]
-        },
-        "tools": {
-          "profile": "coding",
-          "allow": [
-            "group:web"
-          ],
-          "deny": [
-            "canvas"
-          ]
         }
       },
       {
         "id": "virgil-haiku",
-        "name": "Virgil (Codex→Haiku)",
+        "name": "Virgil (Codex\u2192Haiku)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
@@ -160,13 +145,11 @@
             "anthropic/claude-sonnet-4-6"
           ]
         },
-        "tools": {
-          "profile": "coding",
-          "deny": [
-            "browser",
-            "canvas",
-            "group:web"
-          ]
+        "heartbeat": {
+          "every": "1h",
+          "target": "discord",
+          "to": "1477637814014316586",
+          "accountId": "default"
         }
       }
     ]

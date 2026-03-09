@@ -1,5 +1,5 @@
 # Eternia — Project Memory
-_Last distilled: 2026-03-06_
+_Last distilled: 2026-03-09_
 
 ## Project definition
 Eternia is a long-term evolving AI ecosystem combining learning, exploration, and symbolic worldbuilding.
@@ -54,6 +54,6 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - Deep research contract: `memory/workflows/deep-research.md`
 
 ## Open strategic debts
-- Convert Phase 1 hardening into a tracked verification checklist with explicit pass/fail gates.
+- Fill `memory/projects/eternia-phase1-trust-gates.md` with concrete evidence pointers and move gates from `UNKNOWN` to explicit PASS/FAIL.
 - Reconfirm lane-level validation/testing cadence after routing and fallback changes.
 - If requested, package findings into a theory-based playbook artifact for repeatable execution.

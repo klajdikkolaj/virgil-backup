@@ -1,5 +1,5 @@
 # MEMORY.md — Virgil Long-Term Memory
-_Last reviewed: 2026-03-07 (opencortex-memory-review cron)_
+_Last reviewed: 2026-03-09 (memory-consolidation cron)_
 
 ---
 
@@ -63,6 +63,7 @@ Reference workflows:
 Keep these as *check-before-rely* items:
 - Reconfirm Gmail/Calendar auth state before operational dependence.
 - Reconfirm channel delivery routes after major gateway/config updates.
+- Fix/verify `memory_search` provider auth path (repeated invalid API key failures in recent memory-review runs).
 
 ---
 
