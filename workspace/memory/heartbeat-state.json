@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1773040500,
-    "calendar": 1773040500,
+    "email": 1773047036,
+    "calendar": 1773047036,
     "coolify": 1773036900
   },
   "alertedEvents": [
@@ -25,5 +25,5 @@
     "19cbf82e3733529e"
   ],
   "coolifyConfigured": false,
-  "notes": "07:15 UTC Mar 9. Email scan (last 30m): no urgent/time-sensitive messages (newsletter/promotions only). Calendar scan (next 2h): 0 events, 0 new alerts."
+  "notes": "09:03 UTC Mar 9. Email scan (last 30m): no new urgent/time-sensitive mail. Calendar scan (next 2h): 0 events, 0 new alerts."
 }

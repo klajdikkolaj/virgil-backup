@@ -1,0 +1,327 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.7",
+    "lastTouchedAt": "2026-03-08T10:59:23.317Z"
+  },
+  "env": {
+    "GOG_KEYRING_BACKEND": "file",
+    "GOG_KEYRING_PASSWORD": "[GOG_KEYRING_PASSWORD]",
+    "GOG_ACCOUNT": "[GOG_ACCOUNT_EMAIL]"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-08T08:36:31.242Z",
+    "lastRunVersion": "2026.3.7",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "anthropic:default": {
+        "provider": "anthropic",
+        "mode": "token"
+      },
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      }
+    }
+  },
+  "acp": {
+    "enabled": true,
+    "dispatch": {
+      "enabled": true
+    },
+    "backend": "acpx",
+    "defaultAgent": "codex",
+    "allowedAgents": [
+      "claude",
+      "codex"
+    ]
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.3-codex",
+        "fallbacks": [
+          "anthropic/claude-sonnet-4-6",
+          "openai-codex/gpt-5.3-codex-spark",
+          "anthropic/claude-opus-4-6",
+          "anthropic/claude-haiku-4-5"
+        ]
+      },
+      "models": {
+        "anthropic/claude-sonnet-4-6": {},
+        "openai-codex/gpt-5.3-codex": {
+          "alias": "codex"
+        },
+        "openai-codex/gpt-5.3-codex-spark": {},
+        "anthropic/claude-opus-4-6": {},
+        "anthropic/claude-haiku-4-5": {}
+      },
+      "workspace": "/home/clawdkbot/.openclaw/workspace",
+      "bootstrapMaxChars": 5000,
+      "bootstrapTotalMaxChars": 20000,
+      "memorySearch": {
+        "provider": "gemini",
+        "remote": {
+          "apiKey": "[GOOGLE_API_KEY]"
+        },
+        "model": "gemini-embedding-001"
+      },
+      "contextPruning": {
+        "mode": "cache-ttl",
+        "ttl": "1h",
+        "keepLastAssistants": 3,
+        "softTrimRatio": 0.3,
+        "hardClearRatio": 0.5,
+        "minPrunableToolChars": 50000,
+        "tools": {
+          "deny": [
+            "browser",
+            "canvas"
+          ]
+        },
+        "softTrim": {
+          "maxChars": 4000,
+          "headChars": 1500,
+          "tailChars": 1500
+        },
+        "hardClear": {
+          "enabled": true,
+          "placeholder": "[Old tool result content cleared]"
+        }
+      },
+      "compaction": {
+        "mode": "safeguard",
+        "reserveTokensFloor": 24000,
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 6000,
+          "prompt": "Write any lasting notes to memory/YYYY-MM-DD.md; reply with NO_REPLY if nothing to store.",
+          "systemPrompt": "Session nearing compaction. Store durable memories now."
+        }
+      },
+      "thinkingDefault": "low",
+      "subagents": {
+        "model": "openai-codex/gpt-5.3-codex",
+        "thinking": "low",
+        "runTimeoutSeconds": 900
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "Virgil (Codex)",
+        "workspace": "/home/clawdkbot/.openclaw/workspace",
+        "model": {
+          "primary": "openai-codex/gpt-5.3-codex",
+          "fallbacks": [
+            "anthropic/claude-sonnet-4-6",
+            "anthropic/claude-opus-4-6"
+          ]
+        }
+      },
+      {
+        "id": "virgil-opus",
+        "name": "Virgil (Codex\u2192Opus)",
+        "workspace": "/home/clawdkbot/.openclaw/workspace",
+        "model": {
+          "primary": "openai-codex/gpt-5.3-codex",
+          "fallbacks": [
+            "anthropic/claude-opus-4-6",
+            "anthropic/claude-sonnet-4-6"
+          ]
+        }
+      },
+      {
+        "id": "virgil-haiku",
+        "name": "Virgil (Codex\u2192Haiku)",
+        "workspace": "/home/clawdkbot/.openclaw/workspace",
+        "model": {
+          "primary": "openai-codex/gpt-5.3-codex",
+          "fallbacks": [
+            "anthropic/claude-haiku-4-5",
+            "anthropic/claude-sonnet-4-6"
+          ]
+        },
+        "heartbeat": {
+          "every": "1h",
+          "target": "discord",
+          "to": "1477637814014316586",
+          "accountId": "default"
+        }
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "virgil-opus",
+      "match": {
+        "channel": "discord",
+        "peer": {
+          "kind": "channel",
+          "id": "1477637773681885184"
+        }
+      }
+    },
+    {
+      "agentId": "virgil-haiku",
+      "match": {
+        "channel": "discord",
+        "peer": {
+          "kind": "channel",
+          "id": "1477637814014316586"
+        }
+      }
+    }
+  ],
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer",
+    "threadBindings": {
+      "enabled": true
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true,
+          "autoWriteOnCompaction": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": false
+        },
+        "boot-md": {
+          "enabled": false
+        }
+      }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": false,
+      "dmPolicy": "allowlist",
+      "selfChatMode": true,
+      "allowFrom": [
+        "[PHONE_NUMBER]"
+      ],
+      "groupPolicy": "allowlist",
+      "debounceMs": 0,
+      "accounts": {
+        "default": {
+          "enabled": false,
+          "dmPolicy": "pairing",
+          "groupPolicy": "allowlist",
+          "debounceMs": 0
+        }
+      },
+      "mediaMaxMb": 50
+    },
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "[TELEGRAM_BOT_TOKEN]",
+      "groupPolicy": "allowlist",
+      "streaming": "off"
+    },
+    "discord": {
+      "enabled": true,
+      "token": "[DISCORD_BOT_TOKEN]",
+      "groupPolicy": "allowlist",
+      "streaming": "off",
+      "guilds": {
+        "1477606617670221948": {
+          "requireMention": false,
+          "users": [
+            "692688749972160542"
+          ],
+          "channels": {
+            "1477637736964952075": {
+              "requireMention": false,
+              "enabled": true
+            },
+            "1477637773681885184": {
+              "requireMention": false,
+              "enabled": true
+            },
+            "1477637792157794369": {
+              "requireMention": false,
+              "enabled": true
+            },
+            "1477637814014316586": {
+              "requireMention": false,
+              "enabled": true
+            },
+            "1477637827964571780": {
+              "requireMention": false,
+              "enabled": true
+            },
+            "1477606618224132274": {
+              "requireMention": false,
+              "enabled": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "[GATEWAY_TOKEN]"
+    },
+    "tailscale": {
+      "mode": "serve",
+      "resetOnExit": false
+    },
+    "remote": {
+      "token": "[GATEWAY_TOKEN]"
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "pnpm"
+    },
+    "entries": {
+      "goplaces": {
+        "apiKey": "[GOOGLE_API_KEY]"
+      },
+      "notion": {
+        "apiKey": "no"
+      },
+      "openai-image-gen": {
+        "apiKey": "no"
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      },
+      "whatsapp": {
+        "enabled": false
+      },
+      "discord": {
+        "enabled": true
+      },
+      "acpx": {
+        "enabled": true
+      }
+    }
+  }
+}

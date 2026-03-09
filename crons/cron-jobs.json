@@ -1,81 +1,6 @@
 {
   "jobs": [
     {
-      "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
-      "name": "heartbeat-klajdi",
-      "description": "Every 30min waking hours: email, calendar, Coolify health check",
-      "enabled": true,
-      "createdAtMs": 1772967603163,
-      "updatedAtMs": 1773036255664,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 7-22/3 * * *",
-        "tz": "Europe/Tirane",
-        "staggerMs": 300000
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Read HEARTBEAT.md in workspace, follow it exactly, alert only on actionable items, otherwise HEARTBEAT_OK.",
-        "model": "codex",
-        "thinking": "low",
-        "timeoutSeconds": 120
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1773047008503,
-        "lastRunAtMs": 1773036208529,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 47135,
-        "lastDelivered": false,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0
-      }
-    },
-    {
-      "id": "b39f28ad-ba1c-4c5d-9e19-9b787a385499",
-      "name": "cron-circuit-breaker",
-      "description": "Disable noisy failing cron jobs after threshold",
-      "enabled": true,
-      "createdAtMs": 1772967619189,
-      "updatedAtMs": 1773040818179,
-      "schedule": {
-        "kind": "cron",
-        "expr": "20 */2 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/cron-circuit-breaker.md and execute exactly. Return concise status only.",
-        "model": "codex",
-        "thinking": "low",
-        "timeoutSeconds": 180
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1773048000000,
-        "lastRunAtMs": 1773040800010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 18169,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
-      }
-    },
-    {
       "id": "e33f8641-bad9-4f51-9d6c-c58406a74bae",
       "agentId": "main",
       "sessionKey": "agent:main:discord:channel:1477637736964952075",
@@ -104,6 +29,81 @@
       },
       "state": {
         "nextRunAtMs": 1773054000000
+      }
+    },
+    {
+      "id": "b39f28ad-ba1c-4c5d-9e19-9b787a385499",
+      "name": "cron-circuit-breaker",
+      "description": "Disable noisy failing cron jobs after threshold",
+      "enabled": true,
+      "createdAtMs": 1772967619189,
+      "updatedAtMs": 1773048015478,
+      "schedule": {
+        "kind": "cron",
+        "expr": "20 */2 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/cron-circuit-breaker.md and execute exactly. Return concise status only.",
+        "model": "codex",
+        "thinking": "low",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1773055200000,
+        "lastRunAtMs": 1773048000013,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 15465,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
+      "name": "heartbeat-klajdi",
+      "description": "Every 30min waking hours: email, calendar, Coolify health check",
+      "enabled": true,
+      "createdAtMs": 1772967603163,
+      "updatedAtMs": 1773047054606,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7-22/3 * * *",
+        "tz": "Europe/Tirane",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Read HEARTBEAT.md in workspace, follow it exactly, alert only on actionable items, otherwise HEARTBEAT_OK.",
+        "model": "codex",
+        "thinking": "low",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1773057808503,
+        "lastRunAtMs": 1773047008518,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 46088,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0
       }
     },
     {
