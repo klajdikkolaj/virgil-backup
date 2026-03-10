@@ -15,5 +15,8 @@
       "token": "[API_TOKEN]"
     }
   },
+  "lastGood": {
+    "openai-codex": "openai-codex:default"
+  },
   "usageStats": {}
 }

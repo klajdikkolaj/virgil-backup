@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.7",
-    "lastTouchedAt": "2026-03-08T10:59:23.317Z"
+    "lastTouchedVersion": "2026.3.9",
+    "lastTouchedAt": "2026-03-09T15:30:44.453Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -9,8 +9,8 @@
     "GOG_ACCOUNT": "[GOG_ACCOUNT_EMAIL]"
   },
   "wizard": {
-    "lastRunAt": "2026-03-08T08:36:31.242Z",
-    "lastRunVersion": "2026.3.7",
+    "lastRunAt": "2026-03-09T15:30:44.390Z",
+    "lastRunVersion": "2026.3.9",
     "lastRunCommand": "configure",
     "lastRunMode": "local"
   },
@@ -46,7 +46,8 @@
           "anthropic/claude-sonnet-4-6",
           "openai-codex/gpt-5.3-codex-spark",
           "anthropic/claude-opus-4-6",
-          "anthropic/claude-haiku-4-5"
+          "anthropic/claude-haiku-4-5",
+          "openai-codex/gpt-5.4"
         ]
       },
       "models": {
@@ -56,7 +57,8 @@
         },
         "openai-codex/gpt-5.3-codex-spark": {},
         "anthropic/claude-opus-4-6": {},
-        "anthropic/claude-haiku-4-5": {}
+        "anthropic/claude-haiku-4-5": {},
+        "openai-codex/gpt-5.4": {}
       },
       "workspace": "/home/clawdkbot/.openclaw/workspace",
       "bootstrapMaxChars": 5000,
@@ -153,6 +155,17 @@
         }
       }
     ]
+  },
+  "tools": {
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "brave"
+      },
+      "fetch": {
+        "enabled": true
+      }
+    }
   },
   "bindings": [
     {
