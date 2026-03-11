@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1773111000,
-    "calendar": 1773111000,
-    "coolify": 1773063780
+    "email": 1773198241,
+    "calendar": 1773198241,
+    "coolify": 1773165857
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z"
@@ -22,8 +22,10 @@
     "19cbd67fabed2403",
     "19cbd69536df732c",
     "19cbdd09466e81d0",
-    "19cbf82e3733529e"
+    "19cbf82e3733529e",
+    "19cd75af2a8470e7",
+    "19cda2eca1e38922"
   ],
   "coolifyConfigured": false,
-  "notes": "02:50 UTC Mar 10. Email scan (last 30m): 0 urgent/time-sensitive messages (no qualifying recent urgent mail). Calendar scan (next 2h): 0 events, 0 new alerts."
+  "notes": "03:04 UTC Mar 11. Email scan (last 30m): 1 new message (Glassdoor update, non-urgent). Calendar scan (next 2h): 0 events, 0 new alerts."
 }
