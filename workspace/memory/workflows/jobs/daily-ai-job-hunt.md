@@ -9,6 +9,17 @@ Find remote AI-focused roles posted within last 24h and produce actionable short
 1. AI Trainer / AI Manager / AI Product / AI Program / Agentic Orchestration
 2. LLM app/platform/tooling roles (Next.js/Node/TS + OpenAI/Anthropic)
 
+## Query bias (explicit)
+Always include these search seeds first before broader AI terms:
+- "AI Trainer"
+- "AI Training Specialist"
+- "LLM Trainer"
+- "AI Manager"
+- "AI Program Manager"
+- "AI Product Manager"
+
+If results are sparse, then expand to adjacent terms (AI Ops, AI Enablement, Agent Ops) while keeping hard filters.
+
 ## Source priority
 RemoteOK, WeWorkRemotely, Wellfound, Remotive, Hugging Face Jobs, company ATS (Greenhouse/Lever), then verified web fallback.
 
