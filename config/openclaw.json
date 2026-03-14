@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.9",
-    "lastTouchedAt": "2026-03-09T15:30:44.453Z"
+    "lastTouchedVersion": "2026.3.11",
+    "lastTouchedAt": "2026-03-13T10:01:27.432Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -13,6 +13,9 @@
     "lastRunVersion": "2026.3.9",
     "lastRunCommand": "configure",
     "lastRunMode": "local"
+  },
+  "browser": {
+    "relayBindHost": "0.0.0.0"
   },
   "auth": {
     "profiles": {
@@ -153,6 +156,18 @@
           "to": "1477637814014316586",
           "accountId": "default"
         }
+      },
+      {
+        "id": "virgil-codex-high",
+        "name": "Virgil (Codex High Thinking)",
+        "workspace": "/home/clawdkbot/.openclaw/workspace",
+        "model": {
+          "primary": "openai-codex/gpt-5.3-codex",
+          "fallbacks": [
+            "anthropic/claude-sonnet-4-6",
+            "anthropic/claude-opus-4-6"
+          ]
+        }
       }
     ]
   },
@@ -185,6 +200,16 @@
         "peer": {
           "kind": "channel",
           "id": "1477637814014316586"
+        }
+      }
+    },
+    {
+      "agentId": "virgil-codex-high",
+      "match": {
+        "channel": "discord",
+        "peer": {
+          "kind": "channel",
+          "id": "1477637736964952075"
         }
       }
     }

@@ -1,5 +1,5 @@
 # Preferences — Distilled Stable Rules
-_Last distilled: 2026-03-07_
+_Last distilled: 2026-03-13_
 
 ## Communication
 - English by default.
