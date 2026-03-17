@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.11",
-    "lastTouchedAt": "2026-03-13T10:01:27.432Z"
+    "lastTouchedVersion": "2026.3.14",
+    "lastTouchedAt": "2026-03-16T09:40:15.177Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -9,14 +9,12 @@
     "GOG_ACCOUNT": "[GOG_ACCOUNT_EMAIL]"
   },
   "wizard": {
-    "lastRunAt": "2026-03-09T15:30:44.390Z",
-    "lastRunVersion": "2026.3.9",
-    "lastRunCommand": "configure",
+    "lastRunAt": "2026-03-16T09:40:15.146Z",
+    "lastRunVersion": "2026.3.14",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
-  "browser": {
-    "relayBindHost": "0.0.0.0"
-  },
+  "browser": {},
   "auth": {
     "profiles": {
       "anthropic:default": {
