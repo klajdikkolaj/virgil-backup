@@ -1,76 +1,38 @@
 {
   "jobs": [
     {
-      "id": "142e1c80-99ff-4f98-b4b2-257ae9cc358c",
-      "name": "daily-backup",
+      "id": "4f3efa4b-14b2-403a-b00c-886f1575d5a5",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477606618224132274",
+      "name": "ado-pr-review-watch-johan-enis",
       "enabled": true,
-      "createdAtMs": 1772967598531,
-      "updatedAtMs": 1773856829299,
+      "createdAtMs": 1772548178714,
+      "updatedAtMs": 1773899327255,
       "schedule": {
-        "kind": "cron",
-        "expr": "30 4 * * *",
-        "tz": "Europe/Tirane"
+        "kind": "every",
+        "everyMs": 1800000,
+        "anchorMs": 1772548178714
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run backup: cd ~/virgil-backup && git pull --rebase && bash backup.sh. Return short status only.",
         "model": "codex",
-        "thinking": "low"
+        "message": "Review-only automation (no code changes, no commits, no pushes).\n\nTask every run:\n1) Query active PRs in Azure DevOps repo atraxal/PGFlow/PGFlow.\n2) Filter PRs authored by: \"Johan Bujari\" or \"Enis Karriqi\".\n3) For each matching PR, fetch latest source commit id and changed files.\n4) If this PR+commit already has a prior auto-review marker comment from this bot, skip.\n5) Otherwise, post 1-2 short balanced inline comments on meaningful lines (clarity, correctness, maintainability; avoid nitpicks).\n6) Add marker in each posted comment: [virgil-auto-review commit:<short_sha>].\n\nImplementation details:\n- Use Azure DevOps REST API with PAT below.\n- Org: atraxal\n- Project: PGFlow\n- Repo: PGFlow\n- PAT: [REDACTED_SECRET]\n- Base API version: 7.1\n\nQuality constraints:\n- Keep comments concise and helpful.\n- Do not post duplicate comments for same PR commit.\n- If no matching PRs, do nothing.\n- If API/auth fails, report error in run output only.",
+        "thinking": "extra-high"
       },
       "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
+        "mode": "none"
       },
       "state": {
-        "lastRunAtMs": 1773718200020,
+        "lastRunAtMs": 1772553586092,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 214456,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
+        "lastDurationMs": 245484,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1773891000000,
-        "runningAtMs": 1773891000026
-      }
-    },
-    {
-      "id": "b39f28ad-ba1c-4c5d-9e19-9b787a385499",
-      "name": "cron-circuit-breaker",
-      "description": "Disable noisy failing cron jobs after threshold",
-      "enabled": true,
-      "createdAtMs": 1772967619189,
-      "updatedAtMs": 1773890427610,
-      "schedule": {
-        "kind": "cron",
-        "expr": "20 */2 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/cron-circuit-breaker.md and execute exactly. Return concise status only.",
-        "model": "codex",
-        "thinking": "low",
-        "timeoutSeconds": 180
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1773890400022,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 27588,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true,
-        "nextRunAtMs": 1773897600000
+        "nextRunAtMs": 1773899978714
       }
     },
     {
@@ -80,7 +42,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1773856829312,
+      "updatedAtMs": 1773899345510,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *",
@@ -107,7 +69,8 @@
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1773900000000
+        "nextRunAtMs": 1773900000000,
+        "runningAtMs": 1773899679881
       }
     },
     {
@@ -116,7 +79,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772967603163,
-      "updatedAtMs": 1773867891900,
+      "updatedAtMs": 1773899345434,
       "schedule": {
         "kind": "cron",
         "expr": "0 7-22/3 * * *",
@@ -156,7 +119,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1773856836621,
+      "updatedAtMs": 1773899345523,
       "schedule": {
         "kind": "cron",
         "expr": "5 7 * * *",
@@ -183,7 +146,8 @@
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1773900300000
+        "nextRunAtMs": 1773900300000,
+        "runningAtMs": 1773899679881
       }
     },
     {
@@ -194,7 +158,7 @@
       "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
       "enabled": true,
       "createdAtMs": 1772967607692,
-      "updatedAtMs": 1773858016295,
+      "updatedAtMs": 1773899345454,
       "schedule": {
         "kind": "cron",
         "expr": "15 7-22/6 * * *",
@@ -225,11 +189,104 @@
       }
     },
     {
+      "id": "a58a9fcb-c7ee-4e6f-94ce-7975c9313787",
+      "name": "gateway-watchdog",
+      "description": "Disabled: merged into maintenance-batch",
+      "enabled": true,
+      "createdAtMs": 1772898158665,
+      "updatedAtMs": 1773899327296,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 10800000,
+        "anchorMs": 1772898158665
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Gateway health check: (1) Run 'openclaw doctor --fix' to clean invalid config keys (Discord bug). (2) Check if gateway is active. (3) If not, restart it. (4) Report status.",
+        "model": "codex",
+        "thinking": "medium"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1773902558665
+      }
+    },
+    {
+      "id": "b39f28ad-ba1c-4c5d-9e19-9b787a385499",
+      "name": "cron-circuit-breaker",
+      "description": "Disable noisy failing cron jobs after threshold",
+      "enabled": true,
+      "createdAtMs": 1772967619189,
+      "updatedAtMs": 1773899345411,
+      "schedule": {
+        "kind": "cron",
+        "expr": "20 */2 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/cron-circuit-breaker.md and execute exactly. Return concise status only.",
+        "model": "codex",
+        "thinking": "low",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1773897600016,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 15419,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true,
+        "nextRunAtMs": 1773904800000
+      }
+    },
+    {
+      "id": "b202acdc-daf5-446f-b7fe-9b484443f659",
+      "name": "gateway-watchdog",
+      "description": "Disabled: merged into maintenance-batch",
+      "enabled": true,
+      "createdAtMs": 1772893753844,
+      "updatedAtMs": 1773899327350,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 10800000,
+        "anchorMs": 1772893753844
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Gateway health check: (1) Run 'openclaw doctor --fix' to clean invalid config keys (Discord bug). (2) Check if gateway is active. (3) If not, restart it. (4) Report status.",
+        "model": "codex",
+        "thinking": "medium"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "nextRunAtMs": 1773908953844
+      }
+    },
+    {
       "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
       "name": "openclaw-update-postcheck-report",
       "enabled": true,
       "createdAtMs": 1772967616887,
-      "updatedAtMs": 1773856836649,
+      "updatedAtMs": 1773899345560,
       "schedule": {
         "kind": "every",
         "everyMs": 259200000,
@@ -259,7 +316,7 @@
       "name": "daily-ai-remote-job-hunt",
       "enabled": true,
       "createdAtMs": 1772967614623,
-      "updatedAtMs": 1773856824060,
+      "updatedAtMs": 1773899345378,
       "schedule": {
         "kind": "cron",
         "expr": "0 12 * * 1-5",
@@ -287,7 +344,8 @@
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "nextRunAtMs": 1773918000000
+        "nextRunAtMs": 1773918000000,
+        "runningAtMs": 1773899679881
       }
     },
     {
@@ -296,7 +354,7 @@
       "description": "Daily token/cost and cron-health report",
       "enabled": true,
       "createdAtMs": 1772967621307,
-      "updatedAtMs": 1773874530712,
+      "updatedAtMs": 1773899345471,
       "schedule": {
         "kind": "cron",
         "expr": "55 23 * * *",
@@ -332,7 +390,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1773885678917,
+      "updatedAtMs": 1773899345485,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -362,11 +420,46 @@
       }
     },
     {
+      "id": "142e1c80-99ff-4f98-b4b2-257ae9cc358c",
+      "name": "daily-backup",
+      "enabled": true,
+      "createdAtMs": 1772967598531,
+      "updatedAtMs": 1773899345498,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 4 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run backup: cd ~/virgil-backup && git pull --rebase && bash backup.sh. Return short status only.",
+        "model": "codex",
+        "thinking": "low"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1773891000026,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 208944,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1773977400000
+      }
+    },
+    {
       "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
       "name": "opencortex-memory-review",
       "enabled": true,
       "createdAtMs": 1772967612188,
-      "updatedAtMs": 1773856836636,
+      "updatedAtMs": 1773899345539,
       "schedule": {
         "kind": "cron",
         "expr": "0 9 * * 1,3,5",
@@ -393,7 +486,8 @@
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1773993600000
+        "nextRunAtMs": 1773993600000,
+        "runningAtMs": 1773899679881
       }
     },
     {
@@ -403,7 +497,7 @@
       "name": "weekly-procurement-research-software",
       "enabled": true,
       "createdAtMs": 1772998466633,
-      "updatedAtMs": 1773856836670,
+      "updatedAtMs": 1773899345573,
       "schedule": {
         "kind": "cron",
         "expr": "0 8 * * 1",
@@ -434,9 +528,9 @@
       }
     }
   ],
-  "total": 12,
+  "total": 15,
   "offset": 0,
-  "limit": 12,
+  "limit": 15,
   "hasMore": false,
   "nextOffset": null
 }

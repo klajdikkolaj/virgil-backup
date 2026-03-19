@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1773888000,
-    "calendar": 1773888000,
+    "email": 1773898861,
+    "calendar": 1773898861,
     "coolify": 1773697256
   },
   "alertedEvents": [
@@ -49,5 +49,5 @@
     "19d02ba07f0d6eb5"
   ],
   "coolifyConfigured": false,
-  "notes": "02:40 UTC Mar 19. Email scan (last 30m): 1 new email (Google AI Studio billing update at 01:59) \u2014 informational, no urgent/time-sensitive items. Calendar scan (next 2h): 0 events, 0 new alerts."
+  "notes": "05:41 UTC Mar 19. Email scan (last 30m): 0 urgent/time-sensitive new messages (latest at 03:55 UTC, outside window). Calendar scan (next 2h): 0 events, 0 new alerts."
 }
