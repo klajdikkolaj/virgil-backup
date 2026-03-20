@@ -1,5 +1,5 @@
 # MEMORY.md — Virgil Long-Term Memory
-_Last reviewed: 2026-03-16 (memory-consolidation cron)_
+_Last reviewed: 2026-03-19 (memory-consolidation cron)_
 
 ---
 
