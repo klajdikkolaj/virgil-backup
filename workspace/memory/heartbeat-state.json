@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1773974510,
-    "calendar": 1773974510,
+    "email": 1774060913,
+    "calendar": 1774060913,
     "coolify": 1773697256
   },
   "alertedEvents": [
@@ -47,8 +47,16 @@
     "1847070fa6caaffe",
     "19d0210f7bd7cdd8",
     "19d02ba07f0d6eb5",
-    "19d06aa65562d98f"
+    "19d06aa65562d98f",
+    "19d0a4e8b0347243",
+    "19d0a426cb7a5c7d",
+    "19d0aaea0ace44e9",
+    "19d0ae3e9dac1b7f",
+    "19d0ad9aa57d89a1",
+    "19d0c28f77412bfb",
+    "19d0d0a898a37ac3",
+    "19d0d06d73868dae"
   ],
   "coolifyConfigured": false,
-  "notes": "02:41 UTC Mar 20. Email scan (last 30m): 0 urgent/time-sensitive messages (latest is marketing from Interactive Brokers at 02:03 UTC, not actionable). Calendar scan (next 2h): 0 events."
+  "notes": "02:41 UTC Mar 21. Email scan (last 30m): 0 new messages. Calendar: 0 events next 2h."
 }

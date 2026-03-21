@@ -1,4 +1,4 @@
-# Today's Scratchpad — 2026-03-02
+# Today's Scratchpad — 2026-03-20
 
 _Ephemeral. Reset or archive daily._
 
@@ -6,13 +6,14 @@ _Ephemeral. Reset or archive daily._
 MODE 1 — Daily Operator
 
 ## Session Notes
-- Memory review cron ran at 09:00 AM UTC
-- MEMORY.md fully distilled from: 2026-02-27.md, 2026-03-01.md, projects/eternia.md, contacts/klajdi.md, preferences.md
-- Vector memory debug session (2026-03-01) noted — Discord config caching issue documented
+- Memory consolidation cron ran at 08:00 AM UTC
+- No new daily logs found since 2026-03-11 (9-day gap — no active sessions recorded)
+- MEMORY.md was already reviewed 2026-03-19; no new promotions needed
+- Long-term anchors remain stable
 
 ## Tasks / WIP
-- Discord reminder set for 19:00 UTC today (2026-03-02)
+_(none active)_
 
 ## Pending Decisions
-- 1Password: CLI installed, no account linked yet
-- Eternia Phase 1 (security hardening): still the active priority
+- Phase 1 trust gates (eternia-phase1-trust-gates.md): all 6 gates still UNKNOWN — awaiting Klajdi-initiated validation work
+- Gmail/Calendar auth: still unconfirmed before operational use
