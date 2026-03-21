@@ -37,6 +37,37 @@
       }
     },
     {
+      "id": "e33f8641-bad9-4f51-9d6c-c58406a74bae",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477637736964952075",
+      "name": "daily-ai-remote-job-hunt",
+      "enabled": true,
+      "createdAtMs": 1772967614623,
+      "updatedAtMs": 1774093415270,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * 1-5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-ai-job-hunt.md and execute exactly. Return short status only: qualified count + top matches count + save path + git sync result + coverage mode.",
+        "model": "codex",
+        "thinking": "medium",
+        "timeoutSeconds": 1200
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1774263600000
+      }
+    },
+    {
       "id": "a58a9fcb-c7ee-4e6f-94ce-7975c9313787",
       "name": "gateway-watchdog",
       "description": "Disabled: merged into maintenance-batch",
@@ -432,9 +463,9 @@
       }
     }
   ],
-  "total": 12,
+  "total": 13,
   "offset": 0,
-  "limit": 12,
+  "limit": 13,
   "hasMore": false,
   "nextOffset": null
 }

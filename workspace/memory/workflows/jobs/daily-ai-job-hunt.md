@@ -2,12 +2,23 @@
 
 Schedule intent: weekdays at 12:00 Europe/Tirane.
 
-## Objective
-Find remote AI-focused roles posted within last 24h and produce actionable shortlist.
+This workflow is now the dispatcher for the dedicated OpenClaw project at:
+`/home/clawdkbot/.openclaw/workspace/projects/job-research-agent/`
 
-## Priority role themes
-1. AI Trainer / AI Manager / AI Product / AI Program / Agentic Orchestration
-2. LLM app/platform/tooling roles (Next.js/Node/TS + OpenAI/Anthropic)
+## Required reads
+Read these before execution:
+- `/home/clawdkbot/.openclaw/workspace/memory/contacts/klajdi.md`
+- `/home/clawdkbot/.openclaw/workspace/memory/contacts/klajdi-job-profile.md`
+- `/home/clawdkbot/.openclaw/workspace/projects/job-research-agent/orchestrator.md`
+- every file under `/home/clawdkbot/.openclaw/workspace/projects/job-research-agent/subagents/`
+
+## Objective
+Run the job-research orchestrator exactly and produce an actionable shortlist of remote AI-focused roles posted within the last 24 hours.
+
+## Execution rule
+- Default to true orchestrator plus specialist-subagent execution
+- Do not collapse the task into one generic single-agent browse pass unless subagents are unavailable
+- If subagents are unavailable, emulate the same lane boundaries sequentially and report that fallback explicitly
 
 ## Query bias (explicit)
 Always include these search seeds first before broader AI terms:
@@ -36,19 +47,25 @@ RemoteOK, WeWorkRemotely, Wellfound, Remotive, Hugging Face Jobs, company ATS (G
 - Open questions (1-3 bullets)
 - Fit score (0-100)
 
+## Required protocol
+1. Execute the orchestrator as manager
+2. Keep sourcing, enrichment, and fit review separated by lane
+3. Preserve structured output and failure handling
+4. Save the final report and update the titles index
+5. Run the git sync defined by the orchestrator
+
 ## Output file (mandatory)
 `/home/clawdkbot/virgil-vault/Jobs/Daily/YYYY-MM-DD.md`
-with YAML frontmatter: `date`, `sources_used`, `query_terms`, `count`.
+with YAML frontmatter: `date`, `sources_used`, `query_terms`, `count`, `coverage_mode`.
 
-Also append compact index to:
+Also append a compact date + title/company/link index block to:
 `/home/clawdkbot/virgil-vault/Jobs/Daily/_titles-index.md`
-with date + 10 title/company/link lines.
 
-## Git sync (mandatory)
-1. `cd /home/clawdkbot/virgil-vault`
-2. `git pull --rebase`
-3. `git add Jobs/Daily/*.md`
-4. If staged: commit `chore(jobs): daily AI jobs $(date +%F)` then push
-5. If no changes: report "no changes to sync"
-
-Return only short completion status: count + file path + index updated + git result.
+## Completion contract
+Return only short completion status:
+- qualified count
+- top matches count
+- save path
+- index updated
+- git result
+- coverage mode
