@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1774147311,
-    "calendar": 1774147311,
+    "email": 1774233745,
+    "calendar": 1774233745,
     "coolify": 1773697256
   },
   "alertedEvents": [
@@ -63,8 +63,16 @@
     "19d10d95c693fed3",
     "19d10f7240d9eba7",
     "19d1194d3ea59aaa",
-    "19d122d8a82ded69"
+    "19d122d8a82ded69",
+    "19d14c90f74b39c2",
+    "19d14c8c4ab2f64f",
+    "19d14babc1d99fe7",
+    "19d1497f1925923d",
+    "19d15e56d2fda849",
+    "19d15e38a4011992",
+    "19d17493b5a20fca",
+    "19d1732cd13be49b"
   ],
   "coolifyConfigured": false,
-  "notes": "02:41 UTC Mar 22. Email scan (last 30m): 0 new messages. Calendar: 0 events next 2h."
+  "notes": "02:42 UTC Mar 23. Email scan (last 30m): 0 messages. Calendar: 0 events next 2h."
 }
