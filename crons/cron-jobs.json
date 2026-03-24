@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1774150231224,
+      "updatedAtMs": 1774236634022,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -25,15 +25,15 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1774150200019,
+        "lastRunAtMs": 1774236600010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 31205,
+        "lastDurationMs": 34012,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774236600000,
-        "runningAtMs": 1774236600010
+        "nextRunAtMs": 1774323000000,
+        "runningAtMs": 1774323000008
       }
     },
     {
@@ -42,7 +42,7 @@
       "description": "Disabled: merged into maintenance-batch",
       "enabled": true,
       "createdAtMs": 1772898158665,
-      "updatedAtMs": 1774215912568,
+      "updatedAtMs": 1774302310246,
       "schedule": {
         "kind": "every",
         "everyMs": 21600000,
@@ -61,11 +61,11 @@
         "channel": "last"
       },
       "state": {
-        "nextRunAtMs": 1774237469960,
-        "lastRunAtMs": 1774215869960,
+        "nextRunAtMs": 1774323869999,
+        "lastRunAtMs": 1774302269999,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 42608,
+        "lastDurationMs": 40247,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
@@ -78,7 +78,7 @@
       "description": "Disable noisy failing cron jobs after threshold",
       "enabled": true,
       "createdAtMs": 1772967619189,
-      "updatedAtMs": 1774236011874,
+      "updatedAtMs": 1774322412271,
       "schedule": {
         "kind": "cron",
         "expr": "20 */2 * * *",
@@ -99,13 +99,13 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1774236000012,
+        "lastRunAtMs": 1774322400010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 11862,
+        "lastDurationMs": 12261,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774243200000,
+        "nextRunAtMs": 1774329600000,
         "lastDelivered": true
       }
     },
@@ -116,7 +116,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1774159394073,
+      "updatedAtMs": 1774245748689,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *",
@@ -136,14 +136,14 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1774159200011,
+        "lastRunAtMs": 1774245600013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 194062,
+        "lastDurationMs": 148676,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774245600000
+        "nextRunAtMs": 1774332000000
       }
     },
     {
@@ -152,7 +152,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772967603163,
-      "updatedAtMs": 1774213459109,
+      "updatedAtMs": 1774299865916,
       "schedule": {
         "kind": "cron",
         "expr": "0 7-22/3 * * *",
@@ -174,13 +174,13 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1774213408512,
+        "lastRunAtMs": 1774299808520,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 50597,
+        "lastDurationMs": 57396,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774245808503,
+        "nextRunAtMs": 1774332208503,
         "lastDelivered": false
       }
     },
@@ -192,7 +192,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1774159515501,
+      "updatedAtMs": 1774245919726,
       "schedule": {
         "kind": "cron",
         "expr": "5 7 * * *",
@@ -212,14 +212,14 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1774159500013,
+        "lastRunAtMs": 1774245900009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 15488,
+        "lastDurationMs": 19717,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774245900000
+        "nextRunAtMs": 1774332300000
       }
     },
     {
@@ -230,7 +230,7 @@
       "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
       "enabled": true,
       "createdAtMs": 1772967607692,
-      "updatedAtMs": 1774203606140,
+      "updatedAtMs": 1774289999545,
       "schedule": {
         "kind": "cron",
         "expr": "15 7-22/6 * * *",
@@ -250,86 +250,14 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1774203563608,
+        "lastRunAtMs": 1774289963606,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 42532,
+        "lastDurationMs": 35939,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774246763598,
+        "nextRunAtMs": 1774333163598,
         "lastDelivered": false
-      }
-    },
-    {
-      "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
-      "agentId": "main",
-      "sessionKey": "agent:main:discord:channel:1477606618224132274",
-      "name": "weekly-procurement-research-software",
-      "enabled": true,
-      "createdAtMs": 1772998466633,
-      "updatedAtMs": 1773899345573,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * 1",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "model": "codex",
-        "thinking": "medium",
-        "message": "Run weekly procurement research focused on software development opportunities.\n\nScope (required):\n- projects.worldbank.org (procurement / consulting / IT/software related)\n- AKSHI opportunities/tenders\n- Other Albanian public institutions publishing procurement notices\n\nFiltering rules:\n1) Include only opportunities relevant to software development, software implementation, digital platforms, systems integration, custom development, maintenance/support, data platforms, or IT services that require a software company.\n2) Include only items where bidding/application expiration date is at least 30 days after today (research date).\n3) Exclude expired, irrelevant hardware-only procurement, and non-software categories.\n\nFor each selected opportunity, provide:\n- Title\n- Institution / buyer\n- Country/region\n- Publication date (if available)\n- Expiration/bid deadline\n- Why it fits software-development companies (2-4 bullet brief)\n- Link\n\nOutput requirements:\n- Create Markdown report at: /home/clawdkbot/virgil-vault/Opportunities/Public-Procurement/YYYY-MM-DD-procurement-report.md\n- Include frontmatter: date, sources_checked, total_found, total_qualified, min_deadline_rule: \"+30d\"\n- Include a short executive summary at top.\n\nGit sync (mandatory):\n1) cd /home/clawdkbot/virgil-vault\n2) git pull --rebase\n3) git add Opportunities/Public-Procurement/*.md\n4) if staged changes exist:\n   - git commit -m \"chore(procurement): weekly software opportunities $(date +%F)\"\n   - git push origin HEAD\n5) if no changes, report \"no changes to sync\"\n\nCompletion message (concise):\n- qualified count\n- saved file path\n- git sync result\n- top 3 highest-value links"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1773644400021,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 471399,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1774249200000
-      }
-    },
-    {
-      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
-      "name": "opencortex-memory-review",
-      "enabled": true,
-      "createdAtMs": 1772967612188,
-      "updatedAtMs": 1773993696843,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 1,3,5",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly. Return concise status with files updated.",
-        "model": "codex",
-        "thinking": "medium"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1773993600021,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 96822,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1774252800000
       }
     },
     {
@@ -339,7 +267,7 @@
       "name": "daily-ai-remote-job-hunt",
       "enabled": true,
       "createdAtMs": 1772967614623,
-      "updatedAtMs": 1774172660870,
+      "updatedAtMs": 1774263878730,
       "schedule": {
         "kind": "cron",
         "expr": "0 12 * * 1-5",
@@ -360,14 +288,14 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1774172535482,
+        "lastRunAtMs": 1774263600011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 125388,
+        "lastDurationMs": 278719,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true,
-        "nextRunAtMs": 1774263600000
+        "nextRunAtMs": 1774350000000
       }
     },
     {
@@ -376,7 +304,7 @@
       "description": "Daily token/cost and cron-health report",
       "enabled": true,
       "createdAtMs": 1772967621307,
-      "updatedAtMs": 1774220126228,
+      "updatedAtMs": 1774306528298,
       "schedule": {
         "kind": "cron",
         "expr": "55 23 * * *",
@@ -397,14 +325,14 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1774220100011,
+        "lastRunAtMs": 1774306500011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 26217,
+        "lastDurationMs": 28287,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774306500000
+        "nextRunAtMs": 1774392900000
       }
     },
     {
@@ -412,7 +340,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1774231232833,
+      "updatedAtMs": 1774317615818,
       "schedule": {
         "kind": "cron",
         "expr": "0 3 * * *",
@@ -431,14 +359,49 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1774231200010,
+        "lastRunAtMs": 1774317600009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 32823,
+        "lastDurationMs": 15809,
         "lastDelivered": false,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1774317600000
+        "nextRunAtMs": 1774404000000
+      }
+    },
+    {
+      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772967612188,
+      "updatedAtMs": 1774252901215,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1,3,5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly. Return concise status with files updated.",
+        "model": "codex",
+        "thinking": "medium"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1774252800011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 101204,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1774425600000
       }
     },
     {
@@ -467,6 +430,43 @@
       },
       "state": {
         "nextRunAtMs": 1774431431575
+      }
+    },
+    {
+      "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477606618224132274",
+      "name": "weekly-procurement-research-software",
+      "enabled": true,
+      "createdAtMs": 1772998466633,
+      "updatedAtMs": 1774249358557,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * 1",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "codex",
+        "thinking": "medium",
+        "message": "Run weekly procurement research focused on software development opportunities.\n\nScope (required):\n- projects.worldbank.org (procurement / consulting / IT/software related)\n- AKSHI opportunities/tenders\n- Other Albanian public institutions publishing procurement notices\n\nFiltering rules:\n1) Include only opportunities relevant to software development, software implementation, digital platforms, systems integration, custom development, maintenance/support, data platforms, or IT services that require a software company.\n2) Include only items where bidding/application expiration date is at least 30 days after today (research date).\n3) Exclude expired, irrelevant hardware-only procurement, and non-software categories.\n\nFor each selected opportunity, provide:\n- Title\n- Institution / buyer\n- Country/region\n- Publication date (if available)\n- Expiration/bid deadline\n- Why it fits software-development companies (2-4 bullet brief)\n- Link\n\nOutput requirements:\n- Create Markdown report at: /home/clawdkbot/virgil-vault/Opportunities/Public-Procurement/YYYY-MM-DD-procurement-report.md\n- Include frontmatter: date, sources_checked, total_found, total_qualified, min_deadline_rule: \"+30d\"\n- Include a short executive summary at top.\n\nGit sync (mandatory):\n1) cd /home/clawdkbot/virgil-vault\n2) git pull --rebase\n3) git add Opportunities/Public-Procurement/*.md\n4) if staged changes exist:\n   - git commit -m \"chore(procurement): weekly software opportunities $(date +%F)\"\n   - git push origin HEAD\n5) if no changes, report \"no changes to sync\"\n\nCompletion message (concise):\n- qualified count\n- saved file path\n- git sync result\n- top 3 highest-value links"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1774249200008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 158549,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1774850400000
       }
     }
   ],
