@@ -28,15 +28,20 @@ Source grounding:
 - Practical OpenClaw operations and orchestration work
 - Interest in lead generation, workflow automation, and AI systems
 
+## Compensation
+- **Floor: $40 USD/hour** (or equivalent for contract/salary roles)
+
 ## Preferred work shape
-- Remote-first
+- **Remote-only** (will not relocate)
 - Worldwide, Europe, or EMEA-friendly roles
 - Contract or full-time are both acceptable when the work is strongly aligned
+- Visa sponsorship needed but only for remote positions
 
 ## Hard exclusions
 - Explicit Albania or Balkans exclusion
-- Onsite-only or relocation-required roles
+- Onsite-only or **relocation-required roles** (hard no)
 - Scammy, unverifiable, or commission-only postings
+- Hybrid or office-based roles
 
 ## High-fit signals
 - AI agent, orchestration, or automation ownership
