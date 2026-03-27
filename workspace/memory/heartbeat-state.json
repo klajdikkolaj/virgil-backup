@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1742955120,
-    "calendar": 1742955120,
+    "email": 1774559046,
+    "calendar": 1774559046,
     "coolify": 1773697256
   },
   "alertedEvents": [
@@ -126,8 +126,21 @@
     "19d2706a7f3462f1",
     "19d2730afe1fffce",
     "19d276fde4a14409",
-    "19d27707b46fdb8b"
+    "19d27707b46fdb8b",
+    "19d281a4df1fc56c",
+    "19d288fa4671890c",
+    "19d29d9252dbb0c8",
+    "19d29cf3acd400c6",
+    "19d29ad5be038118",
+    "19d299db3a611053",
+    "19d299db303e5a9b",
+    "19d298e0a479427d",
+    "19d298814dd6d371",
+    "19d296d117612323",
+    "19d28fea780e0111",
+    "19d2a7d47eb52ac9",
+    "19d2bc5073c14410"
   ],
   "coolifyConfigured": false,
-  "notes": "02:52 UTC Mar 26. Email: Bank notices (old) + informational updates. Calendar: clear. All clear."
+  "notes": "21:03 UTC Mar 26. Email: Calendly monthly update (newsletter, no action). Calendar: no events next 2h. Coolify: not configured."
 }
