@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1774559046,
-    "calendar": 1774559046,
+    "email": 1774742880,
+    "calendar": 1774742880,
     "coolify": 1773697256
   },
   "alertedEvents": [
@@ -139,8 +139,31 @@
     "19d296d117612323",
     "19d28fea780e0111",
     "19d2a7d47eb52ac9",
-    "19d2bc5073c14410"
+    "19d2bc5073c14410",
+    "19d2c9647b92d925",
+    "19d2ced86a6764fe",
+    "19d2f00fba5fde02",
+    "19d2eff6ce96e6fa",
+    "19d2ef909cbad104",
+    "19d2ed2dc0136742",
+    "19d2ed192a01d586",
+    "19d2f3a994e88fff",
+    "19d2f3a97349c10b",
+    "19d2f490e8a12776",
+    "19d2f4a1b9ae9e36",
+    "19d2f597e6be873d",
+    "19d30673d1138746",
+    "19d3059562880b12",
+    "19d3042a682a8f3f",
+    "19d3041645353cf2",
+    "19d303ad850e42c4",
+    "19d30355daec331f",
+    "19d303559ff7a7b0",
+    "19d30334dcec1b5e",
+    "19d30303e016fc95",
+    "19d302be5ed14283",
+    "19d310cd8fa543bc"
   ],
   "coolifyConfigured": false,
-  "notes": "21:03 UTC Mar 26. Email: Calendly monthly update (newsletter, no action). Calendar: no events next 2h. Coolify: not configured."
+  "notes": "23:28 UTC Mar 27. Calendar clear. No new action items. Newsletter from Jeremy Caplan (20:16, already tracked). GitHub deploy failure from 16:57 UTC remains (previously alerted)."
 }

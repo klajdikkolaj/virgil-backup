@@ -50,6 +50,5 @@ Source grounding:
 - Roles that reward structured systems thinking
 
 ## Unknowns
-- Compensation floor is not specified in workspace memory
-- Preferred company stage is not specified in workspace memory
-- Visa or relocation preference beyond remote work is not specified in workspace memory
+- Preferred company stage (startup / scale-up / enterprise) — not yet captured
+- Additional visa or relocation nuance beyond remote-only — not yet specified
