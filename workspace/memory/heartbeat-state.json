@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1774742880,
-    "calendar": 1774742880,
+    "email": 1774922520,
+    "calendar": 1774922520,
     "coolify": 1773697256
   },
   "alertedEvents": [
@@ -162,8 +162,10 @@
     "19d30334dcec1b5e",
     "19d30303e016fc95",
     "19d302be5ed14283",
-    "19d310cd8fa543bc"
+    "19d310cd8fa543bc",
+    "19d33075a5959f98",
+    "19d32fbc92abe246"
   ],
   "coolifyConfigured": false,
-  "notes": "23:28 UTC Mar 27. Calendar clear. No new action items. Newsletter from Jeremy Caplan (20:16, already tracked). GitHub deploy failure from 16:57 UTC remains (previously alerted)."
+  "notes": "02:02 UTC Mar 31. Email scan (last 30m): no actionable urgent/time-sensitive items. Calendar next 2h: clear."
 }

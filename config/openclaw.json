@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.14",
-    "lastTouchedAt": "2026-03-16T09:40:15.177Z"
+    "lastTouchedVersion": "2026.3.27",
+    "lastTouchedAt": "2026-03-30T13:02:32.483Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -9,9 +9,9 @@
     "GOG_ACCOUNT": "[GOG_ACCOUNT_EMAIL]"
   },
   "wizard": {
-    "lastRunAt": "2026-03-16T09:40:15.146Z",
-    "lastRunVersion": "2026.3.14",
-    "lastRunCommand": "doctor",
+    "lastRunAt": "2026-03-30T13:02:32.423Z",
+    "lastRunVersion": "2026.3.27",
+    "lastRunCommand": "configure",
     "lastRunMode": "local"
   },
   "browser": {},
@@ -24,6 +24,11 @@
       "openai-codex:default": {
         "provider": "openai-codex",
         "mode": "oauth"
+      },
+      "openai-codex:kljdkolaj@gmail.com": {
+        "provider": "openai-codex",
+        "mode": "oauth",
+        "email": "kljdkolaj@gmail.com"
       }
     }
   },
@@ -42,13 +47,13 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.3-codex",
+        "primary": "openai-codex/gpt-5.4",
         "fallbacks": [
           "anthropic/claude-sonnet-4-6",
+          "openai-codex/gpt-5.3-codex",
           "openai-codex/gpt-5.3-codex-spark",
           "anthropic/claude-opus-4-6",
-          "anthropic/claude-haiku-4-5",
-          "openai-codex/gpt-5.4"
+          "anthropic/claude-haiku-4-5"
         ]
       },
       "models": {
@@ -347,16 +352,19 @@
   "plugins": {
     "entries": {
       "telegram": {
-        "enabled": true
+        "enabled": true,
+        "config": {}
       },
       "whatsapp": {
         "enabled": false
       },
       "discord": {
-        "enabled": true
+        "enabled": true,
+        "config": {}
       },
       "acpx": {
-        "enabled": true
+        "enabled": true,
+        "config": {}
       }
     }
   }

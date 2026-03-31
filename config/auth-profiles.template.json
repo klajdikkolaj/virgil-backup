@@ -13,10 +13,18 @@
       "type": "token",
       "provider": "anthropic",
       "token": "[API_TOKEN]"
+    },
+    "openai-codex:kljdkolaj@gmail.com": {
+      "type": "oauth",
+      "provider": "openai-codex",
+      "access": "[OAUTH_ACCESS_TOKEN]",
+      "refresh": "[OAUTH_REFRESH_TOKEN]",
+      "expires": 0,
+      "email": "kljdkolaj@gmail.com"
     }
   },
   "lastGood": {
-    "openai-codex": "openai-codex:default",
+    "openai-codex": "openai-codex:kljdkolaj@gmail.com",
     "anthropic": "anthropic:default"
   },
   "usageStats": {}
