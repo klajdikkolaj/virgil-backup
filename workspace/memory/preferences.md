@@ -1,5 +1,5 @@
 # Preferences — Distilled Stable Rules
-_Last distilled: 2026-03-19_
+_Last distilled: 2026-04-01_
 
 ## Communication
 - English by default.
@@ -18,6 +18,9 @@ _Last distilled: 2026-03-19_
 - Prefer SSH-key workflows over token-heavy access when viable.
 - Avoid suspicious/unverified skills.
 - Do not silently deviate from agreed workflow on high-risk/research tasks; state method changes explicitly.
+- When framing jobs/work, emphasize AI integrations, application delivery, and agent orchestration over model training/tuning/research-scientist positioning.
+- Do not frame Klajdi for lead architect / principal full-stack roles unless he explicitly asks; prefer hands-on builder/implementation framing.
+- For recurring reports, prefer exact outcomes or concrete blockers over vague progress updates.
 
 ## Model behavior
 - Notify only automatic fallback model changes (not manual switches).

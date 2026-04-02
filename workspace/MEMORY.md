@@ -1,5 +1,5 @@
 # MEMORY.md — Virgil Long-Term Memory
-_Last reviewed: 2026-03-27 (memory-consolidation cron)_
+_Last reviewed: 2026-04-01 (memory-consolidation cron)_
 
 ---
 
@@ -19,6 +19,7 @@ Canonical profile: `memory/contacts/klajdi.md`
 - Klajdi is the creator and final authority of Eternia.
 - He wants a collaborative partner, not autonomous takeover behavior.
 - He values long-term coherence, structured reasoning, and deliberate execution.
+- Canonical CV file is stored at `memory/contacts/cv-klajdi.md` (source PDF path tracked there).
 
 ### Interaction defaults
 - English by default.
@@ -55,6 +56,7 @@ Reference workflows:
 - `memory/workflows/protocol-levels.md`
 - `memory/workflows/knowledge-access-order.md`
 - `memory/workflows/deep-research.md`
+- `memory/workflows/file-intake-sync.md`
 
 ---
 
@@ -81,6 +83,7 @@ Keep these as *check-before-rely* items:
   - Klajdi's job profile: `memory/contacts/klajdi-job-profile.md`
   - Architectural principle: one orchestrator + specialist subagents (per 2026-03-21 session)
   - Hard exclusions: Albania/Balkans, onsite-only, scam/commission-only roles
+  - Current operating defaults: optimize for realistic acceptance probability; hourly reporting goes to Discord `#briefing` with exact submissions or concrete blockers; nightly deep-search window is 03:00–05:00 Europe/Tirane
 
 ---
 

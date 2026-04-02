@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1774922520,
-    "calendar": 1774922520,
+    "email": 1775073780,
+    "calendar": 1775073780,
     "coolify": 1773697256
   },
   "alertedEvents": [
@@ -19,7 +19,7 @@
     "19cbd273329d5adb",
     "19cbd2b3dde8a5cc",
     "19cbd333498406eb",
-    "19cbd67fabed2403",
+    "19d67fabed2403",
     "19cbd69536df732c",
     "19cbdd09466e81d0",
     "19cbf82e3733529e",
@@ -164,8 +164,17 @@
     "19d302be5ed14283",
     "19d310cd8fa543bc",
     "19d33075a5959f98",
-    "19d32fbc92abe246"
+    "19d32fbc92abe246",
+    "19d4959f5414511d",
+    "19d4958bbd5a514e",
+    "19d495317d069042",
+    "19d495314de52590",
+    "19d49403f0c6d192",
+    "19d49403e355675a",
+    "19d493f6c7416bc8",
+    "19d4a933279961af"
   ],
   "coolifyConfigured": false,
-  "notes": "02:02 UTC Mar 31. Email scan (last 30m): no actionable urgent/time-sensitive items. Calendar next 2h: clear."
+  "notes": "20:03 UTC Apr 1. Security email from GitHub: Arc & Codementor OAuth app authorized; no calendar events in next 2h.",
+  "lastRunStatus": "alert"
 }
