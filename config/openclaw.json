@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.30",
-    "lastTouchedAt": "2026-04-01T13:11:32.528Z"
+    "lastTouchedVersion": "2026.4.3",
+    "lastTouchedAt": "2026-04-06T07:03:46.773Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -28,10 +28,6 @@
   },
   "auth": {
     "profiles": {
-      "anthropic:default": {
-        "provider": "anthropic",
-        "mode": "token"
-      },
       "openai-codex:default": {
         "provider": "openai-codex",
         "mode": "oauth"
@@ -51,7 +47,6 @@
     "backend": "acpx",
     "defaultAgent": "codex",
     "allowedAgents": [
-      "claude",
       "codex"
     ]
   },
@@ -60,21 +55,15 @@
       "model": {
         "primary": "openai-codex/gpt-5.4",
         "fallbacks": [
-          "anthropic/claude-sonnet-4-6",
           "openai-codex/gpt-5.3-codex",
-          "openai-codex/gpt-5.3-codex-spark",
-          "anthropic/claude-opus-4-6",
-          "anthropic/claude-haiku-4-5"
+          "openai-codex/gpt-5.3-codex-spark"
         ]
       },
       "models": {
-        "anthropic/claude-sonnet-4-6": {},
         "openai-codex/gpt-5.3-codex": {
           "alias": "codex"
         },
         "openai-codex/gpt-5.3-codex-spark": {},
-        "anthropic/claude-opus-4-6": {},
-        "anthropic/claude-haiku-4-5": {},
         "openai-codex/gpt-5.4": {}
       },
       "workspace": "/home/clawdkbot/.openclaw/workspace",
@@ -135,34 +124,25 @@
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
           "primary": "openai-codex/gpt-5.4",
-          "fallbacks": [
-            "anthropic/claude-sonnet-4-6",
-            "anthropic/claude-opus-4-6"
-          ]
+          "fallbacks": []
         }
       },
       {
         "id": "virgil-opus",
-        "name": "Virgil (Codex\u2192Opus)",
+        "name": "Virgil (Codex)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
-          "fallbacks": [
-            "anthropic/claude-opus-4-6",
-            "anthropic/claude-sonnet-4-6"
-          ]
+          "fallbacks": []
         }
       },
       {
         "id": "virgil-haiku",
-        "name": "Virgil (Codex\u2192Haiku)",
+        "name": "Virgil (Codex)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
           "primary": "openai-codex/gpt-5.4",
-          "fallbacks": [
-            "anthropic/claude-haiku-4-5",
-            "anthropic/claude-sonnet-4-6"
-          ]
+          "fallbacks": []
         },
         "heartbeat": {
           "every": "1h",
@@ -177,10 +157,7 @@
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
           "primary": "openai-codex/gpt-5.3-codex",
-          "fallbacks": [
-            "anthropic/claude-sonnet-4-6",
-            "anthropic/claude-opus-4-6"
-          ]
+          "fallbacks": []
         }
       }
     ]
