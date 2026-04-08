@@ -11,10 +11,11 @@ Source grounding:
 - Agentic Systems / Orchestration Engineer
 - LLM Application Engineer
 - Full-stack AI Engineer (implementation-focused, not lead/architect-scoped)
+- Full-stack Engineer with AI integrations
 - AI Product / Program / Operations roles with hands-on technical ownership
 
 ## Seniority
-- Prefer mid-level to mid-senior individual contributor roles
+- Prefer intermediate to mid-senior individual contributor roles
 - Open to player-coach roles only if hands-on execution stays central
 - Avoid role framing that implies principal/lead architect ownership
 
