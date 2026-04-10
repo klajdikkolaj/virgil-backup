@@ -20,7 +20,8 @@
       "access": "[OAUTH_ACCESS_TOKEN]",
       "refresh": "[OAUTH_REFRESH_TOKEN]",
       "expires": 0,
-      "email": "kljdkolaj@gmail.com"
+      "email": "kljdkolaj@gmail.com",
+      "accountId": "[ACCOUNT_ID]"
     }
   },
   "lastGood": {
