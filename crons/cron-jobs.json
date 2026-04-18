@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1776306668080,
+      "updatedAtMs": 1776393056528,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -25,15 +25,54 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1776306600010,
+        "lastRunAtMs": 1776393000013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 68070,
+        "lastDurationMs": 56515,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776393000000,
+        "nextRunAtMs": 1776479400000,
         "lastDelivered": true,
-        "runningAtMs": 1776393000013
+        "runningAtMs": 1776479400011
+      }
+    },
+    {
+      "id": "2ab212d8-546d-4042-b875-e6620f44a585",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "watch-eternia-main-branch",
+      "description": "Check Eternakk/eternia origin/main for new commits and notify this session only when it changes.",
+      "enabled": true,
+      "createdAtMs": 1776435507398,
+      "updatedAtMs": 1776478725682,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 1800000,
+        "anchorMs": 1776435507398
+      },
+      "sessionTarget": "session:agent:main:main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check `/home/clawdkbot/.openclaw/workspace/eternia` origin/main for changes against `/home/clawdkbot/.openclaw/workspace/memory/ops/eternia-main-watch.json`.\n\nSteps:\n1. Read the JSON state file.\n2. Run `git -C /home/clawdkbot/.openclaw/workspace/eternia fetch origin main --quiet && git -C /home/clawdkbot/.openclaw/workspace/eternia rev-parse origin/main && git -C /home/clawdkbot/.openclaw/workspace/eternia log --oneline -n 1 origin/main`.\n3. If SHA is unchanged from `lastSeen`, reply exactly `NO_REPLY`.\n4. If SHA changed, update the JSON state file with the new SHA and current UTC timestamp, then reply with a concise alert saying Eternakk/eternia main changed, including old short SHA, new short SHA, and latest commit subject.\n\nKeep it terse. Do not touch any other files.",
+        "toolsAllow": [
+          "exec",
+          "read",
+          "write"
+        ]
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1776480507647,
+        "lastRunAtMs": 1776478707647,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 18035,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": false
       }
     },
     {
@@ -43,7 +82,7 @@
       "name": "job-search-hourly-briefing",
       "enabled": true,
       "createdAtMs": 1774950426243,
-      "updatedAtMs": 1776391809775,
+      "updatedAtMs": 1776478299376,
       "schedule": {
         "kind": "cron",
         "expr": "0 3-5 * * *",
@@ -65,13 +104,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1776391470925,
+        "lastRunAtMs": 1776477870926,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 338850,
+        "lastDurationMs": 428450,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776395070915,
+        "nextRunAtMs": 1776481470915,
         "lastDelivered": true
       }
     },
@@ -81,7 +120,7 @@
       "description": "Disable noisy failing cron jobs after threshold",
       "enabled": true,
       "createdAtMs": 1772967619189,
-      "updatedAtMs": 1776392418377,
+      "updatedAtMs": 1776478819250,
       "schedule": {
         "kind": "cron",
         "expr": "20 */2 * * *",
@@ -102,13 +141,13 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1776392400013,
+        "lastRunAtMs": 1776478800011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 18364,
+        "lastDurationMs": 19239,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776399600000,
+        "nextRunAtMs": 1776486000000,
         "lastDelivered": true
       }
     },
@@ -119,7 +158,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1776315741325,
+      "updatedAtMs": 1776402174183,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *",
@@ -139,13 +178,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1776315600011,
+        "lastRunAtMs": 1776402000009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 141314,
+        "lastDurationMs": 174174,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776402000000,
+        "nextRunAtMs": 1776488400000,
         "lastDelivered": true
       }
     },
@@ -155,7 +194,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772967603163,
-      "updatedAtMs": 1776369895572,
+      "updatedAtMs": 1776456302657,
       "schedule": {
         "kind": "cron",
         "expr": "0 7-22/3 * * *",
@@ -177,13 +216,13 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1776369808514,
+        "lastRunAtMs": 1776456208510,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 87058,
+        "lastDurationMs": 94147,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776402208503,
+        "nextRunAtMs": 1776488608503,
         "lastDelivered": false
       }
     },
@@ -195,7 +234,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1776315923796,
+      "updatedAtMs": 1776402330394,
       "schedule": {
         "kind": "cron",
         "expr": "5 7 * * *",
@@ -215,13 +254,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1776315900004,
+        "lastRunAtMs": 1776402304697,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 23792,
+        "lastDurationMs": 25697,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776402300000,
+        "nextRunAtMs": 1776488700000,
         "lastDelivered": true
       }
     },
@@ -233,7 +272,7 @@
       "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
       "enabled": true,
       "createdAtMs": 1772967607692,
-      "updatedAtMs": 1776360067957,
+      "updatedAtMs": 1776446468948,
       "schedule": {
         "kind": "cron",
         "expr": "15 7-22/6 * * *",
@@ -253,13 +292,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1776359963609,
+        "lastRunAtMs": 1776446363605,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 104348,
+        "lastDurationMs": 105343,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776403163598,
+        "nextRunAtMs": 1776489563598,
         "lastDelivered": false
       }
     },
@@ -271,7 +310,7 @@
       "description": "Periodic cron health digest for #monitoring",
       "enabled": true,
       "createdAtMs": 1774971773234,
-      "updatedAtMs": 1776391840720,
+      "updatedAtMs": 1776478322919,
       "schedule": {
         "kind": "cron",
         "expr": "10 */4 * * *",
@@ -292,121 +331,14 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "nextRunAtMs": 1776406200000,
-        "lastRunAtMs": 1776391811951,
+        "nextRunAtMs": 1776492600000,
+        "lastRunAtMs": 1776478303905,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 28769,
+        "lastDurationMs": 19014,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
-      }
-    },
-    {
-      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
-      "name": "opencortex-memory-review",
-      "enabled": true,
-      "createdAtMs": 1772967612188,
-      "updatedAtMs": 1776236446083,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 1,3,5",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
-        "model": "default",
-        "thinking": "medium",
-        "timeoutSeconds": 600
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1776236400009,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 46074,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1776409200000,
-        "lastDelivered": true
-      }
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "updatedAtMs": 1776376529958,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1776376500012,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 29946,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1776462900000,
-        "lastDelivered": true
-      }
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "updatedAtMs": 1776387632183,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "default",
-        "thinking": "low"
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "lastRunAtMs": 1776387600011,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 32172,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1776474000000,
-        "lastDelivered": false
       }
     },
     {
@@ -445,6 +377,77 @@
       }
     },
     {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "updatedAtMs": 1776462931001,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1776462900011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 30990,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1776549300000,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "updatedAtMs": 1776474035580,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "default",
+        "thinking": "low"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "lastRunAtMs": 1776474000011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 35569,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1776560400000,
+        "lastDelivered": false
+      }
+    },
+    {
       "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
       "agentId": "main",
       "sessionKey": "agent:main:discord:channel:1477606618224132274",
@@ -480,11 +483,47 @@
         "nextRunAtMs": 1776664800000,
         "lastDelivered": true
       }
+    },
+    {
+      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772967612188,
+      "updatedAtMs": 1776409256421,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1,3,5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
+        "model": "default",
+        "thinking": "medium",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1776409200006,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 56415,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1776668400000,
+        "lastDelivered": true
+      }
     }
   ],
-  "total": 13,
+  "total": 14,
   "offset": 0,
-  "limit": 13,
+  "limit": 14,
   "hasMore": false,
   "nextOffset": null
 }
