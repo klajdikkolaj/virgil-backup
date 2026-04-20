@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1776479459226,
+      "updatedAtMs": 1776565846165,
       "schedule": {
         "kind": "cron",
         "expr": "30 4 * * *",
@@ -25,15 +25,15 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1776479400011,
+        "lastRunAtMs": 1776565800010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 59215,
+        "lastDurationMs": 46155,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776565800000,
+        "nextRunAtMs": 1776652200000,
         "lastDelivered": true,
-        "runningAtMs": 1776565800010
+        "runningAtMs": 1776652200013
       }
     },
     {
@@ -44,7 +44,7 @@
       "description": "Check Eternakk/eternia origin/main for new commits and notify this session only when it changes.",
       "enabled": true,
       "createdAtMs": 1776435507398,
-      "updatedAtMs": 1776565127378,
+      "updatedAtMs": 1776651526753,
       "schedule": {
         "kind": "every",
         "everyMs": 1800000,
@@ -65,11 +65,11 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1776566908102,
-        "lastRunAtMs": 1776565108102,
+        "nextRunAtMs": 1776653308561,
+        "lastRunAtMs": 1776651508561,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 19276,
+        "lastDurationMs": 18192,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false
@@ -82,7 +82,7 @@
       "name": "job-search-hourly-briefing",
       "enabled": true,
       "createdAtMs": 1774950426243,
-      "updatedAtMs": 1776564433034,
+      "updatedAtMs": 1776650762518,
       "schedule": {
         "kind": "cron",
         "expr": "0 3-5 * * *",
@@ -104,13 +104,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1776564270925,
+        "lastRunAtMs": 1776650670924,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 162109,
+        "lastDurationMs": 91594,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776567870915,
+        "nextRunAtMs": 1776654270915,
         "lastDelivered": true
       }
     },
@@ -120,7 +120,7 @@
       "description": "Disable noisy failing cron jobs after threshold",
       "enabled": true,
       "createdAtMs": 1772967619189,
-      "updatedAtMs": 1776565221956,
+      "updatedAtMs": 1776651619519,
       "schedule": {
         "kind": "cron",
         "expr": "20 */2 * * *",
@@ -141,13 +141,13 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1776565200009,
+        "lastRunAtMs": 1776651600010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 21947,
+        "lastDurationMs": 19509,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776572400000,
+        "nextRunAtMs": 1776658800000,
         "lastDelivered": true
       }
     },
@@ -158,7 +158,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1776488553932,
+      "updatedAtMs": 1776574988557,
       "schedule": {
         "kind": "cron",
         "expr": "0 7 * * *",
@@ -178,13 +178,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1776488400012,
+        "lastRunAtMs": 1776574800009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 153920,
+        "lastDurationMs": 188548,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776574800000,
+        "nextRunAtMs": 1776661200000,
         "lastDelivered": true
       }
     },
@@ -194,7 +194,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772967603163,
-      "updatedAtMs": 1776542701483,
+      "updatedAtMs": 1776629118248,
       "schedule": {
         "kind": "cron",
         "expr": "0 7-22/3 * * *",
@@ -216,13 +216,13 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1776542608514,
+        "lastRunAtMs": 1776629008513,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 92969,
+        "lastDurationMs": 109735,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776575008503,
+        "nextRunAtMs": 1776661408503,
         "lastDelivered": false
       }
     },
@@ -234,7 +234,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1776488721070,
+      "updatedAtMs": 1776575131945,
       "schedule": {
         "kind": "cron",
         "expr": "5 7 * * *",
@@ -254,13 +254,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1776488700009,
+        "lastRunAtMs": 1776575106979,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 21061,
+        "lastDurationMs": 24966,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776575100000,
+        "nextRunAtMs": 1776661500000,
         "lastDelivered": true
       }
     },
@@ -272,7 +272,7 @@
       "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
       "enabled": true,
       "createdAtMs": 1772967607692,
-      "updatedAtMs": 1776532868912,
+      "updatedAtMs": 1776619274242,
       "schedule": {
         "kind": "cron",
         "expr": "15 7-22/6 * * *",
@@ -292,123 +292,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1776532763610,
+        "lastRunAtMs": 1776619163608,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 105302,
+        "lastDurationMs": 110634,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1776575963598,
-        "lastDelivered": false
-      }
-    },
-    {
-      "id": "1ca8a324-396b-4863-a763-0267025c13b7",
-      "agentId": "virgil-haiku",
-      "sessionKey": "agent:virgil-haiku:discord:channel:1477637814014316586",
-      "name": "monitoring-digest",
-      "description": "Periodic cron health digest for #monitoring",
-      "enabled": true,
-      "createdAtMs": 1774971773234,
-      "updatedAtMs": 1776564619284,
-      "schedule": {
-        "kind": "cron",
-        "expr": "10 */4 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 180,
-        "message": "Create a concise monitoring digest for Discord channel 1477637814014316586.\n\nCheck cron health and report only:\n1) heartbeat-klajdi\n2) cron-circuit-breaker\n3) daily-backup\n4) maintenance-batch\n5) any job with consecutiveErrors > 0\n\nFormat:\n- \u2705 healthy jobs count\n- \u26a0\ufe0f jobs with errors (name + consecutiveErrors + lastError)\n- next run time for heartbeat\n- one-line recommended action (or 'no action')\n\nKeep under 8 lines."
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1776579000000,
-        "lastRunAtMs": 1776564600063,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 19221,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
-      }
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "updatedAtMs": 1776549325977,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1776549300006,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 25971,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1776635700000,
-        "lastDelivered": true
-      }
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "updatedAtMs": 1776560508313,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "default",
-        "thinking": "low"
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "lastRunAtMs": 1776560400011,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 108302,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1776646800000,
+        "nextRunAtMs": 1776662363598,
         "lastDelivered": false
       }
     },
@@ -450,6 +340,45 @@
       }
     },
     {
+      "id": "1ca8a324-396b-4863-a763-0267025c13b7",
+      "agentId": "virgil-haiku",
+      "sessionKey": "agent:virgil-haiku:discord:channel:1477637814014316586",
+      "name": "monitoring-digest",
+      "description": "Periodic cron health digest for #monitoring",
+      "enabled": true,
+      "createdAtMs": 1774971773234,
+      "updatedAtMs": 1776651025228,
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 */4 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 180,
+        "message": "Create a concise monitoring digest for Discord channel 1477637814014316586.\n\nCheck cron health and report only:\n1) heartbeat-klajdi\n2) cron-circuit-breaker\n3) daily-backup\n4) maintenance-batch\n5) any job with consecutiveErrors > 0\n\nFormat:\n- \u2705 healthy jobs count\n- \u26a0\ufe0f jobs with errors (name + consecutiveErrors + lastError)\n- next run time for heartbeat\n- one-line recommended action (or 'no action')\n\nKeep under 8 lines."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1776665400000,
+        "lastRunAtMs": 1776651000033,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 25195,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
       "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
       "name": "opencortex-memory-review",
       "enabled": true,
@@ -483,6 +412,77 @@
         "consecutiveErrors": 0,
         "nextRunAtMs": 1776668400000,
         "lastDelivered": true
+      }
+    },
+    {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "updatedAtMs": 1776635736512,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1776635700008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 36504,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1776722100000,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "updatedAtMs": 1776646838504,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "default",
+        "thinking": "low"
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "lastRunAtMs": 1776646800018,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 38486,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1776733200000,
+        "lastDelivered": false
       }
     },
     {
