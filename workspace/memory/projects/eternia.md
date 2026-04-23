@@ -61,4 +61,23 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 ## Research watchlist (requested)
 - Track **b-dLDS** for possible integration into Eternia’s long-term neuro-symbolic research map.
 - Track **CODEC** for possible integration into Eternia’s interpretability research map.
+- Track the new persistent Eternia research program at `virgil-vault/Research/Eternia/`.
+- Highest-value external domains currently judged most relevant:
+  - agentic simulation and world models
+  - memory architectures for social agents
+  - neuro-symbolic reasoning and constraint-based cognition
+  - companion/social AI
+  - safety, consent, governance, and dependency risks in persistent AI systems
+  - BCI / neural interfaces as future interface research, not near-term product magic
+- Current repo-understanding view to preserve:
+  - Eternia is a hybrid simulation/governance platform, not just a chatbot backend
+  - the real runtime center of gravity is `EternaWorld` in `world_builder_modules/`
+  - `world_builder.py` is now largely a compatibility shim
+  - `modules/governor.py` / the alignment governor is one of the strongest concrete parts of the codebase
+  - trust-boundary hardening remains the non-negotiable sequencing rule before higher-autonomy expansion
+- Current critique to keep alive in daily review:
+  - strategic imagination is ahead of enforcement/runtime rigor
+  - symbolic-law rhetoric still outruns executable semantics
+  - UI/product direction shows some drift from the repo’s core ontology
+  - scope pressure is high and needs disciplined sequencing
 - Next step when requested: disambiguate exact paper/project references for b-dLDS and CODEC, then produce fit/risk/effort scoring against Eternia phase map.
