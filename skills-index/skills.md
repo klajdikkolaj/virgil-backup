@@ -1,4 +1,4 @@
-# Installed Skills — 2026-04-23
+# Installed Skills — 2026-04-24
 - **agent-orchestration-multi-agent-optimize**: "Optimize multi-agent systems with coordinated profiling, workload distribution, and cost-aware orchestration. Use when improving agent performance, throughput, or reliability."
 - **agent-team-orchestration**: "Orchestrate multi-agent teams with defined roles, task lifecycles, handoff protocols, and review workflows. Use when: (1) Setting up a team of 2+ agents with different specializations, (2) Defining task routing and lifecycle (inbox → spec → build → review → done), (3) Creating handoff protocols between agents, (4) Establishing review and quality gates, (5) Managing async communication and artifact sharing between agents."
 - **gog**: Google Workspace CLI for Gmail, Calendar, Drive, Contacts, Sheets, and Docs.
@@ -11,5 +11,7 @@
 - **security-auditor**: Use when reviewing code for security vulnerabilities, implementing authentication flows, auditing OWASP Top 10, configuring CORS/CSP headers, handling secrets, input validation, SQL injection prevention, XSS protection, or any security-related code review.
 - **security-audit-toolkit**: Audit codebases and infrastructure for security issues. Use when scanning dependencies for vulnerabilities, detecting hardcoded secrets, checking OWASP top 10 issues, verifying SSL/TLS, auditing file permissions, or reviewing code for injection and auth flaws.
 - **security-sentinel-skill**: Detect prompt injection, jailbreak, role-hijack, and system extraction attempts. Applies multi-layer defense with semantic analysis and penalty scoring.
+- **superdesign**: Expert frontend design guidelines for creating beautiful, modern UIs. Use when building landing pages, dashboards, or any user interface.
+- **ui-ux-pro-max**: UI/UX design intelligence and implementation guidance for building polished interfaces. Use when the user asks for UI design, UX flows, information architecture, visual style direction, design systems/tokens, component specs, copy/microcopy, accessibility, or to generate/critique/refine frontend UI (HTML/CSS/JS, React, Next.js, Vue, Svelte, Tailwind). Includes workflows for (1) generating new UI layouts and styling, (2) improving existing UI/UX, (3) producing design-system tokens and component guidelines, and (4) turning UX recommendations into concrete code changes.
 - **vt-hash-intel**: >
 - **wiseocr**: "Convert PDF files to Markdown using WiseOCR API (powered by WiseDiag). Supports table recognition, multi-column layouts, and medical document OCR. Usage: Upload a PDF file and say Use WiseOCR to process this."

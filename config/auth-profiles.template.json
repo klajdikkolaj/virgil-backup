@@ -24,7 +24,7 @@
     }
   },
   "lastGood": {
-    "openai-codex": "openai-codex:kljdkolaj@gmail.com",
+    "openai-codex": "openai-codex:default",
     "anthropic": "anthropic:default"
   },
   "usageStats": {}
