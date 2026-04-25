@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.22",
-    "lastTouchedAt": "2026-04-22T08:18:21.880Z"
+    "lastTouchedAt": "2026-04-24T20:16:21.607Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -10,7 +10,7 @@
     "OPENCLAW_BUNDLED_PLUGINS_DIR": "/home/clawdkbot/openclaw/dist/extensions"
   },
   "wizard": {
-    "lastRunAt": "2026-04-22T08:18:21.726Z",
+    "lastRunAt": "2026-04-24T20:16:21.471Z",
     "lastRunVersion": "2026.4.22",
     "lastRunCommand": "configure",
     "lastRunMode": "local"
@@ -167,7 +167,11 @@
     "web": {
       "search": {
         "enabled": true,
-        "provider": "brave"
+        "provider": "duckduckgo",
+        "openaiCodex": {
+          "enabled": true,
+          "mode": "cached"
+        }
       },
       "fetch": {
         "enabled": true
@@ -378,6 +382,9 @@
         "config": {}
       },
       "browser": {
+        "enabled": true
+      },
+      "duckduckgo": {
         "enabled": true
       }
     }
