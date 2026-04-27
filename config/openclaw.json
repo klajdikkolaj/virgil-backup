@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.4.22",
-    "lastTouchedAt": "2026-04-24T20:16:21.607Z"
+    "lastTouchedVersion": "2026.4.26",
+    "lastTouchedAt": "2026-04-26T10:55:27.898Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -10,8 +10,8 @@
     "OPENCLAW_BUNDLED_PLUGINS_DIR": "/home/clawdkbot/openclaw/dist/extensions"
   },
   "wizard": {
-    "lastRunAt": "2026-04-24T20:16:21.471Z",
-    "lastRunVersion": "2026.4.22",
+    "lastRunAt": "2026-04-26T10:44:24.806Z",
+    "lastRunVersion": "2026.4.26",
     "lastRunCommand": "configure",
     "lastRunMode": "local"
   },
@@ -54,8 +54,9 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.4",
+        "primary": "openai-codex/gpt-5.5",
         "fallbacks": [
+          "openai-codex/gpt-5.4",
           "openai-codex/gpt-5.3-codex",
           "openai-codex/gpt-5.3-codex-spark"
         ]
@@ -65,7 +66,8 @@
           "alias": "codex"
         },
         "openai-codex/gpt-5.3-codex-spark": {},
-        "openai-codex/gpt-5.4": {}
+        "openai-codex/gpt-5.4": {},
+        "openai-codex/gpt-5.5": {}
       },
       "workspace": "/home/clawdkbot/.openclaw/workspace",
       "bootstrapMaxChars": 5000,
@@ -124,8 +126,11 @@
         "name": "Virgil (Codex)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
-          "primary": "openai-codex/gpt-5.4",
-          "fallbacks": []
+          "primary": "openai-codex/gpt-5.5",
+          "fallbacks": [
+            "openai-codex/gpt-5.4",
+            "openai-codex/gpt-5.3-codex"
+          ]
         }
       },
       {
@@ -133,8 +138,11 @@
         "name": "Virgil (Codex)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
-          "fallbacks": []
+          "primary": "openai-codex/gpt-5.5",
+          "fallbacks": [
+            "openai-codex/gpt-5.4",
+            "openai-codex/gpt-5.3-codex"
+          ]
         }
       },
       {
@@ -142,8 +150,11 @@
         "name": "Virgil (Codex)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
-          "primary": "openai-codex/gpt-5.4",
-          "fallbacks": []
+          "primary": "openai-codex/gpt-5.5",
+          "fallbacks": [
+            "openai-codex/gpt-5.4",
+            "openai-codex/gpt-5.3-codex"
+          ]
         },
         "heartbeat": {
           "every": "1h",
@@ -157,8 +168,11 @@
         "name": "Virgil (Codex High Thinking)",
         "workspace": "/home/clawdkbot/.openclaw/workspace",
         "model": {
-          "primary": "openai-codex/gpt-5.3-codex",
-          "fallbacks": []
+          "primary": "openai-codex/gpt-5.5",
+          "fallbacks": [
+            "openai-codex/gpt-5.4",
+            "openai-codex/gpt-5.3-codex"
+          ]
         }
       }
     ]
@@ -271,7 +285,9 @@
       "dmPolicy": "pairing",
       "botToken": "[TELEGRAM_BOT_TOKEN]",
       "groupPolicy": "allowlist",
-      "streaming": "off",
+      "streaming": {
+        "mode": "off"
+      },
       "execApprovals": {
         "enabled": false
       }
@@ -280,7 +296,9 @@
       "enabled": true,
       "token": "[DISCORD_BOT_TOKEN]",
       "groupPolicy": "allowlist",
-      "streaming": "off",
+      "streaming": {
+        "mode": "off"
+      },
       "guilds": {
         "1477606617670221948": {
           "requireMention": false,
@@ -337,7 +355,7 @@
       "token": "[GATEWAY_TOKEN]"
     },
     "tailscale": {
-      "mode": "serve",
+      "mode": "off",
       "resetOnExit": false
     },
     "remote": {
@@ -360,11 +378,23 @@
       }
     }
   },
+  "approvals": {
+    "exec": {
+      "enabled": false,
+      "mode": "session",
+      "agentFilter": [
+        "main"
+      ],
+      "sessionFilter": [
+        "discord",
+        "telegram"
+      ]
+    }
+  },
   "plugins": {
     "load": {
       "paths": []
     },
-    "installs": {},
     "entries": {
       "telegram": {
         "enabled": true,
@@ -386,20 +416,15 @@
       },
       "duckduckgo": {
         "enabled": true
+      },
+      "openai": {
+        "enabled": true
       }
     }
   },
-  "approvals": {
-    "exec": {
-      "enabled": false,
-      "mode": "session",
-      "agentFilter": [
-        "main"
-      ],
-      "sessionFilter": [
-        "discord",
-        "telegram"
-      ]
+  "discovery": {
+    "mdns": {
+      "mode": "off"
     }
   }
 }

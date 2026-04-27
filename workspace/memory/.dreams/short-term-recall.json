@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-27T01:00:19.343Z",
+  "entries": {
+    "memory:memory/2026-04-22.md:1:9": {
+      "key": "memory:memory/2026-04-22.md:1:9",
+      "path": "memory/2026-04-22.md",
+      "startLine": 1,
+      "endLine": 9,
+      "source": "memory",
+      "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.6134832218289374,
+      "maxScore": 0.5498931661248206,
+      "firstRecalledAt": "2026-04-26T11:01:23.262Z",
+      "lastRecalledAt": "2026-04-26T11:04:36.220Z",
+      "queryHashes": [
+        "7dec971abfc3",
+        "0a438add1fbe",
+        "202bfb159855"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "2026.4.22",
+        "git/update",
+        "eternakk/eternia",
+        "read-only",
+        "factual/critical",
+        "virgil-vault/research/eternia",
+        "team-structured",
+        "durable"
+      ]
+    },
+    "memory:memory/2026-04-01.md:27:37": {
+      "key": "memory:memory/2026-04-01.md:27:37",
+      "path": "memory/2026-04-01.md",
+      "startLine": 27,
+      "endLine": 37,
+      "source": "memory",
+      "snippet": "- No long-term content changes needed after dedupe review. ### Unresolved uncertainties (carry-forward) - Phase 1 trust gates (`memory/projects/eternia-phase1-trust-gates.md`): still unresolved until explicit validation work is done. - Gmail/Calendar auth state remains check-before-rely. - Preferred company stage beyond frontier-AI preference is still not captured. - `virgil-haiku` heartbeat `directPolicy` unset: still worth pinning explicitly. - `gateway-watchdog` enabled while described as deprecated/merged: still worth reconciling. - User requested job searching should stop running continuously; only run during the nightly window 03:00-05:00 Europe/Tirane. - Updated job-search cron from",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5091158956289291,
+      "maxScore": 0.5091158956289291,
+      "firstRecalledAt": "2026-04-26T11:02:00.491Z",
+      "lastRecalledAt": "2026-04-26T11:02:00.491Z",
+      "queryHashes": [
+        "0a438add1fbe"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "gateway",
+        "long-term",
+        "carry-forward",
+        "gmail/calendar",
+        "check-before-rely",
+        "frontier-ai",
+        "virgil-haiku",
+        "gateway-watchdog"
+      ]
+    },
+    "memory:memory/2026-03-03.md:77:91": {
+      "key": "memory:memory/2026-03-03.md:77:91",
+      "path": "memory/2026-03-03.md",
+      "startLine": 77,
+      "endLine": 91,
+      "source": "memory",
+      "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
+      "recallCount": 7,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 3.5337210550904277,
+      "maxScore": 0.5351848438382149,
+      "firstRecalledAt": "2026-04-26T11:07:01.679Z",
+      "lastRecalledAt": "2026-04-26T20:04:31.100Z",
+      "queryHashes": [
+        "caebfd509774",
+        "b0025376fbe6",
+        "1838ac12ff65",
+        "f3499393ffca",
+        "104c80d6577f",
+        "42b4f3a0aa84",
+        "39153de21415"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "gateway",
+        "heartbeat-ok",
+        "non-delivered",
+        "heartbeat-klajdi",
+        "virgil-haiku",
+        "daily-maintenance",
+        "europe/tirane",
+        "openclaw-gateway.service"
+      ]
+    },
+    "memory:memory/2026-03-03.md:57:81": {
+      "key": "memory:memory/2026-03-03.md:57:81",
+      "path": "memory/2026-03-03.md",
+      "startLine": 57,
+      "endLine": 81,
+      "source": "memory",
+      "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.4790920346975325,
+      "maxScore": 0.497491380572319,
+      "firstRecalledAt": "2026-04-26T14:03:51.025Z",
+      "lastRecalledAt": "2026-04-27T01:00:19.343Z",
+      "queryHashes": [
+        "1838ac12ff65",
+        "104c80d6577f",
+        "f822a46040f1"
+      ],
+      "recallDays": [
+        "2026-04-26",
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "qmd",
+        "gmail/calendar",
+        "re-verified",
+        "cpu-only",
+        "probing/build",
+        "home/linuxbrew",
+        "linuxbrew/lib/node-modules",
+        "tobilu/qmd/dist/llm.js"
+      ]
+    },
+    "memory:memory/2026-03-27.md:22:30": {
+      "key": "memory:memory/2026-03-27.md:22:30",
+      "path": "memory/2026-03-27.md",
+      "startLine": 22,
+      "endLine": 30,
+      "source": "memory",
+      "snippet": "- Reset `today.md` to 2026-03-27. ### Unresolved uncertainties (carry-forward) - Phase 1 trust gates (eternia-phase1-trust-gates.md): all 6 still UNKNOWN \u2014 awaiting Klajdi-initiated validation work. - Gmail/Calendar auth state: unconfirmed. - Preferred company stage (startup vs enterprise): not captured in job profile. - `virgil-haiku` heartbeat `directPolicy` unset \u2014 worth pinning to allow or block. - `gateway-watchdog` enabled but described as deprecated \u2014 worth disabling to reduce redundancy.",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9814471125602722,
+      "maxScore": 0.49419236481189727,
+      "firstRecalledAt": "2026-04-26T17:03:49.752Z",
+      "lastRecalledAt": "2026-04-26T20:04:31.100Z",
+      "queryHashes": [
+        "104c80d6577f",
+        "39153de21415"
+      ],
+      "recallDays": [
+        "2026-04-26"
+      ],
+      "conceptTags": [
+        "gateway",
+        "today.md",
+        "carry-forward",
+        "eternia-phase1-trust-gates.md",
+        "klajdi-initiated",
+        "gmail/calendar",
+        "virgil-haiku",
+        "gateway-watchdog"
+      ]
+    },
+    "memory:memory/2026-03-03.md:1:39": {
+      "key": "memory:memory/2026-03-03.md:1:39",
+      "path": "memory/2026-03-03.md",
+      "startLine": 1,
+      "endLine": 39,
+      "source": "memory",
+      "snippet": "# 2026-03-03 ## QMD indexing optimization applied - Added `workspace-memory` collection: - Path: `/home/clawdkbot/.openclaw/workspace/memory` - Pattern: `**/*.md` - Added targeted contexts for vault subpaths: - `/research`, `/projects`, `/daily`, `/skills` - Added operational context for `workspace-memory` root. - Ran `qmd update` and `qmd embed` successfully. - Post-change index status: - 26 files indexed - 49 vectors embedded - 2 collections (`vault`, `workspace-memory`) ## Scheduled optimization - Added cron job `qmd-light-refresh` (every 3 hours, Europe/Tirane): - Runs lightweight `qmd update` between nightly full reindex cycles. - Delivery mode: none (silent maintena",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5061095684766769,
+      "maxScore": 0.5061095684766769,
+      "firstRecalledAt": "2026-04-27T01:00:19.343Z",
+      "lastRecalledAt": "2026-04-27T01:00:19.343Z",
+      "queryHashes": [
+        "f822a46040f1"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "qmd",
+        "workspace-memory",
+        "home/clawdkbot",
+        "openclaw/workspace/memory",
+        "post-change",
+        "qmd-light-refresh",
+        "europe/tirane",
+        "indexing"
+      ]
+    },
+    "memory:memory/2026-03-03.md:34:63": {
+      "key": "memory:memory/2026-03-03.md:34:63",
+      "path": "memory/2026-03-03.md",
+      "startLine": 34,
+      "endLine": 63,
+      "source": "memory",
+      "snippet": "- added Codex reasoning escalation policy - added QMD light-refresh cron and workspace-memory indexing status - added protocol/workflow pointers for routing and quality controls - refreshed known issues/debts - Restructured long-term vault memory files for retention clarity: - `memory/contacts/klajdi.md` (communication + AI preferences) - `memory/preferences.md` (stable behavior rules) - `memory/projects/eternia.md` (project status + execution governance links) - `memory_search` tool was unavailable during this run (embedding provider/auth error), so distillation was done via direct file reads. ## OpenCortex memory review refresh (09:09 UTC cron run) - Re-read recent daily lo",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.48321111798286437,
+      "maxScore": 0.48321111798286437,
+      "firstRecalledAt": "2026-04-27T01:00:19.343Z",
+      "lastRecalledAt": "2026-04-27T01:00:19.343Z",
+      "queryHashes": [
+        "f822a46040f1"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "embedding",
+        "qmd",
+        "light-refresh",
+        "workspace-memory",
+        "protocol/workflow",
+        "issues/debts",
+        "long-term",
+        "memory/contacts/klajdi.md"
+      ]
+    }
+  }
+}

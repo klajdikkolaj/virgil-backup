@@ -23,9 +23,5 @@
       "email": "kljdkolaj@gmail.com"
     }
   },
-  "lastGood": {
-    "openai-codex": "openai-codex:kljdkolaj@gmail.com",
-    "anthropic": "anthropic:default"
-  },
   "usageStats": {}
 }
