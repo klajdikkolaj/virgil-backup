@@ -1,5 +1,5 @@
 # Eternia — Project Memory
-_Last distilled: 2026-03-09_
+_Last distilled: 2026-04-27_
 
 ## Project definition
 Eternia is a long-term evolving AI ecosystem combining learning, exploration, and symbolic worldbuilding.
@@ -13,7 +13,9 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - Repository: `Eternakk/eternia`
 - Access: SSH confirmed
 - Base implementation branch: `seriously`
-- Key strategy branch previously analyzed: `coklajdi/deep-research-continuation-plan`
+- Historical branch no longer needed for routine checks: `coklajdi/deep-research-continuation-plan`
+- Routine repo observation should track `origin/main`, not stale feature branches or local `HEAD`.
+- Persistent operating constraint: keep the repo read-only unless Klajdi explicitly allows changes.
 
 ## Non-negotiable sequencing rule
 **Do not progress to embodied movement or production multi-agent scale before trust-boundary hardening is complete.**
@@ -29,12 +31,14 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 ## Current status
 - No phase is marked complete.
 - Strategic focus remains Phase 1 hardening.
+- Klajdi requested persistent “Eternia mode” on 2026-04-22: maintain deep evolving understanding of the repo/project, preserve critical factual judgment, and produce daily research reports.
 
 ## Operating expectations for project work
 - Prefer rigorous sequencing and evidence over speed.
 - Use explicit protocol gates for high-risk/research work.
 - Keep reporting transparent about effective lane/model execution and fallback outcomes.
 - Preserve theory-grounded guidance (theory → protocol → action) for practical recommendations.
+- Daily Eternia research reports should be saved under `~/virgil-vault/Research/Eternia/` and remain factual/critical rather than promotional.
 
 ## Technical stack memory (working model)
 - Backend: Python 3.12, FastAPI, WebSocket, PostgreSQL
@@ -52,6 +56,12 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - Protocol strictness by risk: `memory/workflows/protocol-levels.md`
 - Required synthesis order: `memory/workflows/knowledge-access-order.md`
 - Deep research contract: `memory/workflows/deep-research.md`
+
+## Research program artifacts
+- Research directory: `~/virgil-vault/Research/Eternia/`
+- Established artifacts include core understanding, research watchlist, team charter, and daily reports.
+- Current research process uses specialist lanes plus review/synthesis.
+- Browser automation is the primary web-research path while Brave Search API-backed search remains unavailable without an API key.
 
 ## Open strategic debts
 - Fill `memory/projects/eternia-phase1-trust-gates.md` with concrete evidence pointers and move gates from `UNKNOWN` to explicit PASS/FAIL.

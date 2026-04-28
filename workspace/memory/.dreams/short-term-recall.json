@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-27T01:00:19.343Z",
+  "updatedAt": "2026-04-28T01:00:20.534Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,20 +9,24 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 3,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.6134832218289374,
+      "totalScore": 3.1770537942647934,
       "maxScore": 0.5498931661248206,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-04-26T11:04:36.220Z",
+      "lastRecalledAt": "2026-04-27T13:31:36.628Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
-        "202bfb159855"
+        "202bfb159855",
+        "e84eac2406b3",
+        "f750d75a2a56",
+        "dc9f9c3768e9"
       ],
       "recallDays": [
-        "2026-04-26"
+        "2026-04-26",
+        "2026-04-27"
       ],
       "conceptTags": [
         "2026.4.22",
@@ -42,18 +46,22 @@
       "endLine": 37,
       "source": "memory",
       "snippet": "- No long-term content changes needed after dedupe review. ### Unresolved uncertainties (carry-forward) - Phase 1 trust gates (`memory/projects/eternia-phase1-trust-gates.md`): still unresolved until explicit validation work is done. - Gmail/Calendar auth state remains check-before-rely. - Preferred company stage beyond frontier-AI preference is still not captured. - `virgil-haiku` heartbeat `directPolicy` unset: still worth pinning explicitly. - `gateway-watchdog` enabled while described as deprecated/merged: still worth reconciling. - User requested job searching should stop running continuously; only run during the nightly window 03:00-05:00 Europe/Tirane. - Updated job-search cron from",
-      "recallCount": 1,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5091158956289291,
-      "maxScore": 0.5091158956289291,
+      "totalScore": 2.0053886264562606,
+      "maxScore": 0.5268096208572387,
       "firstRecalledAt": "2026-04-26T11:02:00.491Z",
-      "lastRecalledAt": "2026-04-26T11:02:00.491Z",
+      "lastRecalledAt": "2026-04-27T13:45:17.495Z",
       "queryHashes": [
-        "0a438add1fbe"
+        "0a438add1fbe",
+        "6d548c7a43a0",
+        "2d0a44633528",
+        "b6ed60d59224"
       ],
       "recallDays": [
-        "2026-04-26"
+        "2026-04-26",
+        "2026-04-27"
       ],
       "conceptTags": [
         "gateway",
@@ -73,13 +81,13 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 7,
+      "recallCount": 16,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.5337210550904277,
+      "totalScore": 8.133558122813703,
       "maxScore": 0.5351848438382149,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-04-26T20:04:31.100Z",
+      "lastRecalledAt": "2026-04-27T20:03:47.897Z",
       "queryHashes": [
         "caebfd509774",
         "b0025376fbe6",
@@ -87,10 +95,19 @@
         "f3499393ffca",
         "104c80d6577f",
         "42b4f3a0aa84",
-        "39153de21415"
+        "39153de21415",
+        "6d548c7a43a0",
+        "5b38869d2cf8",
+        "f525c337ee6f",
+        "5aae5a72d242",
+        "dcb877d771ba",
+        "05f970f08d24",
+        "ad74f0a76ba1",
+        "019e4f44d32e"
       ],
       "recallDays": [
-        "2026-04-26"
+        "2026-04-26",
+        "2026-04-27"
       ],
       "conceptTags": [
         "gateway",
@@ -110,21 +127,25 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 3,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.4790920346975325,
+      "totalScore": 2.9580020308494563,
       "maxScore": 0.497491380572319,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-04-27T01:00:19.343Z",
+      "lastRecalledAt": "2026-04-28T01:00:20.534Z",
       "queryHashes": [
         "1838ac12ff65",
         "104c80d6577f",
-        "f822a46040f1"
+        "f822a46040f1",
+        "6d548c7a43a0",
+        "05f970f08d24",
+        "629d0851eb3d"
       ],
       "recallDays": [
         "2026-04-26",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-28"
       ],
       "conceptTags": [
         "qmd",
@@ -144,19 +165,21 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "- Reset `today.md` to 2026-03-27. ### Unresolved uncertainties (carry-forward) - Phase 1 trust gates (eternia-phase1-trust-gates.md): all 6 still UNKNOWN \u2014 awaiting Klajdi-initiated validation work. - Gmail/Calendar auth state: unconfirmed. - Preferred company stage (startup vs enterprise): not captured in job profile. - `virgil-haiku` heartbeat `directPolicy` unset \u2014 worth pinning to allow or block. - `gateway-watchdog` enabled but described as deprecated \u2014 worth disabling to reduce redundancy.",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9814471125602722,
-      "maxScore": 0.49419236481189727,
+      "totalScore": 1.4895177990198136,
+      "maxScore": 0.5080706864595413,
       "firstRecalledAt": "2026-04-26T17:03:49.752Z",
-      "lastRecalledAt": "2026-04-26T20:04:31.100Z",
+      "lastRecalledAt": "2026-04-27T08:03:49.073Z",
       "queryHashes": [
         "104c80d6577f",
-        "39153de21415"
+        "39153de21415",
+        "f525c337ee6f"
       ],
       "recallDays": [
-        "2026-04-26"
+        "2026-04-26",
+        "2026-04-27"
       ],
       "conceptTags": [
         "gateway",
@@ -176,18 +199,21 @@
       "endLine": 39,
       "source": "memory",
       "snippet": "# 2026-03-03 ## QMD indexing optimization applied - Added `workspace-memory` collection: - Path: `/home/clawdkbot/.openclaw/workspace/memory` - Pattern: `**/*.md` - Added targeted contexts for vault subpaths: - `/research`, `/projects`, `/daily`, `/skills` - Added operational context for `workspace-memory` root. - Ran `qmd update` and `qmd embed` successfully. - Post-change index status: - 26 files indexed - 49 vectors embedded - 2 collections (`vault`, `workspace-memory`) ## Scheduled optimization - Added cron job `qmd-light-refresh` (every 3 hours, Europe/Tirane): - Runs lightweight `qmd update` between nightly full reindex cycles. - Delivery mode: none (silent maintena",
-      "recallCount": 1,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5061095684766769,
+      "totalScore": 1.5081459164619444,
       "maxScore": 0.5061095684766769,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-04-27T01:00:19.343Z",
+      "lastRecalledAt": "2026-04-28T01:00:20.534Z",
       "queryHashes": [
-        "f822a46040f1"
+        "f822a46040f1",
+        "ad74f0a76ba1",
+        "629d0851eb3d"
       ],
       "recallDays": [
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-28"
       ],
       "conceptTags": [
         "qmd",
@@ -207,18 +233,20 @@
       "endLine": 63,
       "source": "memory",
       "snippet": "- added Codex reasoning escalation policy - added QMD light-refresh cron and workspace-memory indexing status - added protocol/workflow pointers for routing and quality controls - refreshed known issues/debts - Restructured long-term vault memory files for retention clarity: - `memory/contacts/klajdi.md` (communication + AI preferences) - `memory/preferences.md` (stable behavior rules) - `memory/projects/eternia.md` (project status + execution governance links) - `memory_search` tool was unavailable during this run (embedding provider/auth error), so distillation was done via direct file reads. ## OpenCortex memory review refresh (09:09 UTC cron run) - Re-read recent daily lo",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.48321111798286437,
+      "totalScore": 0.9622756123542785,
       "maxScore": 0.48321111798286437,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-04-27T01:00:19.343Z",
+      "lastRecalledAt": "2026-04-28T01:00:20.534Z",
       "queryHashes": [
-        "f822a46040f1"
+        "f822a46040f1",
+        "629d0851eb3d"
       ],
       "recallDays": [
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-28"
       ],
       "conceptTags": [
         "embedding",
@@ -228,6 +256,255 @@
         "protocol/workflow",
         "issues/debts",
         "long-term",
+        "memory/contacts/klajdi.md"
+      ]
+    },
+    "memory:memory/2026-03-04.md:1:44": {
+      "key": "memory:memory/2026-03-04.md:1:44",
+      "path": "memory/2026-03-04.md",
+      "startLine": 1,
+      "endLine": 44,
+      "source": "memory",
+      "snippet": "# 2026-03-04 ## OpenCortex memory review (09:00 UTC cron) - Reviewed recent daily logs: - `memory/2026-02-27.md` - `memory/2026-03-01.md` - `memory/2026-03-02.md` - `memory/2026-03-03.md` - Cross-checked current long-term files for duplication and volatility: - `MEMORY.md` - `memory/contacts/klajdi.md` - `memory/projects/eternia.md` - `memory/preferences.md` ## Distillation updates applied - Rewrote `MEMORY.md` as a stable anchor document: - identity anchor - Klajdi anchor + interaction defaults - Eternia strategic constant + active priority - operating memory pointers and verification debts - explicit retention policy (stable vs volatile storage) - Restructure",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5670112773776054,
+      "maxScore": 0.5670112773776054,
+      "firstRecalledAt": "2026-04-27T07:00:29.288Z",
+      "lastRecalledAt": "2026-04-27T07:00:29.288Z",
+      "queryHashes": [
+        "f0269acc32c9"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "memory/2026-02-27.md",
+        "memory/2026-03-01.md",
+        "memory/2026-03-02.md",
+        "memory/2026-03-03.md",
+        "cross-checked",
+        "long-term",
+        "memory.md",
+        "memory/contacts/klajdi.md"
+      ]
+    },
+    "memory:memory/2026-03-05.md:1:34": {
+      "key": "memory:memory/2026-03-05.md:1:34",
+      "path": "memory/2026-03-05.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# 2026-03-05 ## OpenCortex memory review (09:00 UTC cron) ### Inputs reviewed - `memory/2026-02-27.md` - `memory/2026-03-01.md` - `memory/2026-03-02.md` - `memory/2026-03-03.md` - `memory/2026-03-04.md` ### Long-term files reviewed/restructured - `MEMORY.md` - `memory/contacts/klajdi.md` - `memory/projects/eternia.md` - `memory/preferences.md` ### Distillation changes - Refreshed long-term anchor memory with stable items only. - Promoted stable communication preference: **theory \u2192 protocol \u2192 action** framing. - Promoted stable expectation: transparent reporting of effective model/lane usage and fallback outcomes on important work. - Preserved non-negotiable Eternia sequencing rule (Phase",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5600852489471435,
+      "maxScore": 0.5600852489471435,
+      "firstRecalledAt": "2026-04-27T07:00:29.288Z",
+      "lastRecalledAt": "2026-04-27T07:00:29.288Z",
+      "queryHashes": [
+        "f0269acc32c9"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "memory/2026-02-27.md",
+        "memory/2026-03-01.md",
+        "memory/2026-03-02.md",
+        "memory/2026-03-03.md",
+        "memory/2026-03-04.md",
+        "long-term",
+        "reviewed/restructured",
+        "memory.md"
+      ]
+    },
+    "memory:memory/2026-03-11.md:1:29": {
+      "key": "memory:memory/2026-03-11.md:1:29",
+      "path": "memory/2026-03-11.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# 2026-03-11 ## OpenCortex memory review (08:00 UTC cron) ### Inputs reviewed (last 7-day focus) - `memory/2026-03-04.md` - `memory/2026-03-05.md` - `memory/2026-03-06.md` - `memory/2026-03-07.md` - `memory/2026-03-09-1440.md` - Long-term anchors cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/contacts/klajdi.md` - `memory/projects/eternia.md` ### Distillation decisions - No new durable preferences/constraints/decisions met promotion threshold beyond what is already captured in long-term files. - Kept prior long-term promotions intact (theory \u2192 protocol \u2192 action, transparent model/fallback reporting, Phase 1 trust-boundary gate priority). - Confirmed research-watc",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5537662208080292,
+      "maxScore": 0.5537662208080292,
+      "firstRecalledAt": "2026-04-27T07:00:29.288Z",
+      "lastRecalledAt": "2026-04-27T07:00:29.288Z",
+      "queryHashes": [
+        "f0269acc32c9"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "7-day",
+        "memory/2026-03-04.md",
+        "memory/2026-03-05.md",
+        "memory/2026-03-06.md",
+        "memory/2026-03-07.md",
+        "memory/2026-03-09-1440.md",
+        "long-term",
+        "cross-checked"
+      ]
+    },
+    "memory:memory/2026-03-06.md:1:34": {
+      "key": "memory:memory/2026-03-06.md:1:34",
+      "path": "memory/2026-03-06.md",
+      "startLine": 1,
+      "endLine": 34,
+      "source": "memory",
+      "snippet": "# 2026-03-06 ## OpenCortex memory review (09:00 UTC cron) ### Inputs reviewed - `memory/2026-03-02.md` - `memory/2026-03-03.md` - `memory/2026-03-04.md` - `memory/2026-03-05.md` - Historical anchors spot-checked: `memory/2026-03-01.md`, `memory/2026-02-27.md` ### Long-term files updated - `MEMORY.md` - `memory/contacts/klajdi.md` - `memory/projects/eternia.md` - `memory/preferences.md` ### Distillation decisions - Kept long-term layer focused on stable anchors, governance constraints, and durable preferences. - Preserved Eternia strategic invariant: Phase 1 trust-boundary hardening precedes later phases. - Reinforced communication contract: direct style + **theory \u2192 protocol \u2192 action** f",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5519534289836883,
+      "maxScore": 0.5519534289836883,
+      "firstRecalledAt": "2026-04-27T07:00:29.288Z",
+      "lastRecalledAt": "2026-04-27T07:00:29.288Z",
+      "queryHashes": [
+        "f0269acc32c9"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "memory/2026-03-02.md",
+        "memory/2026-03-03.md",
+        "memory/2026-03-04.md",
+        "memory/2026-03-05.md",
+        "spot-checked",
+        "memory/2026-03-01.md",
+        "memory/2026-02-27.md",
+        "long-term"
+      ]
+    },
+    "memory:memory/2026-03-07.md:1:32": {
+      "key": "memory:memory/2026-03-07.md:1:32",
+      "path": "memory/2026-03-07.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-03-07 ## OpenCortex memory review (09:00 UTC cron) ### Inputs reviewed - `memory/2026-03-03.md` - `memory/2026-03-04.md` - `memory/2026-03-05.md` - `memory/2026-03-06.md` - Long-term anchors cross-checked: - `MEMORY.md` - `memory/contacts/klajdi.md` - `memory/projects/eternia.md` - `memory/preferences.md` ### Distillation outcomes - Confirmed no new contradictory signals in recent logs. - Kept long-term memory constrained to durable truths (identity, governance, safety, communication, and operating defaults). - Preserved the core Eternia invariant: Phase 1 trust-boundary hardening remains the active gate before downstream phases. - Added a dedicated long-term verification l",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.0580057531595228,
+      "maxScore": 0.5484851837158202,
+      "firstRecalledAt": "2026-04-27T07:00:29.288Z",
+      "lastRecalledAt": "2026-04-27T13:45:17.495Z",
+      "queryHashes": [
+        "f0269acc32c9",
+        "b6ed60d59224"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "memory/2026-03-03.md",
+        "memory/2026-03-04.md",
+        "memory/2026-03-05.md",
+        "memory/2026-03-06.md",
+        "long-term",
+        "cross-checked",
+        "memory.md",
+        "memory/contacts/klajdi.md"
+      ]
+    },
+    "memory:memory/2026-03-31.md:10:26": {
+      "key": "memory:memory/2026-03-31.md:10:26",
+      "path": "memory/2026-03-31.md",
+      "startLine": 10,
+      "endLine": 26,
+      "source": "memory",
+      "snippet": "- User requested multi-agent/expert-job-hunter search lanes optimizing for realistic acceptance probability, not just prestige. - User requested a nightly deep search window from 03:00 to 05:00 local time (Europe/Tirane) with results sent to Discord `#briefing`. ## Browser automation recovery on VPS - Main blocker for browser-based job applications was missing browser runtime on Ubuntu VPS. - Installed Chromium (snap package), confirmed browser CDP runtime working manually. - Linux/browser troubleshooting established that snap Chromium is unreliable for OpenClaw-managed launch; switched OpenClaw browser config to attach-only/headless/no-sandbox mode and pointed profile to working local CDP",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4832326471805572,
+      "maxScore": 0.4832326471805572,
+      "firstRecalledAt": "2026-04-27T12:20:27.638Z",
+      "lastRecalledAt": "2026-04-27T12:20:27.638Z",
+      "queryHashes": [
+        "5aae5a72d242"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "multi-agent/expert-job-hunter",
+        "europe/tirane",
+        "browser-based",
+        "linux/browser",
+        "openclaw-managed",
+        "attach-only/headless/no-sandbox",
+        "requested",
+        "multi"
+      ]
+    },
+    "memory:memory/2026-04-27.md:1:31": {
+      "key": "memory:memory/2026-04-27.md:1:31",
+      "path": "memory/2026-04-27.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "# 2026-04-27 ## OpenCortex memory review (07:00 UTC cron) ### Inputs reviewed - `memory/2026-04-22.md` - `memory/2026-04-23.md` - `memory/2026-04-25-1945.md` - Long-term anchors cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/projects/eternia.md` - `memory/contacts/klajdi.md` ### Promotions - Promoted Klajdi's 2026-04-22 persistent Eternia mode request: - maintain deep evolving understanding of `Eternakk/eternia` - keep the repo read-only unless explicitly allowed - save daily factual/critical research reports under `~/virgil-vault/Research/Eternia/` - Added current Eternia research access constraint: browser automation is the primary web-research path while",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5107933163642883,
+      "maxScore": 0.5107933163642883,
+      "firstRecalledAt": "2026-04-27T13:45:17.495Z",
+      "lastRecalledAt": "2026-04-27T13:45:17.495Z",
+      "queryHashes": [
+        "b6ed60d59224"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "memory/2026-04-22.md",
+        "memory/2026-04-23.md",
+        "memory/2026-04-25-1945.md",
+        "long-term",
+        "cross-checked",
+        "memory.md",
+        "memory/preferences.md",
+        "memory/projects/eternia.md"
+      ]
+    },
+    "memory:memory/2026-04-01.md:1:32": {
+      "key": "memory:memory/2026-04-01.md:1:32",
+      "path": "memory/2026-04-01.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-04-01 ## Memory consolidation (07:00 UTC cron) ### Inputs reviewed - `memory/2026-03-25.md` - `memory/2026-03-27.md` - `memory/2026-03-31.md` - Supporting files cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/projects/eternia.md` - `memory/contacts/klajdi.md` - `memory/contacts/klajdi-job-profile.md` - `memory/today.md` ### Promotions - **None.** Recent durable job-search preferences and reporting defaults were already captured in long-term memory/job-profile files; no new item met the 2+ promotion threshold beyond what is already stored. ### Notable events (volatile \u2014 not promoted) - Browser automation on the VPS was unblocked by switching to attach-o",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5079904735088349,
+      "maxScore": 0.5079904735088349,
+      "firstRecalledAt": "2026-04-27T13:45:17.495Z",
+      "lastRecalledAt": "2026-04-27T13:45:17.495Z",
+      "queryHashes": [
+        "b6ed60d59224"
+      ],
+      "recallDays": [
+        "2026-04-27"
+      ],
+      "conceptTags": [
+        "memory/2026-03-25.md",
+        "memory/2026-03-27.md",
+        "memory/2026-03-31.md",
+        "cross-checked",
+        "memory.md",
+        "memory/preferences.md",
+        "memory/projects/eternia.md",
         "memory/contacts/klajdi.md"
       ]
     }

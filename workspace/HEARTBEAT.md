@@ -13,5 +13,5 @@ Read `memory/workflows/heartbeat-check.md` for full rules and severity levels.
 ### Rules:
 - **Silent if nothing needs attention** — reply HEARTBEAT_OK
 - Use 🚨 URGENT (action needed <1h) or ⚠️ HEADS UP (today) severity
-- Deliver alerts to Telegram (chat_id: 2016260249)
+- Do not call messaging tools directly. Return the alert text in the cron response; the cron job delivery sends it to Discord `#monitoring`.
 - Update `memory/heartbeat-state.json` after each run

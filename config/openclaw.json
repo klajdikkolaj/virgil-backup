@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.26",
-    "lastTouchedAt": "2026-04-26T10:55:27.898Z"
+    "lastTouchedAt": "2026-04-27T11:20:31.655Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -10,9 +10,9 @@
     "OPENCLAW_BUNDLED_PLUGINS_DIR": "/home/clawdkbot/openclaw/dist/extensions"
   },
   "wizard": {
-    "lastRunAt": "2026-04-26T10:44:24.806Z",
+    "lastRunAt": "2026-04-27T11:20:31.608Z",
     "lastRunVersion": "2026.4.26",
-    "lastRunCommand": "configure",
+    "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
   "browser": {
@@ -29,10 +29,6 @@
   },
   "auth": {
     "profiles": {
-      "openai-codex:default": {
-        "provider": "openai-codex",
-        "mode": "oauth"
-      },
       "openai-codex:kljdkolaj@gmail.com": {
         "provider": "openai-codex",
         "mode": "oauth",

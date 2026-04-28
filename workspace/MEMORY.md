@@ -1,5 +1,5 @@
 # MEMORY.md — Virgil Long-Term Memory
-_Last reviewed: 2026-04-03 (memory-consolidation cron)_
+_Last reviewed: 2026-04-27 (memory-consolidation cron)_
 
 ---
 
@@ -41,6 +41,7 @@ Do not advance to embodied movement/production multi-agent phases before trust-b
 ### Active priority
 - Phase 1: trust-boundary hardening with explicit pass/fail verification gates.
 - Verification ledger: `memory/projects/eternia-phase1-trust-gates.md`
+- Persistent Eternia research mode: maintain deep repo/project understanding; keep `Eternakk/eternia` read-only unless explicitly allowed; save daily factual/critical research reports under `~/virgil-vault/Research/Eternia/`.
 
 ---
 
@@ -50,6 +51,7 @@ Do not advance to embodied movement/production multi-agent phases before trust-b
 - Codex default reasoning: medium; escalate only for high-stakes/security/high-ambiguity tasks with explicit justification.
 - QMD indexing includes workspace memory and runs in CPU-only mode by default to avoid CUDA noise.
 - Protocol strictness is risk-tiered (STRICT/MEDIUM/LIGHT) and documented for channel-specific execution.
+- For Eternia research, browser automation is the current primary web-research path; Brave Search API-backed search requires an API key and was unavailable as of 2026-04-22.
 
 Reference workflows:
 - `memory/workflows/channel-routing.md`
@@ -65,6 +67,7 @@ Reference workflows:
 Keep these as *check-before-rely* items:
 - Reconfirm Gmail/Calendar auth state before operational dependence.
 - Reconfirm channel delivery routes after major gateway/config updates.
+- Reconfirm Vercel/API-token rotation status before assuming EvoContinuity incident follow-up is complete.
 
 ---
 

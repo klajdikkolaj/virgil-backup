@@ -46,7 +46,7 @@ File: `memory/heartbeat-state.json`
 ```
 
 ## Output Format (when alerting)
-Send to Telegram (primary channel, chat_id: 2016260249):
+Return the alert text as the cron response. Do **not** call messaging tools directly; the cron job delivery handles posting to Discord `#monitoring`.
 
 ```
 🧭 Virgil Heartbeat — [HH:MM]

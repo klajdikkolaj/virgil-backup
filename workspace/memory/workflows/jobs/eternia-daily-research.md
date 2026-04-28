@@ -10,6 +10,8 @@ Produce a daily Eternia research report that combines:
 ## Hard rules
 - Do not modify the Eternia repo.
 - Save report to `/home/clawdkbot/virgil-vault/Research/Eternia/Daily/YYYY-MM-DD-eternia-research.md`
+- At the top of the report, include a generated timestamp with date and hour, e.g. `Generated: YYYY-MM-DD HH:mm Europe/Tirane (UTC: YYYY-MM-DD HH:mm)`.
+- If rewriting an existing same-day report, the generated datetime and current repo snapshot must be at the very top of the file, not appended below an older date-only/stale-branch header.
 - Keep repo facts, external facts, inference, and opinion clearly separated.
 - Keep safety / consent / trust-boundary analysis first-class.
 - Prefer a reviewer/synthesis step over naive aggregation.
@@ -62,6 +64,7 @@ Always consider these domains when relevant:
    - what should be promoted into durable memory?
 
 ## Required sections
+0. Metadata header with generated datetime/date+hour and repo/source snapshot notes
 1. Executive summary
 2. Repo understanding (what Eternia appears to be now)
 3. Repo delta / new understanding today
