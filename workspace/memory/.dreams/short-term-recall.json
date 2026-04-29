@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-28T01:00:20.534Z",
+  "updatedAt": "2026-04-29T01:00:20.645Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,24 +9,26 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3.1770537942647934,
-      "maxScore": 0.5498931661248206,
+      "totalScore": 4.009444079534671,
+      "maxScore": 0.8323902852698775,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-04-27T13:31:36.628Z",
+      "lastRecalledAt": "2026-04-28T06:15:23.618Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
         "202bfb159855",
         "e84eac2406b3",
         "f750d75a2a56",
-        "dc9f9c3768e9"
+        "dc9f9c3768e9",
+        "8508358b5625"
       ],
       "recallDays": [
         "2026-04-26",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-28"
       ],
       "conceptTags": [
         "2026.4.22",
@@ -81,13 +83,13 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 16,
+      "recallCount": 24,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 8.133558122813703,
+      "totalScore": 12.255803495645525,
       "maxScore": 0.5351848438382149,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-04-27T20:03:47.897Z",
+      "lastRecalledAt": "2026-04-28T20:03:48.203Z",
       "queryHashes": [
         "caebfd509774",
         "b0025376fbe6",
@@ -103,11 +105,17 @@
         "dcb877d771ba",
         "05f970f08d24",
         "ad74f0a76ba1",
-        "019e4f44d32e"
+        "019e4f44d32e",
+        "61abd1303fbd",
+        "2427cd2f7eef",
+        "bfc46e436dca",
+        "1e116d3ccf1e",
+        "e5ce14859152"
       ],
       "recallDays": [
         "2026-04-26",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-04-28"
       ],
       "conceptTags": [
         "gateway",
@@ -127,25 +135,29 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 6,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.9580020308494563,
-      "maxScore": 0.497491380572319,
+      "totalScore": 4.935077926516532,
+      "maxScore": 0.4996135085821151,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-04-28T01:00:20.534Z",
+      "lastRecalledAt": "2026-04-29T01:00:20.645Z",
       "queryHashes": [
         "1838ac12ff65",
         "104c80d6577f",
         "f822a46040f1",
         "6d548c7a43a0",
         "05f970f08d24",
-        "629d0851eb3d"
+        "629d0851eb3d",
+        "bfc46e436dca",
+        "e5ce14859152",
+        "1413261956de"
       ],
       "recallDays": [
         "2026-04-26",
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "qmd",
@@ -199,21 +211,24 @@
       "endLine": 39,
       "source": "memory",
       "snippet": "# 2026-03-03 ## QMD indexing optimization applied - Added `workspace-memory` collection: - Path: `/home/clawdkbot/.openclaw/workspace/memory` - Pattern: `**/*.md` - Added targeted contexts for vault subpaths: - `/research`, `/projects`, `/daily`, `/skills` - Added operational context for `workspace-memory` root. - Ran `qmd update` and `qmd embed` successfully. - Post-change index status: - 26 files indexed - 49 vectors embedded - 2 collections (`vault`, `workspace-memory`) ## Scheduled optimization - Added cron job `qmd-light-refresh` (every 3 hours, Europe/Tirane): - Runs lightweight `qmd update` between nightly full reindex cycles. - Delivery mode: none (silent maintena",
-      "recallCount": 3,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.5081459164619444,
-      "maxScore": 0.5061095684766769,
+      "totalScore": 2.5127962678670883,
+      "maxScore": 0.5061195611953735,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-04-28T01:00:20.534Z",
+      "lastRecalledAt": "2026-04-29T01:00:20.645Z",
       "queryHashes": [
         "f822a46040f1",
         "ad74f0a76ba1",
-        "629d0851eb3d"
+        "629d0851eb3d",
+        "5b38869d2cf8",
+        "1413261956de"
       ],
       "recallDays": [
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "qmd",
@@ -233,20 +248,22 @@
       "endLine": 63,
       "source": "memory",
       "snippet": "- added Codex reasoning escalation policy - added QMD light-refresh cron and workspace-memory indexing status - added protocol/workflow pointers for routing and quality controls - refreshed known issues/debts - Restructured long-term vault memory files for retention clarity: - `memory/contacts/klajdi.md` (communication + AI preferences) - `memory/preferences.md` (stable behavior rules) - `memory/projects/eternia.md` (project status + execution governance links) - `memory_search` tool was unavailable during this run (embedding provider/auth error), so distillation was done via direct file reads. ## OpenCortex memory review refresh (09:09 UTC cron run) - Re-read recent daily lo",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9622756123542785,
+      "totalScore": 1.4433495610952376,
       "maxScore": 0.48321111798286437,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-04-28T01:00:20.534Z",
+      "lastRecalledAt": "2026-04-29T01:00:20.645Z",
       "queryHashes": [
         "f822a46040f1",
-        "629d0851eb3d"
+        "629d0851eb3d",
+        "1413261956de"
       ],
       "recallDays": [
         "2026-04-27",
-        "2026-04-28"
+        "2026-04-28",
+        "2026-04-29"
       ],
       "conceptTags": [
         "embedding",
