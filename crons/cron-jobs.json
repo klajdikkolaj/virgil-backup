@@ -24,17 +24,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777343400013,
+        "lastRunAtMs": 1777429800011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 95370,
+        "lastDurationMs": 93894,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777429800000,
+        "nextRunAtMs": 1777516200000,
         "lastDelivered": true,
-        "runningAtMs": 1777429800011
+        "runningAtMs": 1777516200009
       },
-      "updatedAtMs": 1777343495383
+      "updatedAtMs": 1777429893905
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
@@ -69,16 +69,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777429608068,
+        "lastRunAtMs": 1777516008855,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 25557,
+        "lastDurationMs": 23205,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false,
-        "nextRunAtMs": 1777431408068
+        "nextRunAtMs": 1777517808855
       },
-      "updatedAtMs": 1777429633625
+      "updatedAtMs": 1777516032060
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
@@ -106,16 +106,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777352400012,
+        "lastRunAtMs": 1777438800012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 430924,
+        "lastDurationMs": 1148673,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777438800000,
+        "nextRunAtMs": 1777525200000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777352830936
+      "updatedAtMs": 1777439948685
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -144,16 +144,16 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777406608516,
+        "lastRunAtMs": 1777493008513,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 46581,
-        "lastDeliveryStatus": "delivered",
+        "lastDurationMs": 56525,
+        "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777439008503,
-        "lastDelivered": true
+        "nextRunAtMs": 1777525408503,
+        "lastDelivered": false
       },
-      "updatedAtMs": 1777406655097
+      "updatedAtMs": 1777493065038
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
@@ -182,16 +182,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777352878668,
+        "lastRunAtMs": 1777439989402,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 31869,
+        "lastDurationMs": 26960,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777439100000,
+        "nextRunAtMs": 1777525500000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777352910537
+      "updatedAtMs": 1777440016362
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
@@ -213,22 +213,23 @@
         "kind": "agentTurn",
         "message": "Run maintenance batch: (1) openclaw status, (2) openclaw doctor --fix, (3) CPU-only qmd update. If gateway inactive, restart it. Return one-line status.",
         "model": "default",
-        "thinking": "low"
+        "thinking": "low",
+        "timeoutSeconds": 300
       },
       "delivery": {
         "mode": "none",
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1777396763610,
+        "lastRunAtMs": 1777483163614,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 88187,
+        "lastDurationMs": 71762,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777439963598
+        "nextRunAtMs": 1777526363598
       },
-      "updatedAtMs": 1777396851797
+      "updatedAtMs": 1777483235376
     },
     {
       "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
@@ -258,122 +259,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1777443300000,
-        "lastRunAtMs": 1777356900015,
+        "nextRunAtMs": 1777529700000,
+        "lastRunAtMs": 1777443300008,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 705251,
+        "lastDurationMs": 557453,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777357605266
-    },
-    {
-      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
-      "name": "opencortex-memory-review",
-      "enabled": true,
-      "createdAtMs": 1772967612188,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 1,3,5",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
-        "model": "default",
-        "thinking": "medium",
-        "timeoutSeconds": 600
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1777273200011,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 89578,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777446000000,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1777273289589
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1777413300009,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 42198,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777499700000,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1777413342207
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "default",
-        "thinking": "low"
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "lastRunAtMs": 1777424400020,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 52282,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777510800000
-      },
-      "updatedAtMs": 1777424452302
+      "updatedAtMs": 1777443857461
     },
     {
       "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
@@ -409,6 +304,113 @@
         "consecutiveErrors": 0
       },
       "updatedAtMs": 1777282733467
+    },
+    {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1777499700008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 41512,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777586100000,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1777499741520
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "lastRunAtMs": 1777510800015,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 50963,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777597200000
+      },
+      "updatedAtMs": 1777510850978
+    },
+    {
+      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772967612188,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1,3,5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
+        "model": "default",
+        "thinking": "medium",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1777446000017,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 57825,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777618800000,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1777446057842
     },
     {
       "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
@@ -482,7 +484,7 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
@@ -494,7 +496,7 @@
       "label": "none -> last",
       "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
     },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
