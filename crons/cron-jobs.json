@@ -24,17 +24,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777429800011,
+        "lastRunAtMs": 1777516200009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 93894,
+        "lastDurationMs": 35687,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777516200000,
+        "nextRunAtMs": 1777602600000,
         "lastDelivered": true,
-        "runningAtMs": 1777516200009
+        "runningAtMs": 1777602600014
       },
-      "updatedAtMs": 1777429893905
+      "updatedAtMs": 1777516235696
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
@@ -69,16 +69,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777516008855,
+        "lastRunAtMs": 1777602409467,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 23205,
+        "lastDurationMs": 22867,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false,
-        "nextRunAtMs": 1777517808855
+        "nextRunAtMs": 1777604209467
       },
-      "updatedAtMs": 1777516032060
+      "updatedAtMs": 1777602432334
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
@@ -106,16 +106,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777438800012,
+        "lastRunAtMs": 1777525200010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 1148673,
+        "lastDurationMs": 399122,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777525200000,
+        "nextRunAtMs": 1777611600000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777439948685
+      "updatedAtMs": 1777525599132
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -144,16 +144,16 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777493008513,
+        "lastRunAtMs": 1777579408518,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 56525,
+        "lastDurationMs": 63162,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777525408503,
+        "nextRunAtMs": 1777611808503,
         "lastDelivered": false
       },
-      "updatedAtMs": 1777493065038
+      "updatedAtMs": 1777579471680
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
@@ -182,16 +182,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777439989402,
+        "lastRunAtMs": 1777525658330,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 26960,
+        "lastDurationMs": 30366,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777525500000,
+        "nextRunAtMs": 1777611900000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777440016362
+      "updatedAtMs": 1777525688696
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
@@ -221,15 +221,15 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1777483163614,
+        "lastRunAtMs": 1777569563611,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 71762,
+        "lastDurationMs": 71904,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777526363598
+        "nextRunAtMs": 1777612763598
       },
-      "updatedAtMs": 1777483235376
+      "updatedAtMs": 1777569635515
     },
     {
       "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
@@ -259,122 +259,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1777529700000,
-        "lastRunAtMs": 1777443300008,
+        "nextRunAtMs": 1777616100000,
+        "lastRunAtMs": 1777529700011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 557453,
+        "lastDurationMs": 233818,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777443857461
-    },
-    {
-      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
-      "name": "openclaw-update-postcheck-report",
-      "enabled": true,
-      "createdAtMs": 1772967616887,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 259200000,
-        "anchorMs": 1773135431575
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/openclaw-update-postcheck.md and execute exactly. Return concise status with version diff and health.",
-        "model": "default",
-        "thinking": "medium"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1777541831583,
-        "lastRunAtMs": 1777282631583,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 101884,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
-      },
-      "updatedAtMs": 1777282733467
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1777499700008,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 41512,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777586100000,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1777499741520
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "lastRunAtMs": 1777510800015,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 50963,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777597200000
-      },
-      "updatedAtMs": 1777510850978
+      "updatedAtMs": 1777529933829
     },
     {
       "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
@@ -411,6 +305,114 @@
         "lastDelivered": true
       },
       "updatedAtMs": 1777446057842
+    },
+    {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1777586100014,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 37967,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777672500000,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1777586137981
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "lastRunAtMs": 1777597200014,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 100143,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777683600000
+      },
+      "updatedAtMs": 1777597300157
+    },
+    {
+      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
+      "name": "openclaw-update-postcheck-report",
+      "enabled": true,
+      "createdAtMs": 1772967616887,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1773135431575
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/openclaw-update-postcheck.md and execute exactly. Return concise status with version diff and health.",
+        "model": "default",
+        "thinking": "medium"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1777801031589,
+        "lastRunAtMs": 1777541831589,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 603160,
+        "lastDelivered": false,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "cron: job interrupted by gateway restart",
+        "lastDeliveryError": "cron: job interrupted by gateway restart"
+      },
+      "updatedAtMs": 1777542434749
     },
     {
       "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
@@ -484,7 +486,7 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
@@ -496,7 +498,7 @@
       "label": "none -> last",
       "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
     },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
