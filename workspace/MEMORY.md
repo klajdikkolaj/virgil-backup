@@ -1,5 +1,5 @@
 # MEMORY.md — Virgil Long-Term Memory
-_Last reviewed: 2026-04-27 (memory-consolidation cron)_
+_Last reviewed: 2026-05-01 (memory-consolidation cron)_
 
 ---
 
@@ -42,6 +42,8 @@ Do not advance to embodied movement/production multi-agent phases before trust-b
 - Phase 1: trust-boundary hardening with explicit pass/fail verification gates.
 - Verification ledger: `memory/projects/eternia-phase1-trust-gates.md`
 - Persistent Eternia research mode: maintain deep repo/project understanding; keep `Eternakk/eternia` read-only unless explicitly allowed; save daily factual/critical research reports under `~/virgil-vault/Research/Eternia/`.
+- Presence v0 is a staging/acceptance artifact, not Eternia's canonical demo narrative; Presence v1 is the better canonical-demo target.
+- Founder self-review override may exist only as temporary development scaffolding and must be removed/absent before non-demo/production flows.
 
 ---
 

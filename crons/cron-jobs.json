@@ -24,17 +24,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777516200009,
+        "lastRunAtMs": 1777602600014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 35687,
+        "lastDurationMs": 39589,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777602600000,
+        "nextRunAtMs": 1777689000000,
         "lastDelivered": true,
-        "runningAtMs": 1777602600014
+        "runningAtMs": 1777689000012
       },
-      "updatedAtMs": 1777516235696
+      "updatedAtMs": 1777602639603
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
@@ -69,16 +69,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777602409467,
+        "lastRunAtMs": 1777688810075,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 22867,
+        "lastDurationMs": 24089,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false,
-        "nextRunAtMs": 1777604209467
+        "nextRunAtMs": 1777690610075
       },
-      "updatedAtMs": 1777602432334
+      "updatedAtMs": 1777688834164
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
@@ -106,16 +106,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777525200010,
+        "lastRunAtMs": 1777611600008,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 399122,
+        "lastDurationMs": 451688,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777611600000,
+        "nextRunAtMs": 1777698000000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777525599132
+      "updatedAtMs": 1777612051696
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -144,16 +144,16 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777579408518,
+        "lastRunAtMs": 1777665808519,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 63162,
+        "lastDurationMs": 59304,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777611808503,
+        "nextRunAtMs": 1777698208503,
         "lastDelivered": false
       },
-      "updatedAtMs": 1777579471680
+      "updatedAtMs": 1777665867823
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
@@ -182,16 +182,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777525658330,
+        "lastRunAtMs": 1777612105047,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 30366,
+        "lastDurationMs": 30491,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777611900000,
+        "nextRunAtMs": 1777698300000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777525688696
+      "updatedAtMs": 1777612135538
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
@@ -221,15 +221,15 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1777569563611,
+        "lastRunAtMs": 1777655963608,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 71904,
+        "lastDurationMs": 87428,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777612763598
+        "nextRunAtMs": 1777699163598
       },
-      "updatedAtMs": 1777569635515
+      "updatedAtMs": 1777656051036
     },
     {
       "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
@@ -259,52 +259,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1777616100000,
-        "lastRunAtMs": 1777529700011,
+        "nextRunAtMs": 1777702500000,
+        "lastRunAtMs": 1777616100013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 233818,
+        "lastDurationMs": 482775,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777529933829
-    },
-    {
-      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
-      "name": "opencortex-memory-review",
-      "enabled": true,
-      "createdAtMs": 1772967612188,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 1,3,5",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
-        "model": "default",
-        "thinking": "medium",
-        "timeoutSeconds": 600
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1777446000017,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 57825,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777618800000,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1777446057842
+      "updatedAtMs": 1777616582788
     },
     {
       "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
@@ -332,16 +296,16 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777586100014,
+        "lastRunAtMs": 1777672500012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 37967,
+        "lastDurationMs": 48030,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777672500000,
+        "nextRunAtMs": 1777758900000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777586137981
+      "updatedAtMs": 1777672548042
     },
     {
       "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
@@ -367,15 +331,15 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1777597200014,
+        "lastRunAtMs": 1777683600014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 100143,
+        "lastDurationMs": 54407,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777683600000
+        "nextRunAtMs": 1777770000000
       },
-      "updatedAtMs": 1777597300157
+      "updatedAtMs": 1777683654421
     },
     {
       "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
@@ -450,11 +414,79 @@
         "lastDelivered": true
       },
       "updatedAtMs": 1777269976003
+    },
+    {
+      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772967612188,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1,3,5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
+        "model": "default",
+        "thinking": "medium",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1777618800015,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 124684,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777878000000,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1777618924699
+    },
+    {
+      "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
+      "agentId": "virgil-opus",
+      "sessionKey": "agent:virgil-opus:discord:channel:1477637773681885184",
+      "name": "Weekly research \u2014 Codex integrations with Unity/Unreal for Eternia",
+      "description": "Research Codex/agent integrations with Unity or Unreal every Tuesday and save the report into Obsidian.",
+      "enabled": true,
+      "createdAtMs": 1777665619855,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 2",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Weekly automation for Klajdi/Eternia: deep-research current Codex/AI-agent integrations with Unity and Unreal, focusing on plugins, editor automation, MCP/CLI/control bridges, skills/workflows, and practical ways Codex could operate Unity/Unreal similarly to Three.js/WebGPU. Use current web research and primary sources where possible. Compare: maturity, agent-autonomy level, install/setup complexity, API/CLI/editor scripting options, risks, and recommended experiments for Eternia. Then write a concise but useful Markdown report directly into the Virgil Vault repo, which is Klajdi's intended Obsidian vault: ~/virgil-vault/Research/Eternia/AI Engine Integrations/YYYY-MM-DD Codex Unity Unreal Integration Watch.md. Create directories if needed. Include links/sources and an action checklist. Do not use obsidian-cli unless needed for path confirmation; the target is the virgil-vault repository. Do not send external messages; just complete the file write and summarize outcome.",
+        "timeoutSeconds": 1800,
+        "allowUnsafeExternalContent": false
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637773681885184",
+        "bestEffort": true
+      },
+      "state": {
+        "nextRunAtMs": 1777964400000
+      },
+      "updatedAtMs": 1777665645004
     }
   ],
-  "total": 12,
+  "total": 13,
   "offset": 0,
-  "limit": 12,
+  "limit": 13,
   "hasMore": false,
   "nextOffset": null,
   "deliveryPreviews": {
@@ -486,10 +518,6 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
@@ -504,6 +532,14 @@
     },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
       "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
+      "label": "announce -> discord:channel:1477637773681885184",
       "detail": "explicit"
     }
   }

@@ -1,5 +1,5 @@
 # Eternia — Project Memory
-_Last distilled: 2026-04-27_
+_Last distilled: 2026-05-01_
 
 ## Project definition
 Eternia is a long-term evolving AI ecosystem combining learning, exploration, and symbolic worldbuilding.
@@ -8,6 +8,7 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - Human authority: Klajdi
 - Assistant role: steward/operator, never autonomous project owner
 - Execution must preserve governance clarity, consent boundaries, and safety constraints
+- Founder self-review override may exist only as temporary development scaffolding; it must be removed or absent before non-demo/production flows once rules/flows are fully inserted. Future evolution should be architected, not rule-override based, and production rules should not be overridable even by the creator once complete.
 
 ## Source of truth
 - Repository: `Eternakk/eternia`
@@ -32,6 +33,10 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - No phase is marked complete.
 - Strategic focus remains Phase 1 hardening.
 - Klajdi requested persistent “Eternia mode” on 2026-04-22: maintain deep evolving understanding of the repo/project, preserve critical factual judgment, and produce daily research reports.
+- Presence v0 should be treated as a staging/acceptance artifact, not the canonical demo narrative.
+- Presence v1 is the better target for Eternia's canonical demo narrative.
+- For exact pass/fail gates before Presence v1 / World Beauty, Klajdi asked Virgil to propose them.
+- Minimal beauty improvement direction: make the world feel bigger, more realistic, and more curated without expanding provider calls, persistent renderer state, inhabitants, memory writes, or authority scope.
 
 ## Operating expectations for project work
 - Prefer rigorous sequencing and evidence over speed.
@@ -39,6 +44,7 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 - Keep reporting transparent about effective lane/model execution and fallback outcomes.
 - Preserve theory-grounded guidance (theory → protocol → action) for practical recommendations.
 - Daily Eternia research reports should be saved under `~/virgil-vault/Research/Eternia/` and remain factual/critical rather than promotional.
+- Future Presence v1 / World Beauty work should bias toward richer authored spatial/world presentation rather than new autonomy or infrastructure.
 
 ## Technical stack memory (working model)
 - Backend: Python 3.12, FastAPI, WebSocket, PostgreSQL
@@ -65,6 +71,7 @@ Eternia is a long-term evolving AI ecosystem combining learning, exploration, an
 
 ## Open strategic debts
 - Fill `memory/projects/eternia-phase1-trust-gates.md` with concrete evidence pointers and move gates from `UNKNOWN` to explicit PASS/FAIL.
+- Propose concrete Presence v1 / World Beauty pass/fail gate checklist.
 - Reconfirm lane-level validation/testing cadence after routing and fallback changes.
 - If requested, package findings into a theory-based playbook artifact for repeatable execution.
 

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-01T02:30:19.400Z",
+  "updatedAt": "2026-05-02T01:00:21.175Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,13 +9,13 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 10,
+      "recallCount": 11,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.612314606444499,
+      "totalScore": 6.160625950233599,
       "maxScore": 0.8323902852698775,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-04-30T09:14:46.357Z",
+      "lastRecalledAt": "2026-05-01T06:15:21.234Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
@@ -26,14 +26,16 @@
         "8508358b5625",
         "8ace9d8949e5",
         "bdafea4e0d35",
-        "06a934c400ea"
+        "06a934c400ea",
+        "51740a62b948"
       ],
       "recallDays": [
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
         "2026-04-29",
-        "2026-04-30"
+        "2026-04-30",
+        "2026-05-01"
       ],
       "conceptTags": [
         "2026.4.22",
@@ -88,18 +90,14 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 42,
+      "recallCount": 50,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 21.433391021192076,
+      "totalScore": 25.559998966753483,
       "maxScore": 0.5351848438382149,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-04-30T20:03:49.717Z",
+      "lastRecalledAt": "2026-05-01T20:03:49.871Z",
       "queryHashes": [
-        "b0025376fbe6",
-        "1838ac12ff65",
-        "f3499393ffca",
-        "104c80d6577f",
         "42b4f3a0aa84",
         "39153de21415",
         "6d548c7a43a0",
@@ -127,14 +125,19 @@
         "e8cdad8b40c0",
         "5437cc78fd1f",
         "820bcf602e64",
-        "57b43efe239c"
+        "57b43efe239c",
+        "d02431fc3d25",
+        "b1fa06d631a6",
+        "6507c9742b37",
+        "c675fa7a4a00"
       ],
       "recallDays": [
         "2026-04-26",
         "2026-04-27",
         "2026-04-28",
         "2026-04-29",
-        "2026-04-30"
+        "2026-04-30",
+        "2026-05-01"
       ],
       "conceptTags": [
         "gateway",
@@ -154,13 +157,13 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 22,
+      "recallCount": 24,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 10.844599404931065,
-      "maxScore": 0.5046034634113311,
+      "totalScore": 12.105743469824402,
+      "maxScore": 0.7670116772552442,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-05-01T02:30:19.400Z",
+      "lastRecalledAt": "2026-05-02T01:00:21.175Z",
       "queryHashes": [
         "1838ac12ff65",
         "104c80d6577f",
@@ -181,7 +184,8 @@
         "820bcf602e64",
         "57b43efe239c",
         "5e6d0a86db74",
-        "e248224855e7"
+        "e248224855e7",
+        "b1fa06d631a6"
       ],
       "recallDays": [
         "2026-04-26",
@@ -189,7 +193,8 @@
         "2026-04-28",
         "2026-04-29",
         "2026-04-30",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-02"
       ],
       "conceptTags": [
         "qmd",
@@ -243,13 +248,13 @@
       "endLine": 39,
       "source": "memory",
       "snippet": "# 2026-03-03 ## QMD indexing optimization applied - Added `workspace-memory` collection: - Path: `/home/clawdkbot/.openclaw/workspace/memory` - Pattern: `**/*.md` - Added targeted contexts for vault subpaths: - `/research`, `/projects`, `/daily`, `/skills` - Added operational context for `workspace-memory` root. - Ran `qmd update` and `qmd embed` successfully. - Post-change index status: - 26 files indexed - 49 vectors embedded - 2 collections (`vault`, `workspace-memory`) ## Scheduled optimization - Added cron job `qmd-light-refresh` (every 3 hours, Europe/Tirane): - Runs lightweight `qmd update` between nightly full reindex cycles. - Delivery mode: none (silent maintena",
-      "recallCount": 8,
+      "recallCount": 9,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.017072978615761,
+      "totalScore": 4.52073491513729,
       "maxScore": 0.5061195611953735,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-05-01T01:01:03.641Z",
+      "lastRecalledAt": "2026-05-02T01:00:21.175Z",
       "queryHashes": [
         "f822a46040f1",
         "ad74f0a76ba1",
@@ -263,7 +268,8 @@
         "2026-04-28",
         "2026-04-29",
         "2026-04-30",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-02"
       ],
       "conceptTags": [
         "qmd",
@@ -283,13 +289,13 @@
       "endLine": 63,
       "source": "memory",
       "snippet": "- added Codex reasoning escalation policy - added QMD light-refresh cron and workspace-memory indexing status - added protocol/workflow pointers for routing and quality controls - refreshed known issues/debts - Restructured long-term vault memory files for retention clarity: - `memory/contacts/klajdi.md` (communication + AI preferences) - `memory/preferences.md` (stable behavior rules) - `memory/projects/eternia.md` (project status + execution governance links) - `memory_search` tool was unavailable during this run (embedding provider/auth error), so distillation was done via direct file reads. ## OpenCortex memory review refresh (09:09 UTC cron run) - Re-read recent daily lo",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.882907646894455,
+      "totalScore": 3.361972141265869,
       "maxScore": 0.48321111798286437,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-05-01T01:01:03.641Z",
+      "lastRecalledAt": "2026-05-02T01:00:21.175Z",
       "queryHashes": [
         "f822a46040f1",
         "629d0851eb3d",
@@ -302,7 +308,8 @@
         "2026-04-28",
         "2026-04-29",
         "2026-04-30",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-02"
       ],
       "conceptTags": [
         "embedding",
@@ -546,20 +553,22 @@
       "endLine": 32,
       "source": "memory",
       "snippet": "# 2026-04-01 ## Memory consolidation (07:00 UTC cron) ### Inputs reviewed - `memory/2026-03-25.md` - `memory/2026-03-27.md` - `memory/2026-03-31.md` - Supporting files cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/projects/eternia.md` - `memory/contacts/klajdi.md` - `memory/contacts/klajdi-job-profile.md` - `memory/today.md` ### Promotions - **None.** Recent durable job-search preferences and reporting defaults were already captured in long-term memory/job-profile files; no new item met the 2+ promotion threshold beyond what is already stored. ### Notable events (volatile \u2014 not promoted) - Browser automation on the VPS was unblocked by switching to attach-o",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0627218261361122,
+      "totalScore": 1.6030857145786284,
       "maxScore": 0.5547313526272774,
       "firstRecalledAt": "2026-04-27T13:45:17.495Z",
-      "lastRecalledAt": "2026-04-29T07:00:23.045Z",
+      "lastRecalledAt": "2026-05-01T07:00:26.212Z",
       "queryHashes": [
         "b6ed60d59224",
-        "bdafea4e0d35"
+        "bdafea4e0d35",
+        "c2973c89f21b"
       ],
       "recallDays": [
         "2026-04-27",
-        "2026-04-29"
+        "2026-04-29",
+        "2026-05-01"
       ],
       "conceptTags": [
         "memory/2026-03-25.md",
@@ -579,19 +588,21 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# 2026-04-03 ## Memory consolidation (07:00 UTC cron) ### Inputs reviewed - `memory/2026-03-31.md` - `memory/2026-04-01.md` - Supporting files cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/projects/eternia.md` - `memory/contacts/klajdi.md` - `memory/contacts/klajdi-job-profile.md` - `memory/today.md` ### Promotions - **None.** No new item met the 2+ promotion threshold beyond what is already stored in long-term memory. ### Notable events (volatile \u2014 not promoted) - Job-search reporting defaults, remote-only constraints, compensation targets, and nightly search-window preference were already captured in long-term memory/job-profile files. - Browser/CDP recov",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.082959386706352,
+      "totalScore": 1.6271782636642453,
       "maxScore": 0.5589315176010131,
       "firstRecalledAt": "2026-04-29T07:00:23.045Z",
-      "lastRecalledAt": "2026-04-29T09:41:45.811Z",
+      "lastRecalledAt": "2026-05-01T07:00:26.212Z",
       "queryHashes": [
         "bdafea4e0d35",
-        "0c7cd96dbd0b"
+        "0c7cd96dbd0b",
+        "c2973c89f21b"
       ],
       "recallDays": [
-        "2026-04-29"
+        "2026-04-29",
+        "2026-05-01"
       ],
       "conceptTags": [
         "memory/2026-03-31.md",
@@ -611,18 +622,20 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-04-10 ## Memory consolidation (07:00 UTC cron) ### Inputs reviewed - `memory/2026-04-03.md` - `memory/2026-04-07.md` - Supporting files cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/projects/eternia.md` - `memory/contacts/klajdi.md` - `memory/contacts/klajdi-job-profile.md` ### Promotions - **None.** No new durable item required promotion because the only recent durable job-search clarifications were already reflected in `memory/contacts/klajdi-job-profile.md`. ### Notable events (volatile \u2014 not promoted) - Confirmed recent job-search clarification remains: prefer intermediate to mid-senior IC roles and full-stack roles with AI integrations. ### Lean-",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5584238812327385,
+      "totalScore": 1.0981049060821533,
       "maxScore": 0.5584238812327385,
       "firstRecalledAt": "2026-04-29T07:00:23.045Z",
-      "lastRecalledAt": "2026-04-29T07:00:23.045Z",
+      "lastRecalledAt": "2026-05-01T07:00:26.212Z",
       "queryHashes": [
-        "bdafea4e0d35"
+        "bdafea4e0d35",
+        "c2973c89f21b"
       ],
       "recallDays": [
-        "2026-04-29"
+        "2026-04-29",
+        "2026-05-01"
       ],
       "conceptTags": [
         "memory/2026-04-03.md",
@@ -706,18 +719,20 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# 2026-03-23 ## Memory consolidation (08:00 UTC cron) ### Inputs reviewed - `memory/2026-03-20.md` (last daily log) - `memory/projects/openclaw-job-research-orchestrator-2026-03-21.md` (new since last review) - `memory/contacts/klajdi-job-profile.md` (new since last review) - `MEMORY.md`, `memory/preferences.md`, `memory/projects/eternia.md` (cross-checked) ### Promotions - **Job Research Orchestrator** + Klajdi job profile \u2192 promoted to `MEMORY.md` under new section \"Active Operational Projects\". - Rationale: high consequence if forgotten (active operational project + hard exclusions list), stable files created. ### No promotions - Orchestrator architecture principle (single orchestra",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5381095603108406,
-      "maxScore": 0.5381095603108406,
+      "totalScore": 1.0778799146413802,
+      "maxScore": 0.5397703543305397,
       "firstRecalledAt": "2026-04-29T09:41:45.811Z",
-      "lastRecalledAt": "2026-04-29T09:41:45.811Z",
+      "lastRecalledAt": "2026-05-01T07:00:26.212Z",
       "queryHashes": [
-        "0c7cd96dbd0b"
+        "0c7cd96dbd0b",
+        "c2973c89f21b"
       ],
       "recallDays": [
-        "2026-04-29"
+        "2026-04-29",
+        "2026-05-01"
       ],
       "conceptTags": [
         "memory/2026-03-20.md",
@@ -885,6 +900,99 @@
         "suspicious/flagged",
         "virgil-vault/diagrams",
         "security/ar"
+      ]
+    },
+    "memory:memory/2026-04-30.md:1:17": {
+      "key": "memory:memory/2026-04-30.md:1:17",
+      "path": "memory/2026-04-30.md",
+      "startLine": 1,
+      "endLine": 17,
+      "source": "memory",
+      "snippet": "# 2026-04-30 ## Eternia daily-report question answers from Klajdi Context: Klajdi said Virgil can keep inserting questions in daily Eternia reports; he will answer them so future reports and project understanding improve. Answers captured: 1. Presence v0 should **not** become the canonical demo narrative for Eternia's current stage; Klajdi thinks the canonical demo is more suited for **Presence v1**. 2. For exact pass/fail gates before Presence v1 / World Beauty, Klajdi asks Virgil to propose them. 3. Klajdi approved fast-forwarding the local Eternia repo checkout to `origin/main` before the next report / implementation session. - Action taken: `/home/clawdkbot/.openclaw/workspace/eter",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.513252568244934,
+      "maxScore": 0.513252568244934,
+      "firstRecalledAt": "2026-05-01T19:37:29.288Z",
+      "lastRecalledAt": "2026-05-01T19:37:29.288Z",
+      "queryHashes": [
+        "ba5d721a4b55"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "daily-report",
+        "pass/fail",
+        "fast-forwarding",
+        "origin/main",
+        "home/clawdkbot",
+        "openclaw/workspace/eter",
+        "eternia",
+        "report"
+      ]
+    },
+    "memory:memory/2026-04-30.md:13:20": {
+      "key": "memory:memory/2026-04-30.md:13:20",
+      "path": "memory/2026-04-30.md",
+      "startLine": 13,
+      "endLine": 20,
+      "source": "memory",
+      "snippet": "5. Minimal beauty improvement direction: the world should feel **bigger, more realistic, and more curated**, without expanding provider calls, persistent renderer state, inhabitants, memory writes, or authority scope. Implication for next report: - Treat Presence v0 as a staging/acceptance artifact, not canonical narrative. - Propose a concrete Presence v1 / World Beauty gate checklist. - Incorporate the production constraint that founder override must sunset before non-demo/production flows. - Beauty work should bias toward richer authored spatial/world presentation rather than new autonomy or infrastructure.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4914563626050949,
+      "maxScore": 0.4914563626050949,
+      "firstRecalledAt": "2026-05-01T19:37:29.288Z",
+      "lastRecalledAt": "2026-05-01T19:37:29.288Z",
+      "queryHashes": [
+        "ba5d721a4b55"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "staging/acceptance",
+        "non-demo/production",
+        "spatial/world",
+        "minimal",
+        "beauty",
+        "improvement",
+        "direction",
+        "world"
+      ]
+    },
+    "memory:memory/2026-03-31.md:1:14": {
+      "key": "memory:memory/2026-03-31.md:1:14",
+      "path": "memory/2026-03-31.md",
+      "startLine": 1,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "# 2026-03-31 ## Job search + application ops - User requested continuous job search focused on remote-friendly roles in Europe, US, and Australia only; exclude Albania, relocation-required, hybrid/onsite-only where possible. - Applicant defaults confirmed for application use: Tirana, Albania; both contract and full-time acceptable; US visa sponsorship required; earliest start date 2026-04-02; salary expectation roughly $40\u201360/hr or $100k/year for US roles and \u20ac60k/year for EU roles. - Confirmed public links for applications: GitHub `https://github.com/klajdikkolaj`, LinkedIn `https://www.linkedin.com/in/klajdi-kolaj-a1864377/`. - CV located locally at `/home/clawdkbot/.openclaw/media/inboun",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4416651904582977,
+      "maxScore": 0.4416651904582977,
+      "firstRecalledAt": "2026-05-01T20:00:06.839Z",
+      "lastRecalledAt": "2026-05-01T20:00:06.839Z",
+      "queryHashes": [
+        "a296cabf453c"
+      ],
+      "recallDays": [
+        "2026-05-01"
+      ],
+      "conceptTags": [
+        "remote-friendly",
+        "relocation-required",
+        "hybrid/onsite-only",
+        "full-time",
+        "60/hr",
+        "100k/year",
+        "60k/year",
+        "github.com/klajdikkolaj"
       ]
     }
   }
