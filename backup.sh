@@ -168,6 +168,8 @@ patterns = [
     (r"sk-[A-Za-z0-9]{20,}", "[OPENAI_API_KEY]"),
     (r"AIza[A-Za-z0-9_-]{35}", "[GOOGLE_API_KEY]"),
     (r"ghp_[A-Za-z0-9]{36}", "[GITHUB_TOKEN]"),
+    (r"azd[a-zA-Z0-9._-]{20,}", "[AZURE_DEVOPS_PAT]"),
+    (r"(?i)(PAT:\s*)[^\n]+", r"\1[REMOVED]"),
     (r"\+355[0-9]{9}", "[PHONE_NUMBER]"),
     (r"\brt_[A-Za-z0-9._-]{20,}\b", "[OPENAI_REFRESH_TOKEN]"),
     (r"\beyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\b", "[OAUTH_ACCESS_TOKEN]"),
