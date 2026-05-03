@@ -24,17 +24,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777602600014,
+        "lastRunAtMs": 1777689000012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 39589,
+        "lastDurationMs": 38980,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777689000000,
+        "nextRunAtMs": 1777775400000,
         "lastDelivered": true,
-        "runningAtMs": 1777689000012
+        "runningAtMs": 1777775400014
       },
-      "updatedAtMs": 1777602639603
+      "updatedAtMs": 1777689038992
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
@@ -69,16 +69,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777688810075,
+        "lastRunAtMs": 1777775210646,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 24089,
+        "lastDurationMs": 23494,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "lastDelivered": false,
-        "nextRunAtMs": 1777690610075
+        "nextRunAtMs": 1777777010646
       },
-      "updatedAtMs": 1777688834164
+      "updatedAtMs": 1777775234140
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
@@ -106,16 +106,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777611600008,
+        "lastRunAtMs": 1777698000017,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 451688,
+        "lastDurationMs": 650898,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777698000000,
+        "nextRunAtMs": 1777784400000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777612051696
+      "updatedAtMs": 1777698650915
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -144,16 +144,16 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777665808519,
+        "lastRunAtMs": 1777752208517,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 59304,
+        "lastDurationMs": 56244,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777698208503,
+        "nextRunAtMs": 1777784608503,
         "lastDelivered": false
       },
-      "updatedAtMs": 1777665867823
+      "updatedAtMs": 1777752264761
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
@@ -182,16 +182,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777612105047,
+        "lastRunAtMs": 1777698705508,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 30491,
+        "lastDurationMs": 35556,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777698300000,
+        "nextRunAtMs": 1777784700000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777612135538
+      "updatedAtMs": 1777698741064
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
@@ -221,15 +221,15 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1777655963608,
+        "lastRunAtMs": 1777742363611,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 87428,
+        "lastDurationMs": 88511,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777699163598
+        "nextRunAtMs": 1777785563598
       },
-      "updatedAtMs": 1777656051036
+      "updatedAtMs": 1777742452122
     },
     {
       "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
@@ -259,87 +259,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1777702500000,
-        "lastRunAtMs": 1777616100013,
+        "nextRunAtMs": 1777788900000,
+        "lastRunAtMs": 1777702500011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 482775,
+        "lastDurationMs": 321085,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777616582788
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1777672500012,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 48030,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777758900000,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1777672548042
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "lastRunAtMs": 1777683600014,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 54407,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777770000000
-      },
-      "updatedAtMs": 1777683654421
+      "updatedAtMs": 1777702821096
     },
     {
       "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
@@ -377,6 +306,77 @@
         "lastDeliveryError": "cron: job interrupted by gateway restart"
       },
       "updatedAtMs": 1777542434749
+    },
+    {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1777758900017,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 50273,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777845300000,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1777758950290
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "default",
+        "thinking": "low",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "lastRunAtMs": 1777770000014,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 61771,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777856400000
+      },
+      "updatedAtMs": 1777770061785
     },
     {
       "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
@@ -518,6 +518,10 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
@@ -525,10 +529,6 @@
     "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
       "label": "none -> last",
       "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
-    },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
     },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
       "label": "announce -> discord:channel:1477637814014316586",
