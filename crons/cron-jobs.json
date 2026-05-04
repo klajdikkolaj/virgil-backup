@@ -15,7 +15,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run backup: cd ~/virgil-backup && git pull --rebase && bash backup.sh. Return short status only.",
-        "model": "default",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "low"
       },
       "delivery": {
@@ -24,17 +24,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777689000012,
+        "lastRunAtMs": 1777775400014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 38980,
+        "lastDurationMs": 107272,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777775400000,
+        "nextRunAtMs": 1777861800000,
         "lastDelivered": true,
-        "runningAtMs": 1777775400014
+        "runningAtMs": 1777861800009
       },
-      "updatedAtMs": 1777689038992
+      "updatedAtMs": 1777822580472
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
@@ -59,7 +59,7 @@
           "read",
           "write"
         ],
-        "model": "default",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "low",
         "timeoutSeconds": 180
       },
@@ -69,16 +69,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777775210646,
+        "lastRunAtMs": 1777860465181,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 23494,
+        "lastDurationMs": 11992,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "lastDelivered": false,
-        "nextRunAtMs": 1777777010646
+        "nextRunAtMs": 1777862265181,
+        "consecutiveSkipped": 0,
+        "lastDelivered": false
       },
-      "updatedAtMs": 1777775234140
+      "updatedAtMs": 1777860477173
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
@@ -97,7 +98,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-morning-briefing.md and execute exactly.\n\nMANDATORY: after writing the daily file, post the concise 5-section summary to Discord channel #briefing (id: 1477637827964571780).\n\nReturn only a short confirmation including:\n- saved file path\n- posted channel id\n- success/failure",
-        "model": "default",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "medium"
       },
       "delivery": {
@@ -106,16 +107,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777698000017,
+        "lastRunAtMs": 1777784400018,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 650898,
+        "lastDurationMs": 815833,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777784400000,
+        "nextRunAtMs": 1777870800000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777698650915
+      "updatedAtMs": 1777822585787
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -134,7 +135,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Read HEARTBEAT.md in workspace and follow it exactly. Alert only on actionable items; otherwise HEARTBEAT_OK.\n\nIMPORTANT execution rules:\n- Use gog for Gmail/Calendar checks.\n- Do NOT call message/send or any messaging tool. Return the alert text as your final response; cron delivery will post it to Discord #monitoring.\n- Update /home/clawdkbot/.openclaw/workspace/memory/heartbeat-state.json using read + merge + full-file write only. Do NOT use brittle exact text edit replacements.\n- Preserve existing arrays/fields and update only the needed values.\n- If a check is slow, finish the core checks first and keep output concise.\n\nKeep output concise.",
-        "model": "default",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "low",
         "timeoutSeconds": 300
       },
@@ -144,16 +145,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1777752208517,
+        "lastRunAtMs": 1777838608513,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 56244,
+        "lastDurationMs": 65431,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777784608503,
-        "lastDelivered": false
+        "nextRunAtMs": 1777871008503,
+        "lastDelivered": false,
+        "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1777752264761
+      "updatedAtMs": 1777838673944
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
@@ -173,7 +175,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/vault-briefing-sync.md and execute exactly. Return short status.",
-        "model": "default",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "low"
       },
       "delivery": {
@@ -182,16 +184,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777698705508,
+        "lastRunAtMs": 1777785289202,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 35556,
+        "lastDurationMs": 35653,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777784700000,
+        "nextRunAtMs": 1777871100000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777698741064
+      "updatedAtMs": 1777822585965
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
@@ -212,7 +214,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run maintenance batch: (1) openclaw status, (2) openclaw doctor --fix, (3) CPU-only qmd update. If gateway inactive, restart it. Return one-line status.",
-        "model": "default",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "low",
         "timeoutSeconds": 300
       },
@@ -221,15 +223,53 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1777742363611,
+        "lastRunAtMs": 1777828763610,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 88511,
+        "lastDurationMs": 68879,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1777785563598
+        "nextRunAtMs": 1777871963598,
+        "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1777742452122
+      "updatedAtMs": 1777828832489
+    },
+    {
+      "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
+      "agentId": "main",
+      "sessionKey": "agent:main:discord:channel:1477606618224132274",
+      "name": "weekly-procurement-research-software",
+      "enabled": true,
+      "createdAtMs": 1772998466633,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * 1",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "medium",
+        "message": "Run weekly procurement research focused on software development opportunities.\n\nScope (required):\n- projects.worldbank.org (procurement / consulting / IT/software related)\n- AKSHI opportunities/tenders\n- Other Albanian public institutions publishing procurement notices\n\nFiltering rules:\n1) Include only opportunities relevant to software development, software implementation, digital platforms, systems integration, custom development, maintenance/support, data platforms, or IT services that require a software company.\n2) Include only items where bidding/application expiration date is at least 30 days after today (research date).\n3) Exclude expired, irrelevant hardware-only procurement, and non-software categories.\n\nFor each selected opportunity, provide:\n- Title\n- Institution / buyer\n- Country/region\n- Publication date (if available)\n- Expiration/bid deadline\n- Why it fits software-development companies (2-4 bullet brief)\n- Link\n\nOutput requirements:\n- Create Markdown report at: /home/clawdkbot/virgil-vault/Opportunities/Public-Procurement/YYYY-MM-DD-procurement-report.md\n- Include frontmatter: date, sources_checked, total_found, total_qualified, min_deadline_rule: \"+30d\"\n- Include a short executive summary at top.\n\nGit sync (mandatory):\n1) cd /home/clawdkbot/virgil-vault\n2) git pull --rebase\n3) git add Opportunities/Public-Procurement/*.md\n4) if staged changes exist:\n   - git commit -m \"chore(procurement): weekly software opportunities $(date +%F)\"\n   - git push origin HEAD\n5) if no changes, report \"no changes to sync\"\n\nCompletion message (concise):\n- qualified count\n- saved file path\n- git sync result\n- top 3 highest-value links"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1777269600011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 375992,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777874400000,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1777822596816
     },
     {
       "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
@@ -249,7 +289,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Read and execute workflow file `/home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/eternia-daily-research.md`.\n\nAlso re-read these memory anchors before writing:\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia.md`\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia-research-program.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-core-understanding.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-watchlist.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-team-charter.md`\n\nUse the standing research-team structure from the workflow as the explicit lens set for the daily report.\nUse read-only repo review against `/home/clawdkbot/.openclaw/workspace/eternia` plus external web research when available.\n\nImportant:\n- Do not modify the Eternia repo.\n- Save the report to virgil-vault.\n- Be factual, critical, and explicit about what is known vs inferred.\n- Include Virgil's opinion section.\n- Include brief team-lens notes when useful.\n\nReturn concise completion status only.",
-        "model": "default",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "medium",
         "timeoutSeconds": 1800
       },
@@ -259,161 +299,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1777788900000,
-        "lastRunAtMs": 1777702500011,
+        "nextRunAtMs": 1777875300000,
+        "lastRunAtMs": 1777788900015,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 321085,
+        "lastDurationMs": 613209,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777702821096
-    },
-    {
-      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
-      "name": "openclaw-update-postcheck-report",
-      "enabled": true,
-      "createdAtMs": 1772967616887,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 259200000,
-        "anchorMs": 1773135431575
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/openclaw-update-postcheck.md and execute exactly. Return concise status with version diff and health.",
-        "model": "default",
-        "thinking": "medium"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1777801031589,
-        "lastRunAtMs": 1777541831589,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 603160,
-        "lastDelivered": false,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "lastError": "cron: job interrupted by gateway restart",
-        "lastDeliveryError": "cron: job interrupted by gateway restart"
-      },
-      "updatedAtMs": 1777542434749
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1777758900017,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 50273,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777845300000,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1777758950290
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "default",
-        "thinking": "low",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "lastRunAtMs": 1777770000014,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 61771,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777856400000
-      },
-      "updatedAtMs": 1777770061785
-    },
-    {
-      "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
-      "agentId": "main",
-      "sessionKey": "agent:main:discord:channel:1477606618224132274",
-      "name": "weekly-procurement-research-software",
-      "enabled": true,
-      "createdAtMs": 1772998466633,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * 1",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "model": "default",
-        "thinking": "medium",
-        "message": "Run weekly procurement research focused on software development opportunities.\n\nScope (required):\n- projects.worldbank.org (procurement / consulting / IT/software related)\n- AKSHI opportunities/tenders\n- Other Albanian public institutions publishing procurement notices\n\nFiltering rules:\n1) Include only opportunities relevant to software development, software implementation, digital platforms, systems integration, custom development, maintenance/support, data platforms, or IT services that require a software company.\n2) Include only items where bidding/application expiration date is at least 30 days after today (research date).\n3) Exclude expired, irrelevant hardware-only procurement, and non-software categories.\n\nFor each selected opportunity, provide:\n- Title\n- Institution / buyer\n- Country/region\n- Publication date (if available)\n- Expiration/bid deadline\n- Why it fits software-development companies (2-4 bullet brief)\n- Link\n\nOutput requirements:\n- Create Markdown report at: /home/clawdkbot/virgil-vault/Opportunities/Public-Procurement/YYYY-MM-DD-procurement-report.md\n- Include frontmatter: date, sources_checked, total_found, total_qualified, min_deadline_rule: \"+30d\"\n- Include a short executive summary at top.\n\nGit sync (mandatory):\n1) cd /home/clawdkbot/virgil-vault\n2) git pull --rebase\n3) git add Opportunities/Public-Procurement/*.md\n4) if staged changes exist:\n   - git commit -m \"chore(procurement): weekly software opportunities $(date +%F)\"\n   - git push origin HEAD\n5) if no changes, report \"no changes to sync\"\n\nCompletion message (concise):\n- qualified count\n- saved file path\n- git sync result\n- top 3 highest-value links"
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1777269600011,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 375992,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1777874400000,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1777269976003
+      "updatedAtMs": 1777822601239
     },
     {
       "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
@@ -430,7 +325,7 @@
       "payload": {
         "kind": "agentTurn",
         "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
-        "model": "default",
+        "model": "openai-codex/gpt-5.5",
         "thinking": "medium",
         "timeoutSeconds": 600
       },
@@ -449,7 +344,80 @@
         "nextRunAtMs": 1777878000000,
         "lastDelivered": true
       },
-      "updatedAtMs": 1777618924699
+      "updatedAtMs": 1777822592478
+    },
+    {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1777845300006,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 66355,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777931700000,
+        "lastDelivered": true,
+        "consecutiveSkipped": 0
+      },
+      "updatedAtMs": 1777845366361
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "lastRunAtMs": 1777856400010,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 48645,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1777942800000,
+        "consecutiveSkipped": 0
+      },
+      "updatedAtMs": 1777856448655
     },
     {
       "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
@@ -482,6 +450,44 @@
         "nextRunAtMs": 1777964400000
       },
       "updatedAtMs": 1777665645004
+    },
+    {
+      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
+      "name": "openclaw-update-availability-report",
+      "enabled": true,
+      "createdAtMs": 1772967616887,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1773135431575
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
+      "state": {
+        "nextRunAtMs": 1778081302294,
+        "lastRunAtMs": 1777822125722,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 43390,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1777822169112
     }
   ],
   "total": 13,
@@ -514,11 +520,15 @@
       "label": "none -> last",
       "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
     },
+    "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
     "340d1c73-4464-4be3-8c62-0fff544e7e08": {
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
@@ -530,16 +540,12 @@
       "label": "none -> last",
       "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
     },
-    "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
     "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
       "label": "announce -> discord:channel:1477637773681885184",
+      "detail": "explicit"
+    },
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+      "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     }
   }

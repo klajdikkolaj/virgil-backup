@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.4.26",
-    "lastTouchedAt": "2026-04-27T11:20:31.655Z"
+    "lastTouchedVersion": "2026.5.3",
+    "lastTouchedAt": "2026-05-03T14:18:32.099Z"
   },
   "env": {
     "GOG_KEYRING_BACKEND": "file",
@@ -10,8 +10,8 @@
     "OPENCLAW_BUNDLED_PLUGINS_DIR": "/home/clawdkbot/openclaw/dist/extensions"
   },
   "wizard": {
-    "lastRunAt": "2026-04-27T11:20:31.608Z",
-    "lastRunVersion": "2026.4.26",
+    "lastRunAt": "2026-05-03T14:18:31.796Z",
+    "lastRunVersion": "2026.5.3",
     "lastRunCommand": "doctor",
     "lastRunMode": "local"
   },
@@ -53,15 +53,13 @@
         "primary": "openai-codex/gpt-5.5",
         "fallbacks": [
           "openai-codex/gpt-5.4",
-          "openai-codex/gpt-5.3-codex",
-          "openai-codex/gpt-5.3-codex-spark"
+          "openai-codex/gpt-5.3-codex"
         ]
       },
       "models": {
         "openai-codex/gpt-5.3-codex": {
           "alias": "codex"
         },
-        "openai-codex/gpt-5.3-codex-spark": {},
         "openai-codex/gpt-5.4": {},
         "openai-codex/gpt-5.5": {}
       },
@@ -338,7 +336,7 @@
         "target": "channel"
       },
       "threadBindings": {
-        "spawnAcpSessions": true
+        "spawnSessions": true
       }
     }
   },
@@ -371,6 +369,99 @@
       },
       "openai-image-gen": {
         "apiKey": "no"
+      },
+      "apple-notes": {
+        "enabled": false
+      },
+      "apple-reminders": {
+        "enabled": false
+      },
+      "bear-notes": {
+        "enabled": false
+      },
+      "blucli": {
+        "enabled": false
+      },
+      "bluebubbles": {
+        "enabled": false
+      },
+      "camsnap": {
+        "enabled": false
+      },
+      "coding-agent": {
+        "enabled": false
+      },
+      "eightctl": {
+        "enabled": false
+      },
+      "gifgrep": {
+        "enabled": false
+      },
+      "himalaya": {
+        "enabled": false
+      },
+      "imsg": {
+        "enabled": false
+      },
+      "mcporter": {
+        "enabled": false
+      },
+      "model-usage": {
+        "enabled": false
+      },
+      "openai-whisper-api": {
+        "enabled": false
+      },
+      "openhue": {
+        "enabled": false
+      },
+      "oracle": {
+        "enabled": false
+      },
+      "ordercli": {
+        "enabled": false
+      },
+      "peekaboo": {
+        "enabled": false
+      },
+      "realmrouter-switch": {
+        "enabled": false
+      },
+      "sag": {
+        "enabled": false
+      },
+      "session-logs": {
+        "enabled": false
+      },
+      "sherpa-onnx-tts": {
+        "enabled": false
+      },
+      "slack": {
+        "enabled": false
+      },
+      "songsee": {
+        "enabled": false
+      },
+      "sonoscli": {
+        "enabled": false
+      },
+      "spotify-player": {
+        "enabled": false
+      },
+      "summarize": {
+        "enabled": false
+      },
+      "things-mac": {
+        "enabled": false
+      },
+      "trello": {
+        "enabled": false
+      },
+      "voice-call": {
+        "enabled": false
+      },
+      "vt-hash-intel": {
+        "enabled": false
       }
     }
   },
@@ -421,6 +512,11 @@
   "discovery": {
     "mdns": {
       "mode": "off"
+    }
+  },
+  "messages": {
+    "groupChat": {
+      "visibleReplies": "message_tool"
     }
   }
 }
