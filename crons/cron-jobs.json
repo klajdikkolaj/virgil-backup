@@ -23,23 +23,23 @@
         "channel": "discord",
         "to": "1477637814014316586"
       },
+      "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1777948200011,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 45825,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1778034600000,
-        "lastDelivered": true,
+        "lastRunAtMs": 1778034600009,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 56134,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "nextRunAtMs": 1778121000000,
         "consecutiveSkipped": 0,
-        "runningAtMs": 1778034600009
+        "runningAtMs": 1778121000011
       },
-      "updatedAtMs": 1777948245836
+      "updatedAtMs": 1778071737642
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
-      "agentId": "main",
+      "agentId": "eternia-repo-cartographer",
       "sessionKey": "agent:main:main",
       "name": "watch-eternia-main-branch",
       "description": "Check Eternakk/eternia origin/main for new commits and notify this session only when it changes.",
@@ -70,21 +70,21 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778033375932,
+        "lastRunAtMs": 1778119776457,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 13615,
+        "lastDurationMs": 25065,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778035175932,
+        "nextRunAtMs": 1778121576457,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778033389547
+      "updatedAtMs": 1778119801522
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
-      "agentId": "main",
+      "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
@@ -98,9 +98,10 @@
       "wakeMode": "now",
       "payload": {
         "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-morning-briefing.md and execute exactly.\n\nMANDATORY: after writing the daily file, post the concise 5-section summary to Discord channel #briefing (id: 1477637827964571780).\n\nReturn only a short confirmation including:\n- saved file path\n- posted channel id\n- success/failure",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-morning-briefing.md and execute exactly.\n\nDo NOT call message/send or any messaging tool. Cron delivery will post your final concise summary to Discord channel #briefing (id: 1477637827964571780).\n\nReturn only the concise 5-section summary plus short confirmation including:\n- saved file path\n- delivery handled by cron\n- success/failure",
         "model": "openai-codex/gpt-5.5",
-        "thinking": "medium"
+        "thinking": "medium",
+        "timeoutSeconds": 600
       },
       "delivery": {
         "mode": "announce",
@@ -108,17 +109,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777957200010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 205388,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1778043600000,
-        "lastDelivered": true,
-        "consecutiveSkipped": 0
+        "lastRunAtMs": 1778043600012,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 213299,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "nextRunAtMs": 1778130000000,
+        "consecutiveSkipped": 0,
+        "lastError": "Error: Outbound not configured for channel: discord"
       },
-      "updatedAtMs": 1777957405398
+      "updatedAtMs": 1778071800640
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -147,21 +148,21 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1778011408511,
+        "lastRunAtMs": 1778097808513,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 83714,
+        "lastDurationMs": 60785,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778043808503,
-        "lastDelivered": false,
-        "consecutiveSkipped": 0
+        "nextRunAtMs": 1778130208503,
+        "consecutiveSkipped": 0,
+        "lastDelivered": false
       },
-      "updatedAtMs": 1778011492225
+      "updatedAtMs": 1778097869298
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
-      "agentId": "main",
+      "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "name": "vault-github-sync-after-briefing",
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
@@ -186,21 +187,21 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1777957500010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 23321,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1778043900000,
-        "lastDelivered": true,
-        "consecutiveSkipped": 0
+        "lastRunAtMs": 1778043900007,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 23842,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "nextRunAtMs": 1778130300000,
+        "consecutiveSkipped": 0,
+        "lastError": "Unsupported channel: discord"
       },
-      "updatedAtMs": 1777957523331
+      "updatedAtMs": 1778071815944
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
-      "agentId": "main",
+      "agentId": "ops-maintainer",
       "sessionKey": "agent:main:discord:channel:1477606618224132274",
       "name": "maintenance-batch",
       "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
@@ -226,16 +227,19 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1778001563608,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 64049,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1778044763598,
-        "consecutiveSkipped": 0
+        "lastRunAtMs": 1778087963603,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 77224,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "nextRunAtMs": 1778131163598,
+        "consecutiveSkipped": 0,
+        "lastError": "cron: job interrupted by gateway restart",
+        "lastDelivered": false,
+        "lastDeliveryError": "cron: job interrupted by gateway restart"
       },
-      "updatedAtMs": 1778001627657
+      "updatedAtMs": 1778088040827
     },
     {
       "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
@@ -265,92 +269,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1778048100000,
-        "lastRunAtMs": 1777961700010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 641163,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true,
-        "consecutiveSkipped": 0
-      },
-      "updatedAtMs": 1777962341173
-    },
-    {
-      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
-      "name": "opencortex-memory-review",
-      "enabled": true,
-      "createdAtMs": 1772967612188,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 1,3,5",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "medium",
-        "timeoutSeconds": 600
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1777878000013,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 56503,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1778050800000,
-        "lastDelivered": true,
-        "consecutiveSkipped": 0
-      },
-      "updatedAtMs": 1777878056516
-    },
-    {
-      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
-      "name": "openclaw-update-availability-report",
-      "enabled": true,
-      "createdAtMs": 1772967616887,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 259200000,
-        "anchorMs": 1773135431575
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
-      "state": {
-        "nextRunAtMs": 1778081302294,
-        "lastRunAtMs": 1777822125722,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 43390,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778134500000,
+        "lastRunAtMs": 1778048100013,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 707887,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
         "consecutiveSkipped": 0,
-        "lastDelivered": true
+        "lastError": "Error: Outbound not configured for channel: discord"
       },
-      "updatedAtMs": 1777822169112
+      "updatedAtMs": 1778048807900
     },
     {
       "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
@@ -377,18 +306,19 @@
         "channel": "discord",
         "to": "1477637814014316586"
       },
+      "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1778018100012,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 67365,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "nextRunAtMs": 1778104500000,
+        "lastRunAtMs": 1778104500012,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 73102,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778190900000,
         "consecutiveSkipped": 0,
-        "lastError": "Error: Outbound not configured for channel: discord"
+        "lastDelivered": true
       },
-      "updatedAtMs": 1778018167377
+      "updatedAtMs": 1778104573114
     },
     {
       "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
@@ -413,21 +343,100 @@
         "mode": "none",
         "channel": "last"
       },
+      "agentId": "vault-librarian",
       "state": {
-        "lastRunAtMs": 1778029200009,
+        "lastRunAtMs": 1778115600011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 51137,
+        "lastDurationMs": 51823,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778115600000,
+        "nextRunAtMs": 1778202000000,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1778029251146
+      "updatedAtMs": 1778115651834
+    },
+    {
+      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772967612188,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1,3,5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "medium",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "agentId": "vault-librarian",
+      "state": {
+        "lastRunAtMs": 1778050800012,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 30045,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "nextRunAtMs": 1778223600000,
+        "consecutiveSkipped": 0,
+        "lastError": "FallbackSummaryError: All models failed (3): openai-codex/gpt-5.5: Codex error: {\"type\":\"error\",\"error\":{\"type\":\"service_unavailable_error\",\"code\":\"server_is_overloaded\",\"message\":\"Our servers are currently overloaded. Please try again later.\",\"param\":null},\"sequence_number\":2} (overloaded) | openai-codex/gpt-5.4: No available auth profile for openai-codex (all in cooldown or unavailable). (overloaded) | openai-codex/gpt-5.3-codex: No available auth profile for openai-codex (all in cooldown or unavailable). (overloaded)",
+        "lastErrorReason": "overloaded"
+      },
+      "updatedAtMs": 1778071816066
+    },
+    {
+      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
+      "name": "openclaw-update-availability-report",
+      "enabled": true,
+      "createdAtMs": 1772967616887,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1773135431575
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
+      "agentId": "ops-maintainer",
+      "state": {
+        "nextRunAtMs": 1778340502305,
+        "lastRunAtMs": 1778081302305,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 40511,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1778081342816
     },
     {
       "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
-      "agentId": "main",
+      "agentId": "job-opportunity-scout",
       "sessionKey": "agent:main:discord:channel:1477606618224132274",
       "name": "weekly-procurement-research-software",
       "enabled": true,
@@ -461,11 +470,11 @@
         "lastDelivered": true,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1777874884460
+      "updatedAtMs": 1778071816299
     },
     {
       "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
-      "agentId": "virgil-opus",
+      "agentId": "research-scout",
       "sessionKey": "agent:virgil-opus:discord:channel:1477637773681885184",
       "name": "Weekly research \u2014 Codex integrations with Unity/Unreal for Eternia",
       "description": "Research Codex/agent integrations with Unity or Unreal every Tuesday and save the report into Obsidian.",
@@ -501,7 +510,7 @@
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1777964614396
+      "updatedAtMs": 1778071816529
     }
   ],
   "total": 13,
@@ -511,56 +520,56 @@
   "nextOffset": null,
   "deliveryPreviews": {
     "142e1c80-99ff-4f98-b4b2-257ae9cc358c": {
-      "label": "announce -> discord:1477637814014316586",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
     },
     "2ab212d8-546d-4042-b875-e6620f44a585": {
-      "label": "announce -> discord:1477637827964571780",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637827964571780",
+      "detail": "explicit"
     },
     "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f": {
-      "label": "announce -> discord:1477637827964571780",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637827964571780",
+      "detail": "explicit"
     },
     "12a3aa34-1645-42b4-80e5-75fd1954720b": {
-      "label": "announce -> discord:1477637814014316586",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
     },
     "1aa1ad68-c889-415c-9c09-a776bfb8ca34": {
-      "label": "announce -> discord:1477637827964571780",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637827964571780",
+      "detail": "explicit"
     },
     "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3": {
       "label": "none -> last",
-      "detail": "last -> no route, will fail-closed: Channel is required (no configured channels detected). Set delivery.channel explicitly or use a main session with a previous channel."
+      "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
     },
     "340d1c73-4464-4be3-8c62-0fff544e7e08": {
-      "label": "announce -> discord:1477637827964571780",
-      "detail": "Unsupported channel: discord"
-    },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
-      "label": "announce -> discord:1477637814014316586",
-      "detail": "Unsupported channel: discord"
-    },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
-      "label": "announce -> discord:1477637814014316586",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637827964571780",
+      "detail": "explicit"
     },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
-      "label": "announce -> discord:1477637814014316586",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
     },
     "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
       "label": "none -> last",
-      "detail": "last -> no route, will fail-closed: Channel is required (no configured channels detected). Set delivery.channel explicitly or use a main session with a previous channel."
+      "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
+    },
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
     },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
-      "label": "announce -> discord:1477637814014316586",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
     },
     "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
-      "label": "announce -> discord:1477637773681885184",
-      "detail": "Unsupported channel: discord"
+      "label": "announce -> discord:channel:1477637773681885184",
+      "detail": "explicit"
     }
   }
 }

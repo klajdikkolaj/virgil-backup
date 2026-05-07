@@ -33,3 +33,5 @@ Write full briefing to:
 
 ## Channel output
 Post concise summary in the target Discord channel using same section structure.
+
+If this workflow is being run by a cron job whose delivery is already configured, do **not** call messaging tools directly unless the cron payload explicitly requires it. In that case, return the concise summary as the final response and let cron delivery post it.

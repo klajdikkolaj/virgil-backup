@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-06T02:30:18.587Z",
+  "updatedAt": "2026-05-06T20:03:41.431Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,13 +9,13 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 15,
+      "recallCount": 17,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 8.302481474713941,
+      "totalScore": 9.356075400845667,
       "maxScore": 0.8323902852698775,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-05-05T07:00:13.963Z",
+      "lastRecalledAt": "2026-05-06T12:30:03.349Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
@@ -31,7 +31,9 @@
         "9af2908c0030",
         "6d9b27ee3b22",
         "7e75404b7595",
-        "da67b2f1df13"
+        "da67b2f1df13",
+        "2df1d366d7bd",
+        "bceea0e229d7"
       ],
       "recallDays": [
         "2026-04-26",
@@ -42,7 +44,8 @@
         "2026-05-01",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "2026.4.22",
@@ -97,19 +100,14 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 82,
+      "recallCount": 89,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 42.008577747643,
+      "totalScore": 45.585714609921,
       "maxScore": 0.5351848438382149,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-05-05T20:03:43.394Z",
+      "lastRecalledAt": "2026-05-06T20:03:41.431Z",
       "queryHashes": [
-        "820bcf602e64",
-        "57b43efe239c",
-        "d02431fc3d25",
-        "b1fa06d631a6",
-        "6507c9742b37",
         "c675fa7a4a00",
         "c134fdf88516",
         "9b02389536c8",
@@ -136,7 +134,12 @@
         "749404f77ae9",
         "9a4dbe4d2e3e",
         "1426e4cdfcaf",
-        "4493a6a62977"
+        "4493a6a62977",
+        "163058e3dec2",
+        "d101cd389d69",
+        "e50372a70efd",
+        "20013c8c059c",
+        "df9ac2ba65d0"
       ],
       "recallDays": [
         "2026-04-26",
@@ -148,7 +151,8 @@
         "2026-05-02",
         "2026-05-03",
         "2026-05-04",
-        "2026-05-05"
+        "2026-05-05",
+        "2026-05-06"
       ],
       "conceptTags": [
         "gateway",
@@ -168,17 +172,14 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 49,
+      "recallCount": 53,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 24.461991750230403,
-      "maxScore": 0.7670116772552442,
+      "totalScore": 26.714422627413512,
+      "maxScore": 0.7735620827418852,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-05-06T02:30:18.587Z",
+      "lastRecalledAt": "2026-05-06T14:03:43.108Z",
       "queryHashes": [
-        "5192050056cd",
-        "8a60a96e48b9",
-        "415c0290d293",
         "6848e176eab4",
         "73c7d1c6d9ea",
         "46c52d1f6f9e",
@@ -207,7 +208,10 @@
         "9a4dbe4d2e3e",
         "1426e4cdfcaf",
         "629d0851eb3d",
-        "46238f8f1fb9"
+        "46238f8f1fb9",
+        "163058e3dec2",
+        "d101cd389d69",
+        "e50372a70efd"
       ],
       "recallDays": [
         "2026-04-26",
@@ -837,20 +841,22 @@
       "endLine": 44,
       "source": "memory",
       "snippet": "# 2026-03-01 \u2014 Session Brief ## Who I Am - Name: Virgil \ud83e\udded - Role: Cognitive Steward + Daily Operator for Klajdi - Running on: Ubuntu server (89.167.111.189) via OpenClaw ## Who is Klajdi - Creator of the Eternia project - Email: kljdkolaj@gmail.com, Claude Pro subscriber - macOS + iPhone user, timezone: Europe/Tirane (Albania) - Primary channel: Telegram. Discord now active too. ## What We've Set Up (last 2 days) - \u2705 OpenClaw gateway running with auto-restart - \u2705 Telegram connected (primary) - \u2705 Discord connected (@Eterniaclaw bot, Klajdi approved) - \u2705 WhatsApp disabled (personal number, not a bot) - \u2705 Obsidian vault: klajdikkolaj/virgil-vault (GitHub, synced) - \u2705 SSH access to Eternakk/",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.002408331632614,
-      "maxScore": 0.5216077536344528,
+      "totalScore": 1.5322546124458312,
+      "maxScore": 0.5298462808132172,
       "firstRecalledAt": "2026-04-29T09:42:44.081Z",
-      "lastRecalledAt": "2026-04-30T08:31:05.844Z",
+      "lastRecalledAt": "2026-05-06T12:30:03.349Z",
       "queryHashes": [
         "8ae710d28e4c",
-        "4cf631ba3e2b"
+        "4cf631ba3e2b",
+        "bceea0e229d7"
       ],
       "recallDays": [
         "2026-04-29",
-        "2026-04-30"
+        "2026-04-30",
+        "2026-05-06"
       ],
       "conceptTags": [
         "gateway",
@@ -870,16 +876,17 @@
       "endLine": 72,
       "source": "memory",
       "snippet": "- No suspicious/unverified skills - Direct answers, no filler - Ask before external/irreversible actions ## Session Summary (2026-03-01 Telegram) ### Setup completed today: - Discord bot (@Eterniaclaw) connected and approved (user: 692688749972160542) - Gateway service fixed to use stable Node path (linuxbrew), auto-restart working - OpenClaw security hardened (chmod 700 on credentials + state dirs) - Obsidian vault (virgil-vault) set up with git sync to GitHub - QMD semantic search installed and indexed vault - Memory architecture initialized (projects/eternia.md, contacts/klajdi.md, preferences.md) - Daily backup cron (4:30 AM) \u2192 klajdikkolaj/virgil-backup - Daily maintenance cron (4:00",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.983156931400299,
-      "maxScore": 0.5010123014450073,
+      "totalScore": 1.5131103575229643,
+      "maxScore": 0.5299534261226654,
       "firstRecalledAt": "2026-04-30T08:31:05.844Z",
-      "lastRecalledAt": "2026-05-06T02:30:18.587Z",
+      "lastRecalledAt": "2026-05-06T12:30:03.349Z",
       "queryHashes": [
         "4cf631ba3e2b",
-        "46238f8f1fb9"
+        "46238f8f1fb9",
+        "bceea0e229d7"
       ],
       "recallDays": [
         "2026-04-30",

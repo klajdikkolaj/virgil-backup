@@ -49,16 +49,23 @@ Always consider these domains when relevant:
    - `virgil-vault/Research/Eternia/eternia-core-understanding.md`
    - `virgil-vault/Research/Eternia/eternia-research-watchlist.md`
    - `virgil-vault/Research/Eternia/eternia-research-team-charter.md`
-2. Review the Eternia repo in read-only mode for meaningful understanding delta.
-3. Review frontier external developments when tools/data allow.
+2. Preferred execution when specialist agents are available:
+   - Spawn `eternia-repo-cartographer` for read-only repo delta / architecture notes.
+   - Spawn `eternia-frontier-scout` for external developments and source scan.
+   - Spawn `eternia-governance-redteam` for critique, safety, consent, and authority-language review.
+   - Require each specialist to write a dated artifact under `/home/clawdkbot/virgil-vault/Research/Eternia/Agents/<lane>/YYYY-MM-DD.md`.
+   - Virgil/main remains responsible for final synthesis, report writing, git sync, and user-facing completion.
+3. If specialist spawning is unavailable, emulate the same lane boundaries sequentially and state that fallback in the report metadata.
+4. Review the Eternia repo in read-only mode for meaningful understanding delta.
+5. Review frontier external developments when tools/data allow.
    - Primary path: `browser` (Chromium) for discovery and page navigation.
    - Secondary path: `web_fetch` for extracting readable content from selected URLs.
    - Optional path: `web_search` only if a search API key is configured and working.
-4. Run an explicit critique pass:
+6. Run an explicit critique pass:
    - what is hype?
    - what is weak evidence?
    - what is dangerous misinterpretation?
-5. Run an explicit synthesis pass:
+7. Run an explicit synthesis pass:
    - what matters for Eternia now?
    - what changes priorities?
    - what should be promoted into durable memory?
