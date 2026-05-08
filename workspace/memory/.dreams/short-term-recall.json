@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-06T20:03:41.431Z",
+  "updatedAt": "2026-05-07T20:03:40.661Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,13 +9,13 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 17,
+      "recallCount": 18,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 9.356075400845667,
+      "totalScore": 9.926700621084828,
       "maxScore": 0.8323902852698775,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-05-06T12:30:03.349Z",
+      "lastRecalledAt": "2026-05-07T06:15:12.053Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
@@ -33,7 +33,8 @@
         "7e75404b7595",
         "da67b2f1df13",
         "2df1d366d7bd",
-        "bceea0e229d7"
+        "bceea0e229d7",
+        "4feb049d3865"
       ],
       "recallDays": [
         "2026-04-26",
@@ -45,7 +46,8 @@
         "2026-05-03",
         "2026-05-04",
         "2026-05-05",
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-07"
       ],
       "conceptTags": [
         "2026.4.22",
@@ -100,21 +102,14 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 89,
+      "recallCount": 96,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 45.585714609921,
+      "totalScore": 49.211850424110914,
       "maxScore": 0.5351848438382149,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-05-06T20:03:41.431Z",
+      "lastRecalledAt": "2026-05-07T20:03:40.661Z",
       "queryHashes": [
-        "c675fa7a4a00",
-        "c134fdf88516",
-        "9b02389536c8",
-        "88b85d4e3071",
-        "9e87e05ecfda",
-        "35ddde50f12a",
-        "5b38869d2cf8",
         "9df44428477b",
         "54be7d210183",
         "c0dabfb429a1",
@@ -139,7 +134,14 @@
         "d101cd389d69",
         "e50372a70efd",
         "20013c8c059c",
-        "df9ac2ba65d0"
+        "df9ac2ba65d0",
+        "48e6439f886b",
+        "7563291c5751",
+        "c4215d8d1d8d",
+        "e267689967a2",
+        "019e4f44d32e",
+        "e5ce14859152",
+        "9c8c2593e382"
       ],
       "recallDays": [
         "2026-04-26",
@@ -152,7 +154,8 @@
         "2026-05-03",
         "2026-05-04",
         "2026-05-05",
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-07"
       ],
       "conceptTags": [
         "gateway",
@@ -172,17 +175,14 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 53,
+      "recallCount": 56,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 26.714422627413512,
-      "maxScore": 0.7735620827418852,
+      "totalScore": 28.507517238397202,
+      "maxScore": 0.7806781021898603,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-05-06T14:03:43.108Z",
+      "lastRecalledAt": "2026-05-07T11:03:39.460Z",
       "queryHashes": [
-        "6848e176eab4",
-        "73c7d1c6d9ea",
-        "46c52d1f6f9e",
         "5437cc78fd1f",
         "820bcf602e64",
         "57b43efe239c",
@@ -211,7 +211,10 @@
         "46238f8f1fb9",
         "163058e3dec2",
         "d101cd389d69",
-        "e50372a70efd"
+        "e50372a70efd",
+        "7563291c5751",
+        "c4215d8d1d8d",
+        "e267689967a2"
       ],
       "recallDays": [
         "2026-04-26",
@@ -224,7 +227,8 @@
         "2026-05-03",
         "2026-05-04",
         "2026-05-05",
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-07"
       ],
       "conceptTags": [
         "qmd",
