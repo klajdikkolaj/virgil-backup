@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-07T20:03:40.661Z",
+  "updatedAt": "2026-05-09T01:00:23.327Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -102,18 +102,14 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 96,
+      "recallCount": 102,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 49.211850424110914,
-      "maxScore": 0.5351848438382149,
+      "totalScore": 52.32789221405986,
+      "maxScore": 0.5390640631318092,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-05-07T20:03:40.661Z",
+      "lastRecalledAt": "2026-05-08T20:03:38.980Z",
       "queryHashes": [
-        "9df44428477b",
-        "54be7d210183",
-        "c0dabfb429a1",
-        "f4a71e8bd570",
         "738b620f1cab",
         "22af416522e9",
         "c6fb00c611cf",
@@ -141,7 +137,11 @@
         "e267689967a2",
         "019e4f44d32e",
         "e5ce14859152",
-        "9c8c2593e382"
+        "9c8c2593e382",
+        "3e409e2f4f7f",
+        "b1bf8b3ebbba",
+        "2ccdd5a28ad8",
+        "c8bbb1f55b46"
       ],
       "recallDays": [
         "2026-04-26",
@@ -155,7 +155,8 @@
         "2026-05-04",
         "2026-05-05",
         "2026-05-06",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-08"
       ],
       "conceptTags": [
         "gateway",
@@ -175,15 +176,14 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 56,
+      "recallCount": 60,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 28.507517238397202,
+      "totalScore": 30.516136141557297,
       "maxScore": 0.7806781021898603,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-05-07T11:03:39.460Z",
+      "lastRecalledAt": "2026-05-09T01:00:23.327Z",
       "queryHashes": [
-        "5437cc78fd1f",
         "820bcf602e64",
         "57b43efe239c",
         "5e6d0a86db74",
@@ -214,7 +214,8 @@
         "e50372a70efd",
         "7563291c5751",
         "c4215d8d1d8d",
-        "e267689967a2"
+        "e267689967a2",
+        "b1bf8b3ebbba"
       ],
       "recallDays": [
         "2026-04-26",
@@ -228,7 +229,9 @@
         "2026-05-04",
         "2026-05-05",
         "2026-05-06",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-09"
       ],
       "conceptTags": [
         "qmd",
@@ -284,13 +287,13 @@
       "endLine": 39,
       "source": "memory",
       "snippet": "# 2026-03-03 ## QMD indexing optimization applied - Added `workspace-memory` collection: - Path: `/home/clawdkbot/.openclaw/workspace/memory` - Pattern: `**/*.md` - Added targeted contexts for vault subpaths: - `/research`, `/projects`, `/daily`, `/skills` - Added operational context for `workspace-memory` root. - Ran `qmd update` and `qmd embed` successfully. - Post-change index status: - 26 files indexed - 49 vectors embedded - 2 collections (`vault`, `workspace-memory`) ## Scheduled optimization - Added cron job `qmd-light-refresh` (every 3 hours, Europe/Tirane): - Runs lightweight `qmd update` between nightly full reindex cycles. - Delivery mode: none (silent maintena",
-      "recallCount": 13,
+      "recallCount": 14,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6.5547574788331975,
+      "totalScore": 7.067891240119933,
       "maxScore": 0.5140748292207717,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-05-06T01:00:11.759Z",
+      "lastRecalledAt": "2026-05-09T01:00:23.327Z",
       "queryHashes": [
         "f822a46040f1",
         "ad74f0a76ba1",
@@ -311,7 +314,8 @@
         "2026-05-03",
         "2026-05-04",
         "2026-05-05",
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-09"
       ],
       "conceptTags": [
         "qmd",
@@ -331,13 +335,13 @@
       "endLine": 63,
       "source": "memory",
       "snippet": "- added Codex reasoning escalation policy - added QMD light-refresh cron and workspace-memory indexing status - added protocol/workflow pointers for routing and quality controls - refreshed known issues/debts - Restructured long-term vault memory files for retention clarity: - `memory/contacts/klajdi.md` (communication + AI preferences) - `memory/preferences.md` (stable behavior rules) - `memory/projects/eternia.md` (project status + execution governance links) - `memory_search` tool was unavailable during this run (embedding provider/auth error), so distillation was done via direct file reads. ## OpenCortex memory review refresh (09:09 UTC cron run) - Re-read recent daily lo",
-      "recallCount": 11,
+      "recallCount": 12,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.301745155453681,
+      "totalScore": 5.793773439526557,
       "maxScore": 0.4922026455402374,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-05-06T01:00:11.759Z",
+      "lastRecalledAt": "2026-05-09T01:00:23.327Z",
       "queryHashes": [
         "f822a46040f1",
         "629d0851eb3d",
@@ -357,7 +361,8 @@
         "2026-05-03",
         "2026-05-04",
         "2026-05-05",
-        "2026-05-06"
+        "2026-05-06",
+        "2026-05-09"
       ],
       "conceptTags": [
         "embedding",

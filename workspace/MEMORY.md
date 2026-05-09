@@ -1,5 +1,5 @@
 # MEMORY.md — Virgil Long-Term Memory
-_Last reviewed: 2026-05-01 (memory-consolidation cron)_
+_Last reviewed: 2026-05-08 (memory-consolidation cron)_
 
 ---
 
@@ -50,12 +50,14 @@ Do not advance to embodied movement/production multi-agent phases before trust-b
 ## ⚙️ Operating Memory (stable enough to keep loaded)
 
 - Main/default lane is Sonnet; channel-level routing can override lane ownership (see routing workflow).
+- Use the reusable specialist bench for recurring/scoped workflows where safe; Virgil remains orchestrator/final voice, with specialists producing bounded artifacts only.
 - Codex default reasoning: medium; escalate only for high-stakes/security/high-ambiguity tasks with explicit justification.
 - QMD indexing includes workspace memory and runs in CPU-only mode by default to avoid CUDA noise.
 - Protocol strictness is risk-tiered (STRICT/MEDIUM/LIGHT) and documented for channel-specific execution.
 - For Eternia research, browser automation is the current primary web-research path; Brave Search API-backed search requires an API key and was unavailable as of 2026-04-22.
 
 Reference workflows:
+- `memory/workflows/agent-bench.md`
 - `memory/workflows/channel-routing.md`
 - `memory/workflows/protocol-levels.md`
 - `memory/workflows/knowledge-access-order.md`

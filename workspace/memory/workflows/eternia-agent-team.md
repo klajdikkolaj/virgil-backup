@@ -1,5 +1,5 @@
 # Eternia Specialist Agent Team
-_Last updated: 2026-05-06_
+_Last updated: 2026-05-08_
 
 ## Purpose
 Use a small durable specialist-agent team for Eternia research and review while keeping Virgil as the single user-facing orchestrator.
@@ -58,8 +58,13 @@ Forbidden:
 ## Orchestration pattern
 1. Virgil assigns a concrete scope and output path.
 2. Specialists write artifacts to their lane folders.
-3. Governance Red-Team reviews repo/research outputs before final synthesis when stakes are non-trivial.
-4. Virgil writes the final user-facing report and decides what, if anything, belongs in durable memory.
+3. Virgil runs a compact cross-lane review before final synthesis:
+   - Share active lane artifacts or concise summaries across the active specialists.
+   - Ask only for contradictions, missing evidence, priority changes, and overclaim warnings.
+   - When time is tight, route repo + frontier artifacts through Governance Red-Team as the minimum second-pass reviewer.
+   - When signal/stakes are high, ask Repo, Frontier, and Governance to each react briefly to the other lanes.
+4. Virgil writes the single final user-facing report and decides what, if anything, belongs in durable memory.
+5. Specialist artifacts remain source/audit notes, not the final product.
 
 ## Handoff contract
 Each specialist artifact should include:

@@ -62,7 +62,7 @@ Eternia trust-boundary, consent, authority, and safety reviewer.
 See `/home/clawdkbot/.openclaw/workspace/memory/workflows/eternia-agent-team.md` for the Eternia-specific team contract.
 
 ## Suggested workflow mapping
-- Eternia daily research: `eternia-repo-cartographer` + `eternia-frontier-scout` + `eternia-governance-redteam` → Virgil synthesis.
+- Eternia daily research: `eternia-repo-cartographer` + `eternia-frontier-scout` + `eternia-governance-redteam` → compact cross-lane review → Virgil single final synthesis.
 - Deep research: `research-scout` → `redteam-reviewer` → Virgil synthesis.
 - Morning briefing: `briefing-analyst` → Virgil concise delivery.
 - Job hunt/procurement: `job-opportunity-scout` → `redteam-reviewer` for quality/safety if needed.

@@ -10,6 +10,7 @@ Produce a daily Eternia research report that combines:
 ## Hard rules
 - Do not modify the Eternia repo.
 - Save report to `/home/clawdkbot/virgil-vault/Research/Eternia/Daily/YYYY-MM-DD-eternia-research.md`
+- The daily report is the single final user-facing product. Specialist files are source/audit artifacts only.
 - At the top of the report, include a generated timestamp with date and hour, e.g. `Generated: YYYY-MM-DD HH:mm Europe/Tirane (UTC: YYYY-MM-DD HH:mm)`.
 - If rewriting an existing same-day report, the generated datetime and current repo snapshot must be at the very top of the file, not appended below an older date-only/stale-branch header.
 - Keep repo facts, external facts, inference, and opinion clearly separated.
@@ -54,6 +55,11 @@ Always consider these domains when relevant:
    - Spawn `eternia-frontier-scout` for external developments and source scan.
    - Spawn `eternia-governance-redteam` for critique, safety, consent, and authority-language review.
    - Require each specialist to write a dated artifact under `/home/clawdkbot/virgil-vault/Research/Eternia/Agents/<lane>/YYYY-MM-DD.md`.
+   - After the first-pass artifacts exist, run a compact cross-lane review before final synthesis:
+     - Provide each active specialist with the other active specialists' artifact paths or concise summaries.
+     - Ask for only contradictions, missing evidence, priority changes, and "do not overclaim" warnings.
+     - Prefer a single governance/red-team second pass when time is tight; use full repo + frontier + red-team reactions when signal/stakes are high.
+     - Do not create a separate public-facing discussion file by default; fold the useful cross-lane reactions into the final daily report's critique, synthesis, and team-lens notes.
    - Virgil/main remains responsible for final synthesis, report writing, git sync, and user-facing completion.
 3. If specialist spawning is unavailable, emulate the same lane boundaries sequentially and state that fallback in the report metadata.
 4. Review the Eternia repo in read-only mode for meaningful understanding delta.
@@ -65,7 +71,11 @@ Always consider these domains when relevant:
    - what is hype?
    - what is weak evidence?
    - what is dangerous misinterpretation?
-7. Run an explicit synthesis pass:
+7. Run an explicit cross-lane review pass:
+   - where do repo facts and external claims conflict or fail to connect?
+   - what did governance/red-team block or downgrade?
+   - what should Virgil refuse to promote into the one final report?
+8. Run an explicit synthesis pass:
    - what matters for Eternia now?
    - what changes priorities?
    - what should be promoted into durable memory?
@@ -77,11 +87,12 @@ Always consider these domains when relevant:
 3. Repo delta / new understanding today
 4. External developments worth attention
 5. What matters specifically for Eternia
-6. Critical view / risks / false trails
-7. Virgil opinion
-8. Research watchlist updates
-9. Next questions
-10. Team-lens notes (brief bullets by lane when useful)
+6. Cross-lane review notes (brief: contradictions, downgrades, missing evidence)
+7. Critical view / risks / false trails
+8. Virgil opinion
+9. Research watchlist updates
+10. Next questions
+11. Team-lens notes (brief bullets by lane when useful)
 
 ## Git sync
 1. `cd /home/clawdkbot/virgil-vault`
