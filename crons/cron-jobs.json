@@ -25,18 +25,18 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1778207400012,
+        "lastRunAtMs": 1778293800012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 42978,
+        "lastDurationMs": 45049,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778293800000,
+        "nextRunAtMs": 1778380200000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "runningAtMs": 1778293800012
+        "runningAtMs": 1778380200010
       },
-      "updatedAtMs": 1778207442990
+      "updatedAtMs": 1778293845061
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
@@ -71,17 +71,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778292692619,
+        "lastRunAtMs": 1778379093108,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 15801,
+        "lastDurationMs": 13064,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778294492619,
+        "nextRunAtMs": 1778380893108,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778292708420
+      "updatedAtMs": 1778379106172
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
@@ -110,18 +110,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778216400008,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 602358,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "nextRunAtMs": 1778302800000,
+        "lastRunAtMs": 1778302800015,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 197253,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778389200000,
         "consecutiveSkipped": 0,
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "lastDelivered": true
       },
-      "updatedAtMs": 1778217002366
+      "updatedAtMs": 1778302997268
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -150,17 +149,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1778270608513,
+        "lastRunAtMs": 1778357008514,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 72078,
-        "lastDeliveryStatus": "not-delivered",
+        "lastDurationMs": 41747,
+        "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778303008503,
+        "nextRunAtMs": 1778389408503,
         "consecutiveSkipped": 0,
-        "lastDelivered": false
+        "lastDelivered": true
       },
-      "updatedAtMs": 1778270680591
+      "updatedAtMs": 1778357050261
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
@@ -189,17 +188,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778217074693,
+        "lastRunAtMs": 1778303100012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 15476,
+        "lastDurationMs": 21164,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778303100000,
+        "nextRunAtMs": 1778389500000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778217090169
+      "updatedAtMs": 1778303121176
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
@@ -229,16 +228,16 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1778260763608,
+        "lastRunAtMs": 1778347163608,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 91958,
+        "lastDurationMs": 77355,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778303963598,
+        "nextRunAtMs": 1778390363598,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1778260855566
+      "updatedAtMs": 1778347240963
     },
     {
       "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
@@ -268,56 +267,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1778307300000,
-        "lastRunAtMs": 1778220900010,
+        "nextRunAtMs": 1778393700000,
+        "lastRunAtMs": 1778307300011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 56467,
+        "lastDurationMs": 45487,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778220956477
-    },
-    {
-      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
-      "name": "openclaw-update-availability-report",
-      "enabled": true,
-      "createdAtMs": 1772967616887,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 259200000,
-        "anchorMs": 1773135431575
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
-      "agentId": "ops-maintainer",
-      "state": {
-        "nextRunAtMs": 1778340502305,
-        "lastRunAtMs": 1778081302305,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 40511,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1778081342816
+      "updatedAtMs": 1778307345498
     },
     {
       "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
@@ -346,17 +306,17 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1778277300014,
+        "lastRunAtMs": 1778363700013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 66635,
+        "lastDurationMs": 68740,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778363700000,
+        "nextRunAtMs": 1778450100000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778277366649
+      "updatedAtMs": 1778363768753
     },
     {
       "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
@@ -383,18 +343,16 @@
       },
       "agentId": "vault-librarian",
       "state": {
-        "lastRunAtMs": 1778288400011,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 302266,
+        "lastRunAtMs": 1778374800015,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 31198,
         "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 1,
-        "nextRunAtMs": 1778374800000,
-        "consecutiveSkipped": 0,
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778461200000,
+        "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1778288702277
+      "updatedAtMs": 1778374831213
     },
     {
       "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
@@ -511,6 +469,45 @@
         "consecutiveSkipped": 0
       },
       "updatedAtMs": 1778071816529
+    },
+    {
+      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
+      "name": "openclaw-update-availability-report",
+      "enabled": true,
+      "createdAtMs": 1772967616887,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1773135431575
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
+      "agentId": "ops-maintainer",
+      "state": {
+        "nextRunAtMs": 1778599702316,
+        "lastRunAtMs": 1778340502316,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 40438,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1778340542754
     }
   ],
   "total": 13,
@@ -547,10 +544,6 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
@@ -569,6 +562,10 @@
     },
     "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
       "label": "announce -> discord:channel:1477637773681885184",
+      "detail": "explicit"
+    },
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+      "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     }
   }
