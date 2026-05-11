@@ -25,18 +25,18 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1778293800012,
+        "lastRunAtMs": 1778380200010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 45049,
+        "lastDurationMs": 42384,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778380200000,
+        "nextRunAtMs": 1778466600000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "runningAtMs": 1778380200010
+        "runningAtMs": 1778466600010
       },
-      "updatedAtMs": 1778293845061
+      "updatedAtMs": 1778380242394
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
@@ -71,17 +71,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778379093108,
+        "lastRunAtMs": 1778465493626,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 13064,
+        "lastDurationMs": 11790,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778380893108,
+        "nextRunAtMs": 1778467293626,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778379106172
+      "updatedAtMs": 1778465505416
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
@@ -110,17 +110,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778302800015,
+        "lastRunAtMs": 1778389200012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 197253,
+        "lastDurationMs": 130846,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778389200000,
+        "nextRunAtMs": 1778475600000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778302997268
+      "updatedAtMs": 1778389330858
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -149,17 +149,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1778357008514,
+        "lastRunAtMs": 1778443408516,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 41747,
-        "lastDeliveryStatus": "delivered",
+        "lastDurationMs": 63083,
+        "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778389408503,
+        "nextRunAtMs": 1778475808503,
         "consecutiveSkipped": 0,
-        "lastDelivered": true
+        "lastDelivered": false
       },
-      "updatedAtMs": 1778357050261
+      "updatedAtMs": 1778443471599
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
@@ -188,17 +188,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778303100012,
+        "lastRunAtMs": 1778389500007,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 21164,
+        "lastDurationMs": 17293,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778389500000,
+        "nextRunAtMs": 1778475900000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778303121176
+      "updatedAtMs": 1778389517300
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
@@ -228,131 +228,16 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1778347163608,
+        "lastRunAtMs": 1778433563607,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 77355,
+        "lastDurationMs": 116942,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778390363598,
+        "nextRunAtMs": 1778476763598,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1778347240963
-    },
-    {
-      "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
-      "agentId": "main",
-      "sessionKey": "agent:main:main",
-      "name": "eternia-daily-research-report",
-      "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
-      "enabled": true,
-      "createdAtMs": 1776844510356,
-      "schedule": {
-        "kind": "cron",
-        "expr": "15 8 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "session:agent:main:main",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Read and execute workflow file `/home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/eternia-daily-research.md`.\n\nAlso re-read these memory anchors before writing:\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia.md`\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia-research-program.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-core-understanding.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-watchlist.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-team-charter.md`\n\nUse the standing research-team structure from the workflow as the explicit lens set for the daily report.\nUse read-only repo review against `/home/clawdkbot/.openclaw/workspace/eternia` plus external web research when available.\n\nImportant:\n- Do not modify the Eternia repo.\n- Save the report to virgil-vault.\n- Be factual, critical, and explicit about what is known vs inferred.\n- Include Virgil's opinion section.\n- Include brief team-lens notes when useful.\n\nReturn concise completion status only.",
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "medium",
-        "timeoutSeconds": 1800
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637827964571780"
-      },
-      "state": {
-        "nextRunAtMs": 1778393700000,
-        "lastRunAtMs": 1778307300011,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 45487,
-        "lastDeliveryStatus": "not-delivered",
-        "consecutiveErrors": 0,
-        "consecutiveSkipped": 0,
-        "lastDelivered": false
-      },
-      "updatedAtMs": 1778307345498
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "agentId": "ops-maintainer",
-      "state": {
-        "lastRunAtMs": 1778363700013,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 68740,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1778450100000,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1778363768753
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "agentId": "vault-librarian",
-      "state": {
-        "lastRunAtMs": 1778374800015,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 31198,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1778461200000,
-        "consecutiveSkipped": 0
-      },
-      "updatedAtMs": 1778374831213
+      "updatedAtMs": 1778433680549
     },
     {
       "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
@@ -393,6 +278,46 @@
       "updatedAtMs": 1778071816299
     },
     {
+      "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "eternia-daily-research-report",
+      "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
+      "enabled": true,
+      "createdAtMs": 1776844510356,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 8 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "session:agent:main:main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Read and execute workflow file `/home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/eternia-daily-research.md`.\n\nAlso re-read these memory anchors before writing:\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia.md`\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia-research-program.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-core-understanding.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-watchlist.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-team-charter.md`\n\nUse the standing research-team structure from the workflow as the explicit lens set for the daily report.\nUse read-only repo review against `/home/clawdkbot/.openclaw/workspace/eternia` plus external web research when available.\n\nImportant:\n- Do not modify the Eternia repo.\n- Save the report to virgil-vault.\n- Be factual, critical, and explicit about what is known vs inferred.\n- Include Virgil's opinion section.\n- Include brief team-lens notes when useful.\n\nReturn concise completion status only.",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "medium",
+        "timeoutSeconds": 1800
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637827964571780"
+      },
+      "state": {
+        "nextRunAtMs": 1778480100000,
+        "lastRunAtMs": 1778393700009,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 42539,
+        "lastDeliveryStatus": "not-delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastDelivered": false
+      },
+      "updatedAtMs": 1778393742548
+    },
+    {
       "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
       "name": "opencortex-memory-review",
       "enabled": true,
@@ -429,6 +354,81 @@
         "lastDelivered": true
       },
       "updatedAtMs": 1778223704009
+    },
+    {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "agentId": "ops-maintainer",
+      "state": {
+        "lastRunAtMs": 1778450100010,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 54177,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778536500000,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1778450154187
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "agentId": "vault-librarian",
+      "state": {
+        "lastRunAtMs": 1778461200017,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 30665,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778547600000,
+        "consecutiveSkipped": 0
+      },
+      "updatedAtMs": 1778461230682
     },
     {
       "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
@@ -540,8 +540,16 @@
       "label": "none -> last",
       "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
     },
+    "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
     "340d1c73-4464-4be3-8c62-0fff544e7e08": {
       "label": "announce -> discord:channel:1477637827964571780",
+      "detail": "explicit"
+    },
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+      "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
@@ -551,14 +559,6 @@
     "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
       "label": "none -> last",
       "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
-    },
-    "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
     },
     "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
       "label": "announce -> discord:channel:1477637773681885184",
