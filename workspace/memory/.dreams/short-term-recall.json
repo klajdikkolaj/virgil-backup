@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-10T20:03:39.402Z",
+  "updatedAt": "2026-05-11T20:03:40.147Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,13 +9,13 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 19,
+      "recallCount": 20,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 10.488868444399495,
+      "totalScore": 11.039941794411797,
       "maxScore": 0.8323902852698775,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-05-10T06:15:11.947Z",
+      "lastRecalledAt": "2026-05-11T06:15:12.479Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
@@ -35,7 +35,8 @@
         "2df1d366d7bd",
         "bceea0e229d7",
         "4feb049d3865",
-        "0b1d1247dae6"
+        "0b1d1247dae6",
+        "43a3637e89ab"
       ],
       "recallDays": [
         "2026-04-26",
@@ -49,7 +50,8 @@
         "2026-05-05",
         "2026-05-06",
         "2026-05-07",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "2026.4.22",
@@ -104,18 +106,14 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 113,
+      "recallCount": 119,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 57.99330542683604,
+      "totalScore": 61.115692113339925,
       "maxScore": 0.5390640631318092,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-05-10T20:03:39.402Z",
+      "lastRecalledAt": "2026-05-11T20:03:40.147Z",
       "queryHashes": [
-        "74f9896f5487",
-        "0e98eb3db9f8",
-        "61abd1303fbd",
-        "749404f77ae9",
         "9a4dbe4d2e3e",
         "1426e4cdfcaf",
         "4493a6a62977",
@@ -143,7 +141,11 @@
         "b76eb7a9f983",
         "2fe2df0320ae",
         "7a7bbe26a9cb",
-        "b1fa06d631a6"
+        "b1fa06d631a6",
+        "90ed0d6be2dd",
+        "5cb8b29bbef6",
+        "f96cb334699e",
+        "c419b14f0080"
       ],
       "recallDays": [
         "2026-04-26",
@@ -160,7 +162,8 @@
         "2026-05-07",
         "2026-05-08",
         "2026-05-09",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "gateway",
@@ -180,17 +183,14 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 68,
+      "recallCount": 71,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 35.02399153457943,
+      "totalScore": 36.820350440461155,
       "maxScore": 0.7806781021898603,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-05-10T20:03:39.402Z",
+      "lastRecalledAt": "2026-05-11T17:03:44.211Z",
       "queryHashes": [
-        "9e87e05ecfda",
-        "3543ac9a5784",
-        "71a244fc7927",
         "dfbf7011fd14",
         "9df44428477b",
         "22af416522e9",
@@ -219,7 +219,10 @@
         "098bdbbeb31f",
         "a745863c7975",
         "b76eb7a9f983",
-        "b1fa06d631a6"
+        "b1fa06d631a6",
+        "90ed0d6be2dd",
+        "b09378414e63",
+        "f96cb334699e"
       ],
       "recallDays": [
         "2026-04-26",
@@ -236,7 +239,8 @@
         "2026-05-07",
         "2026-05-08",
         "2026-05-09",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "qmd",
@@ -292,13 +296,13 @@
       "endLine": 39,
       "source": "memory",
       "snippet": "# 2026-03-03 ## QMD indexing optimization applied - Added `workspace-memory` collection: - Path: `/home/clawdkbot/.openclaw/workspace/memory` - Pattern: `**/*.md` - Added targeted contexts for vault subpaths: - `/research`, `/projects`, `/daily`, `/skills` - Added operational context for `workspace-memory` root. - Ran `qmd update` and `qmd embed` successfully. - Post-change index status: - 26 files indexed - 49 vectors embedded - 2 collections (`vault`, `workspace-memory`) ## Scheduled optimization - Added cron job `qmd-light-refresh` (every 3 hours, Europe/Tirane): - Runs lightweight `qmd update` between nightly full reindex cycles. - Delivery mode: none (silent maintena",
-      "recallCount": 17,
+      "recallCount": 18,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 8.570272693037987,
-      "maxScore": 0.5140748292207717,
+      "totalScore": 9.086819291114807,
+      "maxScore": 0.5165465980768204,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-05-10T05:19:39.673Z",
+      "lastRecalledAt": "2026-05-11T11:19:57.923Z",
       "queryHashes": [
         "f822a46040f1",
         "ad74f0a76ba1",
@@ -309,7 +313,8 @@
         "3543ac9a5784",
         "b249a2db261f",
         "f502a11ecfdf",
-        "e50a5d936622"
+        "e50a5d936622",
+        "b09378414e63"
       ],
       "recallDays": [
         "2026-04-27",
@@ -323,7 +328,8 @@
         "2026-05-05",
         "2026-05-06",
         "2026-05-09",
-        "2026-05-10"
+        "2026-05-10",
+        "2026-05-11"
       ],
       "conceptTags": [
         "qmd",
@@ -1052,20 +1058,22 @@
       "endLine": 14,
       "source": "memory",
       "snippet": "# 2026-03-31 ## Job search + application ops - User requested continuous job search focused on remote-friendly roles in Europe, US, and Australia only; exclude Albania, relocation-required, hybrid/onsite-only where possible. - Applicant defaults confirmed for application use: Tirana, Albania; both contract and full-time acceptable; US visa sponsorship required; earliest start date 2026-04-02; salary expectation roughly $40\u201360/hr or $100k/year for US roles and \u20ac60k/year for EU roles. - Confirmed public links for applications: GitHub `https://github.com/klajdikkolaj`, LinkedIn `https://www.linkedin.com/in/klajdi-kolaj-a1864377/`. - CV located locally at `/home/clawdkbot/.openclaw/media/inboun",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9378019213676452,
+      "totalScore": 1.4108007937669753,
       "maxScore": 0.4961367309093475,
       "firstRecalledAt": "2026-05-01T20:00:06.839Z",
-      "lastRecalledAt": "2026-05-02T05:00:22.947Z",
+      "lastRecalledAt": "2026-05-11T06:00:23.415Z",
       "queryHashes": [
         "a296cabf453c",
-        "e91588bb7f23"
+        "e91588bb7f23",
+        "203e85d488a1"
       ],
       "recallDays": [
         "2026-05-01",
-        "2026-05-02"
+        "2026-05-02",
+        "2026-05-11"
       ],
       "conceptTags": [
         "remote-friendly",
@@ -1138,6 +1146,37 @@
         "gpt-5.3-codex",
         "gpt-5.3-codex-spark",
         "claude-opus-4-6"
+      ]
+    },
+    "memory:memory/2026-04-23.md:1:6": {
+      "key": "memory:memory/2026-04-23.md:1:6",
+      "path": "memory/2026-04-23.md",
+      "startLine": 1,
+      "endLine": 6,
+      "source": "memory",
+      "snippet": "## 2026-04-23 - Klajdi requested updates to EvoContinuity Vercel analytics setup; analytics scripts were integrated in repo and site deployed to production domain `evo-continuity.world`. - Klajdi asked for security hardening after Vercel incident concerns and is open to rotating API keys/tokens; assistant offered 3-tier rotation plan (full, critical-only, plan-only), pending user selection. - Klajdi asked which ClawHub design skills can improve `klajdi-portfolio`; preferred next step is to install top design skills and run a Codex redesign pass with push+deploy.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5019873321056366,
+      "maxScore": 0.5019873321056366,
+      "firstRecalledAt": "2026-05-11T08:03:40.812Z",
+      "lastRecalledAt": "2026-05-11T08:03:40.812Z",
+      "queryHashes": [
+        "48e6439f886b"
+      ],
+      "recallDays": [
+        "2026-05-11"
+      ],
+      "conceptTags": [
+        "evo-continuity.world",
+        "keys/tokens",
+        "3-tier",
+        "critical-only",
+        "plan-only",
+        "klajdi-portfolio",
+        "klajdi",
+        "requested"
       ]
     }
   }
