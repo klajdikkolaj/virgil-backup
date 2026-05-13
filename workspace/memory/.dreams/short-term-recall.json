@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-11T20:03:40.147Z",
+  "updatedAt": "2026-05-12T20:03:40.393Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -106,18 +106,14 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 119,
+      "recallCount": 125,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 61.115692113339925,
+      "totalScore": 64.20200048536064,
       "maxScore": 0.5390640631318092,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-05-11T20:03:40.147Z",
+      "lastRecalledAt": "2026-05-12T20:03:40.393Z",
       "queryHashes": [
-        "9a4dbe4d2e3e",
-        "1426e4cdfcaf",
-        "4493a6a62977",
-        "163058e3dec2",
         "d101cd389d69",
         "e50372a70efd",
         "20013c8c059c",
@@ -145,10 +141,13 @@
         "90ed0d6be2dd",
         "5cb8b29bbef6",
         "f96cb334699e",
-        "c419b14f0080"
+        "c419b14f0080",
+        "0e98eb3db9f8",
+        "90b470293bf9",
+        "a51b7b2528f1",
+        "ad39cf5f14c7"
       ],
       "recallDays": [
-        "2026-04-26",
         "2026-04-27",
         "2026-04-28",
         "2026-04-29",
@@ -163,7 +162,8 @@
         "2026-05-08",
         "2026-05-09",
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-12"
       ],
       "conceptTags": [
         "gateway",
@@ -183,15 +183,14 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 71,
+      "recallCount": 74,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 36.820350440461155,
+      "totalScore": 38.295970453936576,
       "maxScore": 0.7806781021898603,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-05-11T17:03:44.211Z",
+      "lastRecalledAt": "2026-05-12T17:03:44.214Z",
       "queryHashes": [
-        "dfbf7011fd14",
         "9df44428477b",
         "22af416522e9",
         "ad39cf5f14c7",
@@ -222,10 +221,10 @@
         "b1fa06d631a6",
         "90ed0d6be2dd",
         "b09378414e63",
-        "f96cb334699e"
+        "f96cb334699e",
+        "4493a6a62977"
       ],
       "recallDays": [
-        "2026-04-26",
         "2026-04-27",
         "2026-04-28",
         "2026-04-29",
@@ -240,7 +239,8 @@
         "2026-05-08",
         "2026-05-09",
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-12"
       ],
       "conceptTags": [
         "qmd",
