@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-12T20:03:40.393Z",
+  "updatedAt": "2026-05-13T20:03:44.529Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -106,20 +106,14 @@
       "endLine": 91,
       "source": "memory",
       "snippet": "- `HEARTBEAT_OK` runs are intentionally non-delivered (silent), so no Discord message appears unless there is an alert. - Delivery routing updates applied: - `heartbeat-klajdi` delivery now targets Discord `#monitoring` (`1477637814014316586`) instead of Telegram. - `virgil-haiku` heartbeat enabled at `1h` and targeted to Discord `#monitoring`. - Investigated missed `daily-maintenance` behavior: - Cron did trigger at scheduled time (03:00 UTC / 04:00 Europe/Tirane), but the job restarted `openclaw-gateway.service` from inside its own run. - That self-restart terminated the running cron session before it could finalize run state, making it look skipped/idle. - Durable fix applied to",
-      "recallCount": 125,
+      "recallCount": 131,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 64.20200048536064,
+      "totalScore": 67.28731581270696,
       "maxScore": 0.5390640631318092,
       "firstRecalledAt": "2026-04-26T11:07:01.679Z",
-      "lastRecalledAt": "2026-05-12T20:03:40.393Z",
+      "lastRecalledAt": "2026-05-13T20:03:44.529Z",
       "queryHashes": [
-        "d101cd389d69",
-        "e50372a70efd",
-        "20013c8c059c",
-        "df9ac2ba65d0",
-        "48e6439f886b",
-        "7563291c5751",
         "c4215d8d1d8d",
         "e267689967a2",
         "019e4f44d32e",
@@ -145,10 +139,15 @@
         "0e98eb3db9f8",
         "90b470293bf9",
         "a51b7b2528f1",
-        "ad39cf5f14c7"
+        "ad39cf5f14c7",
+        "b7e3e62170db",
+        "cb0e83e4f4fc",
+        "a7e7a50639c7",
+        "cb2ccee73765",
+        "3ee357e40e8a",
+        "50616662c07a"
       ],
       "recallDays": [
-        "2026-04-27",
         "2026-04-28",
         "2026-04-29",
         "2026-04-30",
@@ -163,7 +162,8 @@
         "2026-05-09",
         "2026-05-10",
         "2026-05-11",
-        "2026-05-12"
+        "2026-05-12",
+        "2026-05-13"
       ],
       "conceptTags": [
         "gateway",
@@ -183,16 +183,14 @@
       "endLine": 81,
       "source": "memory",
       "snippet": "- Flagged one consistency debt for next validation: Gmail/Calendar auth state appears inconsistent across prior logs and should be explicitly re-verified before reliance. ## QMD CPU-only mode enabled (10:12 UTC) - Klajdi requested clean CPU-only mode for QMD. - Updated QMD runtime behavior to default CPU-only (no CUDA probing/build attempt) by patching: - `/home/linuxbrew/.linuxbrew/lib/node_modules/@tobilu/qmd/dist/llm.js` - logic now defaults to CPU unless explicitly disabled with `QMD_CPU_ONLY=0`. - Added shell-level env defaults for consistency: - `~/.bashrc`: `export QMD_CPU_ONLY=1`, `export NODE_LLAMA_CPP_GPU=off` - `~/.profile`: same exports - Updated QMD cron payloads to en",
-      "recallCount": 74,
+      "recallCount": 76,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 38.295970453936576,
+      "totalScore": 39.317955564577105,
       "maxScore": 0.7806781021898603,
       "firstRecalledAt": "2026-04-26T14:03:51.025Z",
-      "lastRecalledAt": "2026-05-12T17:03:44.214Z",
+      "lastRecalledAt": "2026-05-13T11:21:41.325Z",
       "queryHashes": [
-        "9df44428477b",
-        "22af416522e9",
         "ad39cf5f14c7",
         "2fe2df0320ae",
         "b249a2db261f",
@@ -222,10 +220,11 @@
         "90ed0d6be2dd",
         "b09378414e63",
         "f96cb334699e",
-        "4493a6a62977"
+        "4493a6a62977",
+        "a7e7a50639c7",
+        "9f05c62cb8ad"
       ],
       "recallDays": [
-        "2026-04-27",
         "2026-04-28",
         "2026-04-29",
         "2026-04-30",
@@ -240,7 +239,8 @@
         "2026-05-09",
         "2026-05-10",
         "2026-05-11",
-        "2026-05-12"
+        "2026-05-12",
+        "2026-05-13"
       ],
       "conceptTags": [
         "qmd",
@@ -296,13 +296,13 @@
       "endLine": 39,
       "source": "memory",
       "snippet": "# 2026-03-03 ## QMD indexing optimization applied - Added `workspace-memory` collection: - Path: `/home/clawdkbot/.openclaw/workspace/memory` - Pattern: `**/*.md` - Added targeted contexts for vault subpaths: - `/research`, `/projects`, `/daily`, `/skills` - Added operational context for `workspace-memory` root. - Ran `qmd update` and `qmd embed` successfully. - Post-change index status: - 26 files indexed - 49 vectors embedded - 2 collections (`vault`, `workspace-memory`) ## Scheduled optimization - Added cron job `qmd-light-refresh` (every 3 hours, Europe/Tirane): - Runs lightweight `qmd update` between nightly full reindex cycles. - Delivery mode: none (silent maintena",
-      "recallCount": 18,
+      "recallCount": 19,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 9.086819291114807,
+      "totalScore": 9.579659634828568,
       "maxScore": 0.5165465980768204,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-05-11T11:19:57.923Z",
+      "lastRecalledAt": "2026-05-13T11:21:41.325Z",
       "queryHashes": [
         "f822a46040f1",
         "ad74f0a76ba1",
@@ -314,7 +314,8 @@
         "b249a2db261f",
         "f502a11ecfdf",
         "e50a5d936622",
-        "b09378414e63"
+        "b09378414e63",
+        "9f05c62cb8ad"
       ],
       "recallDays": [
         "2026-04-27",
@@ -329,7 +330,8 @@
         "2026-05-06",
         "2026-05-09",
         "2026-05-10",
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-13"
       ],
       "conceptTags": [
         "qmd",
@@ -349,13 +351,13 @@
       "endLine": 63,
       "source": "memory",
       "snippet": "- added Codex reasoning escalation policy - added QMD light-refresh cron and workspace-memory indexing status - added protocol/workflow pointers for routing and quality controls - refreshed known issues/debts - Restructured long-term vault memory files for retention clarity: - `memory/contacts/klajdi.md` (communication + AI preferences) - `memory/preferences.md` (stable behavior rules) - `memory/projects/eternia.md` (project status + execution governance links) - `memory_search` tool was unavailable during this run (embedding provider/auth error), so distillation was done via direct file reads. ## OpenCortex memory review refresh (09:09 UTC cron run) - Re-read recent daily lo",
-      "recallCount": 14,
+      "recallCount": 15,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6.765955528616905,
-      "maxScore": 0.4922026455402374,
+      "totalScore": 7.266222527623176,
+      "maxScore": 0.5002669990062714,
       "firstRecalledAt": "2026-04-27T01:00:19.343Z",
-      "lastRecalledAt": "2026-05-09T17:20:26.305Z",
+      "lastRecalledAt": "2026-05-13T11:21:41.325Z",
       "queryHashes": [
         "f822a46040f1",
         "629d0851eb3d",
@@ -364,7 +366,8 @@
         "5e6d0a86db74",
         "3543ac9a5784",
         "b249a2db261f",
-        "f502a11ecfdf"
+        "f502a11ecfdf",
+        "9f05c62cb8ad"
       ],
       "recallDays": [
         "2026-04-27",
@@ -377,7 +380,8 @@
         "2026-05-04",
         "2026-05-05",
         "2026-05-06",
-        "2026-05-09"
+        "2026-05-09",
+        "2026-05-13"
       ],
       "conceptTags": [
         "embedding",
@@ -662,23 +666,25 @@
       "endLine": 34,
       "source": "memory",
       "snippet": "# 2026-04-03 ## Memory consolidation (07:00 UTC cron) ### Inputs reviewed - `memory/2026-03-31.md` - `memory/2026-04-01.md` - Supporting files cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/projects/eternia.md` - `memory/contacts/klajdi.md` - `memory/contacts/klajdi-job-profile.md` - `memory/today.md` ### Promotions - **None.** No new item met the 2+ promotion threshold beyond what is already stored in long-term memory. ### Notable events (volatile \u2014 not promoted) - Job-search reporting defaults, remote-only constraints, compensation targets, and nightly search-window preference were already captured in long-term memory/job-profile files. - Browser/CDP recov",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.1797610670328136,
+      "totalScore": 2.698741570115089,
       "maxScore": 0.5589315176010131,
       "firstRecalledAt": "2026-04-29T07:00:23.045Z",
-      "lastRecalledAt": "2026-05-04T07:00:14.928Z",
+      "lastRecalledAt": "2026-05-13T07:00:35.015Z",
       "queryHashes": [
         "bdafea4e0d35",
         "0c7cd96dbd0b",
         "c2973c89f21b",
-        "3197b4396dce"
+        "3197b4396dce",
+        "56a0d34cfacc"
       ],
       "recallDays": [
         "2026-04-29",
         "2026-05-01",
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-13"
       ],
       "conceptTags": [
         "memory/2026-03-31.md",
@@ -698,22 +704,24 @@
       "endLine": 30,
       "source": "memory",
       "snippet": "# 2026-04-10 ## Memory consolidation (07:00 UTC cron) ### Inputs reviewed - `memory/2026-04-03.md` - `memory/2026-04-07.md` - Supporting files cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/projects/eternia.md` - `memory/contacts/klajdi.md` - `memory/contacts/klajdi-job-profile.md` ### Promotions - **None.** No new durable item required promotion because the only recent durable job-search clarifications were already reflected in `memory/contacts/klajdi-job-profile.md`. ### Notable events (volatile \u2014 not promoted) - Confirmed recent job-search clarification remains: prefer intermediate to mid-senior IC roles and full-stack roles with AI integrations. ### Lean-",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.6545990660786627,
+      "totalScore": 2.17837271541357,
       "maxScore": 0.5584238812327385,
       "firstRecalledAt": "2026-04-29T07:00:23.045Z",
-      "lastRecalledAt": "2026-05-04T07:00:14.928Z",
+      "lastRecalledAt": "2026-05-13T07:00:35.015Z",
       "queryHashes": [
         "bdafea4e0d35",
         "c2973c89f21b",
-        "3197b4396dce"
+        "3197b4396dce",
+        "56a0d34cfacc"
       ],
       "recallDays": [
         "2026-04-29",
         "2026-05-01",
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-13"
       ],
       "conceptTags": [
         "memory/2026-04-03.md",
@@ -733,20 +741,22 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# 2026-03-25 ## Memory consolidation (08:00 UTC cron) ### Inputs reviewed - `memory/2026-03-24-1301.md` (only new session since last consolidation) - `MEMORY.md`, `memory/preferences.md`, `memory/today.md` (cross-checked) ### Promotions - **None.** Single session, no repeat pattern, no stable/confirmed constraint met promotion threshold. ### Notable events (volatile \u2014 not promoted) - OpenClaw updated from `v2026.3.14` \u2192 `v2026.3.24` on 2026-03-24. Non-blocking notes from doctor: - 30 orphan transcript files \u2014 safe to archive, not urgent - Telegram still in first-time setup/pairing mode - `virgil-haiku` heartbeat `directPolicy` is unset \u2014 worth pinning explicitly ### Lean-memory cl",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0855196088552475,
+      "totalScore": 1.6070535331964493,
       "maxScore": 0.5432828366756439,
       "firstRecalledAt": "2026-04-29T07:00:23.045Z",
-      "lastRecalledAt": "2026-05-04T07:00:14.928Z",
+      "lastRecalledAt": "2026-05-13T07:00:35.015Z",
       "queryHashes": [
         "bdafea4e0d35",
-        "3197b4396dce"
+        "3197b4396dce",
+        "56a0d34cfacc"
       ],
       "recallDays": [
         "2026-04-29",
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-13"
       ],
       "conceptTags": [
         "memory/2026-03-24-1301.md",
@@ -801,20 +811,22 @@
       "endLine": 27,
       "source": "memory",
       "snippet": "# 2026-03-23 ## Memory consolidation (08:00 UTC cron) ### Inputs reviewed - `memory/2026-03-20.md` (last daily log) - `memory/projects/openclaw-job-research-orchestrator-2026-03-21.md` (new since last review) - `memory/contacts/klajdi-job-profile.md` (new since last review) - `MEMORY.md`, `memory/preferences.md`, `memory/projects/eternia.md` (cross-checked) ### Promotions - **Job Research Orchestrator** + Klajdi job profile \u2192 promoted to `MEMORY.md` under new section \"Active Operational Projects\". - Rationale: high consequence if forgotten (active operational project + hard exclusions list), stable files created. ### No promotions - Orchestrator architecture principle (single orchestra",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.0778799146413802,
+      "totalScore": 1.5993743062019345,
       "maxScore": 0.5397703543305397,
       "firstRecalledAt": "2026-04-29T09:41:45.811Z",
-      "lastRecalledAt": "2026-05-01T07:00:26.212Z",
+      "lastRecalledAt": "2026-05-13T07:00:35.015Z",
       "queryHashes": [
         "0c7cd96dbd0b",
-        "c2973c89f21b"
+        "c2973c89f21b",
+        "56a0d34cfacc"
       ],
       "recallDays": [
         "2026-04-29",
-        "2026-05-01"
+        "2026-05-01",
+        "2026-05-13"
       ],
       "conceptTags": [
         "memory/2026-03-20.md",
@@ -1177,6 +1189,37 @@
         "klajdi-portfolio",
         "klajdi",
         "requested"
+      ]
+    },
+    "memory:memory/2026-05-08.md:1:29": {
+      "key": "memory:memory/2026-05-08.md:1:29",
+      "path": "memory/2026-05-08.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# 2026-05-08 ## OpenCortex memory review (07:00 UTC cron) ### Inputs reviewed - `memory/2026-05-01.md` - `memory/2026-05-06.md` - `memory/today.md` (noted stale header dated 2026-04-03; treated as scratchpad/volatile) - Long-term anchors cross-checked: - `MEMORY.md` - `memory/preferences.md` ### Promotions - Promoted the reusable specialist agent bench into `MEMORY.md` operating memory/reference workflows: - use specialist bench for recurring/scoped workflows where safe; - Virgil remains orchestrator/final voice; - specialists produce bounded artifacts only. ### Non-promotions / retained as volatile - Did not promote the detailed list of configured agents or cron route assignme",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5370985016226768,
+      "maxScore": 0.5370985016226768,
+      "firstRecalledAt": "2026-05-13T07:00:35.015Z",
+      "lastRecalledAt": "2026-05-13T07:00:35.015Z",
+      "queryHashes": [
+        "56a0d34cfacc"
+      ],
+      "recallDays": [
+        "2026-05-13"
+      ],
+      "conceptTags": [
+        "memory/2026-05-01.md",
+        "memory/2026-05-06.md",
+        "memory/today.md",
+        "scratchpad/volatile",
+        "long-term",
+        "cross-checked",
+        "memory.md",
+        "memory/preferences.md"
       ]
     }
   }

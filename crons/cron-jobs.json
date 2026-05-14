@@ -25,18 +25,18 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1778553000013,
+        "lastRunAtMs": 1778639400007,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 43057,
+        "lastDurationMs": 41683,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778639400000,
+        "nextRunAtMs": 1778725800000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "runningAtMs": 1778639400007
+        "runningAtMs": 1778725800011
       },
-      "updatedAtMs": 1778553043070
+      "updatedAtMs": 1778639441690
     },
     {
       "id": "2ab212d8-546d-4042-b875-e6620f44a585",
@@ -71,17 +71,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778638294724,
+        "lastRunAtMs": 1778724695236,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 15295,
+        "lastDurationMs": 19449,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778640094724,
+        "nextRunAtMs": 1778726495236,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778638310019
+      "updatedAtMs": 1778724714685
     },
     {
       "id": "34cb9ca1-ff27-4ab1-94f4-5d9ce222c74f",
@@ -110,17 +110,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778562000007,
+        "lastRunAtMs": 1778648400012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 553635,
+        "lastDurationMs": 179551,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778648400000,
+        "nextRunAtMs": 1778734800000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778562553642
+      "updatedAtMs": 1778648579563
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -149,17 +149,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1778616208514,
+        "lastRunAtMs": 1778702608515,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 69886,
+        "lastDurationMs": 71020,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778648608503,
+        "nextRunAtMs": 1778735008503,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778616278400
+      "updatedAtMs": 1778702679535
     },
     {
       "id": "1aa1ad68-c889-415c-9c09-a776bfb8ca34",
@@ -188,17 +188,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778562593110,
+        "lastRunAtMs": 1778648700011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 18316,
+        "lastDurationMs": 17794,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778648700000,
+        "nextRunAtMs": 1778735100000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778562611426
+      "updatedAtMs": 1778648717805
     },
     {
       "id": "bbcb51eb-d5b0-432d-8a99-abfbaf0044c3",
@@ -228,16 +228,16 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1778606363611,
+        "lastRunAtMs": 1778692763607,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 143876,
+        "lastDurationMs": 167314,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778649563598,
+        "nextRunAtMs": 1778735963598,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1778606507487
+      "updatedAtMs": 1778692930921
     },
     {
       "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
@@ -267,55 +267,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1778652900000,
-        "lastRunAtMs": 1778566500011,
+        "nextRunAtMs": 1778739300000,
+        "lastRunAtMs": 1778652900012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 62872,
+        "lastDurationMs": 63461,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778566562883
-    },
-    {
-      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
-      "name": "opencortex-memory-review",
-      "enabled": true,
-      "createdAtMs": 1772967612188,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 1,3,5",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
-        "model": "openai-codex/gpt-5.5",
-        "thinking": "medium",
-        "timeoutSeconds": 600
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "agentId": "vault-librarian",
-      "state": {
-        "lastRunAtMs": 1778482800010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 24677,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1778655600000,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1778482824687
+      "updatedAtMs": 1778652963473
     },
     {
       "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
@@ -344,17 +306,17 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1778622900007,
+        "lastRunAtMs": 1778709300012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 78370,
+        "lastDurationMs": 50166,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778709300000,
+        "nextRunAtMs": 1778795700000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778622978377
+      "updatedAtMs": 1778709350178
     },
     {
       "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
@@ -381,18 +343,54 @@
       },
       "agentId": "vault-librarian",
       "state": {
-        "lastRunAtMs": 1778634000014,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 302558,
+        "lastRunAtMs": 1778720400011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 48425,
         "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 1,
-        "nextRunAtMs": 1778720400000,
-        "consecutiveSkipped": 0,
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778806800000,
+        "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1778634302572
+      "updatedAtMs": 1778720448436
+    },
+    {
+      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772967612188,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1,3,5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
+        "model": "openai-codex/gpt-5.5",
+        "thinking": "medium",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "agentId": "vault-librarian",
+      "state": {
+        "lastRunAtMs": 1778655600015,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 45608,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778828400000,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1778655645623
     },
     {
       "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
@@ -546,10 +544,6 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
@@ -557,6 +551,10 @@
     "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
       "label": "none -> last",
       "detail": "last -> no route, will fail-closed: Channel is required when multiple channels are configured: discord, telegram Set delivery.channel explicitly or use a main session with a previous channel."
+    },
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
     },
     "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
       "label": "announce -> discord:channel:1477637814014316586",
