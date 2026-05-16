@@ -4,10 +4,13 @@
     "openai-codex:default": {
       "type": "oauth",
       "provider": "openai-codex",
-      "access": "[OAUTH_ACCESS_TOKEN]",
-      "refresh": "[OAUTH_REFRESH_TOKEN]",
       "expires": 0,
-      "accountId": "[ACCOUNT_ID]"
+      "accountId": "[ACCOUNT_ID]",
+      "oauthRef": {
+        "source": "openclaw-credentials",
+        "provider": "openai-codex",
+        "id": "0f4a69765515cf5cef1a65da0b8d9bfa"
+      }
     },
     "anthropic:default": {
       "type": "token",
@@ -17,12 +20,15 @@
     "openai-codex:kljdkolaj@gmail.com": {
       "type": "oauth",
       "provider": "openai-codex",
-      "access": "[OAUTH_ACCESS_TOKEN]",
-      "refresh": "[OAUTH_REFRESH_TOKEN]",
       "expires": 0,
       "email": "kljdkolaj@gmail.com",
       "accountId": "[ACCOUNT_ID]",
-      "chatgptPlanType": "pro"
+      "chatgptPlanType": "pro",
+      "oauthRef": {
+        "source": "openclaw-credentials",
+        "provider": "openai-codex",
+        "id": "ce98d6ee25c16a9fc04e93ffc6c77a81"
+      }
     }
   },
   "usageStats": {}
