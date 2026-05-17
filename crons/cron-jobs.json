@@ -25,18 +25,18 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1778812200012,
+        "lastRunAtMs": 1778898600013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 43010,
+        "lastDurationMs": 31418,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778898600000,
+        "nextRunAtMs": 1778985000000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "runningAtMs": 1778898600013
+        "runningAtMs": 1778985000011
       },
-      "updatedAtMs": 1778812243022,
+      "updatedAtMs": 1778898631431,
       "status": "running"
     },
     {
@@ -72,17 +72,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778897496320,
+        "lastRunAtMs": 1778983896864,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 17727,
+        "lastDurationMs": 10965,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778899296320,
+        "nextRunAtMs": 1778985696864,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778897514047,
+      "updatedAtMs": 1778983907829,
       "status": "ok"
     },
     {
@@ -112,19 +112,18 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778821200011,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 602215,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 1,
-        "nextRunAtMs": 1778907600000,
+        "lastRunAtMs": 1778907600006,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 125855,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1778994000000,
         "consecutiveSkipped": 0,
-        "lastError": "cron: job execution timed out",
-        "lastErrorReason": "timeout"
+        "lastDelivered": true
       },
-      "updatedAtMs": 1778821802226,
-      "status": "error"
+      "updatedAtMs": 1778907725861,
+      "status": "ok"
     },
     {
       "id": "12a3aa34-1645-42b4-80e5-75fd1954720b",
@@ -153,17 +152,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1778875408514,
+        "lastRunAtMs": 1778961808514,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 45340,
+        "lastDurationMs": 45228,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778907808503,
+        "nextRunAtMs": 1778994208503,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1778875453854,
+      "updatedAtMs": 1778961853742,
       "status": "ok"
     },
     {
@@ -193,17 +192,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1778821861674,
+        "lastRunAtMs": 1778907900012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 21540,
+        "lastDurationMs": 36535,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778907900000,
+        "nextRunAtMs": 1778994300000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778821883214,
+      "updatedAtMs": 1778907936547,
       "status": "ok"
     },
     {
@@ -234,16 +233,16 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1778865563608,
+        "lastRunAtMs": 1778951963609,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 66278,
+        "lastDurationMs": 61763,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778908763598,
+        "nextRunAtMs": 1778995163598,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1778865629886,
+      "updatedAtMs": 1778952025372,
       "status": "ok"
     },
     {
@@ -274,17 +273,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1778912100000,
-        "lastRunAtMs": 1778825700008,
+        "nextRunAtMs": 1778998500000,
+        "lastRunAtMs": 1778912100011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 51421,
-        "lastDeliveryStatus": "not-delivered",
+        "lastDurationMs": 221663,
+        "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
-        "lastDelivered": false
+        "lastDelivered": true
       },
-      "updatedAtMs": 1778825751429,
+      "updatedAtMs": 1778912321674,
       "status": "ok"
     },
     {
@@ -314,17 +313,17 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1778882100010,
+        "lastRunAtMs": 1778968500013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 55380,
+        "lastDurationMs": 47095,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778968500000,
+        "nextRunAtMs": 1779054900000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1778882155390,
+      "updatedAtMs": 1778968547108,
       "status": "ok"
     },
     {
@@ -352,16 +351,16 @@
       },
       "agentId": "vault-librarian",
       "state": {
-        "lastRunAtMs": 1778893200012,
+        "lastRunAtMs": 1778979600015,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 64206,
+        "lastDurationMs": 62791,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1778979600000,
+        "nextRunAtMs": 1779066000000,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1778893264218,
+      "updatedAtMs": 1778979662806,
       "status": "ok"
     },
     {
