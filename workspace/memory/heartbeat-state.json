@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1778961780,
-    "calendar": 1778961780,
+    "email": 1779048180,
+    "calendar": 1779048180,
     "coolify": 1778875380
   },
   "alertedEvents": [
@@ -282,6 +282,6 @@
   "coolifyConfigured": false,
   "notes": "08:03 UTC May 16. No urgent/time-sensitive emails in the last 30 minutes; no calendar events in the next 2 hours.",
   "lastRunStatus": "ok",
-  "lastHeartbeatAttempt": 1778918580,
+  "lastHeartbeatAttempt": 1779026580,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY missing; skipped health check"
 }
