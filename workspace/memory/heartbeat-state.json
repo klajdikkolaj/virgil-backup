@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1779048180,
-    "calendar": 1779048180,
+    "email": 1779134580,
+    "calendar": 1779134580,
     "coolify": 1778875380
   },
   "alertedEvents": [
@@ -277,7 +277,24 @@
     "19e20e81e6f0cff6",
     "19e20e819252e519",
     "19e20e818f52f55f",
-    "19e20e818d436dcd"
+    "19e20e818d436dcd",
+    "19e395c2d1ff41b7",
+    "19e3a1ce1a9ced88",
+    "19e3a1ce101d75a5",
+    "19e3a1cde77c8de8",
+    "19e3a1cdd42b7bdf",
+    "19e3a1cdaeb33e08",
+    "19e3a1cd93517291",
+    "19e3a1cd92d0f871",
+    "19e3a0e5c5b8f54e",
+    "19e3a0e57b8266c8",
+    "19e3a0e52b7a844a",
+    "19e3a0e52587e976",
+    "19e3a0e51b18a8e6",
+    "19e3a0e50e93207a",
+    "19e3a0e4fc8004c5",
+    "19e3a0e4cae16adb",
+    "19e3a0e4c1a45950"
   ],
   "coolifyConfigured": false,
   "notes": "08:03 UTC May 16. No urgent/time-sensitive emails in the last 30 minutes; no calendar events in the next 2 hours.",
