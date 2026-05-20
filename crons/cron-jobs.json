@@ -25,18 +25,18 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1779071400009,
+        "lastRunAtMs": 1779157800010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 26568,
+        "lastDurationMs": 29228,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779157800000,
+        "nextRunAtMs": 1779244200000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "runningAtMs": 1779157800010
+        "runningAtMs": 1779244200009
       },
-      "updatedAtMs": 1779071426577,
+      "updatedAtMs": 1779157829238,
       "status": "running"
     },
     {
@@ -72,17 +72,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1779156697840,
+        "lastRunAtMs": 1779243098366,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 12176,
+        "lastDurationMs": 12922,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779158497840,
+        "nextRunAtMs": 1779244898366,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1779156710016,
+      "updatedAtMs": 1779243111288,
       "status": "ok"
     },
     {
@@ -112,17 +112,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1779080400014,
+        "lastRunAtMs": 1779166800012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 152278,
+        "lastDurationMs": 94542,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779166800000,
+        "nextRunAtMs": 1779253200000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1779080552292,
+      "updatedAtMs": 1779166894554,
       "status": "ok"
     },
     {
@@ -152,17 +152,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1779134608514,
+        "lastRunAtMs": 1779221008522,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 40681,
+        "lastDurationMs": 34094,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779167008503,
+        "nextRunAtMs": 1779253408503,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1779134649195,
+      "updatedAtMs": 1779221042616,
       "status": "ok"
     },
     {
@@ -192,17 +192,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1779080700010,
+        "lastRunAtMs": 1779167100008,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 19480,
+        "lastDurationMs": 20751,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779167100000,
+        "nextRunAtMs": 1779253500000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1779080719490,
+      "updatedAtMs": 1779167120759,
       "status": "ok"
     },
     {
@@ -233,16 +233,16 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1779124763604,
+        "lastRunAtMs": 1779211163608,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 58942,
+        "lastDurationMs": 59191,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779167963598,
+        "nextRunAtMs": 1779254363598,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1779124822546,
+      "updatedAtMs": 1779211222799,
       "status": "ok"
     },
     {
@@ -273,135 +273,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1779171300000,
-        "lastRunAtMs": 1779084900010,
+        "nextRunAtMs": 1779257700000,
+        "lastRunAtMs": 1779171300010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 244722,
+        "lastDurationMs": 180139,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1779085144732,
-      "status": "ok"
-    },
-    {
-      "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
-      "agentId": "research-scout",
-      "sessionKey": "agent:virgil-opus:discord:channel:1477637773681885184",
-      "name": "Weekly research \u2014 Codex integrations with Unity/Unreal for Eternia",
-      "description": "Research Codex/agent integrations with Unity or Unreal every Tuesday and save the report into Obsidian.",
-      "enabled": true,
-      "createdAtMs": 1777665619855,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 2",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Weekly automation for Klajdi/Eternia: deep-research current Codex/AI-agent integrations with Unity and Unreal, focusing on plugins, editor automation, MCP/CLI/control bridges, skills/workflows, and practical ways Codex could operate Unity/Unreal similarly to Three.js/WebGPU. Use current web research and primary sources where possible. Compare: maturity, agent-autonomy level, install/setup complexity, API/CLI/editor scripting options, risks, and recommended experiments for Eternia. Then write a concise but useful Markdown report directly into the Virgil Vault repo, which is Klajdi's intended Obsidian vault: ~/virgil-vault/Research/Eternia/AI Engine Integrations/YYYY-MM-DD Codex Unity Unreal Integration Watch.md. Create directories if needed. Include links/sources and an action checklist. Do not use obsidian-cli unless needed for path confirmation; the target is the virgil-vault repository. Do not send external messages; just complete the file write and summarize outcome.",
-        "timeoutSeconds": 1800,
-        "allowUnsafeExternalContent": false
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637773681885184",
-        "bestEffort": true
-      },
-      "state": {
-        "nextRunAtMs": 1779174000000,
-        "lastRunAtMs": 1778569200012,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 638024,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "consecutiveSkipped": 0
-      },
-      "updatedAtMs": 1778569838036,
-      "status": "ok"
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "agentId": "ops-maintainer",
-      "state": {
-        "lastRunAtMs": 1779141300010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 36211,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1779227700000,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1779141336221,
-      "status": "ok"
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "agentId": "vault-librarian",
-      "state": {
-        "lastRunAtMs": 1779152400011,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 63177,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1779238800000,
-        "consecutiveSkipped": 0
-      },
-      "updatedAtMs": 1779152463188,
+      "updatedAtMs": 1779171480149,
       "status": "ok"
     },
     {
@@ -441,6 +323,83 @@
         "lastDelivered": true
       },
       "updatedAtMs": 1779087625321,
+      "status": "ok"
+    },
+    {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "agentId": "ops-maintainer",
+      "state": {
+        "lastRunAtMs": 1779227700008,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 53477,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1779314100000,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1779227753485,
+      "status": "ok"
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "agentId": "vault-librarian",
+      "state": {
+        "lastRunAtMs": 1779238800015,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 114635,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1779325200000,
+        "consecutiveSkipped": 0
+      },
+      "updatedAtMs": 1779238914650,
       "status": "ok"
     },
     {
@@ -521,6 +480,47 @@
       },
       "updatedAtMs": 1779084523864,
       "status": "ok"
+    },
+    {
+      "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
+      "agentId": "research-scout",
+      "sessionKey": "agent:virgil-opus:discord:channel:1477637773681885184",
+      "name": "Weekly research \u2014 Codex integrations with Unity/Unreal for Eternia",
+      "description": "Research Codex/agent integrations with Unity or Unreal every Tuesday and save the report into Obsidian.",
+      "enabled": true,
+      "createdAtMs": 1777665619855,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 2",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Weekly automation for Klajdi/Eternia: deep-research current Codex/AI-agent integrations with Unity and Unreal, focusing on plugins, editor automation, MCP/CLI/control bridges, skills/workflows, and practical ways Codex could operate Unity/Unreal similarly to Three.js/WebGPU. Use current web research and primary sources where possible. Compare: maturity, agent-autonomy level, install/setup complexity, API/CLI/editor scripting options, risks, and recommended experiments for Eternia. Then write a concise but useful Markdown report directly into the Virgil Vault repo, which is Klajdi's intended Obsidian vault: ~/virgil-vault/Research/Eternia/AI Engine Integrations/YYYY-MM-DD Codex Unity Unreal Integration Watch.md. Create directories if needed. Include links/sources and an action checklist. Do not use obsidian-cli unless needed for path confirmation; the target is the virgil-vault repository. Do not send external messages; just complete the file write and summarize outcome.",
+        "timeoutSeconds": 1800,
+        "allowUnsafeExternalContent": false
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637773681885184",
+        "bestEffort": true
+      },
+      "state": {
+        "nextRunAtMs": 1779778800000,
+        "lastRunAtMs": 1779174000015,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 107387,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0
+      },
+      "updatedAtMs": 1779174107402,
+      "status": "ok"
     }
   ],
   "total": 13,
@@ -557,8 +557,8 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
-      "label": "announce -> discord:channel:1477637773681885184",
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+      "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
@@ -569,16 +569,16 @@
       "label": "not requested",
       "detail": "not requested"
     },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
     "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
       "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
+      "label": "announce -> discord:channel:1477637773681885184",
       "detail": "explicit"
     }
   }
