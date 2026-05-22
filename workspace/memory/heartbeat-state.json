@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1779307380,
-    "calendar": 1779307380,
-    "coolify": 1778875380
+    "email": 1779393780,
+    "calendar": 1779393780,
+    "coolify": 1779361380
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -318,11 +318,12 @@
     "19e40750a1518875",
     "19e407508c6491fe",
     "19e4469245053c7a",
-    "19e45ae9e911a8a5"
+    "19e45ae9e911a8a5",
+    "19e496ba044721d6"
   ],
   "coolifyConfigured": false,
-  "notes": "08:03 UTC May 20. Alerted on GitHub Actions failure for eternakk/eternia docs-to-project sync; no calendar events in the next 2 hours.",
+  "notes": "08:03 UTC May 21. Alerted on Google AI Pro/Google One cancellation notice; no calendar events in the next 2 hours.",
   "lastRunStatus": "alerted",
-  "lastHeartbeatAttempt": 1779264180,
-  "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY missing; skipped health check"
+  "lastHeartbeatAttempt": 1779350580,
+  "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped service health check"
 }
