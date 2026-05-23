@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1779393780,
-    "calendar": 1779393780,
+    "email": 1779480180,
+    "calendar": 1779480180,
     "coolify": 1779361380
   },
   "alertedEvents": [
@@ -319,11 +319,20 @@
     "19e407508c6491fe",
     "19e4469245053c7a",
     "19e45ae9e911a8a5",
-    "19e496ba044721d6"
+    "19e496ba044721d6",
+    "19e4f5564a964911",
+    "19e4f5559a11a39e",
+    "19e4f55599cbc891",
+    "19e4f555997fed96",
+    "19e4f555913d1cfd",
+    "19e4f5558b7af860",
+    "19e4f5557de9036b",
+    "19e4f55576ffe22c",
+    "19e4f555612b5b17"
   ],
   "coolifyConfigured": false,
-  "notes": "08:03 UTC May 21. Alerted on Google AI Pro/Google One cancellation notice; no calendar events in the next 2 hours.",
-  "lastRunStatus": "alerted",
-  "lastHeartbeatAttempt": 1779350580,
+  "notes": "20:03 UTC May 22. Email scan last 30 minutes found only a non-actionable DeepLearning.AI newsletter; no calendar events in the next 2 hours.",
+  "lastRunStatus": "ok",
+  "lastHeartbeatAttempt": 1779480180,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped service health check"
 }
