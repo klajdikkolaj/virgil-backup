@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1779480180,
-    "calendar": 1779480180,
+    "email": 1779566580,
+    "calendar": 1779566580,
     "coolify": 1779361380
   },
   "alertedEvents": [
@@ -331,8 +331,8 @@
     "19e4f555612b5b17"
   ],
   "coolifyConfigured": false,
-  "notes": "20:03 UTC May 22. Email scan last 30 minutes found only a non-actionable DeepLearning.AI newsletter; no calendar events in the next 2 hours.",
+  "notes": "14:03 UTC May 23. Email scan: no actionable mail in the last 30 minutes. Calendar: no events in next 2 hours.",
   "lastRunStatus": "ok",
-  "lastHeartbeatAttempt": 1779480180,
+  "lastHeartbeatAttempt": 1779544980,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped service health check"
 }
