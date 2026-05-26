@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1779652980,
-    "calendar": 1779652980,
-    "coolify": 1779361380
+    "email": 1779739380,
+    "calendar": 1779739380,
+    "coolify": 1779706980
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -328,11 +328,31 @@
     "19e4f5558b7af860",
     "19e4f5557de9036b",
     "19e4f55576ffe22c",
-    "19e4f555612b5b17"
+    "19e4f555612b5b17",
+    "19e5d6a6b480fa73",
+    "19e5e2959c988517",
+    "19e5e2958c8cd71f",
+    "19e5e295805451f4",
+    "19e5e28521daa09f",
+    "19e5e284e711df03",
+    "19e5e284c886f8ae",
+    "19e5e284b5c17226",
+    "19e5e284b1a33d6f",
+    "19e5e284a219bfac",
+    "19e5e2847f85858d",
+    "19e5e175f09383ff",
+    "19e5e1217caa00c3",
+    "19e5e12179f2ad53",
+    "19e5e1215eeaaece",
+    "19e5e1211cfd0391",
+    "19e5e1210b3addc2",
+    "19e5e12105b36f9d",
+    "19e5e120e149e003"
   ],
   "coolifyConfigured": false,
-  "notes": "11:03 UTC May 24. Email scan: no actionable mail in the last 30 minutes. Calendar: no events in next 2 hours.",
+  "notes": "14:03 UTC May 25. Email scan: no actionable mail in the last 30 minutes. Calendar: no events in next 2 hours.",
   "lastRunStatus": "ok",
-  "lastHeartbeatAttempt": 1779620580,
-  "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped service health check"
+  "lastHeartbeatAttempt": 1779717780,
+  "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped service health check",
+  "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check"
 }
