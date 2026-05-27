@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-15T09:19:09.983Z",
+  "updatedAt": "2026-05-26T05:25:26.387Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,13 +9,13 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 21,
+      "recallCount": 22,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 11.607482133047242,
+      "totalScore": 12.041515848772187,
       "maxScore": 0.8323902852698775,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-05-15T06:15:14.459Z",
+      "lastRecalledAt": "2026-05-26T05:25:26.387Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
@@ -37,7 +37,8 @@
         "4feb049d3865",
         "0b1d1247dae6",
         "43a3637e89ab",
-        "b3ba0ba179e6"
+        "b3ba0ba179e6",
+        "7afb62bb86b2"
       ],
       "recallDays": [
         "2026-04-26",
@@ -53,7 +54,8 @@
         "2026-05-07",
         "2026-05-10",
         "2026-05-11",
-        "2026-05-15"
+        "2026-05-15",
+        "2026-05-26"
       ],
       "conceptTags": [
         "2026.4.22",
@@ -594,24 +596,26 @@
       "endLine": 31,
       "source": "memory",
       "snippet": "# 2026-04-27 ## OpenCortex memory review (07:00 UTC cron) ### Inputs reviewed - `memory/2026-04-22.md` - `memory/2026-04-23.md` - `memory/2026-04-25-1945.md` - Long-term anchors cross-checked: - `MEMORY.md` - `memory/preferences.md` - `memory/projects/eternia.md` - `memory/contacts/klajdi.md` ### Promotions - Promoted Klajdi's 2026-04-22 persistent Eternia mode request: - maintain deep evolving understanding of `Eternakk/eternia` - keep the repo read-only unless explicitly allowed - save daily factual/critical research reports under `~/virgil-vault/Research/Eternia/` - Added current Eternia research access constraint: browser automation is the primary web-research path while",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.116217389702797,
+      "totalScore": 2.547755178809166,
       "maxScore": 0.5597742646932602,
       "firstRecalledAt": "2026-04-27T13:45:17.495Z",
-      "lastRecalledAt": "2026-05-04T07:00:14.928Z",
+      "lastRecalledAt": "2026-05-26T05:25:26.387Z",
       "queryHashes": [
         "b6ed60d59224",
         "bdafea4e0d35",
         "3134d114390a",
-        "3197b4396dce"
+        "3197b4396dce",
+        "7afb62bb86b2"
       ],
       "recallDays": [
         "2026-04-27",
         "2026-04-29",
         "2026-04-30",
-        "2026-05-04"
+        "2026-05-04",
+        "2026-05-26"
       ],
       "conceptTags": [
         "memory/2026-04-22.md",
@@ -1171,18 +1175,20 @@
       "endLine": 6,
       "source": "memory",
       "snippet": "## 2026-04-23 - Klajdi requested updates to EvoContinuity Vercel analytics setup; analytics scripts were integrated in repo and site deployed to production domain `evo-continuity.world`. - Klajdi asked for security hardening after Vercel incident concerns and is open to rotating API keys/tokens; assistant offered 3-tier rotation plan (full, critical-only, plan-only), pending user selection. - Klajdi asked which ClawHub design skills can improve `klajdi-portfolio`; preferred next step is to install top design skills and run a Codex redesign pass with push+deploy.",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.5019873321056366,
+      "totalScore": 0.9343987852334976,
       "maxScore": 0.5019873321056366,
       "firstRecalledAt": "2026-05-11T08:03:40.812Z",
-      "lastRecalledAt": "2026-05-11T08:03:40.812Z",
+      "lastRecalledAt": "2026-05-26T05:25:26.387Z",
       "queryHashes": [
-        "48e6439f886b"
+        "48e6439f886b",
+        "7afb62bb86b2"
       ],
       "recallDays": [
-        "2026-05-11"
+        "2026-05-11",
+        "2026-05-26"
       ],
       "conceptTags": [
         "evo-continuity.world",
@@ -1255,6 +1261,68 @@
         "29.0m",
         "high-risk",
         "heartbeat-klajdi"
+      ]
+    },
+    "memory:memory/ops/2026-05-08-usage.md:1:22": {
+      "key": "memory:memory/ops/2026-05-08-usage.md:1:22",
+      "path": "memory/ops/2026-05-08-usage.md",
+      "startLine": 1,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "# Daily Usage Observability - 2026-05-08 ## Usage Cost Snapshot ``` Usage cost (30 days) Total: $73.52 \u00b7 57.7m tokens Latest day: 2026-05-08 \u00b7 $4.19 \u00b7 2.6m tokens ``` ## Cron Health Summary - Total jobs: 13 - Enabled jobs: 13 - Failing jobs (consecutiveErrors > 0): 0 - High-risk jobs (consecutiveErrors >= 3): 0 ## Jobs At Risk - None ## Recommended Actions - No cron intervention needed based on consecutive error counts. - Keep this workflow read-only unless Klajdi explicitly approves changes.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.426846969127655,
+      "maxScore": 0.426846969127655,
+      "firstRecalledAt": "2026-05-26T05:25:26.387Z",
+      "lastRecalledAt": "2026-05-26T05:25:26.387Z",
+      "queryHashes": [
+        "7afb62bb86b2"
+      ],
+      "recallDays": [
+        "2026-05-26"
+      ],
+      "conceptTags": [
+        "2026-05-08-usage.md",
+        "73.52",
+        "57.7m",
+        "4.19",
+        "2.6m",
+        "high-risk",
+        "read-only",
+        "usage.md"
+      ]
+    },
+    "memory:memory/ops/2026-04-26-usage.md:1:29": {
+      "key": "memory:memory/ops/2026-04-26-usage.md:1:29",
+      "path": "memory/ops/2026-04-26-usage.md",
+      "startLine": 1,
+      "endLine": 29,
+      "source": "memory",
+      "snippet": "# Daily Usage Observability Report Date: 2026-04-26 Generated: 2026-04-26 21:55 UTC ## 1. Usage Cost Snapshot - Usage cost window: 30 days - Total: $120.32 \u00b7 136.6m tokens - Latest day: 2026-04-26 \u00b7 $4.03 \u00b7 2.8m tokens ## 2. Cron Health Summary - Total jobs: 11 - Enabled jobs: 11 - Failing jobs (`consecutiveErrors > 0`): 6 - High-risk jobs (`consecutiveErrors >= 3`): 0 ## 3. Jobs At Risk - `daily-usage-observability` \u2014 consecutiveErrors: 1; last error status recorded before current run. - `vault-qmd-reindex` \u2014 consecutiveErrors: 1; last error: `TypeError: session.agent.setSystemPrompt is not a function`. - `daily-backup` \u2014 consecutiveErrors: 1; last error: `TypeError: session.agent.setSy",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4267970472574234,
+      "maxScore": 0.4267970472574234,
+      "firstRecalledAt": "2026-05-26T05:25:26.387Z",
+      "lastRecalledAt": "2026-05-26T05:25:26.387Z",
+      "queryHashes": [
+        "7afb62bb86b2"
+      ],
+      "recallDays": [
+        "2026-05-26"
+      ],
+      "conceptTags": [
+        "backup",
+        "qmd",
+        "2026-04-26-usage.md",
+        "120.32",
+        "136.6m",
+        "4.03",
+        "2.8m",
+        "high-risk"
       ]
     }
   }
