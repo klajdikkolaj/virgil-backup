@@ -25,18 +25,18 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1779762600009,
+        "lastRunAtMs": 1779849000011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 37166,
+        "lastDurationMs": 34588,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779849000000,
+        "nextRunAtMs": 1779935400000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "runningAtMs": 1779849000011
+        "runningAtMs": 1779935400008
       },
-      "updatedAtMs": 1779762637175,
+      "updatedAtMs": 1779849034599,
       "status": "running"
     },
     {
@@ -72,17 +72,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1779847901640,
+        "lastRunAtMs": 1779934302131,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 12734,
+        "lastDurationMs": 19223,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779849701640,
+        "nextRunAtMs": 1779936102131,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1779847914374,
+      "updatedAtMs": 1779934321354,
       "status": "ok"
     },
     {
@@ -112,17 +112,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1779771600010,
+        "lastRunAtMs": 1779858000010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 123652,
+        "lastDurationMs": 137627,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779858000000,
+        "nextRunAtMs": 1779944400000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1779771723662,
+      "updatedAtMs": 1779858137637,
       "status": "ok"
     },
     {
@@ -152,17 +152,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1779825808513,
+        "lastRunAtMs": 1779912208516,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 36260,
-        "lastDeliveryStatus": "not-delivered",
+        "lastDurationMs": 76608,
+        "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779858208503,
+        "nextRunAtMs": 1779944608503,
         "consecutiveSkipped": 0,
-        "lastDelivered": false
+        "lastDelivered": true
       },
-      "updatedAtMs": 1779825844773,
+      "updatedAtMs": 1779912285124,
       "status": "ok"
     },
     {
@@ -192,17 +192,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1779771900010,
+        "lastRunAtMs": 1779858300010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 42735,
+        "lastDurationMs": 28332,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779858300000,
+        "nextRunAtMs": 1779944700000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1779771942745,
+      "updatedAtMs": 1779858328342,
       "status": "ok"
     },
     {
@@ -233,16 +233,16 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1779815963609,
+        "lastRunAtMs": 1779902363607,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 61132,
+        "lastDurationMs": 64900,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779859163598,
+        "nextRunAtMs": 1779945563598,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1779816024741,
+      "updatedAtMs": 1779902428507,
       "status": "ok"
     },
     {
@@ -273,96 +273,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1779862500000,
-        "lastRunAtMs": 1779776100012,
+        "nextRunAtMs": 1779948900000,
+        "lastRunAtMs": 1779862500010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 180274,
+        "lastDurationMs": 178725,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1779776280286,
-      "status": "ok"
-    },
-    {
-      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
-      "name": "opencortex-memory-review",
-      "enabled": true,
-      "createdAtMs": 1772967612188,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 1,3,5",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
-        "model": "openai/gpt-5.5",
-        "thinking": "medium",
-        "timeoutSeconds": 600
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "agentId": "vault-librarian",
-      "state": {
-        "lastRunAtMs": 1779692400013,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 40559,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1779865200000,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1779692440572,
-      "status": "ok"
-    },
-    {
-      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
-      "name": "openclaw-update-availability-report",
-      "enabled": true,
-      "createdAtMs": 1772967616887,
-      "schedule": {
-        "kind": "every",
-        "everyMs": 259200000,
-        "anchorMs": 1773135431575
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
-      "agentId": "ops-maintainer",
-      "state": {
-        "nextRunAtMs": 1779895702374,
-        "lastRunAtMs": 1779636502374,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 38948,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1779636541322,
+      "updatedAtMs": 1779862678735,
       "status": "ok"
     },
     {
@@ -392,17 +313,17 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1779832500010,
+        "lastRunAtMs": 1779918900010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 54776,
+        "lastDurationMs": 57965,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779918900000,
+        "nextRunAtMs": 1780005300000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1779832554786,
+      "updatedAtMs": 1779918957975,
       "status": "ok"
     },
     {
@@ -430,16 +351,95 @@
       },
       "agentId": "vault-librarian",
       "state": {
-        "lastRunAtMs": 1779843600014,
+        "lastRunAtMs": 1779930000011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 187872,
+        "lastDurationMs": 20506,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1779930000000,
+        "nextRunAtMs": 1780016400000,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1779843787886,
+      "updatedAtMs": 1779930020517,
+      "status": "ok"
+    },
+    {
+      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772967612188,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1,3,5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
+        "model": "openai/gpt-5.5",
+        "thinking": "medium",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "agentId": "vault-librarian",
+      "state": {
+        "lastRunAtMs": 1779865200007,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 97345,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1780038000000,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1779865297352,
+      "status": "ok"
+    },
+    {
+      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
+      "name": "openclaw-update-availability-report",
+      "enabled": true,
+      "createdAtMs": 1772967616887,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1773135431575
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
+      "agentId": "ops-maintainer",
+      "state": {
+        "nextRunAtMs": 1780154902381,
+        "lastRunAtMs": 1779895702381,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 43559,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1779895745940,
       "status": "ok"
     },
     {
@@ -557,14 +557,6 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
@@ -572,6 +564,14 @@
     "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
       "label": "not requested",
       "detail": "not requested"
+    },
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
     },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
       "label": "announce -> discord:channel:1477637814014316586",
