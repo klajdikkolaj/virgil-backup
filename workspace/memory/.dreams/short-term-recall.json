@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-26T05:25:26.387Z",
+  "updatedAt": "2026-05-29T06:18:12.736Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,13 +9,13 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 22,
+      "recallCount": 23,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 12.041515848772187,
+      "totalScore": 12.593317843215127,
       "maxScore": 0.8323902852698775,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-05-26T05:25:26.387Z",
+      "lastRecalledAt": "2026-05-29T06:18:12.736Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
@@ -38,7 +38,8 @@
         "0b1d1247dae6",
         "43a3637e89ab",
         "b3ba0ba179e6",
-        "7afb62bb86b2"
+        "7afb62bb86b2",
+        "03f75774ae00"
       ],
       "recallDays": [
         "2026-04-26",
@@ -55,7 +56,8 @@
         "2026-05-10",
         "2026-05-11",
         "2026-05-15",
-        "2026-05-26"
+        "2026-05-26",
+        "2026-05-29"
       ],
       "conceptTags": [
         "2026.4.22",

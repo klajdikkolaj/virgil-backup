@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1779998580,
-    "calendar": 1779998580,
+    "email": 1780084980,
+    "calendar": 1780084980,
     "coolify": 1779706980
   },
   "alertedEvents": [
@@ -380,12 +380,34 @@
     "19e6b0888d72e2bf",
     "19e6b0886ead6ba1",
     "19e6b088426240eb",
-    "19e6b087e0d093ed"
+    "19e6b087e0d093ed",
+    "19e72a997f212a57",
+    "19e72a98d1f53301",
+    "19e72a986a1864d1",
+    "19e72a98555a13ed",
+    "19e72a98412a10cf",
+    "19e72a9836cbc919",
+    "19e72a98334df82b",
+    "19e72a982a6e07ba",
+    "19e740247e2df411",
+    "19e740244cc94a7a",
+    "19e74024412fbf0c",
+    "19e740242fc9c767",
+    "19e740241e35b3bc",
+    "19e740240b13ee10",
+    "19e740240ae1d27d",
+    "19e73f0fb3c600b1",
+    "19e73f0f903665f9",
+    "19e73f0f88920099",
+    "19e73f0f78689338",
+    "19e73f0f529df5a5",
+    "19e73f0f36cefd4b",
+    "19e73f0f24360e66"
   ],
   "coolifyConfigured": false,
-  "notes": "08:03 UTC May 28. Email scan: no actionable mail in the last 30 minutes. Calendar: no events in next 2 hours.",
+  "notes": "14:03 UTC May 29. Email scan: GitHub PR CI failures in last 30 minutes for eternakk/eternia movement authority PR. Calendar: no events in next 2 hours.",
   "lastRunStatus": "ok",
-  "lastHeartbeatAttempt": 1779955380,
+  "lastHeartbeatAttempt": 1780063380,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped service health check",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check"
 }
