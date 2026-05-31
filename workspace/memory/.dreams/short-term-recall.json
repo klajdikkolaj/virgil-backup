@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-29T06:18:12.736Z",
+  "updatedAt": "2026-05-30T17:33:17.433Z",
   "entries": {
     "memory:memory/2026-04-22.md:1:9": {
       "key": "memory:memory/2026-04-22.md:1:9",
@@ -9,13 +9,13 @@
       "endLine": 9,
       "source": "memory",
       "snippet": "# 2026-04-22 ## Durable updates - OpenClaw was manually repaired and updated to version `2026.4.22 (fd2c883)` after clearing stale git/update blockers. - Klajdi requested persistent \"Eternia mode\": maintain deep, evolving understanding of `Eternakk/eternia`, keep the repo read-only unless explicitly allowed, and produce daily factual/critical research reports saved to `virgil-vault/Research/Eternia/`. - Eternia research program artifacts were established in `virgil-vault/Research/Eternia/`, including core understanding, research watchlist, team charter, and daily reports. - Eternia daily research workflow was upgraded from a simple setup to a larger team-structured process with explicit spe",
-      "recallCount": 23,
+      "recallCount": 24,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 12.593317843215127,
+      "totalScore": 13.036413056389947,
       "maxScore": 0.8323902852698775,
       "firstRecalledAt": "2026-04-26T11:01:23.262Z",
-      "lastRecalledAt": "2026-05-29T06:18:12.736Z",
+      "lastRecalledAt": "2026-05-30T17:32:11.416Z",
       "queryHashes": [
         "7dec971abfc3",
         "0a438add1fbe",
@@ -39,10 +39,10 @@
         "43a3637e89ab",
         "b3ba0ba179e6",
         "7afb62bb86b2",
-        "03f75774ae00"
+        "03f75774ae00",
+        "25b04d0d908b"
       ],
       "recallDays": [
-        "2026-04-26",
         "2026-04-27",
         "2026-04-28",
         "2026-04-29",
@@ -57,7 +57,8 @@
         "2026-05-11",
         "2026-05-15",
         "2026-05-26",
-        "2026-05-29"
+        "2026-05-29",
+        "2026-05-30"
       ],
       "conceptTags": [
         "2026.4.22",
@@ -77,22 +78,24 @@
       "endLine": 37,
       "source": "memory",
       "snippet": "- No long-term content changes needed after dedupe review. ### Unresolved uncertainties (carry-forward) - Phase 1 trust gates (`memory/projects/eternia-phase1-trust-gates.md`): still unresolved until explicit validation work is done. - Gmail/Calendar auth state remains check-before-rely. - Preferred company stage beyond frontier-AI preference is still not captured. - `virgil-haiku` heartbeat `directPolicy` unset: still worth pinning explicitly. - `gateway-watchdog` enabled while described as deprecated/merged: still worth reconciling. - User requested job searching should stop running continuously; only run during the nightly window 03:00-05:00 Europe/Tirane. - Updated job-search cron from",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 2.0053886264562606,
+      "totalScore": 2.431286934018135,
       "maxScore": 0.5268096208572387,
       "firstRecalledAt": "2026-04-26T11:02:00.491Z",
-      "lastRecalledAt": "2026-04-27T13:45:17.495Z",
+      "lastRecalledAt": "2026-05-30T15:50:30.202Z",
       "queryHashes": [
         "0a438add1fbe",
         "6d548c7a43a0",
         "2d0a44633528",
-        "b6ed60d59224"
+        "b6ed60d59224",
+        "f94b32362b5a"
       ],
       "recallDays": [
         "2026-04-26",
-        "2026-04-27"
+        "2026-04-27",
+        "2026-05-30"
       ],
       "conceptTags": [
         "gateway",
@@ -1078,24 +1081,26 @@
       "endLine": 14,
       "source": "memory",
       "snippet": "# 2026-03-31 ## Job search + application ops - User requested continuous job search focused on remote-friendly roles in Europe, US, and Australia only; exclude Albania, relocation-required, hybrid/onsite-only where possible. - Applicant defaults confirmed for application use: Tirana, Albania; both contract and full-time acceptable; US visa sponsorship required; earliest start date 2026-04-02; salary expectation roughly $40\u201360/hr or $100k/year for US roles and \u20ac60k/year for EU roles. - Confirmed public links for applications: GitHub `https://github.com/klajdikkolaj`, LinkedIn `https://www.linkedin.com/in/klajdi-kolaj-a1864377/`. - CV located locally at `/home/clawdkbot/.openclaw/media/inboun",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.9322893232107161,
+      "totalScore": 2.372623375058174,
       "maxScore": 0.5214885294437408,
       "firstRecalledAt": "2026-05-01T20:00:06.839Z",
-      "lastRecalledAt": "2026-05-15T05:00:32.638Z",
+      "lastRecalledAt": "2026-05-30T15:44:45.441Z",
       "queryHashes": [
         "a296cabf453c",
         "e91588bb7f23",
         "203e85d488a1",
-        "762e292b4b5e"
+        "762e292b4b5e",
+        "630dd0c32f9a"
       ],
       "recallDays": [
         "2026-05-01",
         "2026-05-02",
         "2026-05-11",
-        "2026-05-15"
+        "2026-05-15",
+        "2026-05-30"
       ],
       "conceptTags": [
         "remote-friendly",
@@ -1177,20 +1182,22 @@
       "endLine": 6,
       "source": "memory",
       "snippet": "## 2026-04-23 - Klajdi requested updates to EvoContinuity Vercel analytics setup; analytics scripts were integrated in repo and site deployed to production domain `evo-continuity.world`. - Klajdi asked for security hardening after Vercel incident concerns and is open to rotating API keys/tokens; assistant offered 3-tier rotation plan (full, critical-only, plan-only), pending user selection. - Klajdi asked which ClawHub design skills can improve `klajdi-portfolio`; preferred next step is to install top design skills and run a Codex redesign pass with push+deploy.",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.9343987852334976,
+      "totalScore": 1.3700852632522582,
       "maxScore": 0.5019873321056366,
       "firstRecalledAt": "2026-05-11T08:03:40.812Z",
-      "lastRecalledAt": "2026-05-26T05:25:26.387Z",
+      "lastRecalledAt": "2026-05-30T15:50:30.202Z",
       "queryHashes": [
         "48e6439f886b",
-        "7afb62bb86b2"
+        "7afb62bb86b2",
+        "f94b32362b5a"
       ],
       "recallDays": [
         "2026-05-11",
-        "2026-05-26"
+        "2026-05-26",
+        "2026-05-30"
       ],
       "conceptTags": [
         "evo-continuity.world",
@@ -1241,18 +1248,20 @@
       "endLine": 21,
       "source": "memory",
       "snippet": "# Daily Usage Observability Report \u2014 2026-04-01 ## 1. Usage Cost Snapshot - 30-day total cost: **$127.20** - 30-day total tokens: **166.3m** - Latest day (2026-04-01): **$29.85** / **29.0m tokens** ## 2. Cron Health Summary - Total jobs: **15** - Enabled jobs: **15** - Failing jobs (`consecutiveErrors > 0`): **1** - High-risk jobs (`consecutiveErrors >= 3`): **0** ## 3. Jobs At Risk - `heartbeat-klajdi` \u2014 consecutiveErrors: **1** \u2014 lastError: `cron: job execution timed out` ## 4. Recommended Actions - Investigate `heartbeat-klajdi` timeout and reduce/guard any slow heartbeat steps before the next run. - Monitor the unusually high latest-day usage spike (**$29.85 / 29.0m tokens**) to conf",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 0.46764244139194483,
+      "totalScore": 0.8929573535919189,
       "maxScore": 0.46764244139194483,
       "firstRecalledAt": "2026-05-15T09:19:09.983Z",
-      "lastRecalledAt": "2026-05-15T09:19:09.983Z",
+      "lastRecalledAt": "2026-05-30T15:50:30.202Z",
       "queryHashes": [
-        "d52efbd5ed51"
+        "d52efbd5ed51",
+        "f94b32362b5a"
       ],
       "recallDays": [
-        "2026-05-15"
+        "2026-05-15",
+        "2026-05-30"
       ],
       "conceptTags": [
         "2026-04-01-usage.md",
@@ -1325,6 +1334,101 @@
         "4.03",
         "2.8m",
         "high-risk"
+      ]
+    },
+    "memory:memory/2026-04-25-1945.md:113:174": {
+      "key": "memory:memory/2026-04-25-1945.md:113:174",
+      "path": "memory/2026-04-25-1945.md",
+      "startLine": 113,
+      "endLine": 174,
+      "source": "memory",
+      "snippet": "tesseract \"/home/clawdkbot/.openclaw/media/inbound/file_13---c6b95438-635c-4174-ada7-787baebbfb25.jpg\" stdout tesseract \"/home/clawdkbot/.openclaw/media/inbound/file_14---ec7e443a-35a7-4c4a-a20c-608550754379.jpg\" stdout tesseract \"/home/clawdkbot/.openclaw/media/inbound/file_15---c305f1a2-f95b-4647-804e-ec9f907b8f04.jpg\" stdout ``` Then paste the outputs, and I\u2019ll fill the Excel rows properly from **77 onward**. user: Conversation info (untrusted metadata): ```json { \"message_id\": \"597\", \"sender_id\": \"2016260249\", \"sender\": \"Klajdi\", \"timestamp\": \"Mon 2026-04-13 16:22 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Klajdi (2016260249)\", \"id\": \"2016260249\", \"name\":",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4535155117511749,
+      "maxScore": 0.4535155117511749,
+      "firstRecalledAt": "2026-05-30T15:58:57.968Z",
+      "lastRecalledAt": "2026-05-30T15:58:57.968Z",
+      "queryHashes": [
+        "0429bbf80c71"
+      ],
+      "recallDays": [
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "2026-04-25-1945.md",
+        "home/clawdkbot",
+        "openclaw/media/inbound/file-13",
+        "openclaw/media/inbound/file-14",
+        "openclaw/media/inbound/file-15",
+        "message-id",
+        "sender-id",
+        "tesseract"
+      ]
+    },
+    "memory:memory/2026-05-30.md:1:14": {
+      "key": "memory:memory/2026-05-30.md:1:14",
+      "path": "memory/2026-05-30.md",
+      "startLine": 1,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "# 2026-05-30 ## AZHT search: Zvernec development permits - In Discord, Klajdi asked for the signed AZHT document for the Zvernec development permit, specifically decisions/development permits from the last year. - Initial official AZHT hits for Zvernec were older and not within scope: - 2015: \"Zverneci Perendimor 1\" \u2014 https://azht.gov.al/wp-content/uploads/2021/03/Vendimi_Nr.1_date_22.07.2015.pdf - 2017: \"Ura e Zvernecit, Narte, Bashkia Vlore\" \u2014 https://azht.gov.al/wp-content/uploads/2021/03/Vendimi_Nr._9_date_12.04.2017_Ura_e_Zvernecit.pdf - Searched AZHT/KKTU 2025-2026 archives and extracted/OCR-checked hundreds of PDFs. Finding reported to Discord: no official AZHT/KKTU 2025-2026 dec",
+      "recallCount": 3,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.5433663904666899,
+      "maxScore": 0.5231135874986649,
+      "firstRecalledAt": "2026-05-30T17:30:42.204Z",
+      "lastRecalledAt": "2026-05-30T17:33:17.433Z",
+      "queryHashes": [
+        "1123e4acb374",
+        "25b04d0d908b",
+        "3bc811ca8020"
+      ],
+      "recallDays": [
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "decisions/development",
+        "azht/kktu",
+        "2025-2026",
+        "extracted/ocr-checked",
+        "azht",
+        "zvernec",
+        "development",
+        "permits"
+      ]
+    },
+    "memory:memory/2026-04-25-1945.md:1:53": {
+      "key": "memory:memory/2026-04-25-1945.md:1:53",
+      "path": "memory/2026-04-25-1945.md",
+      "startLine": 1,
+      "endLine": 53,
+      "source": "memory",
+      "snippet": "# Session: 2026-04-25 19:45:42 UTC - **Session Key**: agent:main:telegram:direct:2016260249 - **Session ID**: 9eabf61e-8270-422f-9212-f2b6a715a59d - **Source**: telegram ## Conversation Summary assistant: NO_REPLY user: [Queued messages while agent was busy] --- Queued #1 Conversation info (untrusted metadata): ```json { \"message_id\": \"590\", \"sender_id\": \"2016260249\", \"sender\": \"Klajdi\", \"timestamp\": \"Mon 2026-04-13 16:16 UTC\" } ``` Sender (untrusted metadata): ```json { \"label\": \"Klajdi (2016260249)\", \"id\": \"2016260249\", \"name\": \"Klajdi\", \"username\": \"Slide_Solaj\" } ``` You must insert in the excel rows with the appropriate columns all the dara of the list, like the ot",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4506646454334259,
+      "maxScore": 0.4506646454334259,
+      "firstRecalledAt": "2026-05-30T17:33:17.433Z",
+      "lastRecalledAt": "2026-05-30T17:33:17.433Z",
+      "queryHashes": [
+        "3bc811ca8020"
+      ],
+      "recallDays": [
+        "2026-05-30"
+      ],
+      "conceptTags": [
+        "2026-04-25-1945.md",
+        "no-reply",
+        "message-id",
+        "sender-id",
+        "slide-solaj",
+        "utc",
+        "key",
+        "agent:main:telegram:direct"
       ]
     }
   }
