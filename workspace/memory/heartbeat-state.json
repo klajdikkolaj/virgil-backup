@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1780171380,
-    "calendar": 1780171380,
-    "coolify": 1779706980
+    "email": 1780257780,
+    "calendar": 1780257780,
+    "coolify": 1780246980
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -405,9 +405,9 @@
     "19e73f0f24360e66"
   ],
   "coolifyConfigured": false,
-  "notes": "14:03 UTC May 29. Email scan: GitHub PR CI failures in last 30 minutes for eternakk/eternia movement authority PR. Calendar: no events in next 2 hours.",
+  "notes": "17:03 UTC May 31. Email scan: no urgent/time-sensitive mail in last 30 minutes. Calendar: no events in next 2 hours. Coolify skipped: missing COOLIFY_URL or COOLIFY_API_KEY.",
   "lastRunStatus": "ok",
-  "lastHeartbeatAttempt": 1780063380,
+  "lastHeartbeatAttempt": 1780246980,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped service health check",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check"
 }
