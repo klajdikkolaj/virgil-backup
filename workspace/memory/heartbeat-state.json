@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1780344180,
-    "calendar": 1780344180,
+    "email": 1780430580,
+    "calendar": 1780430580,
     "coolify": 1780300980
   },
   "alertedEvents": [
@@ -403,12 +403,15 @@
     "19e73f0f529df5a5",
     "19e73f0f36cefd4b",
     "19e73f0f24360e66",
-    "19e817906f5a1c46"
+    "19e817906f5a1c46",
+    "19e8743ed710b5a3",
+    "19e874fc37fb4691",
+    "19e87fb53ed278a3"
   ],
   "coolifyConfigured": false,
-  "notes": "05:03 UTC Jun 1. Email scan: flagged GitHub Actions OWASP ZAP Baseline Scan failure for eternakk/eternia. Calendar: no events in next 2 hours. Coolify skipped: missing COOLIFY_URL or COOLIFY_API_KEY.",
-  "lastRunStatus": "alerted",
-  "lastHeartbeatAttempt": 1780290180,
+  "notes": "20:03 UTC Jun 2. Email scan: no urgent/time-sensitive mail in the last 30 minutes. Calendar: no events in next 2 hours.",
+  "lastRunStatus": "ok",
+  "lastHeartbeatAttempt": 1780430580,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped service health check",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check"
 }
