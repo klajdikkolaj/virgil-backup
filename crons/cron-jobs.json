@@ -25,18 +25,18 @@
       },
       "agentId": "ops-maintainer",
       "state": {
-        "lastRunAtMs": 1780713000012,
+        "lastRunAtMs": 1780799400011,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 34027,
+        "lastDurationMs": 34431,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1780799400000,
+        "nextRunAtMs": 1780885800000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "runningAtMs": 1780799400011
+        "runningAtMs": 1780885800010
       },
-      "updatedAtMs": 1780713034039,
+      "updatedAtMs": 1780799434442,
       "status": "running"
     },
     {
@@ -72,17 +72,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1780798307051,
+        "lastRunAtMs": 1780884707556,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 19333,
+        "lastDurationMs": 13666,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1780800107051,
+        "nextRunAtMs": 1780886507556,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1780798326384,
+      "updatedAtMs": 1780884721222,
       "status": "ok"
     },
     {
@@ -112,17 +112,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1780722000012,
+        "lastRunAtMs": 1780808400014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 189157,
+        "lastDurationMs": 88679,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1780808400000,
+        "nextRunAtMs": 1780894800000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1780722189169,
+      "updatedAtMs": 1780808488693,
       "status": "ok"
     },
     {
@@ -152,17 +152,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1780776208514,
+        "lastRunAtMs": 1780862608513,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 40098,
+        "lastDurationMs": 44297,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1780808608503,
+        "nextRunAtMs": 1780895008503,
         "consecutiveSkipped": 0,
         "lastDelivered": false
       },
-      "updatedAtMs": 1780776248612,
+      "updatedAtMs": 1780862652810,
       "status": "ok"
     },
     {
@@ -192,17 +192,17 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1780722300009,
+        "lastRunAtMs": 1780808700012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 33432,
+        "lastDurationMs": 47311,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1780808700000,
+        "nextRunAtMs": 1780895100000,
         "consecutiveSkipped": 0,
         "lastDelivered": true
       },
-      "updatedAtMs": 1780722333441,
+      "updatedAtMs": 1780808747323,
       "status": "ok"
     },
     {
@@ -233,149 +233,17 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1780766363606,
+        "lastRunAtMs": 1780852763617,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 65775,
+        "lastDurationMs": 98887,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1780809563598,
+        "nextRunAtMs": 1780895963598,
         "consecutiveSkipped": 0
       },
-      "updatedAtMs": 1780766429381,
+      "updatedAtMs": 1780852862504,
       "status": "ok"
-    },
-    {
-      "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
-      "agentId": "main",
-      "sessionKey": "agent:main:main",
-      "name": "eternia-daily-research-report",
-      "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
-      "enabled": true,
-      "createdAtMs": 1776844510356,
-      "schedule": {
-        "kind": "cron",
-        "expr": "15 8 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "session:agent:main:main",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Read and execute workflow file `/home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/eternia-daily-research.md`.\n\nAlso re-read these memory anchors before writing:\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia.md`\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia-research-program.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-core-understanding.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-watchlist.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-team-charter.md`\n\nUse the standing research-team structure from the workflow as the explicit lens set for the daily report.\nUse read-only repo review against `/home/clawdkbot/.openclaw/workspace/eternia` plus external web research when available.\n\nImportant:\n- Do not modify the Eternia repo.\n- Save the report to virgil-vault.\n- Be factual, critical, and explicit about what is known vs inferred.\n- Include Virgil's opinion section.\n- Include brief team-lens notes when useful.\n\nReturn concise completion status only.",
-        "model": "openai/gpt-5.5",
-        "thinking": "medium",
-        "timeoutSeconds": 1800
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637827964571780"
-      },
-      "state": {
-        "nextRunAtMs": 1780812900000,
-        "lastRunAtMs": 1780726500016,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 267879,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1780726767895,
-      "status": "ok"
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "agentId": "ops-maintainer",
-      "state": {
-        "lastRunAtMs": 1780782900010,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 70323,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1780869300000,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true
-      },
-      "updatedAtMs": 1780782970333,
-      "status": "ok"
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "agentId": "vault-librarian",
-      "state": {
-        "lastRunAtMs": 1780794000014,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 300944,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 2,
-        "nextRunAtMs": 1780880400000,
-        "consecutiveSkipped": 0,
-        "lastDiagnostics": {
-          "summary": "cron: job execution timed out (last phase: tool-execution-started)",
-          "entries": [
-            {
-              "ts": 1780794300955,
-              "source": "cron-setup",
-              "severity": "error",
-              "message": "cron: job execution timed out (last phase: tool-execution-started)"
-            }
-          ]
-        },
-        "lastDiagnosticSummary": "cron: job execution timed out (last phase: tool-execution-started)",
-        "lastErrorReason": "timeout",
-        "lastError": "cron: job execution timed out (last phase: tool-execution-started)"
-      },
-      "updatedAtMs": 1780794300958,
-      "status": "error"
     },
     {
       "id": "2d0581eb-8e15-40b0-a472-e62f10a0010f",
@@ -414,6 +282,47 @@
         "consecutiveSkipped": 0
       },
       "updatedAtMs": 1780293920064,
+      "status": "ok"
+    },
+    {
+      "id": "340d1c73-4464-4be3-8c62-0fff544e7e08",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "eternia-daily-research-report",
+      "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
+      "enabled": true,
+      "createdAtMs": 1776844510356,
+      "schedule": {
+        "kind": "cron",
+        "expr": "15 8 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "session:agent:main:main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Read and execute workflow file `/home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/eternia-daily-research.md`.\n\nAlso re-read these memory anchors before writing:\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia.md`\n- `/home/clawdkbot/.openclaw/workspace/memory/projects/eternia-research-program.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-core-understanding.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-watchlist.md`\n- `/home/clawdkbot/virgil-vault/Research/Eternia/eternia-research-team-charter.md`\n\nUse the standing research-team structure from the workflow as the explicit lens set for the daily report.\nUse read-only repo review against `/home/clawdkbot/.openclaw/workspace/eternia` plus external web research when available.\n\nImportant:\n- Do not modify the Eternia repo.\n- Save the report to virgil-vault.\n- Be factual, critical, and explicit about what is known vs inferred.\n- Include Virgil's opinion section.\n- Include brief team-lens notes when useful.\n\nReturn concise completion status only.",
+        "model": "openai/gpt-5.5",
+        "thinking": "medium",
+        "timeoutSeconds": 1800
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637827964571780"
+      },
+      "state": {
+        "nextRunAtMs": 1780899300000,
+        "lastRunAtMs": 1780812900007,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 161396,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1780813061403,
       "status": "ok"
     },
     {
@@ -496,6 +405,97 @@
       "status": "ok"
     },
     {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "agentId": "ops-maintainer",
+      "state": {
+        "lastRunAtMs": 1780869300011,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 52273,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1780955700000,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true
+      },
+      "updatedAtMs": 1780869352284,
+      "status": "ok"
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "agentId": "vault-librarian",
+      "state": {
+        "lastRunAtMs": 1780880400010,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 300689,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 3,
+        "nextRunAtMs": 1780966800000,
+        "consecutiveSkipped": 0,
+        "lastDiagnostics": {
+          "summary": "cron: job execution timed out (last phase: tool-execution-started)",
+          "entries": [
+            {
+              "ts": 1780880700685,
+              "source": "cron-setup",
+              "severity": "error",
+              "message": "cron: job execution timed out (last phase: tool-execution-started)"
+            }
+          ]
+        },
+        "lastDiagnosticSummary": "cron: job execution timed out (last phase: tool-execution-started)",
+        "lastErrorReason": "timeout",
+        "lastError": "cron: job execution timed out (last phase: tool-execution-started)"
+      },
+      "updatedAtMs": 1780880700699,
+      "status": "error"
+    },
+    {
       "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
       "agentId": "research-scout",
       "sessionKey": "agent:virgil-opus:discord:channel:1477637773681885184",
@@ -567,20 +567,12 @@
       "label": "not requested",
       "detail": "not requested"
     },
-    "340d1c73-4464-4be3-8c62-0fff544e7e08": {
-      "label": "announce -> discord:channel:1477637827964571780",
-      "detail": "explicit"
-    },
-    "a921d03a-7cee-4538-8ced-3558d18f00e3": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
-    "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
-      "label": "not requested",
-      "detail": "not requested"
-    },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
       "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "340d1c73-4464-4be3-8c62-0fff544e7e08": {
+      "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
     "ad0279dd-c30c-4158-94fc-34f6d614b714": {
@@ -590,6 +582,14 @@
     "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
+    },
+    "a921d03a-7cee-4538-8ced-3558d18f00e3": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
+      "label": "not requested",
+      "detail": "not requested"
     },
     "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
       "label": "announce -> discord:channel:1477637773681885184",
