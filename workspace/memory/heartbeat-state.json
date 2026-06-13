@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1781208180,
-    "calendar": 1781208180,
-    "coolify": 1781121780
+    "email": 1781294580,
+    "calendar": 1781294580,
+    "coolify": 1781262180
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -414,9 +414,9 @@
     "19eb82df02594553"
   ],
   "coolifyConfigured": false,
-  "notes": "20:03 UTC Jun 11. Email: Google AI Studio alert requires restricting unrestricted Gemini API keys by Jun 19, 2026. Calendar: no events in next 2 hours.",
-  "lastRunStatus": "alert",
-  "lastHeartbeatAttempt": 1781208180,
-  "coolifyLastWarning": "COOLIFY_API_KEY/COOLIFY_URL not configured; health check skipped at 2026-06-10T20:03:00Z",
+  "notes": "17:03 UTC Jun 12. Email: no actionable urgent/time-sensitive mail in last 30 minutes. Calendar: no events in next 2 hours.",
+  "lastRunStatus": "ok",
+  "lastHeartbeatAttempt": 1781283780,
+  "coolifyLastWarning": "COOLIFY_API_KEY/COOLIFY_URL not configured; health check skipped at 2026-06-12T11:03:00Z",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check"
 }
