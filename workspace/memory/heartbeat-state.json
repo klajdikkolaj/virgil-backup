@@ -1,14 +1,16 @@
 {
   "lastChecks": {
-    "email": 1781553780,
-    "calendar": 1781553780,
-    "coolify": 1781532180
+    "email": 1781662680,
+    "calendar": 1781662680,
+    "coolify": 1781607780
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
     "chq90lljogdpkhk1gfsd3iv5k0"
   ],
   "alertedEmails": [
+    "19e17b37194c3f0a",
+    "19ed0f30dc1df7a1",
     "19e2b76ee7da46ee",
     "19cae7817c77ee79",
     "19cb4a10b94c0aa8",
@@ -414,12 +416,14 @@
     "19eb82df02594553",
     "19ec9919bc7c01cf",
     "19ecb84e658e84ea",
-    "19ecb8479a33d768"
+    "19ecb8479a33d768",
+    "19ed009afa3cf5a1",
+    "19ed15a7b675d7cc"
   ],
   "coolifyConfigured": false,
-  "notes": "05:03 UTC Jun 13. Email: no actionable urgent/time-sensitive mail in last 30 minutes. Calendar: no events in next 2 hours.",
+  "notes": "20:03 UTC Jun 16. Email: one OpenAI Codex reset notice in last 30m, not actionable. Calendar: no events in next 2 hours.",
   "lastRunStatus": "ok",
-  "lastHeartbeatAttempt": 1781326980,
+  "lastHeartbeatAttempt": 1781640180,
   "coolifyLastWarning": "COOLIFY_API_KEY not configured; skipped service health check at 2026-06-14T08:03:00Z",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check",
   "lastWarnings": {
