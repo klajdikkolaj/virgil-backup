@@ -1,7 +1,7 @@
 {
   "lastChecks": {
-    "email": 1782267480,
-    "calendar": 1782267480,
+    "email": 1782353880,
+    "calendar": 1782353880,
     "coolify": 1782126262
   },
   "alertedEvents": [
@@ -437,14 +437,14 @@
     "19ef2dddad74a2b6"
   ],
   "coolifyConfigured": false,
-  "notes": "02:18 UTC Jun 24. Email: Gmail connector missing permissions/scopes, check could not run. Calendar: no events in next 2 hours.",
+  "notes": "02:18 UTC Jun 25. Email: Gmail connector missing permissions/scopes, check could not run. Calendar: no events in next 2 hours.",
   "lastRunStatus": "blocked_email_scope",
-  "lastHeartbeatAttempt": 1782267480,
+  "lastHeartbeatAttempt": 1782353880,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-06-22T05:03:00Z",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-06-22T05:03:00Z",
   "lastWarnings": {
     "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-06-22T05:03:00Z"
   },
   "coolifyWarning": "COOLIFY_URL/COOLIFY_API_KEY not configured; skipped during 2026-06-19T08:03:00Z heartbeat.",
-  "gmailLastWarning": "Gmail connector missing permissions/scopes; email heartbeat check failed at 2026-06-24T02:18:00Z"
+  "gmailLastWarning": "Gmail connector missing permissions/scopes; email heartbeat check failed at 2026-06-25T02:18:00Z"
 }
