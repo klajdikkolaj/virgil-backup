@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1782354648910,
+      "updatedAtMs": 1782441052524,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1782354600020,
+        "lastRunAtMs": 1782441000027,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 48890,
+        "lastDurationMs": 52497,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1782441000000,
+        "nextRunAtMs": 1782527400000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "runningAtMs": 1782441000027
+        "runningAtMs": 1782527400024
       },
       "status": "running"
     },
@@ -46,7 +46,7 @@
       "description": "Check Eternakk/eternia origin/main for new commits and notify this session only when it changes.",
       "enabled": true,
       "createdAtMs": 1776435507398,
-      "updatedAtMs": 1782440826113,
+      "updatedAtMs": 1782527254408,
       "agentId": "eternia-repo-cartographer",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -69,13 +69,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1782440805130,
+        "lastRunAtMs": 1782527229971,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 20983,
+        "lastDurationMs": 24437,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1782442605130,
+        "nextRunAtMs": 1782529029971,
         "consecutiveSkipped": 0,
         "lastDelivered": false,
         "lastFailureNotificationDeliveryStatus": "not-requested"
@@ -87,7 +87,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1782363734118,
+      "updatedAtMs": 1782450171240,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -110,16 +110,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1782363600021,
+        "lastRunAtMs": 1782450000018,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 134097,
+        "lastDurationMs": 171222,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1782450000000,
+        "nextRunAtMs": 1782536400000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
+        "lastFailureNotificationDeliveryStatus": "not-requested",
+        "lastDiagnostics": {
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=openclaw&sort=updated&order=desc&per_page=5 -> run jq (agent)` failed",
+          "entries": [
+            {
+              "ts": 1782450169875,
+              "source": "tool",
+              "severity": "warn",
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=openclaw&sort=updated&order=desc&per_page=5 -> run jq (agent)` failed"
+            }
+          ]
+        },
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=openclaw&sort=updated&order=desc&per_page=5 -> run jq (agent)` failed"
       },
       "status": "ok"
     },
@@ -129,7 +141,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772967603163,
-      "updatedAtMs": 1782417901498,
+      "updatedAtMs": 1782504300952,
       "schedule": {
         "kind": "cron",
         "expr": "0 7-22/3 * * *",
@@ -151,28 +163,28 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1782417808515,
+        "lastRunAtMs": 1782504208530,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 92983,
+        "lastDurationMs": 92422,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1782450208503,
+        "nextRunAtMs": 1782536608503,
         "consecutiveSkipped": 0,
         "lastDelivered": false,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq now \u2192 move $tmp to memory/heartbeat-state.json (agent)` failed",
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run jq ts \u2192 move $tmp to memory/heartbeat-state.json (agent)` failed",
           "entries": [
             {
-              "ts": 1782417901481,
+              "ts": 1782504300937,
               "source": "tool",
               "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq now \u2192 move $tmp to memory/heartbeat-state.json (agent)` failed"
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run jq ts \u2192 move $tmp to memory/heartbeat-state.json (agent)` failed"
             }
           ]
         },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq now \u2192 move $tmp to memory/heartbeat-state.json (agent)` failed"
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run jq ts \u2192 move $tmp to memory/heartbeat-state.json (agent)` failed"
       },
       "status": "ok"
     },
@@ -182,7 +194,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1782363934534,
+      "updatedAtMs": 1782450380724,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -204,13 +216,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1782363900022,
+        "lastRunAtMs": 1782450316350,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 34512,
+        "lastDurationMs": 64374,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1782450300000,
+        "nextRunAtMs": 1782536700000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested"
@@ -223,7 +235,7 @@
       "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
       "enabled": true,
       "createdAtMs": 1772967607692,
-      "updatedAtMs": 1782408064672,
+      "updatedAtMs": 1782494450455,
       "agentId": "ops-maintainer",
       "sessionKey": "agent:main:discord:channel:1477606618224132274",
       "schedule": {
@@ -246,13 +258,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1782407963612,
+        "lastRunAtMs": 1782494363611,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 101060,
+        "lastDurationMs": 86844,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1782451163598,
+        "nextRunAtMs": 1782537563598,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
@@ -264,7 +276,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1782368461320,
+      "updatedAtMs": 1782454832734,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -287,92 +299,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1782454500000,
-        "lastRunAtMs": 1782368100022,
+        "nextRunAtMs": 1782540900000,
+        "lastRunAtMs": 1782454500013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 361298,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
-      },
-      "status": "ok"
-    },
-    {
-      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
-      "name": "opencortex-memory-review",
-      "enabled": true,
-      "createdAtMs": 1772967612188,
-      "updatedAtMs": 1782284473253,
-      "agentId": "vault-librarian",
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 1,3,5",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
-        "model": "openai/gpt-5.5",
-        "thinking": "medium",
-        "timeoutSeconds": 600
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1782284400025,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 73228,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1782457200000,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
-      },
-      "status": "ok"
-    },
-    {
-      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
-      "name": "openclaw-update-availability-report",
-      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
-      "enabled": true,
-      "createdAtMs": 1772967616887,
-      "updatedAtMs": 1782228539597,
-      "agentId": "ops-maintainer",
-      "schedule": {
-        "kind": "every",
-        "everyMs": 259200000,
-        "anchorMs": 1773135431575
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1782487702518,
-        "lastRunAtMs": 1782228502518,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 37079,
+        "lastDurationMs": 332721,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
@@ -387,7 +318,7 @@
       "description": "Daily token/cost and cron-health report",
       "enabled": true,
       "createdAtMs": 1772967621307,
-      "updatedAtMs": 1782424577389,
+      "updatedAtMs": 1782511027714,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -409,13 +340,13 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1782424500028,
+        "lastRunAtMs": 1782510900020,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 77361,
+        "lastDurationMs": 127694,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1782510900000,
+        "nextRunAtMs": 1782597300000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested"
@@ -427,7 +358,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1782435696205,
+      "updatedAtMs": 1782522072209,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -448,13 +379,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1782435600017,
+        "lastRunAtMs": 1782522000018,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 96188,
+        "lastDurationMs": 72191,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1782522000000,
+        "nextRunAtMs": 1782608400000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
@@ -508,6 +439,87 @@
           ]
         },
         "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `pull git changes (in ~/virgil-vault)` failed",
+        "lastFailureNotificationDeliveryStatus": "not-requested"
+      },
+      "status": "ok"
+    },
+    {
+      "id": "ad0279dd-c30c-4158-94fc-34f6d614b714",
+      "name": "opencortex-memory-review",
+      "enabled": true,
+      "createdAtMs": 1772967612188,
+      "updatedAtMs": 1782457264837,
+      "agentId": "vault-librarian",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 1,3,5",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/memory-consolidation.md and execute exactly.\n\nIMPORTANT write rule:\n- When updating MEMORY.md, memory/preferences.md, or any memory/*.md target, prefer read + merge + full-file write.\n- Do NOT rely on brittle exact text edit replacements for long-lived files.\n- If no durable changes are needed, return completed with no file updates.\n\nReturn concise status with files updated.",
+        "model": "openai/gpt-5.5",
+        "thinking": "medium",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1782457200018,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 64819,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1782716400000,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true,
+        "lastFailureNotificationDeliveryStatus": "not-requested"
+      },
+      "status": "ok"
+    },
+    {
+      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
+      "name": "openclaw-update-availability-report",
+      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
+      "enabled": true,
+      "createdAtMs": 1772967616887,
+      "updatedAtMs": 1782487740965,
+      "agentId": "ops-maintainer",
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1773135431575
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1782746902536,
+        "lastRunAtMs": 1782487702536,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 38429,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
       "status": "ok"
@@ -601,14 +613,6 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
@@ -618,6 +622,14 @@
       "detail": "not requested"
     },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "ad0279dd-c30c-4158-94fc-34f6d614b714": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     },
