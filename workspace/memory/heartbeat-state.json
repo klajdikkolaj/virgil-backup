@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1783909080,
-    "calendar": 1783909080,
-    "coolify": 1783864980
+    "email": 1783995480,
+    "calendar": 1783995480,
+    "coolify": 1783951380
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -10,9 +10,9 @@
     "3k3tu6k81hqin7udnpjfohb1hs"
   ],
   "lastWarnings": {
-    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-07-12T14:03:00Z",
+    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-07-13T14:03:00Z",
     "memory_search": "2026-07-10T11:18:00Z memory_search unavailable: Gemini embeddings API key invalid.",
-    "email": "2026-07-13T02:18:00Z Gmail connector missing permissions/scopes; urgent-mail scan could not run."
+    "email": "2026-07-14T02:18:00Z Gmail connector missing permissions/scopes; urgent-mail scan could not run."
   },
   "alertedEmails": [
     "19f2fc9752dc5604",
@@ -462,7 +462,8 @@
     "19f1902600b060e9",
     "19f1903c49e092d0",
     "19f26547dce06723",
-    "19f3ccb95b75c557"
+    "19f3ccb95b75c557",
+    "19f5bc7db61693ed"
   ],
   "coolifyConfigured": false,
   "notes": "05:03 UTC Jul 11. Email: no urgent/time-sensitive mail surfaced in last 30 minutes. Calendar: no unalerted events in next 2 hours. Coolify: skipped; COOLIFY_URL or COOLIFY_API_KEY not configured.",
