@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1784686680,
-    "calendar": 1784686680,
-    "coolify": 1784491380
+    "email": 1784773080,
+    "calendar": 1784773080,
+    "coolify": 1784750580
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -10,9 +10,9 @@
     "3k3tu6k81hqin7udnpjfohb1hs"
   ],
   "lastWarnings": {
-    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-07-19T20:03:00Z",
+    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-07-22T20:03:00Z",
     "memory_search": "2026-07-10T11:18:00Z memory_search unavailable: Gemini embeddings API key invalid.",
-    "email": "2026-07-22T02:18:00Z Gmail connector missing permissions/scopes; urgent-mail scan could not run."
+    "email": "2026-07-23T02:18:00Z Gmail connector missing permissions/scopes; urgent-mail scan could not run."
   },
   "alertedEmails": [
     "19f2fc9752dc5604",
@@ -470,14 +470,15 @@
     "19f66b039f02f061",
     "19f70597254d05aa",
     "19f83ab4c87b7909",
-    "19f839b3f805e61c"
+    "19f839b3f805e61c",
+    "19f882ff8e8fb516"
   ],
   "coolifyConfigured": false,
-  "notes": "20:03 UTC Jul 21. Email: no urgent/time-sensitive mail found in last 30 minutes. Calendar: no events in next 2 hours.",
+  "notes": "17:03 UTC Jul 22. Email: no urgent/time-sensitive mail found in last 30 minutes. Calendar: no events in next 2 hours.",
   "lastRunStatus": "ok",
-  "lastHeartbeatAttempt": 1784664180,
+  "lastHeartbeatAttempt": 1784739780,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-06-28T08:03:00Z",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-06-22T05:03:00Z",
   "coolifyWarning": "COOLIFY_API_KEY or COOLIFY_URL not configured; skipped health check",
-  "gmailLastWarning": "Gmail connector missing permissions/scopes; email heartbeat check failed at 2026-07-22T02:18:00Z"
+  "gmailLastWarning": "Gmail connector missing permissions/scopes; email heartbeat check failed at 2026-07-23T02:18:00Z"
 }
