@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1785465049109,
+      "updatedAtMs": 1785551446994,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1785465000016,
+        "lastRunAtMs": 1785551400029,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 49093,
+        "lastDurationMs": 46965,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785551400000,
+        "nextRunAtMs": 1785637800000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "runningAtMs": 1785551400029
+        "runningAtMs": 1785637800029
       },
       "status": "running"
     },
@@ -46,7 +46,7 @@
       "description": "Check Eternakk/eternia origin/main for new commits and notify this session only when it changes.",
       "enabled": true,
       "createdAtMs": 1776435507398,
-      "updatedAtMs": 1785551090518,
+      "updatedAtMs": 1785637491042,
       "agentId": "eternia-repo-cartographer",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -69,13 +69,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1785551067078,
+        "lastRunAtMs": 1785637468313,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 23440,
+        "lastDurationMs": 22729,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785552867078,
+        "nextRunAtMs": 1785639268313,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": false
@@ -87,7 +87,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1785474184272,
+      "updatedAtMs": 1785560534555,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -110,28 +110,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1785474000027,
+        "lastRunAtMs": 1785560400017,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 184245,
+        "lastDurationMs": 134538,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785560400000,
+        "nextRunAtMs": 1785646800000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/openclaw-ai/OpenClaw/releases?per_page=5 -> run jq (agent)` failed",
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=topic:ai-agent+pushed:%3E2026-07-25&sort=stars&order=desc&per_page=8 -> run jq (agent)` failed",
           "entries": [
             {
-              "ts": 1785474183250,
+              "ts": 1785560532606,
               "source": "tool",
               "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/openclaw-ai/OpenClaw/releases?per_page=5 -> run jq (agent)` failed"
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=topic:ai-agent+pushed:%3E2026-07-25&sort=stars&order=desc&per_page=8 -> run jq (agent)` failed"
             }
           ]
         },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/openclaw-ai/OpenClaw/releases?per_page=5 -> run jq (agent)` failed"
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=topic:ai-agent+pushed:%3E2026-07-25&sort=stars&order=desc&per_page=8 -> run jq (agent)` failed"
       },
       "status": "ok"
     },
@@ -141,7 +141,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772967603163,
-      "updatedAtMs": 1785528299509,
+      "updatedAtMs": 1785614686672,
       "schedule": {
         "kind": "cron",
         "expr": "0 7-22/3 * * *",
@@ -163,28 +163,28 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1785528208530,
+        "lastRunAtMs": 1785614608516,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 90979,
+        "lastDurationMs": 78156,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785560608503,
+        "nextRunAtMs": 1785647008503,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": false,
         "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-24 from memory/heartbeat-state.json (agent)` failed",
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq ts \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-40 from memory/heartbeat-state.json (agent)` failed",
           "entries": [
             {
-              "ts": 1785528299495,
+              "ts": 1785614686650,
               "source": "tool",
               "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-24 from memory/heartbeat-state.json (agent)` failed"
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq ts \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-40 from memory/heartbeat-state.json (agent)` failed"
             }
           ]
         },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-24 from memory/heartbeat-state.json (agent)` failed"
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq ts \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-40 from memory/heartbeat-state.json (agent)` failed"
       },
       "status": "ok"
     },
@@ -194,7 +194,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1785474363179,
+      "updatedAtMs": 1785560737013,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -216,13 +216,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1785474307628,
+        "lastRunAtMs": 1785560700026,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 55551,
+        "lastDurationMs": 36987,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785560700000,
+        "nextRunAtMs": 1785647100000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested"
@@ -235,7 +235,7 @@
       "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
       "enabled": true,
       "createdAtMs": 1772967607692,
-      "updatedAtMs": 1785518453842,
+      "updatedAtMs": 1785604868619,
       "agentId": "ops-maintainer",
       "sessionKey": "agent:main:discord:channel:1477606618224132274",
       "schedule": {
@@ -258,13 +258,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1785518363621,
+        "lastRunAtMs": 1785604763622,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 90221,
+        "lastDurationMs": 104997,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785561563598,
+        "nextRunAtMs": 1785647963598,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
@@ -276,7 +276,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1785478900618,
+      "updatedAtMs": 1785565270894,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -299,52 +299,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1785564900000,
-        "lastRunAtMs": 1785478500027,
+        "nextRunAtMs": 1785651300000,
+        "lastRunAtMs": 1785564900032,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 400591,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
-      },
-      "status": "ok"
-    },
-    {
-      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
-      "name": "openclaw-update-availability-report",
-      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
-      "enabled": true,
-      "createdAtMs": 1772967616887,
-      "updatedAtMs": 1785338940402,
-      "agentId": "ops-maintainer",
-      "schedule": {
-        "kind": "every",
-        "everyMs": 259200000,
-        "anchorMs": 1773135431575
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "nextRunAtMs": 1785598102793,
-        "lastRunAtMs": 1785338902793,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 37609,
+        "lastDurationMs": 370862,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
@@ -359,7 +318,7 @@
       "description": "Daily token/cost and cron-health report",
       "enabled": true,
       "createdAtMs": 1772967621307,
-      "updatedAtMs": 1785534970686,
+      "updatedAtMs": 1785621380047,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -381,13 +340,13 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1785534900016,
+        "lastRunAtMs": 1785621300028,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 70670,
+        "lastDurationMs": 80019,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785621300000,
+        "nextRunAtMs": 1785707700000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested"
@@ -399,7 +358,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1785546387837,
+      "updatedAtMs": 1785632467028,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -420,13 +379,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1785546330551,
+        "lastRunAtMs": 1785632400036,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 57286,
+        "lastDurationMs": 66992,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785632400000,
+        "nextRunAtMs": 1785718800000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
@@ -577,6 +536,47 @@
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
       "status": "ok"
+    },
+    {
+      "id": "f1d83064-ea30-41bb-a5d7-b65a82f490fc",
+      "name": "openclaw-update-availability-report",
+      "description": "Dev-channel update availability + health check only; do not auto-apply updates.",
+      "enabled": true,
+      "createdAtMs": 1772967616887,
+      "updatedAtMs": 1785598144760,
+      "agentId": "ops-maintainer",
+      "schedule": {
+        "kind": "every",
+        "everyMs": 259200000,
+        "anchorMs": 1773135431575
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Check OpenClaw update availability and health only. Do NOT run openclaw update.\n\nSteps:\n1. Run `openclaw --version`.\n2. Run `openclaw update status --json` and inspect whether an update is available.\n3. Run `openclaw status --json` if possible, otherwise `openclaw status`.\n4. If no update is available and health is normal, reply exactly `NO_REPLY`.\n5. If an update is available, reply with a concise summary including current version, latest version, channel, and a short health note.\n6. If health is degraded, reply with a concise warning even if no update is available.\n\nKeep it terse.",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "nextRunAtMs": 1785857302807,
+        "lastRunAtMs": 1785598102807,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 41953,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true,
+        "lastFailureNotificationDeliveryStatus": "not-requested"
+      },
+      "status": "ok"
     }
   ],
   "total": 13,
@@ -613,10 +613,6 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
     "a921d03a-7cee-4538-8ced-3558d18f00e3": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
@@ -635,6 +631,10 @@
     },
     "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
       "label": "announce -> discord:channel:1477637773681885184",
+      "detail": "explicit"
+    },
+    "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
+      "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
     }
   }
