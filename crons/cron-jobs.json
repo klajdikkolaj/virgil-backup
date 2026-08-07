@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1785897048540,
+      "updatedAtMs": 1785983449946,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1785897000024,
+        "lastRunAtMs": 1785983400018,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 48516,
+        "lastDurationMs": 49928,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785983400000,
+        "nextRunAtMs": 1786069800000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "runningAtMs": 1785983400018
+        "runningAtMs": 1786069800032
       },
       "status": "running"
     },
@@ -46,7 +46,7 @@
       "description": "Check Eternakk/eternia origin/main for new commits and notify this session only when it changes.",
       "enabled": true,
       "createdAtMs": 1776435507398,
-      "updatedAtMs": 1785983095891,
+      "updatedAtMs": 1786069499650,
       "agentId": "eternia-repo-cartographer",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -69,13 +69,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1785983072919,
+        "lastRunAtMs": 1786069474038,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 22972,
+        "lastDurationMs": 25612,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785984872919,
+        "nextRunAtMs": 1786071274038,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": false
@@ -87,7 +87,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1785906164660,
+      "updatedAtMs": 1785992649819,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -110,13 +110,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1785906000032,
+        "lastRunAtMs": 1785992400022,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 164628,
+        "lastDurationMs": 249797,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785992400000,
+        "nextRunAtMs": 1786078800000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested"
@@ -129,7 +129,7 @@
       "description": "Every 30min waking hours: email, calendar, Coolify health check",
       "enabled": true,
       "createdAtMs": 1772967603163,
-      "updatedAtMs": 1785960294112,
+      "updatedAtMs": 1786046709009,
       "schedule": {
         "kind": "cron",
         "expr": "0 7-22/3 * * *",
@@ -151,28 +151,16 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1785960208518,
+        "lastRunAtMs": 1786046608533,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 85594,
+        "lastDurationMs": 100476,
         "lastDeliveryStatus": "not-delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785992608503,
+        "nextRunAtMs": 1786079008503,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "lastDelivered": false,
-        "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-40 from memory/heartbeat-state.json (agent)` failed",
-          "entries": [
-            {
-              "ts": 1785960294098,
-              "source": "tool",
-              "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-40 from memory/heartbeat-state.json (agent)` failed"
-            }
-          ]
-        },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run command \u2192 run jq \u2192 move $tmp to memory/heartbeat-state.json \u2192 print lines 1-40 from memory/heartbeat-state.json (agent)` failed"
+        "lastDelivered": false
       },
       "status": "ok"
     },
@@ -182,7 +170,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1785906346011,
+      "updatedAtMs": 1785992771913,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -204,13 +192,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1785906307182,
+        "lastRunAtMs": 1785992733146,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 38829,
+        "lastDurationMs": 38767,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785992700000,
+        "nextRunAtMs": 1786079100000,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested"
@@ -223,7 +211,7 @@
       "description": "Batch maintenance: gateway status + doctor + lightweight QMD refresh",
       "enabled": true,
       "createdAtMs": 1772967607692,
-      "updatedAtMs": 1785950452245,
+      "updatedAtMs": 1786036882485,
       "agentId": "ops-maintainer",
       "sessionKey": "agent:main:discord:channel:1477606618224132274",
       "schedule": {
@@ -246,13 +234,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1785950363625,
+        "lastRunAtMs": 1786036763623,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 88620,
+        "lastDurationMs": 118862,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1785993563598,
+        "nextRunAtMs": 1786079963598,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
@@ -264,7 +252,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1785910943201,
+      "updatedAtMs": 1785997257122,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -287,94 +275,15 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1785996900000,
-        "lastRunAtMs": 1785910500020,
+        "nextRunAtMs": 1786083300000,
+        "lastRunAtMs": 1785996900025,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 443181,
+        "lastDurationMs": 357097,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
-      },
-      "status": "ok"
-    },
-    {
-      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
-      "name": "daily-usage-observability",
-      "description": "Daily token/cost and cron-health report",
-      "enabled": true,
-      "createdAtMs": 1772967621307,
-      "updatedAtMs": 1785966985437,
-      "agentId": "ops-maintainer",
-      "schedule": {
-        "kind": "cron",
-        "expr": "55 23 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 240
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637814014316586"
-      },
-      "state": {
-        "lastRunAtMs": 1785966900027,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 85410,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1786053300000,
-        "consecutiveSkipped": 0,
-        "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
-      },
-      "status": "ok"
-    },
-    {
-      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
-      "name": "vault-qmd-reindex",
-      "enabled": true,
-      "createdAtMs": 1772967609847,
-      "updatedAtMs": 1785978042063,
-      "agentId": "vault-librarian",
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 3 * * *",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
-        "model": "openai/gpt-5.5",
-        "thinking": "low",
-        "timeoutSeconds": 300
-      },
-      "delivery": {
-        "mode": "none",
-        "channel": "last"
-      },
-      "state": {
-        "lastRunAtMs": 1785978000028,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 42035,
-        "lastDeliveryStatus": "not-requested",
-        "consecutiveErrors": 0,
-        "nextRunAtMs": 1786064400000,
-        "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
       "status": "ok"
@@ -456,6 +365,85 @@
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
+        "lastFailureNotificationDeliveryStatus": "not-requested"
+      },
+      "status": "ok"
+    },
+    {
+      "id": "a921d03a-7cee-4538-8ced-3558d18f00e3",
+      "name": "daily-usage-observability",
+      "description": "Daily token/cost and cron-health report",
+      "enabled": true,
+      "createdAtMs": 1772967621307,
+      "updatedAtMs": 1786053373898,
+      "agentId": "ops-maintainer",
+      "schedule": {
+        "kind": "cron",
+        "expr": "55 23 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run workflow file /home/clawdkbot/.openclaw/workspace/memory/workflows/jobs/daily-usage-observability.md and execute exactly. Return concise status with report path.",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 240
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637814014316586"
+      },
+      "state": {
+        "lastRunAtMs": 1786053300012,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 73886,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1786139700000,
+        "consecutiveSkipped": 0,
+        "lastDelivered": true,
+        "lastFailureNotificationDeliveryStatus": "not-requested"
+      },
+      "status": "ok"
+    },
+    {
+      "id": "7bcbf06f-c4b4-4dec-abd9-d956713e3004",
+      "name": "vault-qmd-reindex",
+      "enabled": true,
+      "createdAtMs": 1772967609847,
+      "updatedAtMs": 1786064476590,
+      "agentId": "vault-librarian",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 3 * * *",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run CPU-only vault QMD reindex once and return compact status (indexed counts + errors).",
+        "model": "openai/gpt-5.5",
+        "thinking": "low",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "none",
+        "channel": "last"
+      },
+      "state": {
+        "lastRunAtMs": 1786064400016,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 76574,
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1786150800000,
+        "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
       "status": "ok"
@@ -589,14 +577,6 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "a921d03a-7cee-4538-8ced-3558d18f00e3": {
-      "label": "announce -> discord:channel:1477637814014316586",
-      "detail": "explicit"
-    },
-    "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
-      "label": "not requested",
-      "detail": "not requested"
-    },
     "ad0279dd-c30c-4158-94fc-34f6d614b714": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
@@ -604,6 +584,14 @@
     "f1d83064-ea30-41bb-a5d7-b65a82f490fc": {
       "label": "announce -> discord:channel:1477637814014316586",
       "detail": "explicit"
+    },
+    "a921d03a-7cee-4538-8ced-3558d18f00e3": {
+      "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
+      "label": "not requested",
+      "detail": "not requested"
     },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
       "label": "announce -> discord:channel:1477637814014316586",
