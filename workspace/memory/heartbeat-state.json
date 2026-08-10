@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1786219380,
-    "calendar": 1786219380,
-    "coolify": 1785873780
+    "email": 1786305780,
+    "calendar": 1786305780,
+    "coolify": 1786305780
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -10,7 +10,7 @@
     "3k3tu6k81hqin7udnpjfohb1hs"
   ],
   "lastWarnings": {
-    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-08-04T20:03:00Z",
+    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-08-09T20:03:00Z",
     "memory_search": "2026-07-10T11:18:00Z memory_search unavailable: Gemini embeddings API key invalid."
   },
   "alertedEmails": [
@@ -476,7 +476,8 @@
     "19fcd07faeabebff",
     "19fd17e86bd0404f",
     "19fd2196549ca4b5",
-    "19fd606faf366997"
+    "19fd606faf366997",
+    "19fe6228f4e83d15"
   ],
   "coolifyConfigured": false,
   "notes": "11:03 UTC Aug 4. Email: no urgent/time-sensitive mail found in last 30 minutes. Calendar: no events in next 2 hours.",
