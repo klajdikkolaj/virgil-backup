@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1786478580,
-    "calendar": 1786478580,
-    "coolify": 1786467780
+    "email": 1786564980,
+    "calendar": 1786564980,
+    "coolify": 1786564980
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -10,7 +10,7 @@
     "3k3tu6k81hqin7udnpjfohb1hs"
   ],
   "lastWarnings": {
-    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-08-11T17:03:00Z",
+    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-08-12T20:03:00Z",
     "memory_search": "2026-07-10T11:18:00Z memory_search unavailable: Gemini embeddings API key invalid."
   },
   "alertedEmails": [
@@ -481,13 +481,15 @@
     "19fe9f75ea2d6f67",
     "19fefc16b4e70e4b",
     "19fefbbca2cd418c",
-    "19ff10791019eb65"
+    "19ff10791019eb65",
+    "19ff4f954e69821d",
+    "19ff4f82c71dd713"
   ],
   "coolifyConfigured": false,
-  "notes": "14:03 UTC Aug 11. Email: GitHub PR run failed for WESSER-FR/WRecruitment WES-520 at 13:33 UTC flagged. Calendar: no events in next 2 hours.",
-  "lastRunStatus": "alert",
-  "lastHeartbeatAttempt": 1786456980,
-  "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-08-11T08:03:00Z",
+  "notes": "20:03 UTC Aug 12. Email: no actionable urgent/time-sensitive mail in last 30 minutes. Calendar: no events in next 2 hours. Coolify skipped: not configured.",
+  "lastRunStatus": "ok",
+  "lastHeartbeatAttempt": 1786564980,
+  "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-08-12T20:03:00Z",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-06-22T05:03:00Z",
   "coolifyWarning": "COOLIFY_API_KEY or COOLIFY_URL not configured; skipped health check",
   "gmailLastWarning": "Gmail connector missing permissions/scopes; email heartbeat check failed at 2026-07-23T06:20:00Z"
