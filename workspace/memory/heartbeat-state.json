@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1786737855,
-    "calendar": 1786737855,
-    "coolify": 1786737855
+    "email": 1786824180,
+    "calendar": 1786824180,
+    "coolify": 1786813380
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -10,8 +10,8 @@
     "3k3tu6k81hqin7udnpjfohb1hs"
   ],
   "lastWarnings": {
-    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-08-14T20:03:00Z",
-    "memory_search": "2026-07-10T11:18:00Z memory_search unavailable: Gemini embeddings API key invalid."
+    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-08-15T17:03:00Z",
+    "memory_search": "2026-08-15T11:03:00Z memory_search unavailable: Gemini embeddings API key invalid."
   },
   "alertedEmails": [
     "19f2fc9752dc5604",
