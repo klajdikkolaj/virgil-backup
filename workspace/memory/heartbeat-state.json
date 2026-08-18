@@ -1,8 +1,8 @@
 {
   "lastChecks": {
-    "email": 1786910580,
-    "calendar": 1786910580,
-    "coolify": 1786878180
+    "email": 1786996980,
+    "calendar": 1786996980,
+    "coolify": 1786996980
   },
   "alertedEvents": [
     "m9712fa40vkimb4guqgt14n7uh_20260227T133000Z",
@@ -10,7 +10,7 @@
     "3k3tu6k81hqin7udnpjfohb1hs"
   ],
   "lastWarnings": {
-    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-08-16T11:03:00Z",
+    "coolify": "COOLIFY_URL or COOLIFY_API_KEY not configured; Coolify health check skipped at 2026-08-17T20:03:00Z",
     "memory_search": "2026-08-15T11:03:00Z memory_search unavailable: Gemini embeddings API key invalid."
   },
   "alertedEmails": [
@@ -486,12 +486,14 @@
     "19ff4f82c71dd713",
     "19ff9d9fd48374d9",
     "19ffb37353109956",
-    "1a0009450654b78d"
+    "1a0009450654b78d",
+    "1a00f61eadfd194e",
+    "1a00f5e0bb7e7ef0"
   ],
   "coolifyConfigured": false,
-  "notes": "17:03 UTC Aug 13. Email: one recent AI newsletter, not actionable. Calendar: no events in next 2 hours.",
+  "notes": "11:03 UTC Aug 17. Email: Linear assigned/mentioned Klajdi on WES-549 and WES-551; newsletter ignored. Calendar: no events in next 2 hours.",
   "lastRunStatus": "ok",
-  "lastHeartbeatAttempt": 1786640580,
+  "lastHeartbeatAttempt": 1786964580,
   "coolifyLastWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-08-12T20:03:00Z",
   "lastCoolifyWarning": "COOLIFY_URL or COOLIFY_API_KEY not configured; skipped health check at 2026-06-22T05:03:00Z",
   "coolifyWarning": "COOLIFY_API_KEY or COOLIFY_URL not configured; skipped health check",
