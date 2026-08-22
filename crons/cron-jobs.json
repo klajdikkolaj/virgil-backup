@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1787193023583,
+      "updatedAtMs": 1787279451735,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,29 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1787193000022,
-        "lastRunStatus": "error",
-        "lastStatus": "error",
-        "lastDurationMs": 23561,
-        "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 5,
-        "nextRunAtMs": 1787279400000,
+        "lastRunAtMs": 1787279400023,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 51712,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "nextRunAtMs": 1787365800000,
         "consecutiveSkipped": 0,
-        "lastFailureNotificationDeliveryStatus": "unknown",
-        "lastDiagnostics": {
-          "summary": "All models failed (2): openai/gpt-5.5: You've reached your Codex subscription usage limit. Next reset in 2 hours, Aug 20 at 3:38 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. (rate_limit) | openai/gpt-5.4: You've reached your Codex subscription usage limit. Next reset in 2 hours, Aug 20 at 3:38 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. (rate_limit)",
-          "entries": [
-            {
-              "ts": 1787193023563,
-              "source": "agent-run",
-              "severity": "error",
-              "message": "All models failed (2): openai/gpt-5.5: You've reached your Codex subscription usage limit. Next reset in 2 hours, Aug 20 at 3:38 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. (rate_limit) | openai/gpt-5.4: You've reached your Codex subscription usage limit. Next reset in 2 hours, Aug 20 at 3:38 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. (rate_limit)"
-            }
-          ]
-        },
-        "lastDiagnosticSummary": "All models failed (2): openai/gpt-5.5: You've reached your Codex subscription usage limit. Next reset in 2 hours, Aug 20 at 3:38 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. (rate_limit) | openai/gpt-5.4: You've reached your Codex subscription usage limit. Next reset in 2 hours, Aug 20 at 3:38 AM UTC. Wait until the reset time, use another Codex account if available, or switch to another configured model/provider. (rate_limit)",
-        "lastErrorReason": "rate_limit",
-        "runningAtMs": 1787279400023
+        "lastFailureNotificationDeliveryStatus": "not-requested",
+        "lastDelivered": true,
+        "runningAtMs": 1787365800009
       },
       "status": "running"
     },
@@ -57,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1787202145260,
+      "updatedAtMs": 1787288586014,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -80,27 +68,15 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1787202000027,
+        "lastRunAtMs": 1787288400017,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 145233,
+        "lastDurationMs": 185997,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787288400000,
+        "nextRunAtMs": 1787374800000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run test \u2192 print lines 1-220 from ~/virgil-vault/Daily/2026-08-20-briefing.md (agent)` failed",
-          "entries": [
-            {
-              "ts": 1787202144020,
-              "source": "tool",
-              "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run test \u2192 print lines 1-220 from ~/virgil-vault/Daily/2026-08-20-briefing.md (agent)` failed"
-            }
-          ]
-        },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run test \u2192 print lines 1-220 from ~/virgil-vault/Daily/2026-08-20-briefing.md (agent)` failed",
         "lastDelivered": true
       },
       "status": "ok"
@@ -111,7 +87,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1787202335042,
+      "updatedAtMs": 1787288763660,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -133,13 +109,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1787202300016,
+        "lastRunAtMs": 1787288700023,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 35026,
+        "lastDurationMs": 63637,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787288700000,
+        "nextRunAtMs": 1787375100000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -152,7 +128,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1787206882411,
+      "updatedAtMs": 1787293247401,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -175,11 +151,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1787292900000,
-        "lastRunAtMs": 1787206500014,
+        "nextRunAtMs": 1787379300000,
+        "lastRunAtMs": 1787292900012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 382397,
+        "lastDurationMs": 347389,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
@@ -193,7 +169,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1787274058222,
+      "updatedAtMs": 1787360513114,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -214,13 +190,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1787274000023,
+        "lastRunAtMs": 1787360400025,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 58199,
+        "lastDurationMs": 113089,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787360400000,
+        "nextRunAtMs": 1787446800000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
