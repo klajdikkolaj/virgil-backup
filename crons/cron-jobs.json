@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1787538651386,
+      "updatedAtMs": 1787625050698,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1787538600012,
+        "lastRunAtMs": 1787625000010,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 51374,
+        "lastDurationMs": 50688,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787625000000,
+        "nextRunAtMs": 1787711400000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1787625000010
+        "runningAtMs": 1787711400022
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1787547785071,
+      "updatedAtMs": 1787634243701,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,13 +68,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1787547600020,
+        "lastRunAtMs": 1787634000014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 185051,
+        "lastDurationMs": 243687,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787634000000,
+        "nextRunAtMs": 1787720400000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -87,7 +87,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1787547968080,
+      "updatedAtMs": 1787634354694,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -109,13 +109,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1787547900013,
+        "lastRunAtMs": 1787634300017,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 68067,
+        "lastDurationMs": 54677,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787634300000,
+        "nextRunAtMs": 1787720700000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -128,7 +128,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1787552529299,
+      "updatedAtMs": 1787638833019,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -151,57 +151,15 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1787638500000,
-        "lastRunAtMs": 1787552100011,
+        "nextRunAtMs": 1787724900000,
+        "lastRunAtMs": 1787638500009,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 429288,
+        "lastDurationMs": 333010,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
-      },
-      "status": "ok"
-    },
-    {
-      "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
-      "name": "Weekly research \u2014 Codex integrations with Unity/Unreal for Eternia",
-      "description": "Research Codex/agent integrations with Unity or Unreal every Tuesday and save the report into Obsidian.",
-      "enabled": true,
-      "createdAtMs": 1777665619855,
-      "updatedAtMs": 1787036626908,
-      "agentId": "research-scout",
-      "sessionKey": "agent:virgil-opus:discord:channel:1477637773681885184",
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 9 * * 2",
-        "tz": "Europe/Tirane"
-      },
-      "sessionTarget": "isolated",
-      "wakeMode": "now",
-      "payload": {
-        "kind": "agentTurn",
-        "message": "Weekly automation for Klajdi/Eternia: deep-research current Codex/AI-agent integrations with Unity and Unreal, focusing on plugins, editor automation, MCP/CLI/control bridges, skills/workflows, and practical ways Codex could operate Unity/Unreal similarly to Three.js/WebGPU. Use current web research and primary sources where possible. Compare: maturity, agent-autonomy level, install/setup complexity, API/CLI/editor scripting options, risks, and recommended experiments for Eternia. Then write a concise but useful Markdown report directly into the Virgil Vault repo, which is Klajdi's intended Obsidian vault: ~/virgil-vault/Research/Eternia/AI Engine Integrations/YYYY-MM-DD Codex Unity Unreal Integration Watch.md. Create directories if needed. Include links/sources and an action checklist. Do not use obsidian-cli unless needed for path confirmation; the target is the virgil-vault repository. Do not send external messages; just complete the file write and summarize outcome.",
-        "timeoutSeconds": 1800,
-        "allowUnsafeExternalContent": false
-      },
-      "delivery": {
-        "mode": "announce",
-        "channel": "discord",
-        "to": "1477637773681885184",
-        "bestEffort": true
-      },
-      "state": {
-        "nextRunAtMs": 1787641200000,
-        "lastRunAtMs": 1787036400014,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 226894,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
       "status": "ok"
@@ -211,7 +169,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1787619697396,
+      "updatedAtMs": 1787706112528,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -232,13 +190,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1787619600023,
+        "lastRunAtMs": 1787706000016,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 97373,
+        "lastDurationMs": 112512,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787706000000,
+        "nextRunAtMs": 1787792400000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
@@ -295,6 +253,48 @@
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
       "status": "ok"
+    },
+    {
+      "id": "829ced23-d1bb-4c8b-a92a-f1190ab57e70",
+      "name": "Weekly research \u2014 Codex integrations with Unity/Unreal for Eternia",
+      "description": "Research Codex/agent integrations with Unity or Unreal every Tuesday and save the report into Obsidian.",
+      "enabled": true,
+      "createdAtMs": 1777665619855,
+      "updatedAtMs": 1787641518075,
+      "agentId": "research-scout",
+      "sessionKey": "agent:virgil-opus:discord:channel:1477637773681885184",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 9 * * 2",
+        "tz": "Europe/Tirane"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Weekly automation for Klajdi/Eternia: deep-research current Codex/AI-agent integrations with Unity and Unreal, focusing on plugins, editor automation, MCP/CLI/control bridges, skills/workflows, and practical ways Codex could operate Unity/Unreal similarly to Three.js/WebGPU. Use current web research and primary sources where possible. Compare: maturity, agent-autonomy level, install/setup complexity, API/CLI/editor scripting options, risks, and recommended experiments for Eternia. Then write a concise but useful Markdown report directly into the Virgil Vault repo, which is Klajdi's intended Obsidian vault: ~/virgil-vault/Research/Eternia/AI Engine Integrations/YYYY-MM-DD Codex Unity Unreal Integration Watch.md. Create directories if needed. Include links/sources and an action checklist. Do not use obsidian-cli unless needed for path confirmation; the target is the virgil-vault repository. Do not send external messages; just complete the file write and summarize outcome.",
+        "timeoutSeconds": 1800,
+        "allowUnsafeExternalContent": false
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "discord",
+        "to": "1477637773681885184",
+        "bestEffort": true
+      },
+      "state": {
+        "nextRunAtMs": 1788246000000,
+        "lastRunAtMs": 1787641200014,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 318061,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "consecutiveSkipped": 0,
+        "lastFailureNotificationDeliveryStatus": "not-requested"
+      },
+      "status": "ok"
     }
   ],
   "total": 7,
@@ -319,16 +319,16 @@
       "label": "announce -> discord:channel:1477637827964571780",
       "detail": "explicit"
     },
-    "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
-      "label": "announce -> discord:channel:1477637773681885184",
-      "detail": "explicit"
-    },
     "7bcbf06f-c4b4-4dec-abd9-d956713e3004": {
       "label": "not requested",
       "detail": "not requested"
     },
     "2d0581eb-8e15-40b0-a472-e62f10a0010f": {
       "label": "announce -> discord:channel:1477637814014316586",
+      "detail": "explicit"
+    },
+    "829ced23-d1bb-4c8b-a92a-f1190ab57e70": {
+      "label": "announce -> discord:channel:1477637773681885184",
       "detail": "explicit"
     }
   }
