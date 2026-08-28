@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1787711451691,
+      "updatedAtMs": 1787797852892,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1787711400022,
+        "lastRunAtMs": 1787797800023,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 51669,
+        "lastDurationMs": 52869,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787797800000,
+        "nextRunAtMs": 1787884200000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1787797800023
+        "runningAtMs": 1787884200016
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1787720545226,
+      "updatedAtMs": 1787806950777,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,28 +68,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1787720400021,
+        "lastRunAtMs": 1787806800025,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 145205,
+        "lastDurationMs": 150752,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787806800000,
+        "nextRunAtMs": 1787893200000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
         "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/anthropics/claude-code/releases/latest -> run jq (agent)` failed",
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agentic+automation+created:%3E2026-08-20&sort=stars&order=desc&per_page=5 -> run jq (agent)` failed",
           "entries": [
             {
-              "ts": 1787720544064,
+              "ts": 1787806949446,
               "source": "tool",
               "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/anthropics/claude-code/releases/latest -> run jq (agent)` failed"
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agentic+automation+created:%3E2026-08-20&sort=stars&order=desc&per_page=5 -> run jq (agent)` failed"
             }
           ]
         },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/anthropics/claude-code/releases/latest -> run jq (agent)` failed"
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agentic+automation+created:%3E2026-08-20&sort=stars&order=desc&per_page=5 -> run jq (agent)` failed"
       },
       "status": "ok"
     },
@@ -99,7 +99,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1787720736462,
+      "updatedAtMs": 1787807150363,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -121,13 +121,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1787720700010,
+        "lastRunAtMs": 1787807100013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 36452,
+        "lastDurationMs": 50350,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787807100000,
+        "nextRunAtMs": 1787893500000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -140,7 +140,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1787725315385,
+      "updatedAtMs": 1787811648809,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -163,11 +163,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1787811300000,
-        "lastRunAtMs": 1787724900024,
+        "nextRunAtMs": 1787897700000,
+        "lastRunAtMs": 1787811300019,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 415361,
+        "lastDurationMs": 348790,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
@@ -181,7 +181,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1787792491604,
+      "updatedAtMs": 1787878877835,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -202,15 +202,27 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1787792400024,
+        "lastRunAtMs": 1787878800015,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 91580,
+        "lastDurationMs": 77820,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787878800000,
+        "nextRunAtMs": 1787965200000,
         "consecutiveSkipped": 0,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
+        "lastFailureNotificationDeliveryStatus": "not-requested",
+        "lastDiagnostics": {
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run pwd \u2192 search \"qmd|reindex|vault\" in 2>/dev/null (agent)` failed",
+          "entries": [
+            {
+              "ts": 1787878877809,
+              "source": "tool",
+              "severity": "warn",
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run pwd \u2192 search \"qmd|reindex|vault\" in 2>/dev/null (agent)` failed"
+            }
+          ]
+        },
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run pwd \u2192 search \"qmd|reindex|vault\" in 2>/dev/null (agent)` failed"
       },
       "status": "ok"
     },
