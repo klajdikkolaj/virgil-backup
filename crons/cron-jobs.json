@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1787797852892,
+      "updatedAtMs": 1787884256228,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1787797800023,
+        "lastRunAtMs": 1787884200016,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 52869,
+        "lastDurationMs": 56212,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787884200000,
+        "nextRunAtMs": 1787970600000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1787884200016
+        "runningAtMs": 1787970600025
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1787806950777,
+      "updatedAtMs": 1787893472334,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,28 +68,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1787806800025,
+        "lastRunAtMs": 1787893200021,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 150752,
+        "lastDurationMs": 272313,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787893200000,
+        "nextRunAtMs": 1787979600000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "lastDelivered": true,
-        "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agentic+automation+created:%3E2026-08-20&sort=stars&order=desc&per_page=5 -> run jq (agent)` failed",
-          "entries": [
-            {
-              "ts": 1787806949446,
-              "source": "tool",
-              "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agentic+automation+created:%3E2026-08-20&sort=stars&order=desc&per_page=5 -> run jq (agent)` failed"
-            }
-          ]
-        },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agentic+automation+created:%3E2026-08-20&sort=stars&order=desc&per_page=5 -> run jq (agent)` failed"
+        "lastDelivered": true
       },
       "status": "ok"
     },
@@ -99,7 +87,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1787807150363,
+      "updatedAtMs": 1787893569046,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -121,13 +109,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1787807100013,
+        "lastRunAtMs": 1787893500027,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 50350,
+        "lastDurationMs": 69019,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787893500000,
+        "nextRunAtMs": 1787979900000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -140,7 +128,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1787811648809,
+      "updatedAtMs": 1787898088494,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -163,11 +151,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1787897700000,
-        "lastRunAtMs": 1787811300019,
+        "nextRunAtMs": 1787984100000,
+        "lastRunAtMs": 1787897700023,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 348790,
+        "lastDurationMs": 388471,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
@@ -181,7 +169,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1787878877835,
+      "updatedAtMs": 1787965961830,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -202,27 +190,15 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1787878800015,
+        "lastRunAtMs": 1787965891264,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 77820,
+        "lastDurationMs": 70566,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1787965200000,
+        "nextRunAtMs": 1788051600000,
         "consecutiveSkipped": 0,
-        "lastFailureNotificationDeliveryStatus": "not-requested",
-        "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run pwd \u2192 search \"qmd|reindex|vault\" in 2>/dev/null (agent)` failed",
-          "entries": [
-            {
-              "ts": 1787878877809,
-              "source": "tool",
-              "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run pwd \u2192 search \"qmd|reindex|vault\" in 2>/dev/null (agent)` failed"
-            }
-          ]
-        },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run pwd \u2192 search \"qmd|reindex|vault\" in 2>/dev/null (agent)` failed"
+        "lastFailureNotificationDeliveryStatus": "not-requested"
       },
       "status": "ok"
     },
