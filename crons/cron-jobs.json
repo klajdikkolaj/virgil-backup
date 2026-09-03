@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1788229855928,
+      "updatedAtMs": 1788316256890,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1788229800023,
+        "lastRunAtMs": 1788316200027,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 55905,
+        "lastDurationMs": 56863,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788316200000,
+        "nextRunAtMs": 1788402600000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1788316200027
+        "runningAtMs": 1788402600026
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1788238933242,
+      "updatedAtMs": 1788325321623,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,13 +68,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788238800017,
+        "lastRunAtMs": 1788325200022,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 133225,
+        "lastDurationMs": 121601,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788325200000,
+        "nextRunAtMs": 1788411600000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -87,7 +87,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1788239144160,
+      "updatedAtMs": 1788325541936,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -109,13 +109,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788239100018,
+        "lastRunAtMs": 1788325500012,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 44142,
+        "lastDurationMs": 41924,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788325500000,
+        "nextRunAtMs": 1788411900000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -128,7 +128,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1788243809061,
+      "updatedAtMs": 1788330078663,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -151,16 +151,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1788329700000,
-        "lastRunAtMs": 1788243300019,
+        "nextRunAtMs": 1788416100000,
+        "lastRunAtMs": 1788329700030,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 509042,
+        "lastDurationMs": 378633,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
+        "lastFailureNotificationDeliveryStatus": "not-requested",
+        "lastDiagnostics": {
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git rev-parse (agent)` failed",
+          "entries": [
+            {
+              "ts": 1788330077925,
+              "source": "tool",
+              "severity": "warn",
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git rev-parse (agent)` failed"
+            }
+          ]
+        },
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git rev-parse (agent)` failed"
       },
       "status": "ok"
     },
@@ -169,7 +181,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1788310874542,
+      "updatedAtMs": 1788397602757,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -190,13 +202,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1788310800019,
+        "lastRunAtMs": 1788397530776,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 74523,
+        "lastDurationMs": 71981,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788397200000,
+        "nextRunAtMs": 1788483600000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
