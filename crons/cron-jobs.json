@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1788316256890,
+      "updatedAtMs": 1788402654891,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1788316200027,
+        "lastRunAtMs": 1788402600026,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 56863,
+        "lastDurationMs": 54865,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788402600000,
+        "nextRunAtMs": 1788489000000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1788402600026
+        "runningAtMs": 1788489000016
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1788325321623,
+      "updatedAtMs": 1788411819792,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,16 +68,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788325200022,
+        "lastRunAtMs": 1788411600021,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 121601,
+        "lastDurationMs": 219771,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788411600000,
+        "nextRunAtMs": 1788498000000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "lastDelivered": true
+        "lastDelivered": true,
+        "lastDiagnostics": {
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/openai/codex/releases?per_page=3 -> run jq (agent)` failed",
+          "entries": [
+            {
+              "ts": 1788411818599,
+              "source": "tool",
+              "severity": "warn",
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/openai/codex/releases?per_page=3 -> run jq (agent)` failed"
+            }
+          ]
+        },
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/repos/openai/codex/releases?per_page=3 -> run jq (agent)` failed"
       },
       "status": "ok"
     },
@@ -87,7 +99,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1788325541936,
+      "updatedAtMs": 1788411941815,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -109,13 +121,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788325500012,
+        "lastRunAtMs": 1788411900017,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 41924,
+        "lastDurationMs": 41798,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788411900000,
+        "nextRunAtMs": 1788498300000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -128,7 +140,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1788330078663,
+      "updatedAtMs": 1788416458602,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -151,28 +163,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1788416100000,
-        "lastRunAtMs": 1788329700030,
+        "nextRunAtMs": 1788502500000,
+        "lastRunAtMs": 1788416100021,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 378633,
+        "lastDurationMs": 358581,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git rev-parse (agent)` failed",
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `push git changes (in ~/virgil-vault)` failed",
           "entries": [
             {
-              "ts": 1788330077925,
+              "ts": 1788416457990,
               "source": "tool",
               "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git rev-parse (agent)` failed"
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `push git changes (in ~/virgil-vault)` failed"
             }
           ]
         },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git rev-parse (agent)` failed"
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `push git changes (in ~/virgil-vault)` failed"
       },
       "status": "ok"
     },
@@ -181,7 +193,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1788397602757,
+      "updatedAtMs": 1788484343966,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -202,13 +214,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1788397530776,
+        "lastRunAtMs": 1788484291272,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 71981,
+        "lastDurationMs": 52694,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788483600000,
+        "nextRunAtMs": 1788570000000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
