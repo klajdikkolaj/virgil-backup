@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1788489075820,
+      "updatedAtMs": 1788575455297,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1788489000016,
+        "lastRunAtMs": 1788575400029,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 75804,
+        "lastDurationMs": 55268,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788575400000,
+        "nextRunAtMs": 1788661800000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1788575400029
+        "runningAtMs": 1788661800019
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1788498182995,
+      "updatedAtMs": 1788584686567,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,13 +68,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788498000024,
+        "lastRunAtMs": 1788584400027,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 182971,
+        "lastDurationMs": 286540,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788584400000,
+        "nextRunAtMs": 1788670800000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -87,7 +87,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1788498342192,
+      "updatedAtMs": 1788584750029,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -109,13 +109,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788498300012,
+        "lastRunAtMs": 1788584700020,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 42180,
+        "lastDurationMs": 50009,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788584700000,
+        "nextRunAtMs": 1788671100000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -128,7 +128,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1788502996810,
+      "updatedAtMs": 1788589210989,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -151,11 +151,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1788588900000,
-        "lastRunAtMs": 1788502500023,
+        "nextRunAtMs": 1788675300000,
+        "lastRunAtMs": 1788588900017,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 496787,
+        "lastDurationMs": 310972,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
@@ -169,7 +169,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1788570083785,
+      "updatedAtMs": 1788656465741,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -190,13 +190,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1788570000024,
+        "lastRunAtMs": 1788656400025,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 83761,
+        "lastDurationMs": 65716,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788656400000,
+        "nextRunAtMs": 1788742800000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
