@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1788834660595,
+      "updatedAtMs": 1788921057941,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1788834600024,
+        "lastRunAtMs": 1788921000014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 60571,
+        "lastDurationMs": 57927,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788921000000,
+        "nextRunAtMs": 1789007400000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1788921000014
+        "runningAtMs": 1789007400016
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1788843868462,
+      "updatedAtMs": 1788930213332,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,28 +68,16 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788843600025,
+        "lastRunAtMs": 1788930000013,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 268437,
+        "lastDurationMs": 213319,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788930000000,
+        "nextRunAtMs": 1789016400000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "lastDelivered": true,
-        "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://export.arxiv.org/api/query?search_query=all:%28brain%20computer%20interface%20OR%20neural%20decoding%20OR%20world%20models%20OR%20agents%29&sortBy=submittedDate&sortOrder=descending&max_results=8 (agent)` failed",
-          "entries": [
-            {
-              "ts": 1788843867224,
-              "source": "tool",
-              "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://export.arxiv.org/api/query?search_query=all:%28brain%20computer%20interface%20OR%20neural%20decoding%20OR%20world%20models%20OR%20agents%29&sortBy=submittedDate&sortOrder=descending&max_results=8 (agent)` failed"
-            }
-          ]
-        },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://export.arxiv.org/api/query?search_query=all:%28brain%20computer%20interface%20OR%20neural%20decoding%20OR%20world%20models%20OR%20agents%29&sortBy=submittedDate&sortOrder=descending&max_results=8 (agent)` failed"
+        "lastDelivered": true
       },
       "status": "ok"
     },
@@ -99,7 +87,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1788843944034,
+      "updatedAtMs": 1788930341507,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -121,13 +109,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788843900019,
+        "lastRunAtMs": 1788930300021,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 44015,
+        "lastDurationMs": 41486,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1788930300000,
+        "nextRunAtMs": 1789016700000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -140,7 +128,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1788848543205,
+      "updatedAtMs": 1788934852058,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -163,11 +151,11 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1788934500000,
-        "lastRunAtMs": 1788848100012,
+        "nextRunAtMs": 1789020900000,
+        "lastRunAtMs": 1788934500024,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 443193,
+        "lastDurationMs": 352034,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
@@ -181,7 +169,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1788915644277,
+      "updatedAtMs": 1789002210438,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -202,13 +190,13 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1788915600028,
+        "lastRunAtMs": 1789002000016,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 44249,
+        "lastDurationMs": 210422,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789002000000,
+        "nextRunAtMs": 1789088400000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested"
       },
