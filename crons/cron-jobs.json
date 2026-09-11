@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1788921057941,
+      "updatedAtMs": 1789007456674,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1788921000014,
+        "lastRunAtMs": 1789007400016,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 57927,
+        "lastDurationMs": 56658,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789007400000,
+        "nextRunAtMs": 1789093800000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1789007400016
+        "runningAtMs": 1789093800014
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1788930213332,
+      "updatedAtMs": 1789016663679,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,13 +68,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788930000013,
+        "lastRunAtMs": 1789016400019,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 213319,
+        "lastDurationMs": 263660,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789016400000,
+        "nextRunAtMs": 1789102800000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -87,7 +87,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1788930341507,
+      "updatedAtMs": 1789016743099,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -109,13 +109,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1788930300021,
+        "lastRunAtMs": 1789016700024,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 41486,
+        "lastDurationMs": 43075,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789016700000,
+        "nextRunAtMs": 1789103100000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -128,7 +128,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1788934852058,
+      "updatedAtMs": 1789021269564,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -151,16 +151,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1789020900000,
-        "lastRunAtMs": 1788934500024,
+        "nextRunAtMs": 1789107300000,
+        "lastRunAtMs": 1789020900016,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 352034,
+        "lastDurationMs": 369548,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
+        "lastFailureNotificationDeliveryStatus": "not-requested",
+        "lastDiagnostics": {
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git ls-remote (agent)` failed",
+          "entries": [
+            {
+              "ts": 1789021269036,
+              "source": "tool",
+              "severity": "warn",
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git ls-remote (agent)` failed"
+            }
+          ]
+        },
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git ls-remote (agent)` failed"
       },
       "status": "ok"
     },
@@ -169,7 +181,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1789002210438,
+      "updatedAtMs": 1789088573256,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -190,15 +202,27 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1789002000016,
+        "lastRunAtMs": 1789088400026,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 210422,
+        "lastDurationMs": 173230,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789088400000,
+        "nextRunAtMs": 1789174800000,
         "consecutiveSkipped": 0,
-        "lastFailureNotificationDeliveryStatus": "not-requested"
+        "lastFailureNotificationDeliveryStatus": "not-requested",
+        "lastDiagnostics": {
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `TS=20260911T0100Z; export QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU\u2026-status-$TS.log; S=${PIPESTATUS[0]}; exit $(( U || E || S )) (agent)` failed",
+          "entries": [
+            {
+              "ts": 1789088573241,
+              "source": "tool",
+              "severity": "warn",
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `TS=20260911T0100Z; export QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU\u2026-status-$TS.log; S=${PIPESTATUS[0]}; exit $(( U || E || S )) (agent)` failed"
+            }
+          ]
+        },
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `TS=20260911T0100Z; export QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU\u2026-status-$TS.log; S=${PIPESTATUS[0]}; exit $(( U || E || S )) (agent)` failed"
       },
       "status": "ok"
     },
