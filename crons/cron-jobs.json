@@ -5,7 +5,7 @@
       "name": "daily-backup",
       "enabled": true,
       "createdAtMs": 1772967598531,
-      "updatedAtMs": 1789007456674,
+      "updatedAtMs": 1789093857379,
       "agentId": "ops-maintainer",
       "schedule": {
         "kind": "cron",
@@ -26,17 +26,17 @@
         "to": "1477637814014316586"
       },
       "state": {
-        "lastRunAtMs": 1789007400016,
+        "lastRunAtMs": 1789093800014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 56658,
+        "lastDurationMs": 57365,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789093800000,
+        "nextRunAtMs": 1789180200000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true,
-        "runningAtMs": 1789093800014
+        "runningAtMs": 1789180200021
       },
       "status": "running"
     },
@@ -45,7 +45,7 @@
       "name": "Daily Morning Briefing (Non-X Sources)",
       "enabled": true,
       "createdAtMs": 1772967600887,
-      "updatedAtMs": 1789016663679,
+      "updatedAtMs": 1789102952957,
       "agentId": "briefing-analyst",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -68,16 +68,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1789016400019,
+        "lastRunAtMs": 1789102800014,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 263660,
+        "lastDurationMs": 152943,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789102800000,
+        "nextRunAtMs": 1789189200000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
-        "lastDelivered": true
+        "lastDelivered": true,
+        "lastDiagnostics": {
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agent+automation+language:TypeScript&sort=updated&order=desc&per_page=8 -> run jq (agent)` failed",
+          "entries": [
+            {
+              "ts": 1789102951533,
+              "source": "tool",
+              "severity": "warn",
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agent+automation+language:TypeScript&sort=updated&order=desc&per_page=8 -> run jq (agent)` failed"
+            }
+          ]
+        },
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `fetch https://api.github.com/search/repositories?q=agent+automation+language:TypeScript&sort=updated&order=desc&per_page=8 -> run jq (agent)` failed"
       },
       "status": "ok"
     },
@@ -87,7 +99,7 @@
       "description": "Auto commit/push Daily briefing to virgil-vault after morning briefing",
       "enabled": true,
       "createdAtMs": 1772967605334,
-      "updatedAtMs": 1789016743099,
+      "updatedAtMs": 1789103153256,
       "agentId": "vault-librarian",
       "sessionKey": "agent:main:discord:channel:1477637827964571780",
       "schedule": {
@@ -109,13 +121,13 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "lastRunAtMs": 1789016700024,
+        "lastRunAtMs": 1789103100021,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 43075,
+        "lastDurationMs": 53235,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789103100000,
+        "nextRunAtMs": 1789189500000,
         "consecutiveSkipped": 0,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDelivered": true
@@ -128,7 +140,7 @@
       "description": "Daily Eternia repo-understanding + frontier research synthesis saved to virgil-vault Research/Eternia and announced back here.",
       "enabled": true,
       "createdAtMs": 1776844510356,
-      "updatedAtMs": 1789021269564,
+      "updatedAtMs": 1789107768516,
       "agentId": "main",
       "sessionKey": "agent:main:main",
       "schedule": {
@@ -151,28 +163,28 @@
         "to": "1477637827964571780"
       },
       "state": {
-        "nextRunAtMs": 1789107300000,
-        "lastRunAtMs": 1789020900016,
+        "nextRunAtMs": 1789193700000,
+        "lastRunAtMs": 1789107300017,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 369548,
+        "lastDurationMs": 468499,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "consecutiveSkipped": 0,
         "lastDelivered": true,
         "lastFailureNotificationDeliveryStatus": "not-requested",
         "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git ls-remote (agent)` failed",
+          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run python inline script (heredoc) (agent)` failed",
           "entries": [
             {
-              "ts": 1789021269036,
+              "ts": 1789107767939,
               "source": "tool",
               "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git ls-remote (agent)` failed"
+              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run python inline script (heredoc) (agent)` failed"
             }
           ]
         },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run git ls-remote (agent)` failed"
+        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `run python inline script (heredoc) (agent)` failed"
       },
       "status": "ok"
     },
@@ -181,7 +193,7 @@
       "name": "vault-qmd-reindex",
       "enabled": true,
       "createdAtMs": 1772967609847,
-      "updatedAtMs": 1789088573256,
+      "updatedAtMs": 1789174873813,
       "agentId": "vault-librarian",
       "schedule": {
         "kind": "cron",
@@ -202,27 +214,15 @@
         "channel": "last"
       },
       "state": {
-        "lastRunAtMs": 1789088400026,
+        "lastRunAtMs": 1789174800020,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 173230,
+        "lastDurationMs": 73793,
         "lastDeliveryStatus": "not-requested",
         "consecutiveErrors": 0,
-        "nextRunAtMs": 1789174800000,
+        "nextRunAtMs": 1789261200000,
         "consecutiveSkipped": 0,
-        "lastFailureNotificationDeliveryStatus": "not-requested",
-        "lastDiagnostics": {
-          "summary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `TS=20260911T0100Z; export QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU\u2026-status-$TS.log; S=${PIPESTATUS[0]}; exit $(( U || E || S )) (agent)` failed",
-          "entries": [
-            {
-              "ts": 1789088573241,
-              "source": "tool",
-              "severity": "warn",
-              "message": "\u26a0\ufe0f \ud83d\udee0\ufe0f `TS=20260911T0100Z; export QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU\u2026-status-$TS.log; S=${PIPESTATUS[0]}; exit $(( U || E || S )) (agent)` failed"
-            }
-          ]
-        },
-        "lastDiagnosticSummary": "\u26a0\ufe0f \ud83d\udee0\ufe0f `TS=20260911T0100Z; export QMD_CPU_ONLY=1 NODE_LLAMA_CPP_GPU\u2026-status-$TS.log; S=${PIPESTATUS[0]}; exit $(( U || E || S )) (agent)` failed"
+        "lastFailureNotificationDeliveryStatus": "not-requested"
       },
       "status": "ok"
     },
